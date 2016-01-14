@@ -7,6 +7,7 @@ Desktop="Desktop"
 
 [Globals]
 AutoSaveProject=1
+UsedLibrary="D:/Programs/Eagle/lbr/con-harting-ml.lbr"
 UsedLibrary="D:/Programs/Eagle/lbr/con-ml.lbr"
 UsedLibrary="D:/Programs/Eagle/lbr/con-ptr500.lbr"
 UsedLibrary="D:/Programs/Eagle/lbr/crystal.lbr"
@@ -64,6 +65,7 @@ UsedLibrary="D:/Programs/Eagle/lbr/OPL/Seeed-OPL-Switch.lbr"
 UsedLibrary="D:/Programs/Eagle/lbr/SparkFun/SparkFun-Electromechanical.lbr"
 UsedLibrary="D:/Programs/Eagle/lbr/SparkFun/SparkFun-DigitalIC.lbr"
 UsedLibrary="D:/Programs/Eagle/lbr/SparkFun/SparkFun-Displays.lbr"
+UsedLibrary="D:/Programs/Eagle/lbr/MyLib/Thermals.lbr"
 
 [Win_1]
 Type="Control Panel"
