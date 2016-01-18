@@ -15783,6 +15783,8 @@ Source: http://www.molex.com/pdm_docs/sd/877580616_sd.pdf</description>
 <part name="C8" library="rcl" deviceset="C-EU" device="C0805"/>
 <part name="R17" library="rcl" deviceset="R-EU_" device="M0805"/>
 <part name="LED2" library="led" deviceset="LED" device="CHIP-LED0805"/>
+<part name="P+3" library="supply1" deviceset="+5V" device=""/>
+<part name="GND3" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15848,6 +15850,8 @@ Source: http://www.molex.com/pdm_docs/sd/877580616_sd.pdf</description>
 <instance part="C8" gate="G$1" x="88.9" y="96.52"/>
 <instance part="R17" gate="G$1" x="121.92" y="104.14" rot="R180"/>
 <instance part="LED2" gate="G$1" x="121.92" y="96.52" rot="R270"/>
+<instance part="P+3" gate="1" x="-106.68" y="-25.4" rot="R90"/>
+<instance part="GND3" gate="1" x="-86.36" y="-27.94"/>
 </instances>
 <busses>
 <bus name="+3V3,+5V,GND,SCL,SDA,MOSI,MISO,SCLK,SS1,SS2,NRF_CE,NRF_IRQ,SWD_IO,SWD_CLK,SWD_RES,DISP_[1..8],SIM[1..4]">
@@ -15952,6 +15956,11 @@ Source: http://www.molex.com/pdm_docs/sd/877580616_sd.pdf</description>
 <wire x1="7.62" y1="48.26" x2="7.62" y2="33.02" width="0.1524" layer="91"/>
 <label x="7.62" y="38.1" size="1.778" layer="95" rot="R90"/>
 </segment>
+<segment>
+<pinref part="X1" gate="-8" pin="S"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+<wire x1="-81.28" y1="-25.4" x2="-86.36" y2="-25.4" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
@@ -16049,6 +16058,11 @@ Source: http://www.molex.com/pdm_docs/sd/877580616_sd.pdf</description>
 <pinref part="U$1" gate="G$1" pin="35"/>
 <wire x1="10.16" y1="48.26" x2="10.16" y2="33.02" width="0.1524" layer="91"/>
 <label x="10.16" y="38.1" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="X1" gate="-7" pin="S"/>
+<pinref part="P+3" gate="1" pin="+5V"/>
+<wire x1="-101.6" y1="-25.4" x2="-104.14" y2="-25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -16580,24 +16594,6 @@ Source: http://www.molex.com/pdm_docs/sd/877580616_sd.pdf</description>
 <wire x1="-86.36" y1="-22.86" x2="-81.28" y2="-22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$35" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="8"/>
-<wire x1="-33.02" y1="-5.08" x2="-109.22" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="-109.22" y1="-5.08" x2="-109.22" y2="-25.4" width="0.1524" layer="91"/>
-<pinref part="X1" gate="-7" pin="S"/>
-<wire x1="-109.22" y1="-25.4" x2="-101.6" y2="-25.4" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$36" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="9"/>
-<wire x1="-33.02" y1="-7.62" x2="-88.9" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="-88.9" y1="-7.62" x2="-88.9" y2="-25.4" width="0.1524" layer="91"/>
-<pinref part="X1" gate="-8" pin="S"/>
-<wire x1="-88.9" y1="-25.4" x2="-81.28" y2="-25.4" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="I2C_IN" gate="A" pin="1"/>
@@ -16639,6 +16635,17 @@ Source: http://www.molex.com/pdm_docs/sd/877580616_sd.pdf</description>
 <wire x1="127" y1="104.14" x2="127" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="LED2" gate="G$1" pin="A"/>
 <wire x1="127" y1="96.52" x2="124.46" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="NRF_CE" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="CE"/>
+<wire x1="91.44" y1="-81.28" x2="68.58" y2="-81.28" width="0.1524" layer="91"/>
+<label x="76.2" y="-81.28" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="27"/>
+<wire x1="58.42" y1="-2.54" x2="33.02" y2="-2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
