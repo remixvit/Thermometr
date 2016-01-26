@@ -296,6 +296,41 @@
 <VisibleNodeIds>
 <v>Workspace_Thermo</v>
 <v>Workspace_Thermo\Thermometr</v>
+<v>Workspace_Thermo\Thermometr\CortexM0</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\7Seg.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\Clock_1.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\Cm0Start.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\CyLFClk.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\HDC1050.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_SEG_PWM.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_SEG_PWM_PM.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\NRF_CE.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\NRF_IRQ.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\NRF_IRQ_ISR.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\PWM_Mux_Reg.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\PWM_Mux_Reg_PM.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\SCB_1.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\SCB_1_BOOT.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\SCB_1_miso_m.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\SCB_1_mosi_m.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\SCB_1_PM.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\SCB_1_SCBCLK.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\SCB_1_sclk_m.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\SCB_1_SPI.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\SCB_1_SPI_BOOT.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\SCB_1_SPI_UART.lst</v>
+<v>Workspace_Thermo\Thermometr\CortexM0\ARM_GCC_493\Debug\Listing Files\SCB_1_ss0_m.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
