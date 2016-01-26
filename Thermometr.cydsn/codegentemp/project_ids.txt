@@ -1,0 +1,5 @@
+C:\Users\Vit\Documents\PSoC Creator\Workspace_Thermo\Thermometr.cydsn\Thermometr.cyprj|5f2012bb-e59b-4920-aa32-52f69e1e7ee5
+C:\My Programs\PSoC\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|c967dffb-77d8-4e8f-a60a-096494941f94
+C:\My Programs\PSoC\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|cb366dae-b70d-4d82-a6da-10aad8c5bd8b
+C:\My Programs\PSoC\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|cbd72f8c-6c35-4cf5-88ad-41c8c80b5655
+C:\My Programs\PSoC\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|5c86d312-ae3c-461c-b861-b08076ccaf28

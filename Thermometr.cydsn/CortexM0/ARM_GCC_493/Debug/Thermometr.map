@@ -1,0 +1,1392 @@
+Archive member included because of file (symbol)
+
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o (cyfitter_cfg)
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (SCB_1_Start)
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+                              .\CortexM0\ARM_GCC_493\Debug\7Seg.o (SCB_1_SpiUartWriteTxData)
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o) (SCB_1_SpiPostEnable)
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (SCB_2_Start)
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o) (SCB_2_I2CInit)
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o) (SCB_2_mstrRdBufIndex)
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (LED_SEG_PWM_WriteCompare2)
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(PWM_Mux_Reg.o)
+                              .\CortexM0\ARM_GCC_493\Debug\7Seg.o (PWM_Mux_Reg_Write)
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o) (SCB_1_ss1_m_Write)
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o) (SCB_1_sclk_m_Write)
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o) (SCB_1_ss0_m_Write)
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o) (SCB_2_sda_Read)
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o) (SCB_2_scl_Write)
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyBootAsmGnu.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o) (CyEnterCriticalSection)
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o) (CyIntEnable)
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o) (CySysWdtIsr)
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+                              .\CortexM0\ARM_GCC_493\Debug\SysClock.o (Timer_Interrupt_StartEx)
+.\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_INT.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o) (SCB_2_I2C_ISR)
+c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
+                              .\CortexM0\ARM_GCC_493\Debug\7Seg.o (__aeabi_uidiv)
+c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
+                              .\CortexM0\ARM_GCC_493\Debug\7Seg.o (__aeabi_idiv)
+c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
+                              c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o (__errno)
+c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+                              c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o (exit)
+c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+                              c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o) (_global_impure_ptr)
+c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+                              c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o (__libc_init_array)
+c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+                              c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o (memset)
+
+Allocating common symbols
+Common symbol       size              file
+
+System_Timer        0x28              .\CortexM0\ARM_GCC_493\Debug\main.o
+SCB_2_mstrRdBufPtr  0x4               .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+VideoMemory         0x11              .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+SCB_2_mstrRdBufIndex
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+SCB_2_state         0x1               .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o)
+SCB_2_mstrRdBufSize
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+SCB_2_mstrStatus    0x2               .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+SCB_2_mstrWrBufIndexTmp
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+VideoBufer          0x4               .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+SCB_2_mstrWrBufPtr  0x4               .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+SCB_2_mstrControl   0x1               .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+System_Timer_Flag   0x5               .\CortexM0\ARM_GCC_493\Debug\main.o
+SCB_2_mstrWrBufSize
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+SCB_2_mstrWrBufIndex
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+ .data          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+ .bss           0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+ .data          0x00000000        0x4 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .text          0x00000000       0x78 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .data          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .bss           0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .ARM.extab     0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .ARM.exidx     0x00000000        0x8 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .bss           0x00000000        0x3 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\HDC1050.o
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\HDC1050.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+ .text.Display_Test_1
+                0x00000000       0x98 .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+ .text.Display_Test_2
+                0x00000000       0x88 .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+ .text.Display_Write_Numer
+                0x00000000       0x40 .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\SysClock.o
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\SysClock.o
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\SysClock.o
+ .text.System_Timer_Remove
+                0x00000000       0x5c .\CortexM0\ARM_GCC_493\Debug\SysClock.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .data          0x00000000        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .text._exit    0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .text._sbrk    0x00000000       0x30 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+ .text.SCB_1_ScbModeStop
+                0x00000000        0x8 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+ .text.SCB_1_Stop
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+ .text.SCB_1_SetRxFifoLevel
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+ .text.SCB_1_SetTxFifoLevel
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+ .text.SCB_1_I2CSlaveNackGeneration
+                0x00000000       0x3c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .text.SCB_1_SpiUartReadRxData
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .text.SCB_1_SpiUartGetRxBufferSize
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .text.SCB_1_SpiUartClearRxBuffer
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .text.SCB_1_SpiUartPutArray
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .text.SCB_1_SpiUartClearTxBuffer
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .text.SCB_1_SpiUartDisableIntRx
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .text.SCB_1_SpiUartDisableIntTx
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o)
+ .text.SCB_1_SpiStop
+                0x00000000       0x4c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+ .text.SCB_2_ScbModeStop
+                0x00000000        0x8 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+ .text.SCB_2_Stop
+                0x00000000       0x2c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+ .text.SCB_2_SetRxFifoLevel
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+ .text.SCB_2_SetTxFifoLevel
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+ .text.SCB_2_SetCustomInterruptHandler
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+ .text.SCB_2_I2CSlaveNackGeneration
+                0x00000000       0x3c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o)
+ .text.SCB_2_I2CStop
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .text.SCB_2_I2CMasterSendStart
+                0x00000000       0xd8 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .text.SCB_2_I2CMasterSendStop
+                0x00000000       0x8c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .text.SCB_2_I2CMasterWriteByte
+                0x00000000       0x98 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .text.SCB_2_I2CMasterReadByte
+                0x00000000       0x84 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .text.SCB_2_I2CMasterGetReadBufSize
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .text.SCB_2_I2CMasterGetWriteBufSize
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .text.SCB_2_I2CMasterClearReadBuf
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .text.SCB_2_I2CMasterClearWriteBuf
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .text.SCB_2_I2CMasterSendRestart
+                0x00000000       0xc4 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+ .text.LED_SEG_PWM_Stop
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+ .text.LED_SEG_PWM_ReadCounter
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+ .text.LED_SEG_PWM_ReadControlRegister
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+ .text.LED_SEG_PWM_WriteControlRegister
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+ .text.LED_SEG_PWM_ReadCompare1
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+ .text.LED_SEG_PWM_ReadCompare2
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+ .text.LED_SEG_PWM_ReadPeriod
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(PWM_Mux_Reg.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(PWM_Mux_Reg.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(PWM_Mux_Reg.o)
+ .text.PWM_Mux_Reg_Read
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(PWM_Mux_Reg.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+ .text.SCB_1_ss1_m_Write
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+ .text.SCB_1_ss1_m_SetDriveMode
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+ .text.SCB_1_ss1_m_Read
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+ .text.SCB_1_ss1_m_ReadDataReg
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+ .text.SCB_1_ss1_m_ClearInterrupt
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+ .text.SCB_1_sclk_m_Write
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+ .text.SCB_1_sclk_m_SetDriveMode
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+ .text.SCB_1_sclk_m_Read
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+ .text.SCB_1_sclk_m_ReadDataReg
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+ .text.SCB_1_sclk_m_ClearInterrupt
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+ .text.SCB_1_ss0_m_Write
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+ .text.SCB_1_ss0_m_SetDriveMode
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+ .text.SCB_1_ss0_m_Read
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+ .text.SCB_1_ss0_m_ReadDataReg
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+ .text.SCB_1_ss0_m_ClearInterrupt
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+ .text.SCB_2_sda_Write
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+ .text.SCB_2_sda_SetDriveMode
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+ .text.SCB_2_sda_ReadDataReg
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+ .text.SCB_2_sda_ClearInterrupt
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+ .text.SCB_2_scl_SetDriveMode
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+ .text.SCB_2_scl_ReadDataReg
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+ .text.SCB_2_scl_ClearInterrupt
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyBootAsmGnu.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyBootAsmGnu.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .bss           0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysClkImoStart
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysClkImoStop
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysClkWriteHfclkDirect
+                0x00000000       0x24 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysClkWriteSysclkDiv
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysLvdDisable
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysLvdGetInterruptSource
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysLvdClearInterrupt
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysGetResetReason
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CyDisableInts
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CyEnableInts
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CyIntGetState
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CyIntSetPending
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CyIntClearPending
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CyIntSetSysVector
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CyIntGetSysVector
+                0x00000000       0x1c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CyIntGetVector
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CyIntGetPriority
+                0x00000000       0x2c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySoftwareReset
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysLvdEnable
+                0x00000000       0x44 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CyDelayFreq
+                0x00000000       0x4c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysTickStop
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysTickEnableInterrupt
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysTickEnable
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysTickDisableInterrupt
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysTickSetReload
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysTickGetReload
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysTickGetValue
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysTickGetCountFlag
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysTickServiceCallbacks
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysTickClear
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysTickInit
+                0x00000000       0x44 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysTickStart
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysTickSetCallback
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CySysTickGetCallback
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text.CyGetUniqueId
+                0x00000000       0x70 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysClkIloEnabled
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysClkIloStart
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtGetEnabledStatus
+                0x00000000       0x24 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtSetMode
+                0x00000000       0x38 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysClkLfclkPosedgeRestore
+                0x00000000       0x2c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtGetMode
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtSetClearOnMatch
+                0x00000000       0x38 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtGetClearOnMatch
+                0x00000000       0x24 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtEnable
+                0x00000000       0x40 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtDisable
+                0x00000000       0x44 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtSetCascade
+                0x00000000       0x34 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtGetCascade
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtSetMatch
+                0x00000000       0x3c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtSetToggleBit
+                0x00000000       0x2c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtGetToggleBit
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtGetMatch
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtGetCount
+                0x00000000       0x3c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysClkLfclkPosedgeCatch
+                0x00000000       0x74 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysClkIloStop
+                0x00000000       0x38 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtGetInterruptSource
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtResetCounters
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtSetInterruptCallback
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtGetInterruptCallback
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtEnableCounterIsr
+                0x00000000       0x34 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtDisableCounterIsr
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysTimerDelayUntilMatch
+                0x00000000       0x6c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysTimerDelay
+                0x00000000       0x3c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWatchdogFeed
+                0x00000000       0x60 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .rodata        0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .text.Timer_Interrupt_Interrupt
+                0x00000000        0x4 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .text.Timer_Interrupt_GetVector
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .text.Timer_Interrupt_GetPriority
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .text.Timer_Interrupt_GetState
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .text.Timer_Interrupt_Start
+                0x00000000       0x1c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .text.Timer_Interrupt_Stop
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .text.Timer_Interrupt_SetPending
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .text.Timer_Interrupt_ClearPending
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_INT.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_INT.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_INT.o)
+ .data          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
+ .bss           0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
+ .bss           0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
+ .data          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
+ .text          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .data          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .bss           0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .text.__errno  0x00000000        0xc c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .text          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .data          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .text.exit     0x00000000       0x2c c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .text          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .data          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .data.impure_data
+                0x00000000       0x60 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x00000000        0x4 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .rodata.str1.1
+                0x00000000        0x2 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x00000000        0x4 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .text          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .data          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .bss           0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .text          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+ .text          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+ .data          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+ .bss           0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+ .text          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+ .data          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+ .bss           0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x00000000         0x00008000         xr
+ram              0x20000000         0x00001000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+LOAD c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+LOAD c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+START GROUP
+LOAD .\CortexM0\ARM_GCC_493\Debug\main.o
+LOAD .\CortexM0\ARM_GCC_493\Debug\HDC1050.o
+LOAD .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+LOAD .\CortexM0\ARM_GCC_493\Debug\SysClock.o
+LOAD .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+LOAD .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+LOAD .\CortexM0\ARM_GCC_493\Debug\Thermometr.a
+LOAD C:\My Programs\PSoC\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM0\ARM_GCC_493\Debug\CyComponentLibrary.a
+END GROUP
+START GROUP
+LOAD c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a
+LOAD c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a
+LOAD c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a
+END GROUP
+START GROUP
+LOAD c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a
+LOAD c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a
+END GROUP
+LOAD c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+LOAD c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+START GROUP
+LOAD c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a
+LOAD c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a
+LOAD c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libnosys.a
+END GROUP
+                0x00000000                CY_APPL_ORIGIN = 0x0
+                0x00000080                CY_FLASH_ROW_SIZE = 0x80
+                0x00000001                CY_APPL_NUM = 0x1
+                0x00000001                CY_APPL_MAX = 0x1
+                0x00000040                CY_METADATA_SIZE = 0x40
+                0x00000000                CY_APPL_LOADABLE = 0x0
+                0x00000000                CY_CHECKSUM_EXCLUDE_SIZE = ALIGN (0x0, CY_FLASH_ROW_SIZE)
+                0x00000000                CY_APP_FOR_STACK_AND_COPIER = 0x0
+                0x200001b0                PROVIDE (__cy_heap_start, _end)
+                0x00000001                PROVIDE (__cy_region_num, ((__cy_regions_end - __cy_regions) / 0x10))
+                0x20001000                PROVIDE (__cy_stack, (ORIGIN (ram) + 0x1000))
+                0x20000c00                PROVIDE (__cy_heap_end, (__cy_stack - 0x400))
+
+.cybootloader   0x00000000        0x0
+ *(.cybootloader)
+                0x00000000                appl1_start = CY_APPL_ORIGIN?CY_APPL_ORIGIN:ALIGN (CY_FLASH_ROW_SIZE)
+                0x00003f80                appl2_start = (appl1_start + ALIGN ((((0x8000 - appl1_start) - (0x2 * CY_FLASH_ROW_SIZE)) / 0x2), CY_FLASH_ROW_SIZE))
+                0x00000000                appl_start = (CY_APPL_NUM == 0x1)?appl1_start:appl2_start
+                0x00000001                cy_project_type_bootloader = (appl_start == 0x0)?0x1:0x0
+                0x00000000                cy_project_type_app_for_stack_and_copier = (CY_APP_FOR_STACK_AND_COPIER == 0x1)?0x1:0x0
+
+.text           0x00000000     0x1aa8
+ CREATE_OBJECT_SYMBOLS
+                0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
+ *(.romvectors)
+ .romvectors    0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x00000000                RomVectors
+                0x00000001                ASSERT ((. != __cy_interrupt_vector), No interrupt vector)
+                0x00000001                ASSERT (CY_APPL_ORIGIN?(SIZEOF (.cybootloader) <= CY_APPL_ORIGIN):0x1, Wrong image location)
+                0x00000010                PROVIDE (__cy_reset, Reset)
+ *(.text.Reset)
+ .text.Reset    0x00000010        0x8 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x00000010                Reset
+                0x00000001                ASSERT ((. != __cy_reset), No reset code)
+ *(.psocinit)
+ .psocinit      0x00000018      0x21c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o)
+                0x000000b8                cyfitter_cfg
+                0x00000234                . = MAX (., 0x100)
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text          0x00000234       0x60 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .text.main     0x00000294       0xcc .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x00000294                main
+ .text.HDC1050_Request_Conversion
+                0x00000360       0x2c .\CortexM0\ARM_GCC_493\Debug\HDC1050.o
+                0x00000360                HDC1050_Request_Conversion
+ .text.HDC1050_Get_Temp_And_Humi
+                0x0000038c       0x64 .\CortexM0\ARM_GCC_493\Debug\HDC1050.o
+                0x0000038c                HDC1050_Get_Temp_And_Humi
+ .text.Init_Video_Memory
+                0x000003f0       0x34 .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+                0x000003f0                Init_Video_Memory
+ .text.Display_Set_Video_Memory
+                0x00000424      0x1ac .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+                0x00000424                Display_Set_Video_Memory
+ .text.Display_Scroll_Video_Memory
+                0x000005d0       0x74 .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+                0x000005d0                Display_Scroll_Video_Memory
+ .text.Display_Write_Mem
+                0x00000644       0x84 .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+                0x00000644                Display_Write_Mem
+ .text.System_Timer_ISR
+                0x000006c8       0x84 .\CortexM0\ARM_GCC_493\Debug\SysClock.o
+                0x000006c8                System_Timer_ISR
+ .text.System_Timer_Start
+                0x0000074c       0x5c .\CortexM0\ARM_GCC_493\Debug\SysClock.o
+                0x0000074c                System_Timer_Start
+ .text.System_Timer_Add
+                0x000007a8       0xac .\CortexM0\ARM_GCC_493\Debug\SysClock.o
+                0x000007a8                System_Timer_Add
+ .text.IntDefaultHandler
+                0x00000854        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x00000854                IntDefaultHandler
+ .text.Start_c  0x00000858       0x48 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x00000858                Start_c
+ .text.initialize_psoc
+                0x000008a0       0x48 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x000008a0                initialize_psoc
+ .text.cfg_write_bytes32
+                0x000008e8       0x34 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o)
+ .text.CYMEMZERO
+                0x0000091c        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o)
+ .text.SCB_1_ScbModePostEnable
+                0x00000928        0x8 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+ .text.SCB_1_Init
+                0x00000930        0x8 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+                0x00000930                SCB_1_Init
+ .text.SCB_1_Enable
+                0x00000938       0x18 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+                0x00000938                SCB_1_Enable
+ .text.SCB_1_Start
+                0x00000950       0x20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+                0x00000950                SCB_1_Start
+ .text.SCB_1_SpiUartWriteTxData
+                0x00000970       0x1c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+                0x00000970                SCB_1_SpiUartWriteTxData
+ .text.SCB_1_SpiUartGetTxBufferSize
+                0x0000098c       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+                0x0000098c                SCB_1_SpiUartGetTxBufferSize
+ .text.SCB_1_SpiPostEnable
+                0x0000099c       0x2c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o)
+                0x0000099c                SCB_1_SpiPostEnable
+ .text.SCB_1_SpiSetActiveSlaveSelect
+                0x000009c8       0x20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o)
+                0x000009c8                SCB_1_SpiSetActiveSlaveSelect
+ .text.SCB_1_SpiInit
+                0x000009e8       0x80 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o)
+                0x000009e8                SCB_1_SpiInit
+ .text.SCB_2_ScbEnableIntr
+                0x00000a68        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+ .text.SCB_2_Init
+                0x00000a74        0x8 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+                0x00000a74                SCB_2_Init
+ .text.SCB_2_Enable
+                0x00000a7c       0x18 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+                0x00000a7c                SCB_2_Enable
+ .text.SCB_2_Start
+                0x00000a94       0x20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+                0x00000a94                SCB_2_Start
+ .text.SCB_2_I2CInit
+                0x00000ab4       0xcc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o)
+                0x00000ab4                SCB_2_I2CInit
+ .text.SCB_2_I2CMasterStatus
+                0x00000b80       0x30 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+                0x00000b80                SCB_2_I2CMasterStatus
+ .text.SCB_2_I2CMasterClearStatus
+                0x00000bb0       0x20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+                0x00000bb0                SCB_2_I2CMasterClearStatus
+ .text.SCB_2_I2CReStartGeneration
+                0x00000bd0       0x98 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+                0x00000bd0                SCB_2_I2CReStartGeneration
+ .text.SCB_2_I2CMasterWriteBuf
+                0x00000c68       0xec .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+                0x00000c68                SCB_2_I2CMasterWriteBuf
+ .text.SCB_2_I2CMasterReadBuf
+                0x00000d54       0xfc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+                0x00000d54                SCB_2_I2CMasterReadBuf
+ .text.LED_SEG_PWM_Enable
+                0x00000e50       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+                0x00000e50                LED_SEG_PWM_Enable
+ .text.LED_SEG_PWM_WriteCounter
+                0x00000e60        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+                0x00000e60                LED_SEG_PWM_WriteCounter
+ .text.LED_SEG_PWM_WritePeriod
+                0x00000e6c        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+                0x00000e6c                LED_SEG_PWM_WritePeriod
+ .text.LED_SEG_PWM_WriteCompare1
+                0x00000e78        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+                0x00000e78                LED_SEG_PWM_WriteCompare1
+ .text.LED_SEG_PWM_WriteCompare2
+                0x00000e84        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+                0x00000e84                LED_SEG_PWM_WriteCompare2
+ .text.LED_SEG_PWM_SetInterruptMode
+                0x00000e90        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+                0x00000e90                LED_SEG_PWM_SetInterruptMode
+ .text.LED_SEG_PWM_ReadStatusRegister
+                0x00000e9c        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+                0x00000e9c                LED_SEG_PWM_ReadStatusRegister
+ .text.LED_SEG_PWM_ReadCapture
+                0x00000ea8        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+                0x00000ea8                LED_SEG_PWM_ReadCapture
+ .text.LED_SEG_PWM_ClearFIFO
+                0x00000eb4       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+                0x00000eb4                LED_SEG_PWM_ClearFIFO
+ .text.LED_SEG_PWM_Init
+                0x00000ec8       0x58 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+                0x00000ec8                LED_SEG_PWM_Init
+ .text.LED_SEG_PWM_Start
+                0x00000f20       0x20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+                0x00000f20                LED_SEG_PWM_Start
+ .text.PWM_Mux_Reg_Write
+                0x00000f40        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(PWM_Mux_Reg.o)
+                0x00000f40                PWM_Mux_Reg_Write
+ .text.SCB_2_sda_Read
+                0x00000f4c       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+                0x00000f4c                SCB_2_sda_Read
+ .text.SCB_2_scl_Write
+                0x00000f5c       0x18 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+                0x00000f5c                SCB_2_scl_Write
+ .text.SCB_2_scl_Read
+                0x00000f74       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+                0x00000f74                SCB_2_scl_Read
+ *fill*         0x00000f84        0x4 
+ .text          0x00000f88       0x28 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyBootAsmGnu.o)
+                0x00000f88                CyDelayCycles
+                0x00000f9c                CyEnterCriticalSection
+                0x00000fa4                CyExitCriticalSection
+ .text.CyIntEnable
+                0x00000fb0       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+                0x00000fb0                CyIntEnable
+ .text.CyIntDisable
+                0x00000fc4       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+                0x00000fc4                CyIntDisable
+ .text.CyHalt   0x00000fd8        0x4 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+                0x00000fd8                CyHalt
+ .text.CyIntSetVector
+                0x00000fdc       0x24 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+                0x00000fdc                CyIntSetVector
+ .text.CyIntSetPriority
+                0x00001000       0x4c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+                0x00001000                CyIntSetPriority
+ .text.CyDelay  0x0000104c       0x30 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+                0x0000104c                CyDelay
+ .text.CyDelayUs
+                0x0000107c       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+                0x0000107c                CyDelayUs
+ .text.CySysClkWriteImoFreq
+                0x00001090      0x164 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+                0x00001090                CySysClkWriteImoFreq
+ .text.CySysWdtLocked
+                0x000011f4       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .text.CySysWdtLock
+                0x00001208       0x1c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+                0x00001208                CySysWdtLock
+ .text.CySysWdtUnlock
+                0x00001224       0x30 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+                0x00001224                CySysWdtUnlock
+ .text.CySysWdtClearInterrupt
+                0x00001254       0x4c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+                0x00001254                CySysWdtClearInterrupt
+ .text.CySysWdtIsr
+                0x000012a0       0xa4 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+                0x000012a0                CySysWdtIsr
+ .text.Timer_Interrupt_SetVector
+                0x00001344        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+                0x00001344                Timer_Interrupt_SetVector
+ .text.Timer_Interrupt_SetPriority
+                0x00001350       0x24 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+                0x00001350                Timer_Interrupt_SetPriority
+ .text.Timer_Interrupt_Enable
+                0x00001374        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+                0x00001374                Timer_Interrupt_Enable
+ .text.Timer_Interrupt_Disable
+                0x00001380        0xc .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+                0x00001380                Timer_Interrupt_Disable
+ .text.Timer_Interrupt_StartEx
+                0x0000138c       0x1c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+                0x0000138c                Timer_Interrupt_StartEx
+ .text.SCB_2_I2C_ISR
+                0x000013a8      0x3a0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_INT.o)
+                0x000013a8                SCB_2_I2C_ISR
+ .text          0x00001748      0x120 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
+                0x00001748                __aeabi_uidiv
+                0x00001748                __udivsi3
+                0x00001854                __aeabi_uidivmod
+ .text          0x00001868      0x1e0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
+                0x00001868                __divsi3
+                0x00001868                __aeabi_idiv
+                0x00001a34                __aeabi_idivmod
+ .text          0x00001a48        0x4 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
+                0x00001a48                __aeabi_idiv0
+                0x00001a48                __aeabi_ldiv0
+ .text.__libc_init_array
+                0x00001a4c       0x4c c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+                0x00001a4c                __libc_init_array
+ .text.memset   0x00001a98       0x10 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+                0x00001a98                memset
+ *(.plt)
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+ *(.bootloader)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ *(.gcc_except_table)
+
+.v4_bx          0x00001aa8        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x00001aa8        0x0
+ .iplt          0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame       0x00001aa8        0x4
+ *(.eh_frame)
+ .eh_frame      0x00001aa8        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .eh_frame      0x00001aa8        0x4 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+                0x00001aac                PROVIDE (__exidx_start, .)
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00001aac                __exidx_end = .
+
+.rodata         0x00001aac      0x194
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x00001aac      0x12c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o)
+ .rodata        0x00001bd8       0x30 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+                0x00001bd8                cyImoFreqMhz2Reg
+                0x00001c08                . = ALIGN (0x4)
+ *(.init)
+ .init          0x00001c08        0x4 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+                0x00001c08                _init
+ .init          0x00001c0c        0x8 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+                0x00001c14                . = ALIGN (0x4)
+                0x00001c14                __preinit_array_start = .
+ *(.preinit_array)
+                0x00001c14                __preinit_array_end = .
+                0x00001c14                . = ALIGN (0x4)
+                0x00001c14                __init_array_start = .
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x00001c14        0x4 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .init_array    0x00001c18        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x00001c1c                __init_array_end = .
+                0x00001c1c                . = ALIGN (0x4)
+ *(.fini)
+ .fini          0x00001c1c        0x4 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+                0x00001c1c                _fini
+ .fini          0x00001c20        0x8 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+                0x00001c28                . = ALIGN (0x4)
+                0x00001c28                __fini_array_start = .
+ *(.fini_array)
+ .fini_array    0x00001c28        0x4 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x00001c2c                __fini_array_end = .
+                0x00001c2c                . = ALIGN (0x4)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *crtend.o(.ctors)
+                0x00001c2c                . = ALIGN (0x4)
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+                0x00001c2c                . = ALIGN (0x4)
+                0x00001c2c                __cy_regions = .
+                0x00001c2c        0x4 LONG 0x1c40 __cy_region_init_ram
+                0x00001c30        0x4 LONG 0x200000c8 __cy_region_start_data
+                0x00001c34        0x4 LONG 0x30 __cy_region_init_size_ram
+                0x00001c38        0x4 LONG 0xb8 __cy_region_zero_size_ram
+                0x00001c3c                __cy_regions_end = .
+                0x00001c40                . = ALIGN (0x8)
+ *fill*         0x00001c3c        0x4 
+                0x00001c40                _etext = .
+
+.cy_checksum_exclude
+                0x00001c40        0x0
+ *(.cy_checksum_exclude)
+
+.ramvectors     0x20000000       0xc0
+                0x20000000                __cy_region_start_ram = .
+ *(.ramvectors)
+ .ramvectors    0x20000000       0xc0 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x20000000                CyRamVectors
+
+.noinit         0x200000c0        0x4
+ *(.noinit)
+ .noinit        0x200000c0        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+
+.data           0x200000c8       0x30 load address 0x00001c40
+                0x200000c8                __cy_region_start_data = .
+ *(.jcr)
+ .jcr           0x200000c8        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .jcr           0x200000c8        0x4 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+ *(.got.plt)
+ *(.got)
+ *(.shdata)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x200000cc        0x8 .\CortexM0\ARM_GCC_493\Debug\HDC1050.o
+                0x200000cc                HDC1050_Slave_Adress
+                0x200000d0                Temp
+                0x200000d1                Humi
+ .data          0x200000d4        0xc .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+                0x200000d4                Font
+ .data          0x200000e0       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+                0x200000e0                cydelay32kMs
+                0x200000e4                cydelayFreqKhz
+                0x200000e8                cydelayFreqMhz
+                0x200000ec                cydelayFreqHz
+ .data          0x200000f0        0x4 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+                0x200000f8                . = ALIGN (0x8)
+ *fill*         0x200000f4        0x4 
+ *(.ram)
+                0x200000f8                _edata = .
+
+.igot.plt       0x200000f8        0x0 load address 0x00001c70
+ .igot.plt      0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+
+.bss            0x200000f8       0xb8 load address 0x00001c70
+                0x200000f8                PROVIDE (__bss_start__, .)
+ *(.shbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x200000f8       0x1c c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .bss           0x20000114        0x1 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+                0x20000114                SCB_1_initVar
+ *fill*         0x20000115        0x3 
+ .bss           0x20000118        0x8 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+                0x20000118                SCB_2_initVar
+                0x2000011c                SCB_2_customIntrHandler
+ .bss           0x20000120        0x1 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+                0x20000120                LED_SEG_PWM_initVar
+ *fill*         0x20000121        0x3 
+ .bss           0x20000124       0x1c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ *(COMMON)
+ COMMON         0x20000140       0x2d .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x20000140                System_Timer
+                0x20000168                System_Timer_Flag
+ *fill*         0x2000016d        0x3 
+ COMMON         0x20000170       0x18 .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+                0x20000170                VideoMemory
+                0x20000184                VideoBufer
+ COMMON         0x20000188        0x1 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o)
+                0x20000188                SCB_2_state
+ *fill*         0x20000189        0x3 
+ COMMON         0x2000018c       0x24 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+                0x2000018c                SCB_2_mstrRdBufPtr
+                0x20000190                SCB_2_mstrRdBufIndex
+                0x20000194                SCB_2_mstrRdBufSize
+                0x20000198                SCB_2_mstrStatus
+                0x2000019c                SCB_2_mstrWrBufIndexTmp
+                0x200001a0                SCB_2_mstrWrBufPtr
+                0x200001a4                SCB_2_mstrControl
+                0x200001a8                SCB_2_mstrWrBufSize
+                0x200001ac                SCB_2_mstrWrBufIndex
+                0x200001b0                . = ALIGN (0x8)
+ *(.ram.b)
+                0x200001b0                _end = .
+                0x200001b0                __end = .
+                0x200001b0                PROVIDE (end, .)
+                0x200001b0                PROVIDE (__bss_end__, .)
+                0x00001c40                __cy_region_init_ram = LOADADDR (.data)
+                0x00000030                __cy_region_init_size_ram = (_edata - ADDR (.data))
+                0x000000b8                __cy_region_zero_size_ram = (_end - _edata)
+
+.heap           0x200001b0       0x80 load address 0x00001c70
+                0x200001b0                . = _end
+                0x20000230                . = (. + 0x80)
+ *fill*         0x200001b0       0x80 
+                0x20000230                __cy_heap_limit = .
+
+.stack          0x20000c00      0x400
+                0x20000c00                __cy_stack_limit = .
+                0x20001000                . = (. + 0x400)
+ *fill*         0x20000c00      0x400 
+                0x00000001                ASSERT ((__cy_stack_limit >= __cy_heap_limit), region RAM overflowed with stack)
+                0x00000000                cy_checksum_exclude_size = (CY_APPL_LOADABLE == 0x1)?SIZEOF (.cy_checksum_exclude):0x0
+                0x00000001                ASSERT ((cy_checksum_exclude_size <= CY_CHECKSUM_EXCLUDE_SIZE), CY_BOOT: Section .cy_checksum_exclude size exceedes specified limit.)
+                0x00007fc0                cyloadermeta_start = (cy_project_type_bootloader || cy_project_type_app_for_stack_and_copier)?(0x8000 - CY_METADATA_SIZE):0xf0000000
+
+.cyloadermeta
+ *(.cyloadermeta)
+                0x00007fc0                cyloadablemeta_start = cy_project_type_app_for_stack_and_copier?((0x8000 - CY_FLASH_ROW_SIZE) - CY_METADATA_SIZE):((0x8000 - (CY_FLASH_ROW_SIZE * (CY_APPL_NUM - 0x1))) - CY_METADATA_SIZE)
+
+.cyloadablemeta
+ *(.cyloadablemeta)
+
+.cyflashprotect
+                0x90400000       0x20
+ *(.cyflashprotect)
+ .cyflashprotect
+                0x90400000       0x20 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+                0x90400000                cy_meta_flashprotect
+
+.cymeta         0x90500000        0xc
+ *(.cymeta)
+ .cymeta        0x90500000        0xc .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+                0x90500000                cy_metadata
+
+.cychipprotect  0x90600000        0x4
+ *(.cychipprotect)
+ .cychipprotect
+                0x90600000        0x4 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+                0x90600000                cy_meta_chipprotect
+
+.rel.dyn        0x00001c70        0x0 load address 0x90600004
+ .rel.iplt      0x00000000        0x0 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x8d8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_aranges
+                0x00000020       0x28 .\CortexM0\ARM_GCC_493\Debug\HDC1050.o
+ .debug_aranges
+                0x00000048       0x50 .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+ .debug_aranges
+                0x00000098       0x38 .\CortexM0\ARM_GCC_493\Debug\SysClock.o
+ .debug_aranges
+                0x000000d0       0x18 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .debug_aranges
+                0x000000e8       0x48 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_aranges
+                0x00000130       0x38 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o)
+ .debug_aranges
+                0x00000168       0x60 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+ .debug_aranges
+                0x000001c8       0x60 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .debug_aranges
+                0x00000228       0x38 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o)
+ .debug_aranges
+                0x00000260       0x68 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+ .debug_aranges
+                0x000002c8       0x28 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o)
+ .debug_aranges
+                0x000002f0       0x88 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .debug_aranges
+                0x00000378       0xa8 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+ .debug_aranges
+                0x00000420       0x28 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(PWM_Mux_Reg.o)
+ .debug_aranges
+                0x00000448       0x40 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+ .debug_aranges
+                0x00000488       0x40 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+ .debug_aranges
+                0x000004c8       0x40 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+ .debug_aranges
+                0x00000508       0x40 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+ .debug_aranges
+                0x00000548       0x40 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+ .debug_aranges
+                0x00000588       0x20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyBootAsmGnu.o)
+ .debug_aranges
+                0x000005a8      0x170 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .debug_aranges
+                0x00000718      0x120 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .debug_aranges
+                0x00000838       0x80 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .debug_aranges
+                0x000008b8       0x20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_INT.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x4ac2
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x345 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_info    0x00000345      0x22c .\CortexM0\ARM_GCC_493\Debug\HDC1050.o
+ .debug_info    0x00000571      0x3ba .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+ .debug_info    0x0000092b      0x239 .\CortexM0\ARM_GCC_493\Debug\SysClock.o
+ .debug_info    0x00000b64       0xfd .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .debug_info    0x00000c61      0x38a .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_info    0x00000feb      0x3cb .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o)
+ .debug_info    0x000013b6      0x21a .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+ .debug_info    0x000015d0      0x215 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .debug_info    0x000017e5      0x18d .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o)
+ .debug_info    0x00001972      0x2a7 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+ .debug_info    0x00001c19      0x1a8 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o)
+ .debug_info    0x00001dc1      0x682 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .debug_info    0x00002443      0x37d .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+ .debug_info    0x000027c0       0xd5 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(PWM_Mux_Reg.o)
+ .debug_info    0x00002895      0x14e .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+ .debug_info    0x000029e3      0x150 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+ .debug_info    0x00002b33      0x150 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+ .debug_info    0x00002c83      0x150 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+ .debug_info    0x00002dd3      0x150 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+ .debug_info    0x00002f23       0x96 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyBootAsmGnu.o)
+ .debug_info    0x00002fb9      0xa61 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .debug_info    0x00003a1a      0xc20 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .debug_info    0x0000463a      0x2fe .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .debug_info    0x00004938      0x18a .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_INT.o)
+
+.debug_abbrev   0x00000000     0x1c84
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x10b .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_abbrev  0x0000010b       0xfe .\CortexM0\ARM_GCC_493\Debug\HDC1050.o
+ .debug_abbrev  0x00000209      0x170 .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+ .debug_abbrev  0x00000379      0x144 .\CortexM0\ARM_GCC_493\Debug\SysClock.o
+ .debug_abbrev  0x000004bd       0x5d .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .debug_abbrev  0x0000051a      0x1fe .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_abbrev  0x00000718      0x1d5 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o)
+ .debug_abbrev  0x000008ed       0xfa .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+ .debug_abbrev  0x000009e7      0x176 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .debug_abbrev  0x00000b5d      0x10f .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o)
+ .debug_abbrev  0x00000c6c      0x168 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+ .debug_abbrev  0x00000dd4      0x100 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o)
+ .debug_abbrev  0x00000ed4      0x189 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .debug_abbrev  0x0000105d      0x15a .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+ .debug_abbrev  0x000011b7       0x8e .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(PWM_Mux_Reg.o)
+ .debug_abbrev  0x00001245       0xc6 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+ .debug_abbrev  0x0000130b       0xb7 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+ .debug_abbrev  0x000013c2       0xb7 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+ .debug_abbrev  0x00001479       0xb7 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+ .debug_abbrev  0x00001530       0xb7 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+ .debug_abbrev  0x000015e7       0x14 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x000015fb      0x20d .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .debug_abbrev  0x00001808      0x226 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .debug_abbrev  0x00001a2e      0x1c1 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .debug_abbrev  0x00001bef       0x95 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_INT.o)
+
+.debug_line     0x00000000     0x2305
+ *(.debug_line)
+ .debug_line    0x00000000       0xcb .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_line    0x000000cb       0x92 .\CortexM0\ARM_GCC_493\Debug\HDC1050.o
+ .debug_line    0x0000015d      0x1eb .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+ .debug_line    0x00000348      0x228 .\CortexM0\ARM_GCC_493\Debug\SysClock.o
+ .debug_line    0x00000570       0x53 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .debug_line    0x000005c3      0x232 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_line    0x000007f5      0x168 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o)
+ .debug_line    0x0000095d      0x144 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+ .debug_line    0x00000aa1      0x134 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .debug_line    0x00000bd5      0x107 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o)
+ .debug_line    0x00000cdc      0x160 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+ .debug_line    0x00000e3c       0xc1 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o)
+ .debug_line    0x00000efd      0x2d9 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .debug_line    0x000011d6      0x1bb .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+ .debug_line    0x00001391       0x76 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(PWM_Mux_Reg.o)
+ .debug_line    0x00001407       0xb0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+ .debug_line    0x000014b7       0xb2 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+ .debug_line    0x00001569       0xb1 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+ .debug_line    0x0000161a       0xaf .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+ .debug_line    0x000016c9       0xaf .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+ .debug_line    0x00001778       0x69 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyBootAsmGnu.o)
+ .debug_line    0x000017e1      0x42c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .debug_line    0x00001c0d      0x3fe .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .debug_line    0x0000200b      0x174 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .debug_line    0x0000217f      0x186 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_INT.o)
+
+.debug_frame    0x00000000     0x1438
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x2c .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_frame   0x0000002c       0x48 .\CortexM0\ARM_GCC_493\Debug\HDC1050.o
+ .debug_frame   0x00000074       0xd8 .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+ .debug_frame   0x0000014c       0x78 .\CortexM0\ARM_GCC_493\Debug\SysClock.o
+ .debug_frame   0x000001c4       0xb0 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_frame   0x00000274       0x88 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o)
+ .debug_frame   0x000002fc       0xe8 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+ .debug_frame   0x000003e4       0xb0 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .debug_frame   0x00000494       0x68 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o)
+ .debug_frame   0x000004fc       0xf8 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+ .debug_frame   0x000005f4       0x3c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o)
+ .debug_frame   0x00000630      0x178 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .debug_frame   0x000007a8      0x154 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+ .debug_frame   0x000008fc       0x30 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(PWM_Mux_Reg.o)
+ .debug_frame   0x0000092c       0x60 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+ .debug_frame   0x0000098c       0x60 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+ .debug_frame   0x000009ec       0x60 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+ .debug_frame   0x00000a4c       0x60 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+ .debug_frame   0x00000aac       0x60 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+ .debug_frame   0x00000b0c      0x3b4 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .debug_frame   0x00000ec0      0x368 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .debug_frame   0x00001228      0x110 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .debug_frame   0x00001338       0x2c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_INT.o)
+ .debug_frame   0x00001364       0x20 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00001384       0x20 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
+ .debug_frame   0x000013a4       0x20 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x000013c4       0x28 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x000013ec       0x2c c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x00001418       0x20 c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+
+.debug_str      0x00000000     0x1ca6
+ *(.debug_str)
+ .debug_str     0x00000000      0x28d .\CortexM0\ARM_GCC_493\Debug\main.o
+                                0x2df (size before relaxing)
+ .debug_str     0x0000028d       0x95 .\CortexM0\ARM_GCC_493\Debug\HDC1050.o
+                                0x25a (size before relaxing)
+ .debug_str     0x00000322       0xe9 .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+                                0x301 (size before relaxing)
+ .debug_str     0x0000040b       0x75 .\CortexM0\ARM_GCC_493\Debug\SysClock.o
+                                0x26a (size before relaxing)
+ .debug_str     0x00000480       0x5b .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+                                0x1d4 (size before relaxing)
+ .debug_str     0x000004db      0x150 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                                0x2fb (size before relaxing)
+ .debug_str     0x0000062b       0xfb .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o)
+                                0x2d2 (size before relaxing)
+ .debug_str     0x00000726      0x10f .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+                                0x2a1 (size before relaxing)
+ .debug_str     0x00000835      0x10b .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+                                0x2d2 (size before relaxing)
+ .debug_str     0x00000940       0x70 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o)
+                                0x244 (size before relaxing)
+ .debug_str     0x000009b0      0x137 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+                                0x2f1 (size before relaxing)
+ .debug_str     0x00000ae7       0x7d .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o)
+                                0x24f (size before relaxing)
+ .debug_str     0x00000b64      0x229 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+                                0x487 (size before relaxing)
+ .debug_str     0x00000d8d      0x248 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+                                0x3f2 (size before relaxing)
+ .debug_str     0x00000fd5       0x38 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(PWM_Mux_Reg.o)
+                                0x1c7 (size before relaxing)
+ .debug_str     0x0000100d       0x97 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+                                0x231 (size before relaxing)
+ .debug_str     0x000010a4       0x89 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+                                0x237 (size before relaxing)
+ .debug_str     0x0000112d       0x84 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+                                0x231 (size before relaxing)
+ .debug_str     0x000011b1       0x7b .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+                                0x225 (size before relaxing)
+ .debug_str     0x0000122c       0x6b .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+                                0x225 (size before relaxing)
+ .debug_str     0x00001297      0x3e6 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+                                0x64f (size before relaxing)
+ .debug_str     0x0000167d      0x471 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+                                0x659 (size before relaxing)
+ .debug_str     0x00001aee      0x16b .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+                                0x370 (size before relaxing)
+ .debug_str     0x00001c59       0x4d .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_INT.o)
+                                0x2be (size before relaxing)
+
+.debug_loc      0x00000000     0x1e32
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x42 .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+ .debug_loc     0x00000042      0x14f .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_loc     0x00000191      0x118 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o)
+ .debug_loc     0x000002a9       0x7e .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+ .debug_loc     0x00000327       0x96 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .debug_loc     0x000003bd       0x4a .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o)
+ .debug_loc     0x00000407       0x7e .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+ .debug_loc     0x00000485      0x882 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .debug_loc     0x00000d07       0x26 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+ .debug_loc     0x00000d2d       0x60 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+ .debug_loc     0x00000d8d       0x81 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+ .debug_loc     0x00000e0e       0x81 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+ .debug_loc     0x00000e8f       0x81 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+ .debug_loc     0x00000f10       0x81 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+ .debug_loc     0x00000f91      0x534 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .debug_loc     0x000014c5      0x7df .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .debug_loc     0x00001ca4       0x82 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .debug_loc     0x00001d26      0x10c .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_INT.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_ranges   0x00000000      0x730
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_ranges  0x00000010       0x18 .\CortexM0\ARM_GCC_493\Debug\HDC1050.o
+ .debug_ranges  0x00000028       0x40 .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+ .debug_ranges  0x00000068       0x28 .\CortexM0\ARM_GCC_493\Debug\SysClock.o
+ .debug_ranges  0x00000090       0x38 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_ranges  0x000000c8       0x28 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o)
+ .debug_ranges  0x000000f0       0x50 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+ .debug_ranges  0x00000140       0x50 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .debug_ranges  0x00000190       0x28 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o)
+ .debug_ranges  0x000001b8       0x58 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+ .debug_ranges  0x00000210       0x18 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o)
+ .debug_ranges  0x00000228       0x78 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .debug_ranges  0x000002a0       0x98 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+ .debug_ranges  0x00000338       0x18 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(PWM_Mux_Reg.o)
+ .debug_ranges  0x00000350       0x30 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+ .debug_ranges  0x00000380       0x30 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+ .debug_ranges  0x000003b0       0x30 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+ .debug_ranges  0x000003e0       0x30 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+ .debug_ranges  0x00000410       0x30 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+ .debug_ranges  0x00000440      0x160 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .debug_ranges  0x000005a0      0x110 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .debug_ranges  0x000006b0       0x70 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .debug_ranges  0x00000720       0x10 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_INT.o)
+
+.comment        0x00000000       0x70
+ .comment       0x00000000       0x70 .\CortexM0\ARM_GCC_493\Debug\main.o
+                                 0x71 (size before relaxing)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\HDC1050.o
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\SysClock.o
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(PWM_Mux_Reg.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_INT.o)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+.ARM.attributes
+                0x00000000       0x28
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x1e c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+ .ARM.attributes
+                0x0000001e       0x2c c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .ARM.attributes
+                0x0000004a       0x1b c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .ARM.attributes
+                0x00000065       0x31 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .ARM.attributes
+                0x00000096       0x31 .\CortexM0\ARM_GCC_493\Debug\HDC1050.o
+ .ARM.attributes
+                0x000000c7       0x31 .\CortexM0\ARM_GCC_493\Debug\7Seg.o
+ .ARM.attributes
+                0x000000f8       0x31 .\CortexM0\ARM_GCC_493\Debug\SysClock.o
+ .ARM.attributes
+                0x00000129       0x31 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .ARM.attributes
+                0x0000015a       0x31 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .ARM.attributes
+                0x0000018b       0x31 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(cyfitter_cfg.o)
+ .ARM.attributes
+                0x000001bc       0x31 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1.o)
+ .ARM.attributes
+                0x000001ed       0x31 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI_UART.o)
+ .ARM.attributes
+                0x0000021e       0x31 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_SPI.o)
+ .ARM.attributes
+                0x0000024f       0x31 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2.o)
+ .ARM.attributes
+                0x00000280       0x31 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C.o)
+ .ARM.attributes
+                0x000002b1       0x31 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_MASTER.o)
+ .ARM.attributes
+                0x000002e2       0x31 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(LED_SEG_PWM.o)
+ .ARM.attributes
+                0x00000313       0x31 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(PWM_Mux_Reg.o)
+ .ARM.attributes
+                0x00000344       0x31 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss1_m.o)
+ .ARM.attributes
+                0x00000375       0x31 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_sclk_m.o)
+ .ARM.attributes
+                0x000003a6       0x31 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_1_ss0_m.o)
+ .ARM.attributes
+                0x000003d7       0x31 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_sda.o)
+ .ARM.attributes
+                0x00000408       0x31 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_scl.o)
+ .ARM.attributes
+                0x00000439       0x21 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyBootAsmGnu.o)
+ .ARM.attributes
+                0x0000045a       0x31 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLib.o)
+ .ARM.attributes
+                0x0000048b       0x31 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(CyLFClk.o)
+ .ARM.attributes
+                0x000004bc       0x31 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(Timer_Interrupt.o)
+ .ARM.attributes
+                0x000004ed       0x31 .\CortexM0\ARM_GCC_493\Debug\Thermometr.a(SCB_2_I2C_INT.o)
+ .ARM.attributes
+                0x0000051e       0x1e c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x0000053c       0x1e c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x0000055a       0x1e c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000578       0x2c c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .ARM.attributes
+                0x000005a4       0x2c c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x000005d0       0x2c c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x000005fc       0x2c c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000628       0x2c c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000654       0x2c c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+ .ARM.attributes
+                0x00000680       0x1e c:/my programs/psoc/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+
+/DISCARD/
+ *(.note.GNU-stack)
+OUTPUT(.\CortexM0\ARM_GCC_493\Debug\Thermometr.elf elf32-littlearm)
