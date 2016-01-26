@@ -1,0 +1,134 @@
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/CortexM0/ARM_GCC_493/Debug/7Seg.o : C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Clock_1.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/LED_SEG_PWM.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/NRF_CE.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/NRF_CE_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/NRF_IRQ.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/NRF_IRQ_ISR.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/NRF_IRQ_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/PWM_Mux_Reg.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Project.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_BOOT.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_PINS.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_PVT.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_SCBCLK.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_SPI_UART.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_SPI_UART_PVT.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_miso_m.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_miso_m_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_mosi_m.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_mosi_m_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_sclk_m.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_sclk_m_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_ss0_m.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_ss0_m_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_ss1_m.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_ss1_m_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_BOOT.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_I2C.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_I2C_PVT.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_PINS.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_PVT.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_SCBCLK.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_SCB_IRQ.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_scl.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_scl_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_sda.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_sda_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_1.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_1_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_2.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_2_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_3.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_3_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_4.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_4_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Timer_Interrupt.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/core_cm0.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/core_cmFunc.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/core_cmInstr.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cyPm.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cydisabledsheets.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/7Seg.c C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/7Seg.h 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Clock_1.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/CyFlash.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/CyLib.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/LED_SEG_PWM.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/NRF_CE.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/NRF_CE_aliases.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/NRF_IRQ.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/NRF_IRQ_ISR.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/NRF_IRQ_aliases.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/PWM_Mux_Reg.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Project.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_BOOT.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_PINS.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_PVT.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_SCBCLK.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_SPI_UART.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_SPI_UART_PVT.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_miso_m.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_miso_m_aliases.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_mosi_m.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_mosi_m_aliases.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_sclk_m.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_sclk_m_aliases.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_ss0_m.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_ss0_m_aliases.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_ss1_m.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_ss1_m_aliases.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_BOOT.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_I2C.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_I2C_PVT.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_PINS.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_PVT.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_SCBCLK.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_SCB_IRQ.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_scl.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_scl_aliases.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_sda.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_sda_aliases.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_1.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_1_aliases.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_2.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_2_aliases.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_3.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_3_aliases.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_4.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_4_aliases.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Timer_Interrupt.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/core_cm0.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/core_cmFunc.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/core_cmInstr.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cyPm.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cydisabledsheets.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cyfitter.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cypins.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cytypes.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/7Seg.c : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/7Seg.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/CortexM0/ARM_GCC_493/Debug/main.o : C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Clock_1.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/LED_SEG_PWM.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/NRF_CE.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/NRF_CE_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/NRF_IRQ.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/NRF_IRQ_ISR.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/NRF_IRQ_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/PWM_Mux_Reg.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Project.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_BOOT.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_PINS.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_PVT.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_SCBCLK.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_SPI_UART.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_SPI_UART_PVT.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_miso_m.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_miso_m_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_mosi_m.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_mosi_m_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_sclk_m.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_sclk_m_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_ss0_m.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_ss0_m_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_ss1_m.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_1_ss1_m_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_BOOT.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_I2C.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_I2C_PVT.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_PINS.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_PVT.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_SCBCLK.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_SCB_IRQ.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_scl.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_scl_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_sda.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/SCB_2_sda_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_1.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_1_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_2.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_2_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_3.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_3_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_4.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Seg_4_aliases.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/Timer_Interrupt.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/core_cm0.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/core_cmFunc.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/core_cmInstr.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cyPm.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cydisabledsheets.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/Generated_Source/PSoC4/project.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/7Seg.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/SysClock.h C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/main.c 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/SysClock.h : 
+
+C:/Users/Vit/Documents/PSoC\ Creator/Workspace_Thermo/Thermometr.cydsn/main.c : 
+
