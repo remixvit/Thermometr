@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccn8ViCW.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
   30:.\Generated_Source\PSoC4/SCB_1_SCBCLK.c **** *
   31:.\Generated_Source\PSoC4/SCB_1_SCBCLK.c **** * Parameters:
   32:.\Generated_Source\PSoC4/SCB_1_SCBCLK.c **** *  alignClkDiv:  The divider to which phase alignment is performed when the
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 2
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccn8ViCW.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/SCB_1_SCBCLK.c **** *    clock is started.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
   38              	.L3:
   39 000e C046     		.align	2
   40              	.L2:
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 3
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccn8ViCW.s 			page 3
 
 
   41 0010 00000240 		.word	1073872896
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
   57 0002 1368     		ldr	r3, [r2]
   58 0004 5B00     		lsl	r3, r3, #1
   59 0006 5B08     		lsr	r3, r3, #1
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 4
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccn8ViCW.s 			page 4
 
 
   60 0008 1360     		str	r3, [r2]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
  145:.\Generated_Source\PSoC4/SCB_1_SCBCLK.c ****     regVal = maskVal |
  146:.\Generated_Source\PSoC4/SCB_1_SCBCLK.c ****         ((uint32)((uint32)clkDivider <<  SCB_1_SCBCLK_DIV_INT_SHIFT) & SCB_1_SCBCLK_DIV_INT_MASK) |
  147:.\Generated_Source\PSoC4/SCB_1_SCBCLK.c ****         ((uint32)((uint32)clkFractional << SCB_1_SCBCLK_DIV_FRAC_SHIFT) & SCB_1_SCBCLK_DIV_FRAC_MAS
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 5
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccn8ViCW.s 			page 5
 
 
  148:.\Generated_Source\PSoC4/SCB_1_SCBCLK.c ****     
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
  173:.\Generated_Source\PSoC4/SCB_1_SCBCLK.c **** *  divide by 2, the return value will be 1.
  174:.\Generated_Source\PSoC4/SCB_1_SCBCLK.c **** *
  175:.\Generated_Source\PSoC4/SCB_1_SCBCLK.c **** *******************************************************************************/
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 6
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccn8ViCW.s 			page 6
 
 
  176:.\Generated_Source\PSoC4/SCB_1_SCBCLK.c **** uint16 SCB_1_SCBCLK_GetDividerRegister(void)
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
  204:.\Generated_Source\PSoC4/SCB_1_SCBCLK.c **** #else
  205:.\Generated_Source\PSoC4/SCB_1_SCBCLK.c ****     return 0u;
  206:.\Generated_Source\PSoC4/SCB_1_SCBCLK.c **** #endif /* SCB_1_SCBCLK__FRAC_MASK */
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 7
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccn8ViCW.s 			page 7
 
 
  207:.\Generated_Source\PSoC4/SCB_1_SCBCLK.c **** }
@@ -379,46 +379,46 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
  151 0006 00000000 		.4byte	.Ldebug_abbrev0
  152 000a 04       		.byte	0x4
  153 000b 01       		.uleb128 0x1
- 154 000c 92010000 		.4byte	.LASF24
+ 154 000c 4C010000 		.4byte	.LASF24
  155 0010 01       		.byte	0x1
- 156 0011 30020000 		.4byte	.LASF25
- 157 0015 6B000000 		.4byte	.LASF26
+ 156 0011 EA010000 		.4byte	.LASF25
+ 157 0015 1B020000 		.4byte	.LASF26
  158 0019 00000000 		.4byte	.Ldebug_ranges0+0
  159 001d 00000000 		.4byte	0
  160 0021 00000000 		.4byte	.Ldebug_line0
  161 0025 02       		.uleb128 0x2
  162 0026 01       		.byte	0x1
  163 0027 06       		.byte	0x6
- 164 0028 61020000 		.4byte	.LASF0
+ 164 0028 43020000 		.4byte	.LASF0
  165 002c 02       		.uleb128 0x2
  166 002d 01       		.byte	0x1
  167 002e 08       		.byte	0x8
- 168 002f B7000000 		.4byte	.LASF1
+ 168 002f 71000000 		.4byte	.LASF1
  169 0033 02       		.uleb128 0x2
  170 0034 02       		.byte	0x2
  171 0035 05       		.byte	0x5
- 172 0036 20020000 		.4byte	.LASF2
+ 172 0036 DA010000 		.4byte	.LASF2
  173 003a 02       		.uleb128 0x2
  174 003b 02       		.byte	0x2
  175 003c 07       		.byte	0x7
- 176 003d D7000000 		.4byte	.LASF3
+ 176 003d 91000000 		.4byte	.LASF3
  177 0041 02       		.uleb128 0x2
  178 0042 04       		.byte	0x4
  179 0043 05       		.byte	0x5
- 180 0044 58020000 		.4byte	.LASF4
+ 180 0044 12020000 		.4byte	.LASF4
  181 0048 02       		.uleb128 0x2
  182 0049 04       		.byte	0x4
  183 004a 07       		.byte	0x7
- 184 004b C5000000 		.4byte	.LASF5
+ 184 004b 7F000000 		.4byte	.LASF5
  185 004f 02       		.uleb128 0x2
  186 0050 08       		.byte	0x8
  187 0051 05       		.byte	0x5
- 188 0052 7F010000 		.4byte	.LASF6
+ 188 0052 39010000 		.4byte	.LASF6
  189 0056 02       		.uleb128 0x2
  190 0057 08       		.byte	0x8
  191 0058 07       		.byte	0x7
- 192 0059 68010000 		.4byte	.LASF7
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 8
+ 192 0059 22010000 		.4byte	.LASF7
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccn8ViCW.s 			page 8
 
 
  193 005d 03       		.uleb128 0x3
@@ -428,34 +428,34 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
  197 0064 02       		.uleb128 0x2
  198 0065 04       		.byte	0x4
  199 0066 07       		.byte	0x7
- 200 0067 5B010000 		.4byte	.LASF8
+ 200 0067 15010000 		.4byte	.LASF8
  201 006b 04       		.uleb128 0x4
- 202 006c 2A020000 		.4byte	.LASF9
+ 202 006c E4010000 		.4byte	.LASF9
  203 0070 02       		.byte	0x2
  204 0071 C2       		.byte	0xc2
  205 0072 2C000000 		.4byte	0x2c
  206 0076 04       		.uleb128 0x4
- 207 0077 3B010000 		.4byte	.LASF10
+ 207 0077 F5000000 		.4byte	.LASF10
  208 007b 02       		.byte	0x2
  209 007c C3       		.byte	0xc3
  210 007d 3A000000 		.4byte	0x3a
  211 0081 04       		.uleb128 0x4
- 212 0082 54010000 		.4byte	.LASF11
+ 212 0082 0E010000 		.4byte	.LASF11
  213 0086 02       		.byte	0x2
  214 0087 C4       		.byte	0xc4
  215 0088 48000000 		.4byte	0x48
  216 008c 02       		.uleb128 0x2
  217 008d 04       		.byte	0x4
  218 008e 04       		.byte	0x4
- 219 008f B1000000 		.4byte	.LASF12
+ 219 008f 6B000000 		.4byte	.LASF12
  220 0093 02       		.uleb128 0x2
  221 0094 08       		.byte	0x8
  222 0095 04       		.byte	0x4
- 223 0096 1F010000 		.4byte	.LASF13
+ 223 0096 D9000000 		.4byte	.LASF13
  224 009a 02       		.uleb128 0x2
  225 009b 01       		.byte	0x1
  226 009c 08       		.byte	0x8
- 227 009d 8D010000 		.4byte	.LASF14
+ 227 009d 47010000 		.4byte	.LASF14
  228 00a1 05       		.uleb128 0x5
  229 00a2 00000000 		.4byte	.LASF15
  230 00a6 02       		.byte	0x2
@@ -472,13 +472,13 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
  241 00c1 01       		.uleb128 0x1
  242 00c2 9C       		.byte	0x9c
  243 00c3 07       		.uleb128 0x7
- 244 00c4 42010000 		.4byte	.LASF17
+ 244 00c4 FC000000 		.4byte	.LASF17
  245 00c8 01       		.byte	0x1
  246 00c9 5F       		.byte	0x5f
  247 00ca 00000000 		.4byte	.LFB1
  248 00ce 10000000 		.4byte	.LFE1-.LFB1
  249 00d2 01       		.uleb128 0x1
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 9
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccn8ViCW.s 			page 9
 
 
  250 00d3 9C       		.byte	0x9c
@@ -492,13 +492,13 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
  258 00e4 9C       		.byte	0x9c
  259 00e5 20010000 		.4byte	0x120
  260 00e9 09       		.uleb128 0x9
- 261 00ea EA000000 		.4byte	.LASF18
+ 261 00ea A4000000 		.4byte	.LASF18
  262 00ee 01       		.byte	0x1
  263 00ef 86       		.byte	0x86
  264 00f0 76000000 		.4byte	0x76
  265 00f4 00000000 		.4byte	.LLST0
  266 00f8 0A       		.uleb128 0xa
- 267 00f9 2D010000 		.4byte	.LASF19
+ 267 00f9 E7000000 		.4byte	.LASF19
  268 00fd 01       		.byte	0x1
  269 00fe 86       		.byte	0x86
  270 00ff 6B000000 		.4byte	0x6b
@@ -512,7 +512,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
  278 0110 01       		.uleb128 0x1
  279 0111 53       		.byte	0x53
  280 0112 0B       		.uleb128 0xb
- 281 0113 26010000 		.4byte	.LASF21
+ 281 0113 E0000000 		.4byte	.LASF21
  282 0117 01       		.byte	0x1
  283 0118 89       		.byte	0x89
  284 0119 81000000 		.4byte	0x81
@@ -529,7 +529,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
  295 0133 01       		.uleb128 0x1
  296 0134 9C       		.byte	0x9c
  297 0135 0C       		.uleb128 0xc
- 298 0136 F5000000 		.4byte	.LASF23
+ 298 0136 AF000000 		.4byte	.LASF23
  299 013a 01       		.byte	0x1
  300 013b C6       		.byte	0xc6
  301 013c 6B000000 		.4byte	0x6b
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
  304 0148 01       		.uleb128 0x1
  305 0149 9C       		.byte	0x9c
  306 014a 00       		.byte	0
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 10
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccn8ViCW.s 			page 10
 
 
  307              		.section	.debug_abbrev,"",%progbits
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
  361 0034 00       		.byte	0
  362 0035 00       		.byte	0
  363 0036 05       		.uleb128 0x5
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 11
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccn8ViCW.s 			page 11
 
 
  364 0037 16       		.uleb128 0x16
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
  418 006e 19       		.uleb128 0x19
  419 006f 11       		.uleb128 0x11
  420 0070 01       		.uleb128 0x1
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 12
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccn8ViCW.s 			page 12
 
 
  421 0071 12       		.uleb128 0x12
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
  475 00a8 00       		.byte	0
  476 00a9 0C       		.uleb128 0xc
  477 00aa 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 13
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccn8ViCW.s 			page 13
 
 
  478 00ab 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
  532 0028 00000000 		.4byte	.LFB3
  533 002c 0C000000 		.4byte	.LFE3-.LFB3
  534 0030 00000000 		.4byte	.LFB4
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 14
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccn8ViCW.s 			page 14
 
 
  535 0034 04000000 		.4byte	.LFE4-.LFB4
@@ -829,130 +829,125 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 1
  564      42434C4B 
  564      5F536574 
  564      46726163 
- 565              	.LASF26:
- 566 006b 433A5C55 		.ascii	"C:\\Users\\Vit\\Documents\\PSoC Creator\\Workspace_"
- 566      73657273 
- 566      5C566974 
- 566      5C446F63 
- 566      756D656E 
- 567 0099 54686572 		.ascii	"Thermo\\Thermometr.cydsn\000"
- 567      6D6F5C54 
- 567      6865726D 
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 15
+ 565              	.LASF12:
+ 566 006b 666C6F61 		.ascii	"float\000"
+ 566      7400
+ 567              	.LASF1:
+ 568 0071 756E7369 		.ascii	"unsigned char\000"
+ 568      676E6564 
+ 568      20636861 
+ 568      7200
+ 569              	.LASF5:
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccn8ViCW.s 			page 15
 
 
- 567      6F6D6574 
- 567      722E6379 
- 568              	.LASF12:
- 569 00b1 666C6F61 		.ascii	"float\000"
- 569      7400
- 570              	.LASF1:
- 571 00b7 756E7369 		.ascii	"unsigned char\000"
- 571      676E6564 
- 571      20636861 
- 571      7200
- 572              	.LASF5:
- 573 00c5 6C6F6E67 		.ascii	"long unsigned int\000"
- 573      20756E73 
- 573      69676E65 
- 573      6420696E 
- 573      7400
- 574              	.LASF3:
- 575 00d7 73686F72 		.ascii	"short unsigned int\000"
- 575      7420756E 
- 575      7369676E 
- 575      65642069 
- 575      6E7400
- 576              	.LASF18:
- 577 00ea 636C6B44 		.ascii	"clkDivider\000"
- 577      69766964 
- 577      657200
- 578              	.LASF23:
- 579 00f5 5343425F 		.ascii	"SCB_1_SCBCLK_GetFractionalDividerRegister\000"
- 579      315F5343 
- 579      42434C4B 
- 579      5F476574 
- 579      46726163 
- 580              	.LASF13:
- 581 011f 646F7562 		.ascii	"double\000"
- 581      6C6500
- 582              	.LASF21:
- 583 0126 72656756 		.ascii	"regVal\000"
- 583      616C00
- 584              	.LASF19:
- 585 012d 636C6B46 		.ascii	"clkFractional\000"
- 585      72616374 
- 585      696F6E61 
- 585      6C00
- 586              	.LASF10:
- 587 013b 75696E74 		.ascii	"uint16\000"
- 587      313600
- 588              	.LASF17:
- 589 0142 5343425F 		.ascii	"SCB_1_SCBCLK_Stop\000"
- 589      315F5343 
- 589      42434C4B 
- 589      5F53746F 
- 589      7000
- 590              	.LASF11:
- 591 0154 75696E74 		.ascii	"uint32\000"
- 591      333200
- 592              	.LASF8:
- 593 015b 756E7369 		.ascii	"unsigned int\000"
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccp48Pjf.s 			page 16
+ 570 007f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 570      20756E73 
+ 570      69676E65 
+ 570      6420696E 
+ 570      7400
+ 571              	.LASF3:
+ 572 0091 73686F72 		.ascii	"short unsigned int\000"
+ 572      7420756E 
+ 572      7369676E 
+ 572      65642069 
+ 572      6E7400
+ 573              	.LASF18:
+ 574 00a4 636C6B44 		.ascii	"clkDivider\000"
+ 574      69766964 
+ 574      657200
+ 575              	.LASF23:
+ 576 00af 5343425F 		.ascii	"SCB_1_SCBCLK_GetFractionalDividerRegister\000"
+ 576      315F5343 
+ 576      42434C4B 
+ 576      5F476574 
+ 576      46726163 
+ 577              	.LASF13:
+ 578 00d9 646F7562 		.ascii	"double\000"
+ 578      6C6500
+ 579              	.LASF21:
+ 580 00e0 72656756 		.ascii	"regVal\000"
+ 580      616C00
+ 581              	.LASF19:
+ 582 00e7 636C6B46 		.ascii	"clkFractional\000"
+ 582      72616374 
+ 582      696F6E61 
+ 582      6C00
+ 583              	.LASF10:
+ 584 00f5 75696E74 		.ascii	"uint16\000"
+ 584      313600
+ 585              	.LASF17:
+ 586 00fc 5343425F 		.ascii	"SCB_1_SCBCLK_Stop\000"
+ 586      315F5343 
+ 586      42434C4B 
+ 586      5F53746F 
+ 586      7000
+ 587              	.LASF11:
+ 588 010e 75696E74 		.ascii	"uint32\000"
+ 588      333200
+ 589              	.LASF8:
+ 590 0115 756E7369 		.ascii	"unsigned int\000"
+ 590      676E6564 
+ 590      20696E74 
+ 590      00
+ 591              	.LASF7:
+ 592 0122 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 592      206C6F6E 
+ 592      6720756E 
+ 592      7369676E 
+ 592      65642069 
+ 593              	.LASF6:
+ 594 0139 6C6F6E67 		.ascii	"long long int\000"
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccn8ViCW.s 			page 16
 
 
- 593      676E6564 
- 593      20696E74 
- 593      00
- 594              	.LASF7:
- 595 0168 6C6F6E67 		.ascii	"long long unsigned int\000"
- 595      206C6F6E 
- 595      6720756E 
- 595      7369676E 
- 595      65642069 
- 596              	.LASF6:
- 597 017f 6C6F6E67 		.ascii	"long long int\000"
- 597      206C6F6E 
- 597      6720696E 
- 597      7400
- 598              	.LASF14:
- 599 018d 63686172 		.ascii	"char\000"
- 599      00
- 600              	.LASF24:
- 601 0192 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 601      4320342E 
- 601      392E3320 
- 601      32303135 
- 601      30333033 
- 602 01c5 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 602      20726576 
- 602      6973696F 
- 602      6E203232 
- 602      31323230 
- 603 01f8 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 603      66756E63 
- 603      74696F6E 
- 603      2D736563 
- 603      74696F6E 
- 604              	.LASF2:
- 605 0220 73686F72 		.ascii	"short int\000"
- 605      7420696E 
- 605      7400
- 606              	.LASF9:
- 607 022a 75696E74 		.ascii	"uint8\000"
- 607      3800
- 608              	.LASF25:
- 609 0230 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\SCB_1_SCBCLK.c\000"
- 609      6E657261 
- 609      7465645F 
- 609      536F7572 
- 609      63655C50 
- 610              	.LASF4:
- 611 0258 6C6F6E67 		.ascii	"long int\000"
- 611      20696E74 
- 611      00
- 612              	.LASF0:
- 613 0261 7369676E 		.ascii	"signed char\000"
- 613      65642063 
- 613      68617200 
- 614              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 594      206C6F6E 
+ 594      6720696E 
+ 594      7400
+ 595              	.LASF14:
+ 596 0147 63686172 		.ascii	"char\000"
+ 596      00
+ 597              	.LASF24:
+ 598 014c 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 598      4320342E 
+ 598      392E3320 
+ 598      32303135 
+ 598      30333033 
+ 599 017f 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 599      20726576 
+ 599      6973696F 
+ 599      6E203232 
+ 599      31323230 
+ 600 01b2 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 600      66756E63 
+ 600      74696F6E 
+ 600      2D736563 
+ 600      74696F6E 
+ 601              	.LASF2:
+ 602 01da 73686F72 		.ascii	"short int\000"
+ 602      7420696E 
+ 602      7400
+ 603              	.LASF9:
+ 604 01e4 75696E74 		.ascii	"uint8\000"
+ 604      3800
+ 605              	.LASF25:
+ 606 01ea 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\SCB_1_SCBCLK.c\000"
+ 606      6E657261 
+ 606      7465645F 
+ 606      536F7572 
+ 606      63655C50 
+ 607              	.LASF4:
+ 608 0212 6C6F6E67 		.ascii	"long int\000"
+ 608      20696E74 
+ 608      00
+ 609              	.LASF26:
+ 610 021b 433A5C45 		.ascii	"C:\\EAGLE\\My\\Thermometr\\Thermometr.cydsn\000"
+ 610      41474C45 
+ 610      5C4D795C 
+ 610      54686572 
+ 610      6D6F6D65 
+ 611              	.LASF0:
+ 612 0243 7369676E 		.ascii	"signed char\000"
+ 612      65642063 
+ 612      68617200 
+ 613              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

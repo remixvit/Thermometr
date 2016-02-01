@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
   31:.\Generated_Source\PSoC4/CyFlash.c **** *******************************************************************************/
   32:.\Generated_Source\PSoC4/CyFlash.c **** #define CY_FLASH_CHECKSUM_WORKAROUND    (CY_PSOC4_4000 || CY_PSOC4_4100 || CY_PSOC4_4200)
   33:.\Generated_Source\PSoC4/CyFlash.c **** 
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 2
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 2
 
 
   34:.\Generated_Source\PSoC4/CyFlash.c **** #if (CY_IP_FM || ((!CY_PSOC4_4000) && CY_IP_SPCIF_SYNCHRONOUS) || (!CY_IP_FM) && CY_PSOC4_4000)
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
   88:.\Generated_Source\PSoC4/CyFlash.c **** *   frequency of 12 MHz. This will impact the operation of most of the hardware
   89:.\Generated_Source\PSoC4/CyFlash.c **** *   in the device.
   90:.\Generated_Source\PSoC4/CyFlash.c **** *
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 3
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 3
 
 
   91:.\Generated_Source\PSoC4/CyFlash.c **** *******************************************************************************/
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  145:.\Generated_Source\PSoC4/CyFlash.c ****         if(retValue == CY_SYS_FLASH_SUCCESS)
  146:.\Generated_Source\PSoC4/CyFlash.c ****         {
  147:.\Generated_Source\PSoC4/CyFlash.c ****             /***************************************************************
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 4
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 4
 
 
  148:.\Generated_Source\PSoC4/CyFlash.c ****             * Mask all the exceptions to guarantee that Flash write will
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  202:.\Generated_Source\PSoC4/CyFlash.c ****                         CY_FLASH_CPUSS_SYSARG_REG = (uint32) &parameters[0u];
  203:.\Generated_Source\PSoC4/CyFlash.c ****                         CY_FLASH_CPUSS_SYSREQ_REG = CY_FLASH_CPUSS_REQ_START | CY_FLASH_API_OPCODE_
  204:.\Generated_Source\PSoC4/CyFlash.c ****                         retValue = CY_FLASH_API_RETURN;
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 5
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 5
 
 
  205:.\Generated_Source\PSoC4/CyFlash.c ****                     }
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  259:.\Generated_Source\PSoC4/CyFlash.c ****             CY_SYS_CLK_SELECT_REG |= CY_FLASH_WAIT_STATE_EN;
  260:.\Generated_Source\PSoC4/CyFlash.c ****         }
  261:.\Generated_Source\PSoC4/CyFlash.c ****     #else /* CY_IP_CPUSSV2 */
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 6
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 6
 
 
  262:.\Generated_Source\PSoC4/CyFlash.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  313:.\Generated_Source\PSoC4/CyFlash.c **** #endif  /* (!CY_IP_FM) */
  314:.\Generated_Source\PSoC4/CyFlash.c **** 
  315:.\Generated_Source\PSoC4/CyFlash.c **** #if(CY_IP_FM)
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 7
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 7
 
 
  316:.\Generated_Source\PSoC4/CyFlash.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  365:.\Generated_Source\PSoC4/CyFlash.c ****             CY_FLASH_CPUSS_SYSREQ_REG = CY_FLASH_CPUSS_REQ_START | CY_FLASH_API_OPCODE_CLK_BACKUP;
  366:.\Generated_Source\PSoC4/CyFlash.c ****             retValue = CY_FLASH_API_RETURN;
  367:.\Generated_Source\PSoC4/CyFlash.c ****         #endif /* (CY_IP_SPCIF_SYNCHRONOUS) */
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 8
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 8
 
 
  368:.\Generated_Source\PSoC4/CyFlash.c **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  403:.\Generated_Source\PSoC4/CyFlash.c ****     /***************************************************************************
  404:.\Generated_Source\PSoC4/CyFlash.c ****     * Perform firmware clock settings setup for the PSOC4 4000 devices (the
  405:.\Generated_Source\PSoC4/CyFlash.c ****     * corresponding system call is not reliable):
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 9
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 9
 
 
  406:.\Generated_Source\PSoC4/CyFlash.c ****     * - The IMO frequency should be 48 MHz
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  460:.\Generated_Source\PSoC4/CyFlash.c **** * Summary:
  461:.\Generated_Source\PSoC4/CyFlash.c **** *  Restores the device clock configuration.
  462:.\Generated_Source\PSoC4/CyFlash.c **** *
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 10
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 10
 
 
  463:.\Generated_Source\PSoC4/CyFlash.c **** * Parameters:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  509:.\Generated_Source\PSoC4/CyFlash.c **** 
  510:.\Generated_Source\PSoC4/CyFlash.c ****             /* Restore HFCLK clock source */
  511:.\Generated_Source\PSoC4/CyFlash.c ****             CySysClkWriteHfclkDirect(cySysFlashBackup.clkSelectReg & CY_SYS_CLK_SELECT_DIRECT_SEL_M
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 11
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 11
 
 
  512:.\Generated_Source\PSoC4/CyFlash.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
   83 0000 F0B5     		push	{r4, r5, r6, r7, lr}
   84              		.cfi_def_cfa_offset 20
   85              		.cfi_offset 4, -20
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 12
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 12
 
 
   86              		.cfi_offset 5, -16
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  129 002a 9A00     		lsl	r2, r3, #2
  130 002c 02AD     		add	r5, sp, #8
  131 002e 5259     		ldr	r2, [r2, r5]
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 13
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 13
 
 
  132              	.LVL7:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  175              	.LVL13:
  176 0058 02AA     		add	r2, sp, #8
  177 005a 9F58     		ldr	r7, [r3, r2]
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 14
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 14
 
 
  178              	.LVL14:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  222 008e 2593     		str	r3, [sp, #148]
  145:.\Generated_Source\PSoC4/CyFlash.c ****         {
  223              		.loc 1 145 0 is_stmt 1 discriminator 4
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 15
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 15
 
 
  224 0090 259B     		ldr	r3, [sp, #148]
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  172:.\Generated_Source\PSoC4/CyFlash.c ****             }
  269              		.loc 1 172 0 discriminator 4
  270 00d2 2593     		str	r3, [sp, #148]
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 16
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 16
 
 
  271              	.L16:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  315              	.L19:
  191:.\Generated_Source\PSoC4/CyFlash.c **** 
  316              		.loc 1 191 0 discriminator 4
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 17
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 17
 
 
  317 0114 2596     		str	r6, [sp, #148]
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  361 0152 2490     		str	r0, [sp, #144]
  362              	.L21:
  214:.\Generated_Source\PSoC4/CyFlash.c ****         }
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 18
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 18
 
 
  363              		.loc 1 214 0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  412 0004 FFF7FEFF 		bl	CyEnterCriticalSection
  413              	.LVL31:
  253:.\Generated_Source\PSoC4/CyFlash.c ****         {
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 19
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 19
 
 
  414              		.loc 1 253 0
@@ -1138,28 +1138,28 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  464 0006 00000000 		.4byte	.Ldebug_abbrev0
  465 000a 04       		.byte	0x4
  466 000b 01       		.uleb128 0x1
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 20
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 20
 
 
- 467 000c E8010000 		.4byte	.LASF36
+ 467 000c A2010000 		.4byte	.LASF36
  468 0010 01       		.byte	0x1
  469 0011 46000000 		.4byte	.LASF37
- 470 0015 8D000000 		.4byte	.LASF38
+ 470 0015 94020000 		.4byte	.LASF38
  471 0019 00000000 		.4byte	.Ldebug_ranges0+0
  472 001d 00000000 		.4byte	0
  473 0021 00000000 		.4byte	.Ldebug_line0
  474 0025 02       		.uleb128 0x2
  475 0026 01       		.byte	0x1
  476 0027 06       		.byte	0x6
- 477 0028 F2020000 		.4byte	.LASF0
+ 477 0028 D4020000 		.4byte	.LASF0
  478 002c 02       		.uleb128 0x2
  479 002d 01       		.byte	0x1
  480 002e 08       		.byte	0x8
- 481 002f E2000000 		.4byte	.LASF1
+ 481 002f 9C000000 		.4byte	.LASF1
  482 0033 02       		.uleb128 0x2
  483 0034 02       		.byte	0x2
  484 0035 05       		.byte	0x5
- 485 0036 29010000 		.4byte	.LASF2
+ 485 0036 E3000000 		.4byte	.LASF2
  486 003a 02       		.uleb128 0x2
  487 003b 02       		.byte	0x2
  488 003c 07       		.byte	0x7
@@ -1167,19 +1167,19 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  490 0041 02       		.uleb128 0x2
  491 0042 04       		.byte	0x4
  492 0043 05       		.byte	0x5
- 493 0044 CC020000 		.4byte	.LASF4
+ 493 0044 86020000 		.4byte	.LASF4
  494 0048 02       		.uleb128 0x2
  495 0049 04       		.byte	0x4
  496 004a 07       		.byte	0x7
- 497 004b 03010000 		.4byte	.LASF5
+ 497 004b BD000000 		.4byte	.LASF5
  498 004f 02       		.uleb128 0x2
  499 0050 08       		.byte	0x8
  500 0051 05       		.byte	0x5
- 501 0052 C1010000 		.4byte	.LASF6
+ 501 0052 7B010000 		.4byte	.LASF6
  502 0056 02       		.uleb128 0x2
  503 0057 08       		.byte	0x8
  504 0058 07       		.byte	0x7
- 505 0059 11030000 		.4byte	.LASF7
+ 505 0059 F3020000 		.4byte	.LASF7
  506 005d 03       		.uleb128 0x3
  507 005e 04       		.byte	0x4
  508 005f 05       		.byte	0x5
@@ -1187,37 +1187,37 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  510 0064 02       		.uleb128 0x2
  511 0065 04       		.byte	0x4
  512 0066 07       		.byte	0x7
- 513 0067 6F010000 		.4byte	.LASF8
+ 513 0067 29010000 		.4byte	.LASF8
  514 006b 04       		.uleb128 0x4
- 515 006c 15010000 		.4byte	.LASF9
+ 515 006c CF000000 		.4byte	.LASF9
  516 0070 02       		.byte	0x2
  517 0071 C2       		.byte	0xc2
  518 0072 2C000000 		.4byte	0x2c
  519 0076 04       		.uleb128 0x4
- 520 0077 4A010000 		.4byte	.LASF10
+ 520 0077 04010000 		.4byte	.LASF10
  521 007b 02       		.byte	0x2
  522 007c C3       		.byte	0xc3
  523 007d 3A000000 		.4byte	0x3a
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 21
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 21
 
 
  524 0081 04       		.uleb128 0x4
- 525 0082 51010000 		.4byte	.LASF11
+ 525 0082 0B010000 		.4byte	.LASF11
  526 0086 02       		.byte	0x2
  527 0087 C4       		.byte	0xc4
  528 0088 48000000 		.4byte	0x48
  529 008c 02       		.uleb128 0x2
  530 008d 04       		.byte	0x4
  531 008e 04       		.byte	0x4
- 532 008f D3000000 		.4byte	.LASF12
+ 532 008f 8D000000 		.4byte	.LASF12
  533 0093 02       		.uleb128 0x2
  534 0094 08       		.byte	0x8
  535 0095 04       		.byte	0x4
- 536 0096 22010000 		.4byte	.LASF13
+ 536 0096 DC000000 		.4byte	.LASF13
  537 009a 02       		.uleb128 0x2
  538 009b 01       		.byte	0x1
  539 009c 08       		.byte	0x8
- 540 009d D5020000 		.4byte	.LASF14
+ 540 009d 8F020000 		.4byte	.LASF14
  541 00a1 05       		.uleb128 0x5
  542 00a2 00000000 		.4byte	.LASF15
  543 00a6 02       		.byte	0x2
@@ -1233,7 +1233,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  553 00be 02       		.uleb128 0x2
  554 00bf 04       		.byte	0x4
  555 00c0 07       		.byte	0x7
- 556 00c1 B8010000 		.4byte	.LASF17
+ 556 00c1 72010000 		.4byte	.LASF17
  557 00c5 07       		.uleb128 0x7
  558 00c6 04       		.byte	0x4
  559 00c7 08       		.uleb128 0x8
@@ -1243,22 +1243,22 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  563 00ce 7D       		.byte	0x7d
  564 00cf E0000000 		.4byte	0xe0
  565 00d3 09       		.uleb128 0x9
- 566 00d4 CF010000 		.4byte	.LASF40
+ 566 00d4 89010000 		.4byte	.LASF40
  567 00d8 03       		.byte	0x3
  568 00d9 80       		.byte	0x80
  569 00da 81000000 		.4byte	0x81
  570 00de 00       		.byte	0
  571 00df 00       		.byte	0
  572 00e0 04       		.uleb128 0x4
- 573 00e1 AB020000 		.4byte	.LASF18
+ 573 00e1 65020000 		.4byte	.LASF18
  574 00e5 03       		.byte	0x3
  575 00e6 93       		.byte	0x93
  576 00e7 C7000000 		.4byte	0xc7
  577 00eb 0A       		.uleb128 0xa
- 578 00ec 95020000 		.4byte	.LASF19
+ 578 00ec 4F020000 		.4byte	.LASF19
  579 00f0 01       		.byte	0x1
  580 00f1 3001     		.2byte	0x130
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 22
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 22
 
 
  581 00f3 A1000000 		.4byte	0xa1
@@ -1275,7 +1275,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  592 0111 00       		.byte	0
  593 0112 00       		.byte	0
  594 0113 0A       		.uleb128 0xa
- 595 0114 33010000 		.4byte	.LASF20
+ 595 0114 ED000000 		.4byte	.LASF20
  596 0118 01       		.byte	0x1
  597 0119 D601     		.2byte	0x1d6
  598 011b A1000000 		.4byte	0xa1
@@ -1292,7 +1292,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  609 0139 00       		.byte	0
  610 013a 00       		.byte	0
  611 013b 0C       		.uleb128 0xc
- 612 013c FE020000 		.4byte	.LASF41
+ 612 013c E0020000 		.4byte	.LASF41
  613 0140 01       		.byte	0x1
  614 0141 5C       		.byte	0x5c
  615 0142 81000000 		.4byte	0x81
@@ -1308,7 +1308,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  625 015b 81000000 		.4byte	0x81
  626 015f 00000000 		.4byte	.LLST0
  627 0163 0D       		.uleb128 0xd
- 628 0164 F0000000 		.4byte	.LASF23
+ 628 0164 AA000000 		.4byte	.LASF23
  629 0168 01       		.byte	0x1
  630 0169 5C       		.byte	0x5c
  631 016a 92020000 		.4byte	0x292
@@ -1318,14 +1318,14 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  635 0177 01       		.byte	0x1
  636 0178 5E       		.byte	0x5e
  637 0179 B9000000 		.4byte	0xb9
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 23
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 23
 
 
  638 017d 02       		.uleb128 0x2
  639 017e 91       		.byte	0x91
  640 017f 64       		.sleb128 -28
  641 0180 0E       		.uleb128 0xe
- 642 0181 7B020000 		.4byte	.LASF24
+ 642 0181 35020000 		.4byte	.LASF24
  643 0185 01       		.byte	0x1
  644 0186 5F       		.byte	0x5f
  645 0187 B9000000 		.4byte	0xb9
@@ -1333,7 +1333,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  647 018c 91       		.byte	0x91
  648 018d 60       		.sleb128 -32
  649 018e 0E       		.uleb128 0xe
- 650 018f F8000000 		.4byte	.LASF25
+ 650 018f B2000000 		.4byte	.LASF25
  651 0193 01       		.byte	0x1
  652 0194 60       		.byte	0x60
  653 0195 AD020000 		.4byte	0x2ad
@@ -1341,13 +1341,13 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  655 019a 91       		.byte	0x91
  656 019b D87E     		.sleb128 -168
  657 019d 0F       		.uleb128 0xf
- 658 019e A9010000 		.4byte	.LASF26
+ 658 019e 63010000 		.4byte	.LASF26
  659 01a2 01       		.byte	0x1
  660 01a3 61       		.byte	0x61
  661 01a4 6B000000 		.4byte	0x6b
  662 01a8 80000000 		.4byte	.LLST2
  663 01ac 0F       		.uleb128 0xf
- 664 01ad 92010000 		.4byte	.LASF27
+ 664 01ad 4C010000 		.4byte	.LASF27
  665 01b1 01       		.byte	0x1
  666 01b2 64       		.byte	0x64
  667 01b3 81000000 		.4byte	0x81
@@ -1359,26 +1359,26 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  673 01c2 81000000 		.4byte	0x81
  674 01c6 C0000000 		.4byte	.LLST4
  675 01ca 0F       		.uleb128 0xf
- 676 01cb 8A020000 		.4byte	.LASF29
+ 676 01cb 44020000 		.4byte	.LASF29
  677 01cf 01       		.byte	0x1
  678 01d0 66       		.byte	0x66
  679 01d1 81000000 		.4byte	0x81
  680 01d5 01010000 		.4byte	.LLST5
  681 01d9 0F       		.uleb128 0xf
- 682 01da D9000000 		.4byte	.LASF30
+ 682 01da 93000000 		.4byte	.LASF30
  683 01de 01       		.byte	0x1
  684 01df 67       		.byte	0x67
  685 01e0 81000000 		.4byte	0x81
  686 01e4 43010000 		.4byte	.LLST6
  687 01e8 0F       		.uleb128 0xf
- 688 01e9 E3010000 		.4byte	.LASF31
+ 688 01e9 9D010000 		.4byte	.LASF31
  689 01ed 01       		.byte	0x1
  690 01ee 68       		.byte	0x68
  691 01ef 81000000 		.4byte	0x81
  692 01f3 79010000 		.4byte	.LLST7
  693 01f7 10       		.uleb128 0x10
  694 01f8 6900     		.ascii	"i\000"
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 24
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 24
 
 
  695 01fa 01       		.byte	0x1
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  749 0267 80       		.byte	0x80
  750 0268 13       		.uleb128 0x13
  751 0269 01       		.uleb128 0x1
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 25
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 25
 
 
  752 026a 51       		.byte	0x51
@@ -1482,7 +1482,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  790 02ad 06       		.uleb128 0x6
  791 02ae 9D020000 		.4byte	0x29d
  792 02b2 1A       		.uleb128 0x1a
- 793 02b3 DA020000 		.4byte	.LASF42
+ 793 02b3 BC020000 		.4byte	.LASF42
  794 02b7 01       		.byte	0x1
  795 02b8 F5       		.byte	0xf5
  796 02b9 00000000 		.4byte	.LFB1
@@ -1491,14 +1491,14 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  799 02c2 9C       		.byte	0x9c
  800 02c3 F8020000 		.4byte	0x2f8
  801 02c7 0D       		.uleb128 0xd
- 802 02c8 76020000 		.4byte	.LASF32
+ 802 02c8 30020000 		.4byte	.LASF32
  803 02cc 01       		.byte	0x1
  804 02cd F5       		.byte	0xf5
  805 02ce 81000000 		.4byte	0x81
  806 02d2 E1010000 		.4byte	.LLST10
  807 02d6 0F       		.uleb128 0xf
- 808 02d7 A9010000 		.4byte	.LASF26
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 26
+ 808 02d7 63010000 		.4byte	.LASF26
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 26
 
 
  809 02db 01       		.byte	0x1
@@ -1521,7 +1521,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  826 0304 03       		.byte	0x3
  827 0305 00000000 		.4byte	cySysFlashBackup
  828 0309 1B       		.uleb128 0x1b
- 829 030a DC010000 		.4byte	.LASF34
+ 829 030a 96010000 		.4byte	.LASF34
  830 030e C5000000 		.4byte	0xc5
  831 0312 26030000 		.4byte	0x326
  832 0316 1C       		.uleb128 0x1c
@@ -1536,12 +1536,12 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  841 0328 2C030000 		.4byte	0x32c
  842 032c 1D       		.uleb128 0x1d
  843 032d 1E       		.uleb128 0x1e
- 844 032e 58010000 		.4byte	.LASF43
+ 844 032e 12010000 		.4byte	.LASF43
  845 0332 04       		.byte	0x4
  846 0333 5E       		.byte	0x5e
  847 0334 6B000000 		.4byte	0x6b
  848 0338 1B       		.uleb128 0x1b
- 849 0339 1B010000 		.4byte	.LASF35
+ 849 0339 D5000000 		.4byte	.LASF35
  850 033d C5000000 		.4byte	0xc5
  851 0341 55030000 		.4byte	0x355
  852 0345 1C       		.uleb128 0x1c
@@ -1552,13 +1552,13 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  857 0350 BE000000 		.4byte	0xbe
  858 0354 00       		.byte	0
  859 0355 1F       		.uleb128 0x1f
- 860 0356 7C010000 		.4byte	.LASF44
+ 860 0356 36010000 		.4byte	.LASF44
  861 035a 04       		.byte	0x4
  862 035b 5F       		.byte	0x5f
  863 035c 1C       		.uleb128 0x1c
  864 035d 6B000000 		.4byte	0x6b
  865 0361 00       		.byte	0
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 27
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 27
 
 
  866 0362 00       		.byte	0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  920 0033 13       		.uleb128 0x13
  921 0034 00       		.byte	0
  922 0035 00       		.byte	0
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 28
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 28
 
 
  923 0036 05       		.uleb128 0x5
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  977 006c 0B       		.uleb128 0xb
  978 006d 00       		.byte	0
  979 006e 00       		.byte	0
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 29
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 29
 
 
  980 006f 0A       		.uleb128 0xa
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  1034 00a6 13       		.uleb128 0x13
  1035 00a7 11       		.uleb128 0x11
  1036 00a8 01       		.uleb128 0x1
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 30
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 30
 
 
  1037 00a9 12       		.uleb128 0x12
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  1091 00e0 00       		.byte	0
  1092 00e1 10       		.uleb128 0x10
  1093 00e2 34       		.uleb128 0x34
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 31
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 31
 
 
  1094 00e3 00       		.byte	0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  1148 0120 898201   		.uleb128 0x4109
  1149 0123 01       		.byte	0x1
  1150 0124 11       		.uleb128 0x11
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 32
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 32
 
 
  1151 0125 01       		.uleb128 0x1
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  1205 015b 12       		.uleb128 0x12
  1206 015c 06       		.uleb128 0x6
  1207 015d 40       		.uleb128 0x40
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 33
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 33
 
 
  1208 015e 18       		.uleb128 0x18
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  1262 0195 19       		.uleb128 0x19
  1263 0196 00       		.byte	0
  1264 0197 00       		.byte	0
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 34
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 34
 
 
  1265 0198 1F       		.uleb128 0x1f
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  1319 0050 51       		.byte	0x51
  1320 0051 1F000000 		.4byte	.LVL5-1
  1321 0055 5C010000 		.4byte	.LVL28
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 35
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 35
 
 
  1322 0059 0400     		.2byte	0x4
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  1376 00db 3A000000 		.4byte	.LVL10
  1377 00df 0100     		.2byte	0x1
  1378 00e1 53       		.byte	0x53
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 36
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 36
 
 
  1379 00e2 3A000000 		.4byte	.LVL10
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  1433 016f 30       		.byte	0x30
  1434 0170 9F       		.byte	0x9f
  1435 0171 00000000 		.4byte	0
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 37
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 37
 
 
  1436 0175 00000000 		.4byte	0
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  1490 0202 01       		.uleb128 0x1
  1491 0203 50       		.byte	0x50
  1492 0204 9F       		.byte	0x9f
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 38
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 38
 
 
  1493 0205 00000000 		.4byte	0
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  1540 000f 73617665 		.ascii	"savedIndex\000"
  1540      64496E64 
  1540      657800
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 39
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 39
 
 
  1541              	.LASF21:
@@ -2312,191 +2312,186 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 1
  1552      7369676E 
  1552      65642069 
  1552      6E7400
- 1553              	.LASF38:
- 1554 008d 433A5C55 		.ascii	"C:\\Users\\Vit\\Documents\\PSoC Creator\\Workspace_"
- 1554      73657273 
- 1554      5C566974 
- 1554      5C446F63 
- 1554      756D656E 
- 1555 00bb 54686572 		.ascii	"Thermo\\Thermometr.cydsn\000"
- 1555      6D6F5C54 
- 1555      6865726D 
- 1555      6F6D6574 
- 1555      722E6379 
- 1556              	.LASF12:
- 1557 00d3 666C6F61 		.ascii	"float\000"
- 1557      7400
- 1558              	.LASF30:
- 1559 00d9 63686563 		.ascii	"checksum\000"
- 1559      6B73756D 
- 1559      00
- 1560              	.LASF1:
- 1561 00e2 756E7369 		.ascii	"unsigned char\000"
- 1561      676E6564 
- 1561      20636861 
- 1561      7200
- 1562              	.LASF23:
- 1563 00f0 726F7744 		.ascii	"rowData\000"
- 1563      61746100 
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 40
+ 1553              	.LASF12:
+ 1554 008d 666C6F61 		.ascii	"float\000"
+ 1554      7400
+ 1555              	.LASF30:
+ 1556 0093 63686563 		.ascii	"checksum\000"
+ 1556      6B73756D 
+ 1556      00
+ 1557              	.LASF1:
+ 1558 009c 756E7369 		.ascii	"unsigned char\000"
+ 1558      676E6564 
+ 1558      20636861 
+ 1558      7200
+ 1559              	.LASF23:
+ 1560 00aa 726F7744 		.ascii	"rowData\000"
+ 1560      61746100 
+ 1561              	.LASF25:
+ 1562 00b2 70617261 		.ascii	"parameters\000"
+ 1562      6D657465 
+ 1562      727300
+ 1563              	.LASF5:
+ 1564 00bd 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1564      20756E73 
+ 1564      69676E65 
+ 1564      6420696E 
+ 1564      7400
+ 1565              	.LASF9:
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 40
 
 
- 1564              	.LASF25:
- 1565 00f8 70617261 		.ascii	"parameters\000"
- 1565      6D657465 
- 1565      727300
- 1566              	.LASF5:
- 1567 0103 6C6F6E67 		.ascii	"long unsigned int\000"
- 1567      20756E73 
- 1567      69676E65 
- 1567      6420696E 
- 1567      7400
- 1568              	.LASF9:
- 1569 0115 75696E74 		.ascii	"uint8\000"
- 1569      3800
- 1570              	.LASF35:
- 1571 011b 6D656D73 		.ascii	"memset\000"
- 1571      657400
- 1572              	.LASF13:
- 1573 0122 646F7562 		.ascii	"double\000"
- 1573      6C6500
- 1574              	.LASF2:
- 1575 0129 73686F72 		.ascii	"short int\000"
- 1575      7420696E 
- 1575      7400
- 1576              	.LASF20:
- 1577 0133 43795379 		.ascii	"CySysFlashClockRestore\000"
- 1577      73466C61 
- 1577      7368436C 
- 1577      6F636B52 
- 1577      6573746F 
- 1578              	.LASF10:
- 1579 014a 75696E74 		.ascii	"uint16\000"
- 1579      313600
- 1580              	.LASF11:
- 1581 0151 75696E74 		.ascii	"uint32\000"
- 1581      333200
- 1582              	.LASF43:
- 1583 0158 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 1583      74657243 
- 1583      72697469 
- 1583      63616C53 
- 1583      65637469 
- 1584              	.LASF8:
- 1585 016f 756E7369 		.ascii	"unsigned int\000"
- 1585      676E6564 
- 1585      20696E74 
- 1585      00
- 1586              	.LASF44:
- 1587 017c 43794578 		.ascii	"CyExitCriticalSection\000"
- 1587      69744372 
- 1587      69746963 
- 1587      616C5365 
- 1587      6374696F 
- 1588              	.LASF27:
- 1589 0192 6E656564 		.ascii	"needChecksumWorkaround\000"
- 1589      43686563 
- 1589      6B73756D 
- 1589      576F726B 
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 41
+ 1566 00cf 75696E74 		.ascii	"uint8\000"
+ 1566      3800
+ 1567              	.LASF35:
+ 1568 00d5 6D656D73 		.ascii	"memset\000"
+ 1568      657400
+ 1569              	.LASF13:
+ 1570 00dc 646F7562 		.ascii	"double\000"
+ 1570      6C6500
+ 1571              	.LASF2:
+ 1572 00e3 73686F72 		.ascii	"short int\000"
+ 1572      7420696E 
+ 1572      7400
+ 1573              	.LASF20:
+ 1574 00ed 43795379 		.ascii	"CySysFlashClockRestore\000"
+ 1574      73466C61 
+ 1574      7368436C 
+ 1574      6F636B52 
+ 1574      6573746F 
+ 1575              	.LASF10:
+ 1576 0104 75696E74 		.ascii	"uint16\000"
+ 1576      313600
+ 1577              	.LASF11:
+ 1578 010b 75696E74 		.ascii	"uint32\000"
+ 1578      333200
+ 1579              	.LASF43:
+ 1580 0112 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1580      74657243 
+ 1580      72697469 
+ 1580      63616C53 
+ 1580      65637469 
+ 1581              	.LASF8:
+ 1582 0129 756E7369 		.ascii	"unsigned int\000"
+ 1582      676E6564 
+ 1582      20696E74 
+ 1582      00
+ 1583              	.LASF44:
+ 1584 0136 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1584      69744372 
+ 1584      69746963 
+ 1584      616C5365 
+ 1584      6374696F 
+ 1585              	.LASF27:
+ 1586 014c 6E656564 		.ascii	"needChecksumWorkaround\000"
+ 1586      43686563 
+ 1586      6B73756D 
+ 1586      576F726B 
+ 1586      61726F75 
+ 1587              	.LASF26:
+ 1588 0163 696E7465 		.ascii	"interruptState\000"
+ 1588      72727570 
+ 1588      74537461 
+ 1588      746500
+ 1589              	.LASF17:
+ 1590 0172 73697A65 		.ascii	"sizetype\000"
+ 1590      74797065 
+ 1590      00
+ 1591              	.LASF6:
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 41
 
 
- 1589      61726F75 
- 1590              	.LASF26:
- 1591 01a9 696E7465 		.ascii	"interruptState\000"
- 1591      72727570 
- 1591      74537461 
- 1591      746500
- 1592              	.LASF17:
- 1593 01b8 73697A65 		.ascii	"sizetype\000"
- 1593      74797065 
- 1593      00
- 1594              	.LASF6:
- 1595 01c1 6C6F6E67 		.ascii	"long long int\000"
- 1595      206C6F6E 
- 1595      6720696E 
- 1595      7400
- 1596              	.LASF40:
- 1597 01cf 696D6F43 		.ascii	"imoConfigReg\000"
- 1597      6F6E6669 
- 1597      67526567 
- 1597      00
- 1598              	.LASF34:
- 1599 01dc 6D656D63 		.ascii	"memcpy\000"
- 1599      707900
- 1600              	.LASF31:
- 1601 01e3 62697473 		.ascii	"bits\000"
- 1601      00
- 1602              	.LASF36:
- 1603 01e8 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1603      4320342E 
- 1603      392E3320 
- 1603      32303135 
- 1603      30333033 
- 1604 021b 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 1604      20726576 
- 1604      6973696F 
- 1604      6E203232 
- 1604      31323230 
- 1605 024e 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1605      66756E63 
- 1605      74696F6E 
- 1605      2D736563 
- 1605      74696F6E 
- 1606              	.LASF32:
- 1607 0276 66726571 		.ascii	"freq\000"
- 1607      00
- 1608              	.LASF24:
- 1609 027b 636C6B43 		.ascii	"clkCnfRetValue\000"
- 1609      6E665265 
- 1609      7456616C 
- 1609      756500
- 1610              	.LASF29:
- 1611 028a 73617665 		.ascii	"savedValue\000"
- 1611      6456616C 
- 1611      756500
- 1612              	.LASF19:
- 1613 0295 43795379 		.ascii	"CySysFlashClockBackup\000"
- 1613      73466C61 
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\cceE6734.s 			page 42
+ 1592 017b 6C6F6E67 		.ascii	"long long int\000"
+ 1592      206C6F6E 
+ 1592      6720696E 
+ 1592      7400
+ 1593              	.LASF40:
+ 1594 0189 696D6F43 		.ascii	"imoConfigReg\000"
+ 1594      6F6E6669 
+ 1594      67526567 
+ 1594      00
+ 1595              	.LASF34:
+ 1596 0196 6D656D63 		.ascii	"memcpy\000"
+ 1596      707900
+ 1597              	.LASF31:
+ 1598 019d 62697473 		.ascii	"bits\000"
+ 1598      00
+ 1599              	.LASF36:
+ 1600 01a2 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1600      4320342E 
+ 1600      392E3320 
+ 1600      32303135 
+ 1600      30333033 
+ 1601 01d5 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 1601      20726576 
+ 1601      6973696F 
+ 1601      6E203232 
+ 1601      31323230 
+ 1602 0208 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1602      66756E63 
+ 1602      74696F6E 
+ 1602      2D736563 
+ 1602      74696F6E 
+ 1603              	.LASF32:
+ 1604 0230 66726571 		.ascii	"freq\000"
+ 1604      00
+ 1605              	.LASF24:
+ 1606 0235 636C6B43 		.ascii	"clkCnfRetValue\000"
+ 1606      6E665265 
+ 1606      7456616C 
+ 1606      756500
+ 1607              	.LASF29:
+ 1608 0244 73617665 		.ascii	"savedValue\000"
+ 1608      6456616C 
+ 1608      756500
+ 1609              	.LASF19:
+ 1610 024f 43795379 		.ascii	"CySysFlashClockBackup\000"
+ 1610      73466C61 
+ 1610      7368436C 
+ 1610      6F636B42 
+ 1610      61636B75 
+ 1611              	.LASF18:
+ 1612 0265 43595F53 		.ascii	"CY_SYS_FLASH_CLOCK_BACKUP_STRUCT\000"
+ 1612      59535F46 
+ 1612      4C415348 
+ 1612      5F434C4F 
+ 1612      434B5F42 
+ 1613              	.LASF4:
+ 1614 0286 6C6F6E67 		.ascii	"long int\000"
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccpsmgo9.s 			page 42
 
 
- 1613      7368436C 
- 1613      6F636B42 
- 1613      61636B75 
- 1614              	.LASF18:
- 1615 02ab 43595F53 		.ascii	"CY_SYS_FLASH_CLOCK_BACKUP_STRUCT\000"
- 1615      59535F46 
- 1615      4C415348 
- 1615      5F434C4F 
- 1615      434B5F42 
- 1616              	.LASF4:
- 1617 02cc 6C6F6E67 		.ascii	"long int\000"
- 1617      20696E74 
- 1617      00
- 1618              	.LASF14:
- 1619 02d5 63686172 		.ascii	"char\000"
- 1619      00
- 1620              	.LASF42:
- 1621 02da 43795379 		.ascii	"CySysFlashSetWaitCycles\000"
- 1621      73466C61 
- 1621      73685365 
- 1621      74576169 
- 1621      74437963 
- 1622              	.LASF0:
- 1623 02f2 7369676E 		.ascii	"signed char\000"
- 1623      65642063 
- 1623      68617200 
- 1624              	.LASF41:
- 1625 02fe 43795379 		.ascii	"CySysFlashWriteRow\000"
- 1625      73466C61 
- 1625      73685772 
- 1625      69746552 
- 1625      6F7700
- 1626              	.LASF7:
- 1627 0311 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1627      206C6F6E 
- 1627      6720756E 
- 1627      7369676E 
- 1627      65642069 
- 1628              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 1614      20696E74 
+ 1614      00
+ 1615              	.LASF14:
+ 1616 028f 63686172 		.ascii	"char\000"
+ 1616      00
+ 1617              	.LASF38:
+ 1618 0294 433A5C45 		.ascii	"C:\\EAGLE\\My\\Thermometr\\Thermometr.cydsn\000"
+ 1618      41474C45 
+ 1618      5C4D795C 
+ 1618      54686572 
+ 1618      6D6F6D65 
+ 1619              	.LASF42:
+ 1620 02bc 43795379 		.ascii	"CySysFlashSetWaitCycles\000"
+ 1620      73466C61 
+ 1620      73685365 
+ 1620      74576169 
+ 1620      74437963 
+ 1621              	.LASF0:
+ 1622 02d4 7369676E 		.ascii	"signed char\000"
+ 1622      65642063 
+ 1622      68617200 
+ 1623              	.LASF41:
+ 1624 02e0 43795379 		.ascii	"CySysFlashWriteRow\000"
+ 1624      73466C61 
+ 1624      73685772 
+ 1624      69746552 
+ 1624      6F7700
+ 1625              	.LASF7:
+ 1626 02f3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1626      206C6F6E 
+ 1626      6720756E 
+ 1626      7369676E 
+ 1626      65642069 
+ 1627              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

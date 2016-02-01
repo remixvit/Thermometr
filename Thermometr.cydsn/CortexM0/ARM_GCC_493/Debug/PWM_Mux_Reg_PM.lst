@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 1
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cc3LxAen.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 1
   30:.\Generated_Source\PSoC4/PWM_Mux_Reg_PM.c **** * Summary:
   31:.\Generated_Source\PSoC4/PWM_Mux_Reg_PM.c **** *  Saves the control register value.
   32:.\Generated_Source\PSoC4/PWM_Mux_Reg_PM.c **** *
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 2
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cc3LxAen.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/PWM_Mux_Reg_PM.c **** * Parameters:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 1
   61:.\Generated_Source\PSoC4/PWM_Mux_Reg_PM.c **** void PWM_Mux_Reg_RestoreConfig(void) 
   62:.\Generated_Source\PSoC4/PWM_Mux_Reg_PM.c **** {
   52              		.loc 1 62 0
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 3
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cc3LxAen.s 			page 3
 
 
   53              		.cfi_startproc
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 1
   86              	.LVL0:
   84:.\Generated_Source\PSoC4/PWM_Mux_Reg_PM.c **** }
   87              		.loc 1 84 0
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 4
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cc3LxAen.s 			page 4
 
 
   88              		@ sp needed
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 1
  122 0000 00       		.space	1
  123 0001 000000   		.text
  124              	.Letext0:
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 5
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cc3LxAen.s 			page 5
 
 
  125              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
@@ -250,45 +250,45 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 1
  131 0006 00000000 		.4byte	.Ldebug_abbrev0
  132 000a 04       		.byte	0x4
  133 000b 01       		.uleb128 0x1
- 134 000c 13010000 		.4byte	.LASF19
+ 134 000c CD000000 		.4byte	.LASF19
  135 0010 01       		.byte	0x1
- 136 0011 F3010000 		.4byte	.LASF20
- 137 0015 13000000 		.4byte	.LASF21
+ 136 0011 D5010000 		.4byte	.LASF20
+ 137 0015 A1010000 		.4byte	.LASF21
  138 0019 00000000 		.4byte	.Ldebug_ranges0+0
  139 001d 00000000 		.4byte	0
  140 0021 00000000 		.4byte	.Ldebug_line0
  141 0025 02       		.uleb128 0x2
  142 0026 01       		.byte	0x1
  143 0027 06       		.byte	0x6
- 144 0028 E7010000 		.4byte	.LASF0
+ 144 0028 C9010000 		.4byte	.LASF0
  145 002c 02       		.uleb128 0x2
  146 002d 01       		.byte	0x1
  147 002e 08       		.byte	0x8
- 148 002f 5F000000 		.4byte	.LASF1
+ 148 002f 19000000 		.4byte	.LASF1
  149 0033 02       		.uleb128 0x2
  150 0034 02       		.byte	0x2
  151 0035 05       		.byte	0x5
- 152 0036 A1010000 		.4byte	.LASF2
+ 152 0036 5B010000 		.4byte	.LASF2
  153 003a 02       		.uleb128 0x2
  154 003b 02       		.byte	0x2
  155 003c 07       		.byte	0x7
- 156 003d 84000000 		.4byte	.LASF3
+ 156 003d 3E000000 		.4byte	.LASF3
  157 0041 02       		.uleb128 0x2
  158 0042 04       		.byte	0x4
  159 0043 05       		.byte	0x5
- 160 0044 CB010000 		.4byte	.LASF4
+ 160 0044 85010000 		.4byte	.LASF4
  161 0048 02       		.uleb128 0x2
  162 0049 04       		.byte	0x4
  163 004a 07       		.byte	0x7
- 164 004b 72000000 		.4byte	.LASF5
+ 164 004b 2C000000 		.4byte	.LASF5
  165 004f 02       		.uleb128 0x2
  166 0050 08       		.byte	0x8
  167 0051 05       		.byte	0x5
- 168 0052 00010000 		.4byte	.LASF6
+ 168 0052 BA000000 		.4byte	.LASF6
  169 0056 02       		.uleb128 0x2
  170 0057 08       		.byte	0x8
  171 0058 07       		.byte	0x7
- 172 0059 B8000000 		.4byte	.LASF7
+ 172 0059 72000000 		.4byte	.LASF7
  173 005d 03       		.uleb128 0x3
  174 005e 04       		.byte	0x4
  175 005f 05       		.byte	0x5
@@ -296,29 +296,29 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 1
  177 0064 02       		.uleb128 0x2
  178 0065 04       		.byte	0x4
  179 0066 07       		.byte	0x7
- 180 0067 AB000000 		.4byte	.LASF8
+ 180 0067 65000000 		.4byte	.LASF8
  181 006b 04       		.uleb128 0x4
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 6
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cc3LxAen.s 			page 6
 
 
- 182 006c AB010000 		.4byte	.LASF12
+ 182 006c 65010000 		.4byte	.LASF12
  183 0070 02       		.byte	0x2
  184 0071 C2       		.byte	0xc2
  185 0072 2C000000 		.4byte	0x2c
  186 0076 02       		.uleb128 0x2
  187 0077 04       		.byte	0x4
  188 0078 04       		.byte	0x4
- 189 0079 59000000 		.4byte	.LASF9
+ 189 0079 13000000 		.4byte	.LASF9
  190 007d 02       		.uleb128 0x2
  191 007e 08       		.byte	0x8
  192 007f 04       		.byte	0x4
- 193 0080 A4000000 		.4byte	.LASF10
+ 193 0080 5E000000 		.4byte	.LASF10
  194 0084 02       		.uleb128 0x2
  195 0085 01       		.byte	0x1
  196 0086 08       		.byte	0x8
- 197 0087 0E010000 		.4byte	.LASF11
+ 197 0087 C8000000 		.4byte	.LASF11
  198 008b 05       		.uleb128 0x5
- 199 008c 6D000000 		.4byte	.LASF13
+ 199 008c 27000000 		.4byte	.LASF13
  200 0090 02       		.byte	0x2
  201 0091 6C01     		.2byte	0x16c
  202 0093 97000000 		.4byte	0x97
@@ -330,19 +330,19 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 1
  208 009f 1C       		.byte	0x1c
  209 00a0 B1000000 		.4byte	0xb1
  210 00a4 08       		.uleb128 0x8
- 211 00a5 97000000 		.4byte	.LASF22
+ 211 00a5 51000000 		.4byte	.LASF22
  212 00a9 03       		.byte	0x3
  213 00aa 1E       		.byte	0x1e
  214 00ab 6B000000 		.4byte	0x6b
  215 00af 00       		.byte	0
  216 00b0 00       		.byte	0
  217 00b1 04       		.uleb128 0x4
- 218 00b2 E6000000 		.4byte	.LASF14
+ 218 00b2 A0000000 		.4byte	.LASF14
  219 00b6 03       		.byte	0x3
  220 00b7 20       		.byte	0x20
  221 00b8 9C000000 		.4byte	0x9c
  222 00bc 09       		.uleb128 0x9
- 223 00bd CF000000 		.4byte	.LASF15
+ 223 00bd 89000000 		.4byte	.LASF15
  224 00c1 01       		.byte	0x1
  225 00c2 28       		.byte	0x28
  226 00c3 00000000 		.4byte	.LFB0
@@ -350,7 +350,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 1
  228 00cb 01       		.uleb128 0x1
  229 00cc 9C       		.byte	0x9c
  230 00cd 09       		.uleb128 0x9
- 231 00ce B1010000 		.4byte	.LASF16
+ 231 00ce 6B010000 		.4byte	.LASF16
  232 00d2 01       		.byte	0x1
  233 00d3 3D       		.byte	0x3d
  234 00d4 00000000 		.4byte	.LFB1
@@ -358,10 +358,10 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 1
  236 00dc 01       		.uleb128 0x1
  237 00dd 9C       		.byte	0x9c
  238 00de 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 7
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cc3LxAen.s 			page 7
 
 
- 239 00df 1D020000 		.4byte	.LASF17
+ 239 00df FF010000 		.4byte	.LASF17
  240 00e3 01       		.byte	0x1
  241 00e4 51       		.byte	0x51
  242 00e5 00000000 		.4byte	.LFB2
@@ -387,7 +387,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 1
  262 0117 CD000000 		.4byte	0xcd
  263 011b 00       		.byte	0
  264 011c 0C       		.uleb128 0xc
- 265 011d D4010000 		.4byte	.LASF23
+ 265 011d 8E010000 		.4byte	.LASF23
  266 0121 01       		.byte	0x1
  267 0122 17       		.byte	0x17
  268 0123 B1000000 		.4byte	0xb1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 1
  293 0012 00       		.byte	0
  294 0013 02       		.uleb128 0x2
  295 0014 24       		.uleb128 0x24
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 8
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cc3LxAen.s 			page 8
 
 
  296 0015 00       		.byte	0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 1
  350 004b 13       		.uleb128 0x13
  351 004c 01       		.byte	0x1
  352 004d 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 9
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cc3LxAen.s 			page 9
 
 
  353 004e 0B       		.uleb128 0xb
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 1
  407 0085 3A       		.uleb128 0x3a
  408 0086 0B       		.uleb128 0xb
  409 0087 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 10
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cc3LxAen.s 			page 10
 
 
  410 0088 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 1
  464 0028 00000000 		.4byte	.LFB3
  465 002c 08000000 		.4byte	.LFE3-.LFB3
  466 0030 00000000 		.4byte	0
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 11
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cc3LxAen.s 			page 11
 
 
  467 0034 00000000 		.4byte	0
@@ -627,138 +627,133 @@ ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 1
  484      5265675F 
  484      57616B65 
  484      757000
- 485              	.LASF21:
- 486 0013 433A5C55 		.ascii	"C:\\Users\\Vit\\Documents\\PSoC Creator\\Workspace_"
- 486      73657273 
- 486      5C566974 
- 486      5C446F63 
- 486      756D656E 
- 487 0041 54686572 		.ascii	"Thermo\\Thermometr.cydsn\000"
- 487      6D6F5C54 
- 487      6865726D 
- 487      6F6D6574 
- 487      722E6379 
- 488              	.LASF9:
- 489 0059 666C6F61 		.ascii	"float\000"
- 489      7400
- 490              	.LASF1:
- 491 005f 756E7369 		.ascii	"unsigned char\000"
- 491      676E6564 
- 491      20636861 
- 491      7200
- 492              	.LASF13:
- 493 006d 72656738 		.ascii	"reg8\000"
- 493      00
- 494              	.LASF5:
- 495 0072 6C6F6E67 		.ascii	"long unsigned int\000"
- 495      20756E73 
- 495      69676E65 
- 495      6420696E 
- 495      7400
- 496              	.LASF3:
- 497 0084 73686F72 		.ascii	"short unsigned int\000"
- 497      7420756E 
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 12
+ 485              	.LASF9:
+ 486 0013 666C6F61 		.ascii	"float\000"
+ 486      7400
+ 487              	.LASF1:
+ 488 0019 756E7369 		.ascii	"unsigned char\000"
+ 488      676E6564 
+ 488      20636861 
+ 488      7200
+ 489              	.LASF13:
+ 490 0027 72656738 		.ascii	"reg8\000"
+ 490      00
+ 491              	.LASF5:
+ 492 002c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 492      20756E73 
+ 492      69676E65 
+ 492      6420696E 
+ 492      7400
+ 493              	.LASF3:
+ 494 003e 73686F72 		.ascii	"short unsigned int\000"
+ 494      7420756E 
+ 494      7369676E 
+ 494      65642069 
+ 494      6E7400
+ 495              	.LASF22:
+ 496 0051 636F6E74 		.ascii	"controlState\000"
+ 496      726F6C53 
+ 496      74617465 
+ 496      00
+ 497              	.LASF10:
+ 498 005e 646F7562 		.ascii	"double\000"
+ 498      6C6500
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cc3LxAen.s 			page 12
 
 
- 497      7369676E 
- 497      65642069 
- 497      6E7400
- 498              	.LASF22:
- 499 0097 636F6E74 		.ascii	"controlState\000"
- 499      726F6C53 
- 499      74617465 
- 499      00
- 500              	.LASF10:
- 501 00a4 646F7562 		.ascii	"double\000"
- 501      6C6500
- 502              	.LASF8:
- 503 00ab 756E7369 		.ascii	"unsigned int\000"
- 503      676E6564 
- 503      20696E74 
- 503      00
- 504              	.LASF7:
- 505 00b8 6C6F6E67 		.ascii	"long long unsigned int\000"
- 505      206C6F6E 
- 505      6720756E 
- 505      7369676E 
- 505      65642069 
- 506              	.LASF15:
- 507 00cf 50574D5F 		.ascii	"PWM_Mux_Reg_SaveConfig\000"
- 507      4D75785F 
- 507      5265675F 
- 507      53617665 
- 507      436F6E66 
- 508              	.LASF14:
- 509 00e6 50574D5F 		.ascii	"PWM_Mux_Reg_BACKUP_STRUCT\000"
- 509      4D75785F 
- 509      5265675F 
- 509      4241434B 
- 509      55505F53 
- 510              	.LASF6:
- 511 0100 6C6F6E67 		.ascii	"long long int\000"
- 511      206C6F6E 
- 511      6720696E 
- 511      7400
- 512              	.LASF11:
- 513 010e 63686172 		.ascii	"char\000"
- 513      00
- 514              	.LASF19:
- 515 0113 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 515      4320342E 
- 515      392E3320 
- 515      32303135 
- 515      30333033 
- 516 0146 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 516      20726576 
- 516      6973696F 
- 516      6E203232 
- 516      31323230 
- 517 0179 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 517      66756E63 
- 517      74696F6E 
- 517      2D736563 
-ARM GAS  C:\Users\Vit\AppData\Local\Temp\ccHTmmZX.s 			page 13
+ 499              	.LASF8:
+ 500 0065 756E7369 		.ascii	"unsigned int\000"
+ 500      676E6564 
+ 500      20696E74 
+ 500      00
+ 501              	.LASF7:
+ 502 0072 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 502      206C6F6E 
+ 502      6720756E 
+ 502      7369676E 
+ 502      65642069 
+ 503              	.LASF15:
+ 504 0089 50574D5F 		.ascii	"PWM_Mux_Reg_SaveConfig\000"
+ 504      4D75785F 
+ 504      5265675F 
+ 504      53617665 
+ 504      436F6E66 
+ 505              	.LASF14:
+ 506 00a0 50574D5F 		.ascii	"PWM_Mux_Reg_BACKUP_STRUCT\000"
+ 506      4D75785F 
+ 506      5265675F 
+ 506      4241434B 
+ 506      55505F53 
+ 507              	.LASF6:
+ 508 00ba 6C6F6E67 		.ascii	"long long int\000"
+ 508      206C6F6E 
+ 508      6720696E 
+ 508      7400
+ 509              	.LASF11:
+ 510 00c8 63686172 		.ascii	"char\000"
+ 510      00
+ 511              	.LASF19:
+ 512 00cd 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 512      4320342E 
+ 512      392E3320 
+ 512      32303135 
+ 512      30333033 
+ 513 0100 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 513      20726576 
+ 513      6973696F 
+ 513      6E203232 
+ 513      31323230 
+ 514 0133 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 514      66756E63 
+ 514      74696F6E 
+ 514      2D736563 
+ 514      74696F6E 
+ 515              	.LASF2:
+ 516 015b 73686F72 		.ascii	"short int\000"
+ 516      7420696E 
+ 516      7400
+ 517              	.LASF12:
+ 518 0165 75696E74 		.ascii	"uint8\000"
+ 518      3800
+ 519              	.LASF16:
+ 520 016b 50574D5F 		.ascii	"PWM_Mux_Reg_RestoreConfig\000"
+ 520      4D75785F 
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cc3LxAen.s 			page 13
 
 
- 517      74696F6E 
- 518              	.LASF2:
- 519 01a1 73686F72 		.ascii	"short int\000"
- 519      7420696E 
- 519      7400
- 520              	.LASF12:
- 521 01ab 75696E74 		.ascii	"uint8\000"
- 521      3800
- 522              	.LASF16:
- 523 01b1 50574D5F 		.ascii	"PWM_Mux_Reg_RestoreConfig\000"
- 523      4D75785F 
- 523      5265675F 
- 523      52657374 
- 523      6F726543 
- 524              	.LASF4:
- 525 01cb 6C6F6E67 		.ascii	"long int\000"
- 525      20696E74 
- 525      00
- 526              	.LASF23:
- 527 01d4 50574D5F 		.ascii	"PWM_Mux_Reg_backup\000"
- 527      4D75785F 
- 527      5265675F 
- 527      6261636B 
- 527      757000
- 528              	.LASF0:
- 529 01e7 7369676E 		.ascii	"signed char\000"
- 529      65642063 
- 529      68617200 
- 530              	.LASF20:
- 531 01f3 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\PWM_Mux_Reg_PM.c\000"
- 531      6E657261 
- 531      7465645F 
- 531      536F7572 
- 531      63655C50 
- 532              	.LASF17:
- 533 021d 50574D5F 		.ascii	"PWM_Mux_Reg_Sleep\000"
- 533      4D75785F 
- 533      5265675F 
- 533      536C6565 
- 533      7000
- 534              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 520      5265675F 
+ 520      52657374 
+ 520      6F726543 
+ 521              	.LASF4:
+ 522 0185 6C6F6E67 		.ascii	"long int\000"
+ 522      20696E74 
+ 522      00
+ 523              	.LASF23:
+ 524 018e 50574D5F 		.ascii	"PWM_Mux_Reg_backup\000"
+ 524      4D75785F 
+ 524      5265675F 
+ 524      6261636B 
+ 524      757000
+ 525              	.LASF21:
+ 526 01a1 433A5C45 		.ascii	"C:\\EAGLE\\My\\Thermometr\\Thermometr.cydsn\000"
+ 526      41474C45 
+ 526      5C4D795C 
+ 526      54686572 
+ 526      6D6F6D65 
+ 527              	.LASF0:
+ 528 01c9 7369676E 		.ascii	"signed char\000"
+ 528      65642063 
+ 528      68617200 
+ 529              	.LASF20:
+ 530 01d5 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\PWM_Mux_Reg_PM.c\000"
+ 530      6E657261 
+ 530      7465645F 
+ 530      536F7572 
+ 530      63655C50 
+ 531              	.LASF17:
+ 532 01ff 50574D5F 		.ascii	"PWM_Mux_Reg_Sleep\000"
+ 532      4D75785F 
+ 532      5265675F 
+ 532      536C6565 
+ 532      7000
+ 533              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

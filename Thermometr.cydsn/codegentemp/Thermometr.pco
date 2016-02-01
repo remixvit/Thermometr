@@ -1,5 +1,5 @@
 # Thermometr
-# 2016-01-21 16:30:54Z
+# 2016-01-26 01:01:01Z
 
 # IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 2
