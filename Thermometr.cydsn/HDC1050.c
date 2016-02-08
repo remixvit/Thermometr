@@ -23,14 +23,20 @@ void HDC1050_Request_Conversion(){
     uint8 Request[] = {0};
     SCB_2_I2CMasterClearStatus();
     SCB_2_I2CMasterWriteBuf(HDC1050_Slave_Adress, Request, 1, SCB_2_I2C_MODE_COMPLETE_XFER);
-    while((SCB_2_I2CMasterStatus() & SCB_2_I2C_MSTAT_WR_CMPLT) == 0){}
+    while((SCB_2_I2CMasterStatus() & SCB_2_I2C_MSTAT_WR_CMPLT) == 0)
+    {
+        
+    }
 }
 
 void HDC1050_Get_Temp_And_Humi(){
     uint8 Bufer[4];
     SCB_2_I2CMasterClearStatus();
     SCB_2_I2CMasterReadBuf(HDC1050_Slave_Adress, Bufer, 4, SCB_2_I2C_MODE_COMPLETE_XFER);
-    while((SCB_2_I2CMasterStatus() & SCB_2_I2C_MSTAT_RD_CMPLT) == 0){}
+    while((SCB_2_I2CMasterStatus() & SCB_2_I2C_MSTAT_RD_CMPLT) == 0)
+    {
+        
+    }
     SCB_2_I2CMasterClearStatus();
     Temp = ((((Bufer[0] << 8) + Bufer[1]) * 165 + 0x8000) >> 16) - 40;
     Humi = (((Bufer[2] << 8) + Bufer[3]) * 100 + 0x8000) >> 16;

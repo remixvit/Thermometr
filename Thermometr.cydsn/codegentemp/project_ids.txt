@@ -1,5 +1,5 @@
-C:\EAGLE\My\Thermometr\Thermometr.cydsn\Thermometr.cyprj|59970438-9275-400e-a76c-5cd27e7aa4da
-C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|e0132a8d-85fc-4d60-bba1-b5a6eb1ef8f2
-C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|1af349af-e8de-4af0-9709-b14e9163654e
-C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|741a6b2e-5c71-48c8-aec0-50f36ac63b10
-C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|eccbbe96-8aca-458f-9d7d-e1588e7aadfd
+C:\EAGLE\My\Thermometr\Thermometr.cydsn\Thermometr.cyprj|4b5cb233-6708-4914-bf67-b5fd014457c8
+C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|4b152283-155e-4f23-b446-e9dcac481200
+C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|6e309260-6d25-4ee9-b702-0d803b79e051
+C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|cc045311-9094-49f2-bf83-fdd075b68e38
+C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|d3c1d000-5aeb-4d5d-b3b4-40c56c08fb05

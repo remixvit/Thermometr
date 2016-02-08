@@ -1,6 +1,6 @@
 -- ======================================================================
 -- Thermometr.ctl generated from Thermometr
--- 01/26/2016 at 09:00
+-- 02/08/2016 at 20:05
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 

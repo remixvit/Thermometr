@@ -1516,7 +1516,7 @@
         pin (interrupt_lo) { direction: output; }
         pin (interrupt_med) { direction: output; }
         pin (interrupt_hi) { direction: output; }
-        pin (usb_sof) { direction: output; }
+        pin (dsi_usb_sof) { direction: output; }
         pin (dma_burstend_0) { direction: input; }
         pin (dma_burstend_1) { direction: input; }
         pin (dma_burstend_2) { direction: input; }
@@ -1538,6 +1538,27 @@
         pin (ep8_1) { direction : output; }
         pin (reset) { direction : output; }
         pin (arb) { direction : output; }
+    }
+
+    cell (p4usbpdcell) {
+        pin (clock_rx) { direction: input; }
+        pin (clock_tx) { direction: input; }
+        pin (clock_sar) { direction: input; }
+        pin (interrupt) { direction: output; }
+        pin (interrupt_wakeup) { direction: output; }
+        pin (cmp_out) { direction: output; }
+        pin (cmp_out_0) { direction: output; }
+        pin (cmp_out_1) { direction: output; }
+        pin (tx_data) { direction: input; }
+        pin (tx_data_en) { direction: input; }
+        pin (tr_out_0) { direction: output; }
+        pin (tr_out_1) { direction: output; }
+        pin (tr_out_2) { direction: output; }
+        pin (tr_out_3) { direction: output; }
+        pin (tr_out_4) { direction: output; }
+        pin (tr_out_5) { direction: output; }
+        pin (tr_out_6) { direction: output; }
+        pin (hpd) { direction: inout; }
     }
 
 /*}*/

@@ -1,7 +1,7 @@
 /*******************************************************************************
 * File Name: cyfitter_cfg.c
 * 
-* PSoC Creator  3.3 CP1
+* PSoC Creator  3.3 SP1
 *
 * Description:
 * This file contains device initialization code.
@@ -29,7 +29,9 @@
     #define CYPACKED_ATTR __attribute__ ((packed))
     #define CYALIGNED __attribute__ ((aligned))
     #define CY_CFG_UNUSED __attribute__ ((unused))
-    #define CY_CFG_SECTION __attribute__ ((section(".psocinit")))
+    #ifndef CY_CFG_SECTION
+        #define CY_CFG_SECTION __attribute__ ((section(".psocinit")))
+    #endif
     
     #if defined(__ARMCC_VERSION)
         #define CY_CFG_MEMORY_BARRIER() __memory_changed()
@@ -203,6 +205,9 @@ static void ClockSetup(void)
 
 	/* CYDEV_CLK_IMO_CONFIG Starting address: CYDEV_CLK_IMO_CONFIG */
 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_IMO_CONFIG), 0x80000000u);
+
+	/* CYDEV_CLK_SELECT Starting address: CYDEV_CLK_SELECT */
+	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT), 0x00000000u);
 
 	/* CYDEV_CLK_DIVIDER_A00 Starting address: CYDEV_CLK_DIVIDER_A00 */
 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_DIVIDER_A00), 0x80000000u);
@@ -454,7 +459,7 @@ void cyfitter_cfg(void)
 
 		/* UDB_PA_1 Starting address: CYDEV_UDB_PA1_BASE */
 		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA1_BASE), 0x00990000u);
-		CY_SET_XTND_REG32((void CYFAR *)(CYREG_UDB_PA1_CFG8), 0xC0800000u);
+		CY_SET_XTND_REG32((void CYFAR *)(CYREG_UDB_PA1_CFG8), 0xD1910000u);
 
 		/* UDB_PA_3 Starting address: CYDEV_UDB_PA3_BASE */
 		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA3_BASE), 0x00990000u);
@@ -491,6 +496,7 @@ void cyfitter_cfg(void)
 	CY_SET_XTND_REG32((void CYFAR *)(CYDEV_PRT4_BASE), 0x0000000Du);
 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_PRT4_PC), 0x00000D8Eu);
 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_PRT4_PC2), 0x0000000Du);
+
 
 	/* Setup clocks based on selections from Clock DWR */
 	ClockSetup();

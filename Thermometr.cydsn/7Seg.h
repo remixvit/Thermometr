@@ -23,14 +23,14 @@
 #define Symbol_Degrees 0x9C
 #define Symbol_Procent 0xA3
 #define Symbol_Space 0xFF
+#define Symbol_Stop 0x11
 
 
-void Display_Test_1(void);
-void Display_Test_2(void);
+
 void Init_Video_Memory();
 void Display_Write_Numer(uint8 Number, uint8 Segment);
 void Display_Write_Mem(void);
-void Display_Scroll_Video_Memory(void);
+void Display_Scroll_Video_Memory(uint8 Scroll);
 void Display_Set_Video_Memory(void);
 
 /* [] END OF FILE */

@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 1
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -17,13 +17,13 @@ ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 1
   14              		.text
   15              	.Ltext0:
   16              		.cfi_sections	.debug_frame
-  17              		.section	.text.main,"ax",%progbits
+  17              		.section	.text.HDC_Put_Result,"ax",%progbits
   18              		.align	2
-  19              		.global	main
+  19              		.global	HDC_Put_Result
   20              		.code	16
   21              		.thumb_func
-  22              		.type	main, %function
-  23              	main:
+  22              		.type	HDC_Put_Result, %function
+  23              	HDC_Put_Result:
   24              	.LFB33:
   25              		.file 1 ".\\main.c"
    1:.\main.c      **** /* ========================================
@@ -44,1195 +44,1484 @@ ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 1
   16:.\main.c      **** #define Timer_Display_Scroll 0
   17:.\main.c      **** #define Timer_Sensor_Request 1
   18:.\main.c      **** #define Timer_Sensor_Get_Temp 2
-  19:.\main.c      **** 
-  20:.\main.c      **** extern void HDC1050_Get_Temp_And_Humi();
-  21:.\main.c      **** extern void HDC1050_Request_Conversion();
-  22:.\main.c      **** volatile uint8 ActionFlag = 0;
-  23:.\main.c      **** volatile uint8 Simofor = 0;
-  24:.\main.c      **** volatile uint8 Counter = 0;
-  25:.\main.c      **** 
-  26:.\main.c      **** 
-  27:.\main.c      **** 
+  19:.\main.c      **** #define Timer_Display_Print 3
+  20:.\main.c      **** 
+  21:.\main.c      **** extern void HDC1050_Get_Temp_And_Humi();
+  22:.\main.c      **** extern void HDC1050_Request_Conversion();
+  23:.\main.c      **** extern volatile uint8 VideoMemory[Video_Memory_Size];
+  24:.\main.c      **** volatile uint8 ActionFlag = 0;
+  25:.\main.c      **** volatile uint8 Simofor = 0;
+  26:.\main.c      **** volatile uint8 Counter = 0;
+  27:.\main.c      **** volatile uint8 Video_Pointer = 0;
   28:.\main.c      **** 
-  29:.\main.c      **** int main()
-  30:.\main.c      **** {
-  26              		.loc 1 30 0
+  29:.\main.c      **** void HDC_Put_Result();
+  30:.\main.c      **** void HDC_Start_Convert();
+  31:.\main.c      **** void Display_Print();
+  32:.\main.c      **** 
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 2
+
+
+  33:.\main.c      **** 
+  34:.\main.c      **** void HDC_Put_Result()
+  35:.\main.c      **** {
+  26              		.loc 1 35 0
   27              		.cfi_startproc
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 2
+  28 0000 08B5     		push	{r3, lr}
+  29              		.cfi_def_cfa_offset 8
+  30              		.cfi_offset 3, -8
+  31              		.cfi_offset 14, -4
+  36:.\main.c      **** 	HDC1050_Get_Temp_And_Humi();
+  32              		.loc 1 36 0
+  33 0002 FFF7FEFF 		bl	HDC1050_Get_Temp_And_Humi
+  34              	.LVL0:
+  37:.\main.c      ****     Display_Set_Video_Memory();
+  35              		.loc 1 37 0
+  36 0006 FFF7FEFF 		bl	Display_Set_Video_Memory
+  37              	.LVL1:
+  38:.\main.c      ****     System_Timer_Add(Timer_Sensor_Request, Second);
+  38              		.loc 1 38 0
+  39 000a 0120     		mov	r0, #1
+  40 000c 0149     		ldr	r1, .L2
+  41 000e FFF7FEFF 		bl	System_Timer_Add
+  42              	.LVL2:
+  39:.\main.c      **** }
+  43              		.loc 1 39 0
+  44              		@ sp needed
+  45 0012 08BD     		pop	{r3, pc}
+  46              	.L3:
+  47              		.align	2
+  48              	.L2:
+  49 0014 510F0000 		.word	3921
+  50              		.cfi_endproc
+  51              	.LFE33:
+  52              		.size	HDC_Put_Result, .-HDC_Put_Result
+  53              		.section	.text.HDC_Start_Convert,"ax",%progbits
+  54              		.align	2
+  55              		.global	HDC_Start_Convert
+  56              		.code	16
+  57              		.thumb_func
+  58              		.type	HDC_Start_Convert, %function
+  59              	HDC_Start_Convert:
+  60              	.LFB34:
+  40:.\main.c      **** 
+  41:.\main.c      **** void HDC_Start_Convert()
+  42:.\main.c      **** {
+  61              		.loc 1 42 0
+  62              		.cfi_startproc
+  63 0000 08B5     		push	{r3, lr}
+  64              		.cfi_def_cfa_offset 8
+  65              		.cfi_offset 3, -8
+  66              		.cfi_offset 14, -4
+  43:.\main.c      **** 	HDC1050_Request_Conversion();
+  67              		.loc 1 43 0
+  68 0002 FFF7FEFF 		bl	HDC1050_Request_Conversion
+  69              	.LVL3:
+  44:.\main.c      **** 	System_Timer_Add(Timer_Sensor_Get_Temp, Second);
+  70              		.loc 1 44 0
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 3
 
 
-  28 0000 00B5     		push	{lr}
-  29              		.cfi_def_cfa_offset 4
-  30              		.cfi_offset 14, -4
-  31 0002 83B0     		sub	sp, sp, #12
-  32              		.cfi_def_cfa_offset 16
-  31:.\main.c      ****     volatile uint8 Watcher = 0;
-  33              		.loc 1 31 0
-  34 0004 0022     		mov	r2, #0
-  35 0006 6B46     		mov	r3, sp
-  36 0008 DA71     		strb	r2, [r3, #7]
-  32:.\main.c      ****     CyGlobalIntEnable; /* Enable global interrupts. */
-  37              		.loc 1 32 0
-  38              	@ 32 ".\main.c" 1
-  39 000a 62B6     		CPSIE   i
-  40              	@ 0 "" 2
-  33:.\main.c      ****     System_Timer_Start();
-  41              		.loc 1 33 0
-  42              		.code	16
-  43 000c FFF7FEFF 		bl	System_Timer_Start
-  44              	.LVL0:
-  34:.\main.c      ****     SCB_2_Start();
-  45              		.loc 1 34 0
-  46 0010 FFF7FEFF 		bl	SCB_2_Start
-  47              	.LVL1:
-  35:.\main.c      ****     HDC1050_Request_Conversion();
-  48              		.loc 1 35 0
-  49 0014 FFF7FEFF 		bl	HDC1050_Request_Conversion
-  50              	.LVL2:
-  36:.\main.c      ****     CyDelay(100);
-  51              		.loc 1 36 0
-  52 0018 6420     		mov	r0, #100
-  53 001a FFF7FEFF 		bl	CyDelay
-  54              	.LVL3:
-  37:.\main.c      ****     HDC1050_Get_Temp_And_Humi();
-  55              		.loc 1 37 0
-  56 001e FFF7FEFF 		bl	HDC1050_Get_Temp_And_Humi
-  57              	.LVL4:
-  38:.\main.c      ****     Init_Video_Memory();
-  58              		.loc 1 38 0
-  59 0022 FFF7FEFF 		bl	Init_Video_Memory
-  60              	.LVL5:
-  39:.\main.c      ****     Display_Set_Video_Memory();
-  61              		.loc 1 39 0
-  62 0026 FFF7FEFF 		bl	Display_Set_Video_Memory
-  63              	.LVL6:
-  40:.\main.c      ****     Display_Scroll_Video_Memory();
-  64              		.loc 1 40 0
-  65 002a FFF7FEFF 		bl	Display_Scroll_Video_Memory
-  66              	.LVL7:
-  41:.\main.c      ****     LED_SEG_PWM_Start();
-  67              		.loc 1 41 0
-  68 002e FFF7FEFF 		bl	LED_SEG_PWM_Start
-  69              	.LVL8:
-  42:.\main.c      ****     LED_SEG_PWM_WriteCompare2(200);
-  70              		.loc 1 42 0
-  71 0032 C820     		mov	r0, #200
-  72 0034 FFF7FEFF 		bl	LED_SEG_PWM_WriteCompare2
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 3
+  71 0006 0220     		mov	r0, #2
+  72 0008 0149     		ldr	r1, .L5
+  73 000a FFF7FEFF 		bl	System_Timer_Add
+  74              	.LVL4:
+  45:.\main.c      **** }
+  75              		.loc 1 45 0
+  76              		@ sp needed
+  77 000e 08BD     		pop	{r3, pc}
+  78              	.L6:
+  79              		.align	2
+  80              	.L5:
+  81 0010 510F0000 		.word	3921
+  82              		.cfi_endproc
+  83              	.LFE34:
+  84              		.size	HDC_Start_Convert, .-HDC_Start_Convert
+  85              		.section	.text.Display_Print,"ax",%progbits
+  86              		.align	2
+  87              		.global	Display_Print
+  88              		.code	16
+  89              		.thumb_func
+  90              		.type	Display_Print, %function
+  91              	Display_Print:
+  92              	.LFB35:
+  46:.\main.c      **** 
+  47:.\main.c      **** void Display_Print()
+  48:.\main.c      **** {
+  93              		.loc 1 48 0
+  94              		.cfi_startproc
+  95 0000 08B5     		push	{r3, lr}
+  96              		.cfi_def_cfa_offset 8
+  97              		.cfi_offset 3, -8
+  98              		.cfi_offset 14, -4
+  49:.\main.c      ****     if(VideoMemory[Video_Pointer] == Symbol_Stop)
+  99              		.loc 1 49 0
+ 100 0002 084B     		ldr	r3, .L9
+ 101 0004 1B78     		ldrb	r3, [r3]
+ 102 0006 DBB2     		uxtb	r3, r3
+ 103 0008 074A     		ldr	r2, .L9+4
+ 104 000a D35C     		ldrb	r3, [r2, r3]
+ 105 000c 112B     		cmp	r3, #17
+ 106 000e 02D1     		bne	.L8
+  50:.\main.c      ****     {
+  51:.\main.c      ****         Video_Pointer = 0;
+ 107              		.loc 1 51 0
+ 108 0010 0022     		mov	r2, #0
+ 109 0012 044B     		ldr	r3, .L9
+ 110 0014 1A70     		strb	r2, [r3]
+ 111              	.L8:
+  52:.\main.c      ****     }
+  53:.\main.c      **** 	Display_Scroll_Video_Memory(Video_Pointer);
+ 112              		.loc 1 53 0
+ 113 0016 034B     		ldr	r3, .L9
+ 114 0018 1878     		ldrb	r0, [r3]
+ 115 001a C0B2     		uxtb	r0, r0
+ 116 001c FFF7FEFF 		bl	Display_Scroll_Video_Memory
+ 117              	.LVL5:
+  54:.\main.c      **** }
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 4
 
 
-  73              	.LVL9:
-  43:.\main.c      ****     SCB_1_Start();
-  74              		.loc 1 43 0
-  75 0038 FFF7FEFF 		bl	SCB_1_Start
-  76              	.LVL10:
-  44:.\main.c      ****     System_Timer_Add(Timer_Display_Scroll, Second);
-  77              		.loc 1 44 0
-  78 003c 0020     		mov	r0, #0
-  79 003e 1F49     		ldr	r1, .L7
-  80 0040 FFF7FEFF 		bl	System_Timer_Add
-  81              	.LVL11:
-  45:.\main.c      ****     System_Timer_Add(Timer_Sensor_Request, (Second*25));
-  82              		.loc 1 45 0
-  83 0044 0120     		mov	r0, #1
-  84 0046 1E49     		ldr	r1, .L7+4
-  85 0048 FFF7FEFF 		bl	System_Timer_Add
-  86              	.LVL12:
-  87              	.L6:
-  46:.\main.c      ****     for(;;)
-  47:.\main.c      ****     {
-  48:.\main.c      ****         if(System_Timer_Flag[Timer_Display_Scroll].Flag == 1)
-  88              		.loc 1 48 0
-  89 004c 1D4B     		ldr	r3, .L7+8
-  90 004e 1B78     		ldrb	r3, [r3]
-  91 0050 012B     		cmp	r3, #1
-  92 0052 16D1     		bne	.L2
-  49:.\main.c      ****         {
-  50:.\main.c      ****             System_Timer_Flag[Timer_Display_Scroll].Flag = 0;
-  93              		.loc 1 50 0
-  94 0054 0022     		mov	r2, #0
-  95 0056 1B4B     		ldr	r3, .L7+8
-  96 0058 1A70     		strb	r2, [r3]
-  51:.\main.c      ****             Display_Scroll_Video_Memory();
-  97              		.loc 1 51 0
-  98 005a FFF7FEFF 		bl	Display_Scroll_Video_Memory
-  99              	.LVL13:
-  52:.\main.c      ****             Watcher++;
- 100              		.loc 1 52 0
- 101 005e 6B46     		mov	r3, sp
- 102 0060 DA1D     		add	r2, r3, #7
- 103 0062 DB79     		ldrb	r3, [r3, #7]
- 104 0064 0133     		add	r3, r3, #1
- 105 0066 DBB2     		uxtb	r3, r3
- 106 0068 1370     		strb	r3, [r2]
-  53:.\main.c      ****             if(Watcher == Video_Memory_Size)
- 107              		.loc 1 53 0
- 108 006a 1378     		ldrb	r3, [r2]
- 109 006c 112B     		cmp	r3, #17
- 110 006e 04D1     		bne	.L3
-  54:.\main.c      ****             {
-  55:.\main.c      ****                 Display_Set_Video_Memory();
- 111              		.loc 1 55 0
- 112 0070 FFF7FEFF 		bl	Display_Set_Video_Memory
- 113              	.LVL14:
-  56:.\main.c      ****                 Watcher = 0;
- 114              		.loc 1 56 0
- 115 0074 0022     		mov	r2, #0
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 4
+ 118              		.loc 1 54 0
+ 119              		@ sp needed
+ 120 0020 08BD     		pop	{r3, pc}
+ 121              	.L10:
+ 122 0022 C046     		.align	2
+ 123              	.L9:
+ 124 0024 00000000 		.word	.LANCHOR0
+ 125 0028 00000000 		.word	VideoMemory
+ 126              		.cfi_endproc
+ 127              	.LFE35:
+ 128              		.size	Display_Print, .-Display_Print
+ 129              		.section	.text.main,"ax",%progbits
+ 130              		.align	2
+ 131              		.global	main
+ 132              		.code	16
+ 133              		.thumb_func
+ 134              		.type	main, %function
+ 135              	main:
+ 136              	.LFB36:
+  55:.\main.c      **** 
+  56:.\main.c      **** 
+  57:.\main.c      **** int main()
+  58:.\main.c      **** {
+ 137              		.loc 1 58 0
+ 138              		.cfi_startproc
+ 139 0000 10B5     		push	{r4, lr}
+ 140              		.cfi_def_cfa_offset 8
+ 141              		.cfi_offset 4, -8
+ 142              		.cfi_offset 14, -4
+  59:.\main.c      ****     CyGlobalIntEnable; /* Enable global interrupts. */
+ 143              		.loc 1 59 0
+ 144              	@ 59 ".\main.c" 1
+ 145 0002 62B6     		CPSIE   i
+ 146              	@ 0 "" 2
+  60:.\main.c      ****     System_Timer_Start();
+ 147              		.loc 1 60 0
+ 148              		.code	16
+ 149 0004 FFF7FEFF 		bl	System_Timer_Start
+ 150              	.LVL6:
+  61:.\main.c      ****     SCB_2_Start();
+ 151              		.loc 1 61 0
+ 152 0008 FFF7FEFF 		bl	SCB_2_Start
+ 153              	.LVL7:
+  62:.\main.c      ****     HDC1050_Request_Conversion();
+ 154              		.loc 1 62 0
+ 155 000c FFF7FEFF 		bl	HDC1050_Request_Conversion
+ 156              	.LVL8:
+  63:.\main.c      ****     CyDelay(100);
+ 157              		.loc 1 63 0
+ 158 0010 6420     		mov	r0, #100
+ 159 0012 FFF7FEFF 		bl	CyDelay
+ 160              	.LVL9:
+  64:.\main.c      ****     HDC1050_Get_Temp_And_Humi();
+ 161              		.loc 1 64 0
+ 162 0016 FFF7FEFF 		bl	HDC1050_Get_Temp_And_Humi
+ 163              	.LVL10:
+  65:.\main.c      ****     Init_Video_Memory();
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 5
 
 
- 116 0076 6B46     		mov	r3, sp
- 117 0078 DA71     		strb	r2, [r3, #7]
- 118              	.L3:
-  57:.\main.c      ****             }
-  58:.\main.c      ****             System_Timer_Add(Timer_Display_Scroll, Second);
- 119              		.loc 1 58 0
- 120 007a 0020     		mov	r0, #0
- 121 007c 0F49     		ldr	r1, .L7
- 122 007e FFF7FEFF 		bl	System_Timer_Add
- 123              	.LVL15:
- 124              	.L2:
-  59:.\main.c      ****         }
-  60:.\main.c      ****         
-  61:.\main.c      ****         if(System_Timer_Flag[Timer_Sensor_Request].Flag == 1)
- 125              		.loc 1 61 0
- 126 0082 104B     		ldr	r3, .L7+8
- 127 0084 5B78     		ldrb	r3, [r3, #1]
- 128 0086 012B     		cmp	r3, #1
- 129 0088 08D1     		bne	.L4
-  62:.\main.c      ****         {
-  63:.\main.c      ****             System_Timer_Flag[Timer_Sensor_Request].Flag = 0;
- 130              		.loc 1 63 0
- 131 008a 0022     		mov	r2, #0
- 132 008c 0D4B     		ldr	r3, .L7+8
- 133 008e 5A70     		strb	r2, [r3, #1]
-  64:.\main.c      ****             HDC1050_Request_Conversion();
- 134              		.loc 1 64 0
- 135 0090 FFF7FEFF 		bl	HDC1050_Request_Conversion
- 136              	.LVL16:
-  65:.\main.c      ****             System_Timer_Add(Timer_Sensor_Get_Temp, Second);
- 137              		.loc 1 65 0
- 138 0094 0220     		mov	r0, #2
- 139 0096 0949     		ldr	r1, .L7
- 140 0098 FFF7FEFF 		bl	System_Timer_Add
- 141              	.LVL17:
- 142              	.L4:
-  66:.\main.c      ****         }
-  67:.\main.c      ****         
-  68:.\main.c      ****         if(System_Timer_Flag[Timer_Sensor_Get_Temp].Flag == 1)
- 143              		.loc 1 68 0
- 144 009c 094B     		ldr	r3, .L7+8
- 145 009e 9B78     		ldrb	r3, [r3, #2]
- 146 00a0 012B     		cmp	r3, #1
- 147 00a2 08D1     		bne	.L5
-  69:.\main.c      ****         {
-  70:.\main.c      ****             System_Timer_Flag[Timer_Sensor_Get_Temp].Flag = 0;
- 148              		.loc 1 70 0
- 149 00a4 0022     		mov	r2, #0
- 150 00a6 074B     		ldr	r3, .L7+8
- 151 00a8 9A70     		strb	r2, [r3, #2]
-  71:.\main.c      ****             HDC1050_Get_Temp_And_Humi();
- 152              		.loc 1 71 0
- 153 00aa FFF7FEFF 		bl	HDC1050_Get_Temp_And_Humi
- 154              	.LVL18:
-  72:.\main.c      ****             System_Timer_Add(Timer_Sensor_Request, (Second*2));
- 155              		.loc 1 72 0
- 156 00ae 0120     		mov	r0, #1
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 5
+ 164              		.loc 1 65 0
+ 165 001a FFF7FEFF 		bl	Init_Video_Memory
+ 166              	.LVL11:
+  66:.\main.c      ****     Display_Set_Video_Memory();
+ 167              		.loc 1 66 0
+ 168 001e FFF7FEFF 		bl	Display_Set_Video_Memory
+ 169              	.LVL12:
+  67:.\main.c      ****     LED_SEG_PWM_Start();
+ 170              		.loc 1 67 0
+ 171 0022 FFF7FEFF 		bl	LED_SEG_PWM_Start
+ 172              	.LVL13:
+  68:.\main.c      ****     LED_SEG_PWM_WriteCompare2(225);
+ 173              		.loc 1 68 0
+ 174 0026 E120     		mov	r0, #225
+ 175 0028 FFF7FEFF 		bl	LED_SEG_PWM_WriteCompare2
+ 176              	.LVL14:
+  69:.\main.c      ****     SCB_1_Start();
+ 177              		.loc 1 69 0
+ 178 002c FFF7FEFF 		bl	SCB_1_Start
+ 179              	.LVL15:
+  70:.\main.c      **** 	System_Timer_Add(Timer_Display_Scroll, Second);
+ 180              		.loc 1 70 0
+ 181 0030 204C     		ldr	r4, .L17
+ 182 0032 0020     		mov	r0, #0
+ 183 0034 211C     		mov	r1, r4
+ 184 0036 FFF7FEFF 		bl	System_Timer_Add
+ 185              	.LVL16:
+  71:.\main.c      **** 	HDC_Start_Convert();
+ 186              		.loc 1 71 0
+ 187 003a FFF7FEFF 		bl	HDC_Start_Convert
+ 188              	.LVL17:
+  72:.\main.c      ****     System_Timer_Add(Timer_Display_Print, 1);
+ 189              		.loc 1 72 0
+ 190 003e 0320     		mov	r0, #3
+ 191 0040 0121     		mov	r1, #1
+ 192 0042 FFF7FEFF 		bl	System_Timer_Add
+ 193              	.LVL18:
+  73:.\main.c      **** 	System_Timer_Add(Timer_Display_Scroll, Second);
+ 194              		.loc 1 73 0
+ 195 0046 0020     		mov	r0, #0
+ 196 0048 211C     		mov	r1, r4
+ 197 004a FFF7FEFF 		bl	System_Timer_Add
+ 198              	.LVL19:
+  74:.\main.c      **** 	HDC_Start_Convert();
+ 199              		.loc 1 74 0
+ 200 004e FFF7FEFF 		bl	HDC_Start_Convert
+ 201              	.LVL20:
+ 202              	.L15:
+  75:.\main.c      ****     for(;;)
+  76:.\main.c      ****     {
+  77:.\main.c      ****         if(System_Timer_Flag[Timer_Display_Scroll].Flag == 1)
+ 203              		.loc 1 77 0
+ 204 0052 194B     		ldr	r3, .L17+4
+ 205 0054 1B78     		ldrb	r3, [r3]
+ 206 0056 012B     		cmp	r3, #1
+ 207 0058 0BD1     		bne	.L12
+  78:.\main.c      ****         {
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 6
 
 
- 157 00b0 0549     		ldr	r1, .L7+12
- 158 00b2 FFF7FEFF 		bl	System_Timer_Add
- 159              	.LVL19:
- 160              	.L5:
-  73:.\main.c      ****         }
-  74:.\main.c      ****         Display_Write_Mem();
- 161              		.loc 1 74 0
- 162 00b6 FFF7FEFF 		bl	Display_Write_Mem
- 163              	.LVL20:
-  75:.\main.c      ****     }
- 164              		.loc 1 75 0
- 165 00ba C7E7     		b	.L6
- 166              	.L8:
- 167              		.align	2
- 168              	.L7:
- 169 00bc 510F0000 		.word	3921
- 170 00c0 E97E0100 		.word	98025
- 171 00c4 00000000 		.word	System_Timer_Flag
- 172 00c8 A21E0000 		.word	7842
- 173              		.cfi_endproc
- 174              	.LFE33:
- 175              		.size	main, .-main
- 176              		.global	Counter
- 177              		.global	Simofor
- 178              		.global	ActionFlag
- 179              		.comm	System_Timer,40,4
- 180              		.comm	System_Timer_Flag,5,4
- 181              		.bss
- 182              		.type	Counter, %object
- 183              		.size	Counter, 1
- 184              	Counter:
- 185 0000 00       		.space	1
- 186              		.type	Simofor, %object
- 187              		.size	Simofor, 1
- 188              	Simofor:
- 189 0001 00       		.space	1
- 190              		.type	ActionFlag, %object
- 191              		.size	ActionFlag, 1
- 192              	ActionFlag:
- 193 0002 00       		.space	1
- 194              		.text
- 195              	.Letext0:
- 196              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
- 197              		.file 3 "./SysClock.h"
- 198              		.file 4 "./7Seg.h"
- 199              		.file 5 "Generated_Source\\PSoC4/SCB_2.h"
- 200              		.file 6 "Generated_Source\\PSoC4/LED_SEG_PWM.h"
- 201              		.file 7 "Generated_Source\\PSoC4/CyLib.h"
- 202              		.file 8 "Generated_Source\\PSoC4/SCB_1.h"
- 203              		.section	.debug_info,"",%progbits
- 204              	.Ldebug_info0:
- 205 0000 41030000 		.4byte	0x341
- 206 0004 0400     		.2byte	0x4
- 207 0006 00000000 		.4byte	.Ldebug_abbrev0
- 208 000a 04       		.byte	0x4
- 209 000b 01       		.uleb128 0x1
- 210 000c 96010000 		.4byte	.LASF36
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 6
+  79:.\main.c      ****             System_Timer_Flag[Timer_Display_Scroll].Flag = 0;
+ 208              		.loc 1 79 0
+ 209 005a 0022     		mov	r2, #0
+ 210 005c 164B     		ldr	r3, .L17+4
+ 211 005e 1A70     		strb	r2, [r3]
+  80:.\main.c      **** 			Video_Pointer++;
+ 212              		.loc 1 80 0
+ 213 0060 164A     		ldr	r2, .L17+8
+ 214 0062 1378     		ldrb	r3, [r2]
+ 215 0064 0133     		add	r3, r3, #1
+ 216 0066 DBB2     		uxtb	r3, r3
+ 217 0068 1370     		strb	r3, [r2]
+  81:.\main.c      ****             System_Timer_Add(Timer_Display_Scroll, Second);
+ 218              		.loc 1 81 0
+ 219 006a 0020     		mov	r0, #0
+ 220 006c 1149     		ldr	r1, .L17
+ 221 006e FFF7FEFF 		bl	System_Timer_Add
+ 222              	.LVL21:
+ 223              	.L12:
+  82:.\main.c      ****         }
+  83:.\main.c      ****         
+  84:.\main.c      ****         if(System_Timer_Flag[Timer_Sensor_Request].Flag == 1)
+ 224              		.loc 1 84 0
+ 225 0072 114B     		ldr	r3, .L17+4
+ 226 0074 5B78     		ldrb	r3, [r3, #1]
+ 227 0076 012B     		cmp	r3, #1
+ 228 0078 04D1     		bne	.L13
+  85:.\main.c      ****         {
+  86:.\main.c      ****             System_Timer_Flag[Timer_Sensor_Request].Flag = 0;
+ 229              		.loc 1 86 0
+ 230 007a 0022     		mov	r2, #0
+ 231 007c 0E4B     		ldr	r3, .L17+4
+ 232 007e 5A70     		strb	r2, [r3, #1]
+  87:.\main.c      ****             HDC_Start_Convert();
+ 233              		.loc 1 87 0
+ 234 0080 FFF7FEFF 		bl	HDC_Start_Convert
+ 235              	.LVL22:
+ 236              	.L13:
+  88:.\main.c      ****         }
+  89:.\main.c      ****         
+  90:.\main.c      ****         if(System_Timer_Flag[Timer_Sensor_Get_Temp].Flag == 1)
+ 237              		.loc 1 90 0
+ 238 0084 0C4B     		ldr	r3, .L17+4
+ 239 0086 9B78     		ldrb	r3, [r3, #2]
+ 240 0088 012B     		cmp	r3, #1
+ 241 008a 04D1     		bne	.L14
+  91:.\main.c      ****         {
+  92:.\main.c      ****             System_Timer_Flag[Timer_Sensor_Get_Temp].Flag = 0;
+ 242              		.loc 1 92 0
+ 243 008c 0022     		mov	r2, #0
+ 244 008e 0A4B     		ldr	r3, .L17+4
+ 245 0090 9A70     		strb	r2, [r3, #2]
+  93:.\main.c      ****             HDC_Put_Result();
+ 246              		.loc 1 93 0
+ 247 0092 FFF7FEFF 		bl	HDC_Put_Result
+ 248              	.LVL23:
+ 249              	.L14:
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 7
 
 
- 211 0010 01       		.byte	0x1
- 212 0011 0F010000 		.4byte	.LASF37
- 213 0015 64020000 		.4byte	.LASF38
- 214 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 215 001d 00000000 		.4byte	0
- 216 0021 00000000 		.4byte	.Ldebug_line0
- 217 0025 02       		.uleb128 0x2
- 218 0026 01       		.byte	0x1
- 219 0027 06       		.byte	0x6
- 220 0028 8C020000 		.4byte	.LASF0
- 221 002c 02       		.uleb128 0x2
- 222 002d 01       		.byte	0x1
- 223 002e 08       		.byte	0x8
- 224 002f A4000000 		.4byte	.LASF1
- 225 0033 02       		.uleb128 0x2
- 226 0034 02       		.byte	0x2
- 227 0035 05       		.byte	0x5
- 228 0036 24020000 		.4byte	.LASF2
- 229 003a 02       		.uleb128 0x2
- 230 003b 02       		.byte	0x2
- 231 003c 07       		.byte	0x7
- 232 003d 55000000 		.4byte	.LASF3
- 233 0041 02       		.uleb128 0x2
- 234 0042 04       		.byte	0x4
- 235 0043 05       		.byte	0x5
- 236 0044 5B020000 		.4byte	.LASF4
- 237 0048 02       		.uleb128 0x2
- 238 0049 04       		.byte	0x4
- 239 004a 07       		.byte	0x7
- 240 004b C4000000 		.4byte	.LASF5
- 241 004f 02       		.uleb128 0x2
- 242 0050 08       		.byte	0x8
- 243 0051 05       		.byte	0x5
- 244 0052 7E010000 		.4byte	.LASF6
- 245 0056 02       		.uleb128 0x2
- 246 0057 08       		.byte	0x8
- 247 0058 07       		.byte	0x7
- 248 0059 56010000 		.4byte	.LASF7
- 249 005d 03       		.uleb128 0x3
- 250 005e 04       		.byte	0x4
- 251 005f 05       		.byte	0x5
- 252 0060 696E7400 		.ascii	"int\000"
- 253 0064 02       		.uleb128 0x2
- 254 0065 04       		.byte	0x4
- 255 0066 07       		.byte	0x7
- 256 0067 74000000 		.4byte	.LASF8
- 257 006b 04       		.uleb128 0x4
- 258 006c EF000000 		.4byte	.LASF9
- 259 0070 02       		.byte	0x2
- 260 0071 C2       		.byte	0xc2
- 261 0072 2C000000 		.4byte	0x2c
- 262 0076 04       		.uleb128 0x4
- 263 0077 20010000 		.4byte	.LASF10
- 264 007b 02       		.byte	0x2
- 265 007c C4       		.byte	0xc4
- 266 007d 48000000 		.4byte	0x48
- 267 0081 02       		.uleb128 0x2
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 7
+  94:.\main.c      ****         }
+  95:.\main.c      ****         
+  96:.\main.c      **** 		if(System_Timer_Flag[Timer_Display_Print].Flag == 1)
+ 250              		.loc 1 96 0
+ 251 0096 084B     		ldr	r3, .L17+4
+ 252 0098 DB78     		ldrb	r3, [r3, #3]
+ 253 009a 012B     		cmp	r3, #1
+ 254 009c D9D1     		bne	.L15
+  97:.\main.c      ****         {
+  98:.\main.c      ****             System_Timer_Flag[Timer_Display_Print].Flag = 0;
+ 255              		.loc 1 98 0
+ 256 009e 0022     		mov	r2, #0
+ 257 00a0 054B     		ldr	r3, .L17+4
+ 258 00a2 DA70     		strb	r2, [r3, #3]
+  99:.\main.c      **** 			Display_Print();
+ 259              		.loc 1 99 0
+ 260 00a4 FFF7FEFF 		bl	Display_Print
+ 261              	.LVL24:
+ 100:.\main.c      ****             System_Timer_Add(Timer_Display_Print, 1);
+ 262              		.loc 1 100 0
+ 263 00a8 0320     		mov	r0, #3
+ 264 00aa 0121     		mov	r1, #1
+ 265 00ac FFF7FEFF 		bl	System_Timer_Add
+ 266              	.LVL25:
+ 267 00b0 CFE7     		b	.L15
+ 268              	.L18:
+ 269 00b2 C046     		.align	2
+ 270              	.L17:
+ 271 00b4 510F0000 		.word	3921
+ 272 00b8 00000000 		.word	System_Timer_Flag
+ 273 00bc 00000000 		.word	.LANCHOR0
+ 274              		.cfi_endproc
+ 275              	.LFE36:
+ 276              		.size	main, .-main
+ 277              		.global	Video_Pointer
+ 278              		.global	Counter
+ 279              		.global	Simofor
+ 280              		.global	ActionFlag
+ 281              		.comm	System_Timer,40,4
+ 282              		.comm	System_Timer_Flag,5,4
+ 283              		.bss
+ 284              		.set	.LANCHOR0,. + 0
+ 285              		.type	Video_Pointer, %object
+ 286              		.size	Video_Pointer, 1
+ 287              	Video_Pointer:
+ 288 0000 00       		.space	1
+ 289              		.type	Counter, %object
+ 290              		.size	Counter, 1
+ 291              	Counter:
+ 292 0001 00       		.space	1
+ 293              		.type	Simofor, %object
+ 294              		.size	Simofor, 1
+ 295              	Simofor:
+ 296 0002 00       		.space	1
+ 297              		.type	ActionFlag, %object
+ 298              		.size	ActionFlag, 1
+ 299              	ActionFlag:
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 8
 
 
- 268 0082 04       		.byte	0x4
- 269 0083 04       		.byte	0x4
- 270 0084 93000000 		.4byte	.LASF11
- 271 0088 02       		.uleb128 0x2
- 272 0089 08       		.byte	0x8
- 273 008a 04       		.byte	0x4
- 274 008b 08010000 		.4byte	.LASF12
- 275 008f 02       		.uleb128 0x2
- 276 0090 01       		.byte	0x1
- 277 0091 08       		.byte	0x8
- 278 0092 91010000 		.4byte	.LASF13
- 279 0096 05       		.uleb128 0x5
- 280 0097 6B000000 		.4byte	0x6b
- 281 009b 05       		.uleb128 0x5
- 282 009c 76000000 		.4byte	0x76
- 283 00a0 02       		.uleb128 0x2
- 284 00a1 04       		.byte	0x4
- 285 00a2 07       		.byte	0x7
- 286 00a3 6D010000 		.4byte	.LASF14
- 287 00a7 06       		.uleb128 0x6
- 288 00a8 08       		.byte	0x8
- 289 00a9 03       		.byte	0x3
- 290 00aa 1C       		.byte	0x1c
- 291 00ab C8000000 		.4byte	0xc8
- 292 00af 07       		.uleb128 0x7
- 293 00b0 4F010000 		.4byte	.LASF15
- 294 00b4 03       		.byte	0x3
- 295 00b5 1E       		.byte	0x1e
- 296 00b6 96000000 		.4byte	0x96
- 297 00ba 00       		.byte	0
- 298 00bb 07       		.uleb128 0x7
- 299 00bc BC020000 		.4byte	.LASF16
- 300 00c0 03       		.byte	0x3
- 301 00c1 1F       		.byte	0x1f
- 302 00c2 9B000000 		.4byte	0x9b
- 303 00c6 04       		.byte	0x4
- 304 00c7 00       		.byte	0
- 305 00c8 08       		.uleb128 0x8
- 306 00c9 A7000000 		.4byte	0xa7
- 307 00cd D8000000 		.4byte	0xd8
- 308 00d1 09       		.uleb128 0x9
- 309 00d2 A0000000 		.4byte	0xa0
- 310 00d6 04       		.byte	0x4
- 311 00d7 00       		.byte	0
- 312 00d8 06       		.uleb128 0x6
- 313 00d9 01       		.byte	0x1
- 314 00da 03       		.byte	0x3
- 315 00db 21       		.byte	0x21
- 316 00dc ED000000 		.4byte	0xed
- 317 00e0 07       		.uleb128 0x7
- 318 00e1 8C010000 		.4byte	.LASF17
- 319 00e5 03       		.byte	0x3
- 320 00e6 23       		.byte	0x23
- 321 00e7 6B000000 		.4byte	0x6b
- 322 00eb 00       		.byte	0
- 323 00ec 00       		.byte	0
- 324 00ed 08       		.uleb128 0x8
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 8
+ 300 0003 00       		.space	1
+ 301              		.text
+ 302              	.Letext0:
+ 303              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 304              		.file 3 "./SysClock.h"
+ 305              		.file 4 "./7Seg.h"
+ 306              		.file 5 "Generated_Source\\PSoC4/SCB_2.h"
+ 307              		.file 6 "Generated_Source\\PSoC4/CyLib.h"
+ 308              		.file 7 "Generated_Source\\PSoC4/LED_SEG_PWM.h"
+ 309              		.file 8 "Generated_Source\\PSoC4/SCB_1.h"
+ 310              		.section	.debug_info,"",%progbits
+ 311              	.Ldebug_info0:
+ 312 0000 E3030000 		.4byte	0x3e3
+ 313 0004 0400     		.2byte	0x4
+ 314 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 315 000a 04       		.byte	0x4
+ 316 000b 01       		.uleb128 0x1
+ 317 000c C1010000 		.4byte	.LASF40
+ 318 0010 01       		.byte	0x1
+ 319 0011 3A010000 		.4byte	.LASF41
+ 320 0015 8F020000 		.4byte	.LASF42
+ 321 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 322 001d 00000000 		.4byte	0
+ 323 0021 00000000 		.4byte	.Ldebug_line0
+ 324 0025 02       		.uleb128 0x2
+ 325 0026 01       		.byte	0x1
+ 326 0027 06       		.byte	0x6
+ 327 0028 B7020000 		.4byte	.LASF0
+ 328 002c 02       		.uleb128 0x2
+ 329 002d 01       		.byte	0x1
+ 330 002e 08       		.byte	0x8
+ 331 002f 25010000 		.4byte	.LASF1
+ 332 0033 02       		.uleb128 0x2
+ 333 0034 02       		.byte	0x2
+ 334 0035 05       		.byte	0x5
+ 335 0036 4F020000 		.4byte	.LASF2
+ 336 003a 02       		.uleb128 0x2
+ 337 003b 02       		.byte	0x2
+ 338 003c 07       		.byte	0x7
+ 339 003d 6A000000 		.4byte	.LASF3
+ 340 0041 02       		.uleb128 0x2
+ 341 0042 04       		.byte	0x4
+ 342 0043 05       		.byte	0x5
+ 343 0044 86020000 		.4byte	.LASF4
+ 344 0048 02       		.uleb128 0x2
+ 345 0049 04       		.byte	0x4
+ 346 004a 07       		.byte	0x7
+ 347 004b C5000000 		.4byte	.LASF5
+ 348 004f 02       		.uleb128 0x2
+ 349 0050 08       		.byte	0x8
+ 350 0051 05       		.byte	0x5
+ 351 0052 A9010000 		.4byte	.LASF6
+ 352 0056 02       		.uleb128 0x2
+ 353 0057 08       		.byte	0x8
+ 354 0058 07       		.byte	0x7
+ 355 0059 81010000 		.4byte	.LASF7
+ 356 005d 03       		.uleb128 0x3
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 9
 
 
- 325 00ee D8000000 		.4byte	0xd8
- 326 00f2 FD000000 		.4byte	0xfd
- 327 00f6 09       		.uleb128 0x9
- 328 00f7 A0000000 		.4byte	0xa0
- 329 00fb 04       		.byte	0x4
- 330 00fc 00       		.byte	0
- 331 00fd 0A       		.uleb128 0xa
- 332 00fe 27010000 		.4byte	.LASF39
- 333 0102 01       		.byte	0x1
- 334 0103 1D       		.byte	0x1d
- 335 0104 5D000000 		.4byte	0x5d
- 336 0108 00000000 		.4byte	.LFB33
- 337 010c CC000000 		.4byte	.LFE33-.LFB33
- 338 0110 01       		.uleb128 0x1
- 339 0111 9C       		.byte	0x9c
- 340 0112 4F020000 		.4byte	0x24f
- 341 0116 0B       		.uleb128 0xb
- 342 0117 33000000 		.4byte	.LASF40
- 343 011b 01       		.byte	0x1
- 344 011c 1F       		.byte	0x1f
- 345 011d 96000000 		.4byte	0x96
- 346 0121 02       		.uleb128 0x2
- 347 0122 91       		.byte	0x91
- 348 0123 77       		.sleb128 -9
- 349 0124 0C       		.uleb128 0xc
- 350 0125 10000000 		.4byte	.LVL0
- 351 0129 AE020000 		.4byte	0x2ae
- 352 012d 0C       		.uleb128 0xc
- 353 012e 14000000 		.4byte	.LVL1
- 354 0132 BB020000 		.4byte	0x2bb
- 355 0136 0C       		.uleb128 0xc
- 356 0137 18000000 		.4byte	.LVL2
- 357 013b C2020000 		.4byte	0x2c2
- 358 013f 0D       		.uleb128 0xd
- 359 0140 1E000000 		.4byte	.LVL3
- 360 0144 CF020000 		.4byte	0x2cf
- 361 0148 53010000 		.4byte	0x153
- 362 014c 0E       		.uleb128 0xe
- 363 014d 01       		.uleb128 0x1
- 364 014e 50       		.byte	0x50
- 365 014f 02       		.uleb128 0x2
- 366 0150 08       		.byte	0x8
- 367 0151 64       		.byte	0x64
- 368 0152 00       		.byte	0
- 369 0153 0C       		.uleb128 0xc
- 370 0154 22000000 		.4byte	.LVL4
- 371 0158 E0020000 		.4byte	0x2e0
- 372 015c 0C       		.uleb128 0xc
- 373 015d 26000000 		.4byte	.LVL5
- 374 0161 ED020000 		.4byte	0x2ed
- 375 0165 0C       		.uleb128 0xc
- 376 0166 2A000000 		.4byte	.LVL6
- 377 016a FA020000 		.4byte	0x2fa
- 378 016e 0C       		.uleb128 0xc
- 379 016f 2E000000 		.4byte	.LVL7
- 380 0173 01030000 		.4byte	0x301
- 381 0177 0C       		.uleb128 0xc
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 9
+ 357 005e 04       		.byte	0x4
+ 358 005f 05       		.byte	0x5
+ 359 0060 696E7400 		.ascii	"int\000"
+ 360 0064 02       		.uleb128 0x2
+ 361 0065 04       		.byte	0x4
+ 362 0066 07       		.byte	0x7
+ 363 0067 89000000 		.4byte	.LASF8
+ 364 006b 04       		.uleb128 0x4
+ 365 006c F0000000 		.4byte	.LASF9
+ 366 0070 02       		.byte	0x2
+ 367 0071 C2       		.byte	0xc2
+ 368 0072 2C000000 		.4byte	0x2c
+ 369 0076 04       		.uleb128 0x4
+ 370 0077 4B010000 		.4byte	.LASF10
+ 371 007b 02       		.byte	0x2
+ 372 007c C4       		.byte	0xc4
+ 373 007d 48000000 		.4byte	0x48
+ 374 0081 02       		.uleb128 0x2
+ 375 0082 04       		.byte	0x4
+ 376 0083 04       		.byte	0x4
+ 377 0084 96000000 		.4byte	.LASF11
+ 378 0088 02       		.uleb128 0x2
+ 379 0089 08       		.byte	0x8
+ 380 008a 04       		.byte	0x4
+ 381 008b 33010000 		.4byte	.LASF12
+ 382 008f 02       		.uleb128 0x2
+ 383 0090 01       		.byte	0x1
+ 384 0091 08       		.byte	0x8
+ 385 0092 BC010000 		.4byte	.LASF13
+ 386 0096 05       		.uleb128 0x5
+ 387 0097 6B000000 		.4byte	0x6b
+ 388 009b 05       		.uleb128 0x5
+ 389 009c 76000000 		.4byte	0x76
+ 390 00a0 02       		.uleb128 0x2
+ 391 00a1 04       		.byte	0x4
+ 392 00a2 07       		.byte	0x7
+ 393 00a3 98010000 		.4byte	.LASF14
+ 394 00a7 06       		.uleb128 0x6
+ 395 00a8 08       		.byte	0x8
+ 396 00a9 03       		.byte	0x3
+ 397 00aa 1C       		.byte	0x1c
+ 398 00ab C8000000 		.4byte	0xc8
+ 399 00af 07       		.uleb128 0x7
+ 400 00b0 7A010000 		.4byte	.LASF15
+ 401 00b4 03       		.byte	0x3
+ 402 00b5 1E       		.byte	0x1e
+ 403 00b6 96000000 		.4byte	0x96
+ 404 00ba 00       		.byte	0
+ 405 00bb 07       		.uleb128 0x7
+ 406 00bc EB020000 		.4byte	.LASF16
+ 407 00c0 03       		.byte	0x3
+ 408 00c1 1F       		.byte	0x1f
+ 409 00c2 9B000000 		.4byte	0x9b
+ 410 00c6 04       		.byte	0x4
+ 411 00c7 00       		.byte	0
+ 412 00c8 08       		.uleb128 0x8
+ 413 00c9 A7000000 		.4byte	0xa7
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 10
 
 
- 382 0178 32000000 		.4byte	.LVL8
- 383 017c 08030000 		.4byte	0x308
- 384 0180 0D       		.uleb128 0xd
- 385 0181 38000000 		.4byte	.LVL9
- 386 0185 0F030000 		.4byte	0x30f
- 387 0189 94010000 		.4byte	0x194
- 388 018d 0E       		.uleb128 0xe
- 389 018e 01       		.uleb128 0x1
- 390 018f 50       		.byte	0x50
- 391 0190 02       		.uleb128 0x2
- 392 0191 09       		.byte	0x9
- 393 0192 C8       		.byte	0xc8
- 394 0193 00       		.byte	0
- 395 0194 0C       		.uleb128 0xc
- 396 0195 3C000000 		.4byte	.LVL10
- 397 0199 20030000 		.4byte	0x320
- 398 019d 0D       		.uleb128 0xd
- 399 019e 44000000 		.4byte	.LVL11
- 400 01a2 27030000 		.4byte	0x327
- 401 01a6 B7010000 		.4byte	0x1b7
- 402 01aa 0E       		.uleb128 0xe
- 403 01ab 01       		.uleb128 0x1
- 404 01ac 51       		.byte	0x51
- 405 01ad 03       		.uleb128 0x3
- 406 01ae 0A       		.byte	0xa
- 407 01af 510F     		.2byte	0xf51
- 408 01b1 0E       		.uleb128 0xe
- 409 01b2 01       		.uleb128 0x1
- 410 01b3 50       		.byte	0x50
- 411 01b4 01       		.uleb128 0x1
- 412 01b5 30       		.byte	0x30
- 413 01b6 00       		.byte	0
- 414 01b7 0D       		.uleb128 0xd
- 415 01b8 4C000000 		.4byte	.LVL12
- 416 01bc 27030000 		.4byte	0x327
- 417 01c0 D3010000 		.4byte	0x1d3
- 418 01c4 0E       		.uleb128 0xe
- 419 01c5 01       		.uleb128 0x1
- 420 01c6 51       		.byte	0x51
- 421 01c7 05       		.uleb128 0x5
- 422 01c8 0C       		.byte	0xc
- 423 01c9 E97E0100 		.4byte	0x17ee9
- 424 01cd 0E       		.uleb128 0xe
- 425 01ce 01       		.uleb128 0x1
- 426 01cf 50       		.byte	0x50
- 427 01d0 01       		.uleb128 0x1
- 428 01d1 31       		.byte	0x31
- 429 01d2 00       		.byte	0
- 430 01d3 0C       		.uleb128 0xc
- 431 01d4 5E000000 		.4byte	.LVL13
- 432 01d8 01030000 		.4byte	0x301
- 433 01dc 0C       		.uleb128 0xc
- 434 01dd 74000000 		.4byte	.LVL14
- 435 01e1 FA020000 		.4byte	0x2fa
- 436 01e5 0D       		.uleb128 0xd
- 437 01e6 82000000 		.4byte	.LVL15
- 438 01ea 27030000 		.4byte	0x327
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 10
+ 414 00cd D8000000 		.4byte	0xd8
+ 415 00d1 09       		.uleb128 0x9
+ 416 00d2 A0000000 		.4byte	0xa0
+ 417 00d6 04       		.byte	0x4
+ 418 00d7 00       		.byte	0
+ 419 00d8 06       		.uleb128 0x6
+ 420 00d9 01       		.byte	0x1
+ 421 00da 03       		.byte	0x3
+ 422 00db 21       		.byte	0x21
+ 423 00dc ED000000 		.4byte	0xed
+ 424 00e0 07       		.uleb128 0x7
+ 425 00e1 B7010000 		.4byte	.LASF17
+ 426 00e5 03       		.byte	0x3
+ 427 00e6 23       		.byte	0x23
+ 428 00e7 6B000000 		.4byte	0x6b
+ 429 00eb 00       		.byte	0
+ 430 00ec 00       		.byte	0
+ 431 00ed 08       		.uleb128 0x8
+ 432 00ee D8000000 		.4byte	0xd8
+ 433 00f2 FD000000 		.4byte	0xfd
+ 434 00f6 09       		.uleb128 0x9
+ 435 00f7 A0000000 		.4byte	0xa0
+ 436 00fb 04       		.byte	0x4
+ 437 00fc 00       		.byte	0
+ 438 00fd 0A       		.uleb128 0xa
+ 439 00fe 41000000 		.4byte	.LASF18
+ 440 0102 01       		.byte	0x1
+ 441 0103 22       		.byte	0x22
+ 442 0104 00000000 		.4byte	.LFB33
+ 443 0108 18000000 		.4byte	.LFE33-.LFB33
+ 444 010c 01       		.uleb128 0x1
+ 445 010d 9C       		.byte	0x9c
+ 446 010e 3B010000 		.4byte	0x13b
+ 447 0112 0B       		.uleb128 0xb
+ 448 0113 06000000 		.4byte	.LVL0
+ 449 0117 4D030000 		.4byte	0x34d
+ 450 011b 0B       		.uleb128 0xb
+ 451 011c 0A000000 		.4byte	.LVL1
+ 452 0120 5A030000 		.4byte	0x35a
+ 453 0124 0C       		.uleb128 0xc
+ 454 0125 12000000 		.4byte	.LVL2
+ 455 0129 61030000 		.4byte	0x361
+ 456 012d 0D       		.uleb128 0xd
+ 457 012e 01       		.uleb128 0x1
+ 458 012f 51       		.byte	0x51
+ 459 0130 03       		.uleb128 0x3
+ 460 0131 0A       		.byte	0xa
+ 461 0132 510F     		.2byte	0xf51
+ 462 0134 0D       		.uleb128 0xd
+ 463 0135 01       		.uleb128 0x1
+ 464 0136 50       		.byte	0x50
+ 465 0137 01       		.uleb128 0x1
+ 466 0138 31       		.byte	0x31
+ 467 0139 00       		.byte	0
+ 468 013a 00       		.byte	0
+ 469 013b 0A       		.uleb128 0xa
+ 470 013c D9020000 		.4byte	.LASF19
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 11
 
 
- 439 01ee FF010000 		.4byte	0x1ff
- 440 01f2 0E       		.uleb128 0xe
- 441 01f3 01       		.uleb128 0x1
- 442 01f4 51       		.byte	0x51
- 443 01f5 03       		.uleb128 0x3
- 444 01f6 0A       		.byte	0xa
- 445 01f7 510F     		.2byte	0xf51
- 446 01f9 0E       		.uleb128 0xe
- 447 01fa 01       		.uleb128 0x1
- 448 01fb 50       		.byte	0x50
- 449 01fc 01       		.uleb128 0x1
- 450 01fd 30       		.byte	0x30
- 451 01fe 00       		.byte	0
- 452 01ff 0C       		.uleb128 0xc
- 453 0200 94000000 		.4byte	.LVL16
- 454 0204 C2020000 		.4byte	0x2c2
- 455 0208 0D       		.uleb128 0xd
- 456 0209 9C000000 		.4byte	.LVL17
- 457 020d 27030000 		.4byte	0x327
- 458 0211 22020000 		.4byte	0x222
- 459 0215 0E       		.uleb128 0xe
- 460 0216 01       		.uleb128 0x1
- 461 0217 51       		.byte	0x51
- 462 0218 03       		.uleb128 0x3
- 463 0219 0A       		.byte	0xa
- 464 021a 510F     		.2byte	0xf51
- 465 021c 0E       		.uleb128 0xe
- 466 021d 01       		.uleb128 0x1
- 467 021e 50       		.byte	0x50
- 468 021f 01       		.uleb128 0x1
- 469 0220 32       		.byte	0x32
- 470 0221 00       		.byte	0
- 471 0222 0C       		.uleb128 0xc
- 472 0223 AE000000 		.4byte	.LVL18
- 473 0227 E0020000 		.4byte	0x2e0
- 474 022b 0D       		.uleb128 0xd
- 475 022c B6000000 		.4byte	.LVL19
- 476 0230 27030000 		.4byte	0x327
- 477 0234 45020000 		.4byte	0x245
- 478 0238 0E       		.uleb128 0xe
- 479 0239 01       		.uleb128 0x1
- 480 023a 51       		.byte	0x51
- 481 023b 03       		.uleb128 0x3
- 482 023c 0A       		.byte	0xa
- 483 023d A21E     		.2byte	0x1ea2
- 484 023f 0E       		.uleb128 0xe
- 485 0240 01       		.uleb128 0x1
- 486 0241 50       		.byte	0x50
- 487 0242 01       		.uleb128 0x1
- 488 0243 31       		.byte	0x31
- 489 0244 00       		.byte	0
- 490 0245 0C       		.uleb128 0xc
- 491 0246 BA000000 		.4byte	.LVL20
- 492 024a 3D030000 		.4byte	0x33d
- 493 024e 00       		.byte	0
- 494 024f 0F       		.uleb128 0xf
- 495 0250 49020000 		.4byte	.LASF18
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 11
+ 471 0140 01       		.byte	0x1
+ 472 0141 29       		.byte	0x29
+ 473 0142 00000000 		.4byte	.LFB34
+ 474 0146 14000000 		.4byte	.LFE34-.LFB34
+ 475 014a 01       		.uleb128 0x1
+ 476 014b 9C       		.byte	0x9c
+ 477 014c 70010000 		.4byte	0x170
+ 478 0150 0B       		.uleb128 0xb
+ 479 0151 06000000 		.4byte	.LVL3
+ 480 0155 77030000 		.4byte	0x377
+ 481 0159 0C       		.uleb128 0xc
+ 482 015a 0E000000 		.4byte	.LVL4
+ 483 015e 61030000 		.4byte	0x361
+ 484 0162 0D       		.uleb128 0xd
+ 485 0163 01       		.uleb128 0x1
+ 486 0164 51       		.byte	0x51
+ 487 0165 03       		.uleb128 0x3
+ 488 0166 0A       		.byte	0xa
+ 489 0167 510F     		.2byte	0xf51
+ 490 0169 0D       		.uleb128 0xd
+ 491 016a 01       		.uleb128 0x1
+ 492 016b 50       		.byte	0x50
+ 493 016c 01       		.uleb128 0x1
+ 494 016d 32       		.byte	0x32
+ 495 016e 00       		.byte	0
+ 496 016f 00       		.byte	0
+ 497 0170 0A       		.uleb128 0xa
+ 498 0171 C3020000 		.4byte	.LASF20
+ 499 0175 01       		.byte	0x1
+ 500 0176 2F       		.byte	0x2f
+ 501 0177 00000000 		.4byte	.LFB35
+ 502 017b 2C000000 		.4byte	.LFE35-.LFB35
+ 503 017f 01       		.uleb128 0x1
+ 504 0180 9C       		.byte	0x9c
+ 505 0181 8F010000 		.4byte	0x18f
+ 506 0185 0B       		.uleb128 0xb
+ 507 0186 20000000 		.4byte	.LVL5
+ 508 018a 84030000 		.4byte	0x384
+ 509 018e 00       		.byte	0
+ 510 018f 0E       		.uleb128 0xe
+ 511 0190 52010000 		.4byte	.LASF43
+ 512 0194 01       		.byte	0x1
+ 513 0195 39       		.byte	0x39
+ 514 0196 5D000000 		.4byte	0x5d
+ 515 019a 00000000 		.4byte	.LFB36
+ 516 019e C0000000 		.4byte	.LFE36-.LFB36
+ 517 01a2 01       		.uleb128 0x1
+ 518 01a3 9C       		.byte	0x9c
+ 519 01a4 BD020000 		.4byte	0x2bd
+ 520 01a8 0B       		.uleb128 0xb
+ 521 01a9 08000000 		.4byte	.LVL6
+ 522 01ad 95030000 		.4byte	0x395
+ 523 01b1 0B       		.uleb128 0xb
+ 524 01b2 0C000000 		.4byte	.LVL7
+ 525 01b6 A2030000 		.4byte	0x3a2
+ 526 01ba 0B       		.uleb128 0xb
+ 527 01bb 10000000 		.4byte	.LVL8
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 12
 
 
- 496 0254 03       		.byte	0x3
- 497 0255 26       		.byte	0x26
- 498 0256 60020000 		.4byte	0x260
- 499 025a 05       		.uleb128 0x5
- 500 025b 03       		.byte	0x3
- 501 025c 00000000 		.4byte	System_Timer_Flag
- 502 0260 05       		.uleb128 0x5
- 503 0261 ED000000 		.4byte	0xed
- 504 0265 0F       		.uleb128 0xf
- 505 0266 1A000000 		.4byte	.LASF19
- 506 026a 03       		.byte	0x3
- 507 026b 27       		.byte	0x27
- 508 026c 76020000 		.4byte	0x276
- 509 0270 05       		.uleb128 0x5
- 510 0271 03       		.byte	0x3
- 511 0272 00000000 		.4byte	System_Timer
- 512 0276 05       		.uleb128 0x5
- 513 0277 C8000000 		.4byte	0xc8
- 514 027b 0F       		.uleb128 0xf
- 515 027c 99000000 		.4byte	.LASF20
- 516 0280 01       		.byte	0x1
- 517 0281 16       		.byte	0x16
- 518 0282 96000000 		.4byte	0x96
- 519 0286 05       		.uleb128 0x5
- 520 0287 03       		.byte	0x3
- 521 0288 00000000 		.4byte	ActionFlag
- 522 028c 0F       		.uleb128 0xf
- 523 028d 76010000 		.4byte	.LASF21
- 524 0291 01       		.byte	0x1
- 525 0292 17       		.byte	0x17
- 526 0293 96000000 		.4byte	0x96
- 527 0297 05       		.uleb128 0x5
- 528 0298 03       		.byte	0x3
- 529 0299 00000000 		.4byte	Simofor
- 530 029d 0F       		.uleb128 0xf
- 531 029e 18010000 		.4byte	.LASF22
- 532 02a2 01       		.byte	0x1
- 533 02a3 18       		.byte	0x18
- 534 02a4 96000000 		.4byte	0x96
- 535 02a8 05       		.uleb128 0x5
- 536 02a9 03       		.byte	0x3
- 537 02aa 00000000 		.4byte	Counter
- 538 02ae 10       		.uleb128 0x10
- 539 02af F5000000 		.4byte	.LASF23
- 540 02b3 03       		.byte	0x3
- 541 02b4 2A       		.byte	0x2a
- 542 02b5 BB020000 		.4byte	0x2bb
- 543 02b9 11       		.uleb128 0x11
- 544 02ba 00       		.byte	0
- 545 02bb 12       		.uleb128 0x12
- 546 02bc 68000000 		.4byte	.LASF27
- 547 02c0 05       		.byte	0x5
- 548 02c1 68       		.byte	0x68
- 549 02c2 10       		.uleb128 0x10
- 550 02c3 2E020000 		.4byte	.LASF24
- 551 02c7 01       		.byte	0x1
- 552 02c8 15       		.byte	0x15
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 12
+ 528 01bf 77030000 		.4byte	0x377
+ 529 01c3 0F       		.uleb128 0xf
+ 530 01c4 16000000 		.4byte	.LVL9
+ 531 01c8 A9030000 		.4byte	0x3a9
+ 532 01cc D7010000 		.4byte	0x1d7
+ 533 01d0 0D       		.uleb128 0xd
+ 534 01d1 01       		.uleb128 0x1
+ 535 01d2 50       		.byte	0x50
+ 536 01d3 02       		.uleb128 0x2
+ 537 01d4 08       		.byte	0x8
+ 538 01d5 64       		.byte	0x64
+ 539 01d6 00       		.byte	0
+ 540 01d7 0B       		.uleb128 0xb
+ 541 01d8 1A000000 		.4byte	.LVL10
+ 542 01dc 4D030000 		.4byte	0x34d
+ 543 01e0 0B       		.uleb128 0xb
+ 544 01e1 1E000000 		.4byte	.LVL11
+ 545 01e5 BA030000 		.4byte	0x3ba
+ 546 01e9 0B       		.uleb128 0xb
+ 547 01ea 22000000 		.4byte	.LVL12
+ 548 01ee 5A030000 		.4byte	0x35a
+ 549 01f2 0B       		.uleb128 0xb
+ 550 01f3 26000000 		.4byte	.LVL13
+ 551 01f7 C7030000 		.4byte	0x3c7
+ 552 01fb 0F       		.uleb128 0xf
+ 553 01fc 2C000000 		.4byte	.LVL14
+ 554 0200 CE030000 		.4byte	0x3ce
+ 555 0204 0F020000 		.4byte	0x20f
+ 556 0208 0D       		.uleb128 0xd
+ 557 0209 01       		.uleb128 0x1
+ 558 020a 50       		.byte	0x50
+ 559 020b 02       		.uleb128 0x2
+ 560 020c 09       		.byte	0x9
+ 561 020d E1       		.byte	0xe1
+ 562 020e 00       		.byte	0
+ 563 020f 0B       		.uleb128 0xb
+ 564 0210 30000000 		.4byte	.LVL15
+ 565 0214 DF030000 		.4byte	0x3df
+ 566 0218 0F       		.uleb128 0xf
+ 567 0219 3A000000 		.4byte	.LVL16
+ 568 021d 61030000 		.4byte	0x361
+ 569 0221 31020000 		.4byte	0x231
+ 570 0225 0D       		.uleb128 0xd
+ 571 0226 01       		.uleb128 0x1
+ 572 0227 51       		.byte	0x51
+ 573 0228 02       		.uleb128 0x2
+ 574 0229 74       		.byte	0x74
+ 575 022a 00       		.sleb128 0
+ 576 022b 0D       		.uleb128 0xd
+ 577 022c 01       		.uleb128 0x1
+ 578 022d 50       		.byte	0x50
+ 579 022e 01       		.uleb128 0x1
+ 580 022f 30       		.byte	0x30
+ 581 0230 00       		.byte	0
+ 582 0231 0B       		.uleb128 0xb
+ 583 0232 3E000000 		.4byte	.LVL17
+ 584 0236 3B010000 		.4byte	0x13b
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 13
 
 
- 553 02c9 CF020000 		.4byte	0x2cf
- 554 02cd 11       		.uleb128 0x11
- 555 02ce 00       		.byte	0
- 556 02cf 13       		.uleb128 0x13
- 557 02d0 B4020000 		.4byte	.LASF31
- 558 02d4 07       		.byte	0x7
- 559 02d5 57       		.byte	0x57
- 560 02d6 E0020000 		.4byte	0x2e0
- 561 02da 14       		.uleb128 0x14
- 562 02db 76000000 		.4byte	0x76
- 563 02df 00       		.byte	0
- 564 02e0 10       		.uleb128 0x10
- 565 02e1 3B000000 		.4byte	.LASF25
- 566 02e5 01       		.byte	0x1
- 567 02e6 14       		.byte	0x14
- 568 02e7 ED020000 		.4byte	0x2ed
- 569 02eb 11       		.uleb128 0x11
- 570 02ec 00       		.byte	0
- 571 02ed 10       		.uleb128 0x10
- 572 02ee 3D010000 		.4byte	.LASF26
- 573 02f2 04       		.byte	0x4
- 574 02f3 1E       		.byte	0x1e
- 575 02f4 FA020000 		.4byte	0x2fa
- 576 02f8 11       		.uleb128 0x11
- 577 02f9 00       		.byte	0
- 578 02fa 12       		.uleb128 0x12
- 579 02fb D6000000 		.4byte	.LASF28
- 580 02ff 04       		.byte	0x4
- 581 0300 22       		.byte	0x22
- 582 0301 12       		.uleb128 0x12
- 583 0302 98020000 		.4byte	.LASF29
- 584 0306 04       		.byte	0x4
- 585 0307 21       		.byte	0x21
- 586 0308 12       		.uleb128 0x12
- 587 0309 B2000000 		.4byte	.LASF30
- 588 030d 06       		.byte	0x6
- 589 030e 92       		.byte	0x92
- 590 030f 13       		.uleb128 0x13
- 591 0310 00000000 		.4byte	.LASF32
- 592 0314 06       		.byte	0x6
- 593 0315 CA       		.byte	0xca
- 594 0316 20030000 		.4byte	0x320
- 595 031a 14       		.uleb128 0x14
- 596 031b 6B000000 		.4byte	0x6b
- 597 031f 00       		.byte	0
- 598 0320 12       		.uleb128 0x12
- 599 0321 27000000 		.4byte	.LASF33
- 600 0325 08       		.byte	0x8
- 601 0326 68       		.byte	0x68
- 602 0327 13       		.uleb128 0x13
- 603 0328 2C010000 		.4byte	.LASF34
- 604 032c 03       		.byte	0x3
- 605 032d 28       		.byte	0x28
- 606 032e 3D030000 		.4byte	0x33d
- 607 0332 14       		.uleb128 0x14
- 608 0333 6B000000 		.4byte	0x6b
- 609 0337 14       		.uleb128 0x14
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 13
+ 585 023a 0F       		.uleb128 0xf
+ 586 023b 46000000 		.4byte	.LVL18
+ 587 023f 61030000 		.4byte	0x361
+ 588 0243 52020000 		.4byte	0x252
+ 589 0247 0D       		.uleb128 0xd
+ 590 0248 01       		.uleb128 0x1
+ 591 0249 51       		.byte	0x51
+ 592 024a 01       		.uleb128 0x1
+ 593 024b 31       		.byte	0x31
+ 594 024c 0D       		.uleb128 0xd
+ 595 024d 01       		.uleb128 0x1
+ 596 024e 50       		.byte	0x50
+ 597 024f 01       		.uleb128 0x1
+ 598 0250 33       		.byte	0x33
+ 599 0251 00       		.byte	0
+ 600 0252 0F       		.uleb128 0xf
+ 601 0253 4E000000 		.4byte	.LVL19
+ 602 0257 61030000 		.4byte	0x361
+ 603 025b 6B020000 		.4byte	0x26b
+ 604 025f 0D       		.uleb128 0xd
+ 605 0260 01       		.uleb128 0x1
+ 606 0261 51       		.byte	0x51
+ 607 0262 02       		.uleb128 0x2
+ 608 0263 74       		.byte	0x74
+ 609 0264 00       		.sleb128 0
+ 610 0265 0D       		.uleb128 0xd
+ 611 0266 01       		.uleb128 0x1
+ 612 0267 50       		.byte	0x50
+ 613 0268 01       		.uleb128 0x1
+ 614 0269 30       		.byte	0x30
+ 615 026a 00       		.byte	0
+ 616 026b 0B       		.uleb128 0xb
+ 617 026c 52000000 		.4byte	.LVL20
+ 618 0270 3B010000 		.4byte	0x13b
+ 619 0274 0F       		.uleb128 0xf
+ 620 0275 72000000 		.4byte	.LVL21
+ 621 0279 61030000 		.4byte	0x361
+ 622 027d 8D020000 		.4byte	0x28d
+ 623 0281 0D       		.uleb128 0xd
+ 624 0282 01       		.uleb128 0x1
+ 625 0283 51       		.byte	0x51
+ 626 0284 02       		.uleb128 0x2
+ 627 0285 74       		.byte	0x74
+ 628 0286 00       		.sleb128 0
+ 629 0287 0D       		.uleb128 0xd
+ 630 0288 01       		.uleb128 0x1
+ 631 0289 50       		.byte	0x50
+ 632 028a 01       		.uleb128 0x1
+ 633 028b 30       		.byte	0x30
+ 634 028c 00       		.byte	0
+ 635 028d 0B       		.uleb128 0xb
+ 636 028e 84000000 		.4byte	.LVL22
+ 637 0292 3B010000 		.4byte	0x13b
+ 638 0296 0B       		.uleb128 0xb
+ 639 0297 96000000 		.4byte	.LVL23
+ 640 029b FD000000 		.4byte	0xfd
+ 641 029f 0B       		.uleb128 0xb
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 14
 
 
- 610 0338 76000000 		.4byte	0x76
- 611 033c 00       		.byte	0
- 612 033d 12       		.uleb128 0x12
- 613 033e 81000000 		.4byte	.LASF35
- 614 0342 04       		.byte	0x4
- 615 0343 20       		.byte	0x20
- 616 0344 00       		.byte	0
- 617              		.section	.debug_abbrev,"",%progbits
- 618              	.Ldebug_abbrev0:
- 619 0000 01       		.uleb128 0x1
- 620 0001 11       		.uleb128 0x11
- 621 0002 01       		.byte	0x1
- 622 0003 25       		.uleb128 0x25
- 623 0004 0E       		.uleb128 0xe
- 624 0005 13       		.uleb128 0x13
- 625 0006 0B       		.uleb128 0xb
- 626 0007 03       		.uleb128 0x3
- 627 0008 0E       		.uleb128 0xe
- 628 0009 1B       		.uleb128 0x1b
- 629 000a 0E       		.uleb128 0xe
- 630 000b 55       		.uleb128 0x55
- 631 000c 17       		.uleb128 0x17
- 632 000d 11       		.uleb128 0x11
- 633 000e 01       		.uleb128 0x1
- 634 000f 10       		.uleb128 0x10
- 635 0010 17       		.uleb128 0x17
- 636 0011 00       		.byte	0
- 637 0012 00       		.byte	0
- 638 0013 02       		.uleb128 0x2
- 639 0014 24       		.uleb128 0x24
- 640 0015 00       		.byte	0
- 641 0016 0B       		.uleb128 0xb
- 642 0017 0B       		.uleb128 0xb
- 643 0018 3E       		.uleb128 0x3e
- 644 0019 0B       		.uleb128 0xb
- 645 001a 03       		.uleb128 0x3
- 646 001b 0E       		.uleb128 0xe
- 647 001c 00       		.byte	0
- 648 001d 00       		.byte	0
- 649 001e 03       		.uleb128 0x3
- 650 001f 24       		.uleb128 0x24
- 651 0020 00       		.byte	0
- 652 0021 0B       		.uleb128 0xb
- 653 0022 0B       		.uleb128 0xb
- 654 0023 3E       		.uleb128 0x3e
- 655 0024 0B       		.uleb128 0xb
- 656 0025 03       		.uleb128 0x3
- 657 0026 08       		.uleb128 0x8
- 658 0027 00       		.byte	0
- 659 0028 00       		.byte	0
- 660 0029 04       		.uleb128 0x4
- 661 002a 16       		.uleb128 0x16
- 662 002b 00       		.byte	0
- 663 002c 03       		.uleb128 0x3
- 664 002d 0E       		.uleb128 0xe
- 665 002e 3A       		.uleb128 0x3a
- 666 002f 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 14
+ 642 02a0 A8000000 		.4byte	.LVL24
+ 643 02a4 70010000 		.4byte	0x170
+ 644 02a8 0C       		.uleb128 0xc
+ 645 02a9 B0000000 		.4byte	.LVL25
+ 646 02ad 61030000 		.4byte	0x361
+ 647 02b1 0D       		.uleb128 0xd
+ 648 02b2 01       		.uleb128 0x1
+ 649 02b3 51       		.byte	0x51
+ 650 02b4 01       		.uleb128 0x1
+ 651 02b5 31       		.byte	0x31
+ 652 02b6 0D       		.uleb128 0xd
+ 653 02b7 01       		.uleb128 0x1
+ 654 02b8 50       		.byte	0x50
+ 655 02b9 01       		.uleb128 0x1
+ 656 02ba 33       		.byte	0x33
+ 657 02bb 00       		.byte	0
+ 658 02bc 00       		.byte	0
+ 659 02bd 10       		.uleb128 0x10
+ 660 02be 74020000 		.4byte	.LASF21
+ 661 02c2 03       		.byte	0x3
+ 662 02c3 26       		.byte	0x26
+ 663 02c4 CE020000 		.4byte	0x2ce
+ 664 02c8 05       		.uleb128 0x5
+ 665 02c9 03       		.byte	0x3
+ 666 02ca 00000000 		.4byte	System_Timer_Flag
+ 667 02ce 05       		.uleb128 0x5
+ 668 02cf ED000000 		.4byte	0xed
+ 669 02d3 10       		.uleb128 0x10
+ 670 02d4 1A000000 		.4byte	.LASF22
+ 671 02d8 03       		.byte	0x3
+ 672 02d9 27       		.byte	0x27
+ 673 02da E4020000 		.4byte	0x2e4
+ 674 02de 05       		.uleb128 0x5
+ 675 02df 03       		.byte	0x3
+ 676 02e0 00000000 		.4byte	System_Timer
+ 677 02e4 05       		.uleb128 0x5
+ 678 02e5 C8000000 		.4byte	0xc8
+ 679 02e9 08       		.uleb128 0x8
+ 680 02ea 6B000000 		.4byte	0x6b
+ 681 02ee F9020000 		.4byte	0x2f9
+ 682 02f2 09       		.uleb128 0x9
+ 683 02f3 A0000000 		.4byte	0xa0
+ 684 02f7 10       		.byte	0x10
+ 685 02f8 00       		.byte	0
+ 686 02f9 11       		.uleb128 0x11
+ 687 02fa A7000000 		.4byte	.LASF23
+ 688 02fe 01       		.byte	0x1
+ 689 02ff 17       		.byte	0x17
+ 690 0300 04030000 		.4byte	0x304
+ 691 0304 05       		.uleb128 0x5
+ 692 0305 E9020000 		.4byte	0x2e9
+ 693 0309 10       		.uleb128 0x10
+ 694 030a 9C000000 		.4byte	.LASF24
+ 695 030e 01       		.byte	0x1
+ 696 030f 18       		.byte	0x18
+ 697 0310 96000000 		.4byte	0x96
+ 698 0314 05       		.uleb128 0x5
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 15
 
 
- 667 0030 3B       		.uleb128 0x3b
- 668 0031 0B       		.uleb128 0xb
- 669 0032 49       		.uleb128 0x49
- 670 0033 13       		.uleb128 0x13
- 671 0034 00       		.byte	0
- 672 0035 00       		.byte	0
- 673 0036 05       		.uleb128 0x5
- 674 0037 35       		.uleb128 0x35
- 675 0038 00       		.byte	0
- 676 0039 49       		.uleb128 0x49
- 677 003a 13       		.uleb128 0x13
- 678 003b 00       		.byte	0
- 679 003c 00       		.byte	0
- 680 003d 06       		.uleb128 0x6
- 681 003e 13       		.uleb128 0x13
- 682 003f 01       		.byte	0x1
- 683 0040 0B       		.uleb128 0xb
- 684 0041 0B       		.uleb128 0xb
- 685 0042 3A       		.uleb128 0x3a
- 686 0043 0B       		.uleb128 0xb
- 687 0044 3B       		.uleb128 0x3b
- 688 0045 0B       		.uleb128 0xb
- 689 0046 01       		.uleb128 0x1
- 690 0047 13       		.uleb128 0x13
- 691 0048 00       		.byte	0
- 692 0049 00       		.byte	0
- 693 004a 07       		.uleb128 0x7
- 694 004b 0D       		.uleb128 0xd
- 695 004c 00       		.byte	0
- 696 004d 03       		.uleb128 0x3
- 697 004e 0E       		.uleb128 0xe
- 698 004f 3A       		.uleb128 0x3a
- 699 0050 0B       		.uleb128 0xb
- 700 0051 3B       		.uleb128 0x3b
- 701 0052 0B       		.uleb128 0xb
- 702 0053 49       		.uleb128 0x49
- 703 0054 13       		.uleb128 0x13
- 704 0055 38       		.uleb128 0x38
- 705 0056 0B       		.uleb128 0xb
- 706 0057 00       		.byte	0
- 707 0058 00       		.byte	0
- 708 0059 08       		.uleb128 0x8
- 709 005a 01       		.uleb128 0x1
- 710 005b 01       		.byte	0x1
- 711 005c 49       		.uleb128 0x49
- 712 005d 13       		.uleb128 0x13
- 713 005e 01       		.uleb128 0x1
- 714 005f 13       		.uleb128 0x13
- 715 0060 00       		.byte	0
- 716 0061 00       		.byte	0
- 717 0062 09       		.uleb128 0x9
- 718 0063 21       		.uleb128 0x21
- 719 0064 00       		.byte	0
- 720 0065 49       		.uleb128 0x49
- 721 0066 13       		.uleb128 0x13
- 722 0067 2F       		.uleb128 0x2f
- 723 0068 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 15
+ 699 0315 03       		.byte	0x3
+ 700 0316 00000000 		.4byte	ActionFlag
+ 701 031a 10       		.uleb128 0x10
+ 702 031b A1010000 		.4byte	.LASF25
+ 703 031f 01       		.byte	0x1
+ 704 0320 19       		.byte	0x19
+ 705 0321 96000000 		.4byte	0x96
+ 706 0325 05       		.uleb128 0x5
+ 707 0326 03       		.byte	0x3
+ 708 0327 00000000 		.4byte	Simofor
+ 709 032b 10       		.uleb128 0x10
+ 710 032c 43010000 		.4byte	.LASF26
+ 711 0330 01       		.byte	0x1
+ 712 0331 1A       		.byte	0x1a
+ 713 0332 96000000 		.4byte	0x96
+ 714 0336 05       		.uleb128 0x5
+ 715 0337 03       		.byte	0x3
+ 716 0338 00000000 		.4byte	Counter
+ 717 033c 10       		.uleb128 0x10
+ 718 033d 27000000 		.4byte	.LASF27
+ 719 0341 01       		.byte	0x1
+ 720 0342 1B       		.byte	0x1b
+ 721 0343 96000000 		.4byte	0x96
+ 722 0347 05       		.uleb128 0x5
+ 723 0348 03       		.byte	0x3
+ 724 0349 00000000 		.4byte	Video_Pointer
+ 725 034d 12       		.uleb128 0x12
+ 726 034e 50000000 		.4byte	.LASF28
+ 727 0352 01       		.byte	0x1
+ 728 0353 15       		.byte	0x15
+ 729 0354 5A030000 		.4byte	0x35a
+ 730 0358 13       		.uleb128 0x13
+ 731 0359 00       		.byte	0
+ 732 035a 14       		.uleb128 0x14
+ 733 035b D7000000 		.4byte	.LASF33
+ 734 035f 04       		.byte	0x4
+ 735 0360 22       		.byte	0x22
+ 736 0361 15       		.uleb128 0x15
+ 737 0362 57010000 		.4byte	.LASF30
+ 738 0366 03       		.byte	0x3
+ 739 0367 28       		.byte	0x28
+ 740 0368 77030000 		.4byte	0x377
+ 741 036c 16       		.uleb128 0x16
+ 742 036d 6B000000 		.4byte	0x6b
+ 743 0371 16       		.uleb128 0x16
+ 744 0372 76000000 		.4byte	0x76
+ 745 0376 00       		.byte	0
+ 746 0377 12       		.uleb128 0x12
+ 747 0378 59020000 		.4byte	.LASF29
+ 748 037c 01       		.byte	0x1
+ 749 037d 16       		.byte	0x16
+ 750 037e 84030000 		.4byte	0x384
+ 751 0382 13       		.uleb128 0x13
+ 752 0383 00       		.byte	0
+ 753 0384 15       		.uleb128 0x15
+ 754 0385 F6000000 		.4byte	.LASF31
+ 755 0389 04       		.byte	0x4
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 16
 
 
- 724 0069 00       		.byte	0
- 725 006a 00       		.byte	0
- 726 006b 0A       		.uleb128 0xa
- 727 006c 2E       		.uleb128 0x2e
- 728 006d 01       		.byte	0x1
- 729 006e 3F       		.uleb128 0x3f
- 730 006f 19       		.uleb128 0x19
- 731 0070 03       		.uleb128 0x3
- 732 0071 0E       		.uleb128 0xe
- 733 0072 3A       		.uleb128 0x3a
- 734 0073 0B       		.uleb128 0xb
- 735 0074 3B       		.uleb128 0x3b
- 736 0075 0B       		.uleb128 0xb
- 737 0076 49       		.uleb128 0x49
- 738 0077 13       		.uleb128 0x13
- 739 0078 11       		.uleb128 0x11
- 740 0079 01       		.uleb128 0x1
- 741 007a 12       		.uleb128 0x12
- 742 007b 06       		.uleb128 0x6
- 743 007c 40       		.uleb128 0x40
- 744 007d 18       		.uleb128 0x18
- 745 007e 9742     		.uleb128 0x2117
- 746 0080 19       		.uleb128 0x19
- 747 0081 01       		.uleb128 0x1
- 748 0082 13       		.uleb128 0x13
- 749 0083 00       		.byte	0
- 750 0084 00       		.byte	0
- 751 0085 0B       		.uleb128 0xb
- 752 0086 34       		.uleb128 0x34
- 753 0087 00       		.byte	0
- 754 0088 03       		.uleb128 0x3
- 755 0089 0E       		.uleb128 0xe
- 756 008a 3A       		.uleb128 0x3a
- 757 008b 0B       		.uleb128 0xb
- 758 008c 3B       		.uleb128 0x3b
- 759 008d 0B       		.uleb128 0xb
- 760 008e 49       		.uleb128 0x49
- 761 008f 13       		.uleb128 0x13
- 762 0090 02       		.uleb128 0x2
- 763 0091 18       		.uleb128 0x18
- 764 0092 00       		.byte	0
- 765 0093 00       		.byte	0
- 766 0094 0C       		.uleb128 0xc
- 767 0095 898201   		.uleb128 0x4109
- 768 0098 00       		.byte	0
- 769 0099 11       		.uleb128 0x11
- 770 009a 01       		.uleb128 0x1
- 771 009b 31       		.uleb128 0x31
- 772 009c 13       		.uleb128 0x13
- 773 009d 00       		.byte	0
- 774 009e 00       		.byte	0
- 775 009f 0D       		.uleb128 0xd
- 776 00a0 898201   		.uleb128 0x4109
- 777 00a3 01       		.byte	0x1
- 778 00a4 11       		.uleb128 0x11
- 779 00a5 01       		.uleb128 0x1
- 780 00a6 31       		.uleb128 0x31
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 16
+ 756 038a 21       		.byte	0x21
+ 757 038b 95030000 		.4byte	0x395
+ 758 038f 16       		.uleb128 0x16
+ 759 0390 6B000000 		.4byte	0x6b
+ 760 0394 00       		.byte	0
+ 761 0395 12       		.uleb128 0x12
+ 762 0396 12010000 		.4byte	.LASF32
+ 763 039a 03       		.byte	0x3
+ 764 039b 2A       		.byte	0x2a
+ 765 039c A2030000 		.4byte	0x3a2
+ 766 03a0 13       		.uleb128 0x13
+ 767 03a1 00       		.byte	0
+ 768 03a2 14       		.uleb128 0x14
+ 769 03a3 7D000000 		.4byte	.LASF34
+ 770 03a7 05       		.byte	0x5
+ 771 03a8 68       		.byte	0x68
+ 772 03a9 15       		.uleb128 0x15
+ 773 03aa D1020000 		.4byte	.LASF35
+ 774 03ae 06       		.byte	0x6
+ 775 03af 57       		.byte	0x57
+ 776 03b0 BA030000 		.4byte	0x3ba
+ 777 03b4 16       		.uleb128 0x16
+ 778 03b5 76000000 		.4byte	0x76
+ 779 03b9 00       		.byte	0
+ 780 03ba 12       		.uleb128 0x12
+ 781 03bb 68010000 		.4byte	.LASF36
+ 782 03bf 04       		.byte	0x4
+ 783 03c0 1E       		.byte	0x1e
+ 784 03c1 C7030000 		.4byte	0x3c7
+ 785 03c5 13       		.uleb128 0x13
+ 786 03c6 00       		.byte	0
+ 787 03c7 14       		.uleb128 0x14
+ 788 03c8 B3000000 		.4byte	.LASF37
+ 789 03cc 07       		.byte	0x7
+ 790 03cd 92       		.byte	0x92
+ 791 03ce 15       		.uleb128 0x15
+ 792 03cf 00000000 		.4byte	.LASF38
+ 793 03d3 07       		.byte	0x7
+ 794 03d4 CA       		.byte	0xca
+ 795 03d5 DF030000 		.4byte	0x3df
+ 796 03d9 16       		.uleb128 0x16
+ 797 03da 6B000000 		.4byte	0x6b
+ 798 03de 00       		.byte	0
+ 799 03df 14       		.uleb128 0x14
+ 800 03e0 35000000 		.4byte	.LASF39
+ 801 03e4 08       		.byte	0x8
+ 802 03e5 68       		.byte	0x68
+ 803 03e6 00       		.byte	0
+ 804              		.section	.debug_abbrev,"",%progbits
+ 805              	.Ldebug_abbrev0:
+ 806 0000 01       		.uleb128 0x1
+ 807 0001 11       		.uleb128 0x11
+ 808 0002 01       		.byte	0x1
+ 809 0003 25       		.uleb128 0x25
+ 810 0004 0E       		.uleb128 0xe
+ 811 0005 13       		.uleb128 0x13
+ 812 0006 0B       		.uleb128 0xb
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 17
 
 
- 781 00a7 13       		.uleb128 0x13
- 782 00a8 01       		.uleb128 0x1
- 783 00a9 13       		.uleb128 0x13
- 784 00aa 00       		.byte	0
- 785 00ab 00       		.byte	0
- 786 00ac 0E       		.uleb128 0xe
- 787 00ad 8A8201   		.uleb128 0x410a
- 788 00b0 00       		.byte	0
- 789 00b1 02       		.uleb128 0x2
- 790 00b2 18       		.uleb128 0x18
- 791 00b3 9142     		.uleb128 0x2111
- 792 00b5 18       		.uleb128 0x18
- 793 00b6 00       		.byte	0
- 794 00b7 00       		.byte	0
- 795 00b8 0F       		.uleb128 0xf
- 796 00b9 34       		.uleb128 0x34
- 797 00ba 00       		.byte	0
- 798 00bb 03       		.uleb128 0x3
- 799 00bc 0E       		.uleb128 0xe
- 800 00bd 3A       		.uleb128 0x3a
- 801 00be 0B       		.uleb128 0xb
- 802 00bf 3B       		.uleb128 0x3b
- 803 00c0 0B       		.uleb128 0xb
- 804 00c1 49       		.uleb128 0x49
- 805 00c2 13       		.uleb128 0x13
- 806 00c3 3F       		.uleb128 0x3f
- 807 00c4 19       		.uleb128 0x19
- 808 00c5 02       		.uleb128 0x2
- 809 00c6 18       		.uleb128 0x18
- 810 00c7 00       		.byte	0
- 811 00c8 00       		.byte	0
- 812 00c9 10       		.uleb128 0x10
- 813 00ca 2E       		.uleb128 0x2e
- 814 00cb 01       		.byte	0x1
- 815 00cc 3F       		.uleb128 0x3f
- 816 00cd 19       		.uleb128 0x19
- 817 00ce 03       		.uleb128 0x3
- 818 00cf 0E       		.uleb128 0xe
- 819 00d0 3A       		.uleb128 0x3a
- 820 00d1 0B       		.uleb128 0xb
- 821 00d2 3B       		.uleb128 0x3b
- 822 00d3 0B       		.uleb128 0xb
- 823 00d4 3C       		.uleb128 0x3c
- 824 00d5 19       		.uleb128 0x19
- 825 00d6 01       		.uleb128 0x1
- 826 00d7 13       		.uleb128 0x13
- 827 00d8 00       		.byte	0
- 828 00d9 00       		.byte	0
- 829 00da 11       		.uleb128 0x11
- 830 00db 18       		.uleb128 0x18
- 831 00dc 00       		.byte	0
- 832 00dd 00       		.byte	0
- 833 00de 00       		.byte	0
- 834 00df 12       		.uleb128 0x12
- 835 00e0 2E       		.uleb128 0x2e
- 836 00e1 00       		.byte	0
- 837 00e2 3F       		.uleb128 0x3f
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 17
+ 813 0007 03       		.uleb128 0x3
+ 814 0008 0E       		.uleb128 0xe
+ 815 0009 1B       		.uleb128 0x1b
+ 816 000a 0E       		.uleb128 0xe
+ 817 000b 55       		.uleb128 0x55
+ 818 000c 17       		.uleb128 0x17
+ 819 000d 11       		.uleb128 0x11
+ 820 000e 01       		.uleb128 0x1
+ 821 000f 10       		.uleb128 0x10
+ 822 0010 17       		.uleb128 0x17
+ 823 0011 00       		.byte	0
+ 824 0012 00       		.byte	0
+ 825 0013 02       		.uleb128 0x2
+ 826 0014 24       		.uleb128 0x24
+ 827 0015 00       		.byte	0
+ 828 0016 0B       		.uleb128 0xb
+ 829 0017 0B       		.uleb128 0xb
+ 830 0018 3E       		.uleb128 0x3e
+ 831 0019 0B       		.uleb128 0xb
+ 832 001a 03       		.uleb128 0x3
+ 833 001b 0E       		.uleb128 0xe
+ 834 001c 00       		.byte	0
+ 835 001d 00       		.byte	0
+ 836 001e 03       		.uleb128 0x3
+ 837 001f 24       		.uleb128 0x24
+ 838 0020 00       		.byte	0
+ 839 0021 0B       		.uleb128 0xb
+ 840 0022 0B       		.uleb128 0xb
+ 841 0023 3E       		.uleb128 0x3e
+ 842 0024 0B       		.uleb128 0xb
+ 843 0025 03       		.uleb128 0x3
+ 844 0026 08       		.uleb128 0x8
+ 845 0027 00       		.byte	0
+ 846 0028 00       		.byte	0
+ 847 0029 04       		.uleb128 0x4
+ 848 002a 16       		.uleb128 0x16
+ 849 002b 00       		.byte	0
+ 850 002c 03       		.uleb128 0x3
+ 851 002d 0E       		.uleb128 0xe
+ 852 002e 3A       		.uleb128 0x3a
+ 853 002f 0B       		.uleb128 0xb
+ 854 0030 3B       		.uleb128 0x3b
+ 855 0031 0B       		.uleb128 0xb
+ 856 0032 49       		.uleb128 0x49
+ 857 0033 13       		.uleb128 0x13
+ 858 0034 00       		.byte	0
+ 859 0035 00       		.byte	0
+ 860 0036 05       		.uleb128 0x5
+ 861 0037 35       		.uleb128 0x35
+ 862 0038 00       		.byte	0
+ 863 0039 49       		.uleb128 0x49
+ 864 003a 13       		.uleb128 0x13
+ 865 003b 00       		.byte	0
+ 866 003c 00       		.byte	0
+ 867 003d 06       		.uleb128 0x6
+ 868 003e 13       		.uleb128 0x13
+ 869 003f 01       		.byte	0x1
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 18
 
 
- 838 00e3 19       		.uleb128 0x19
- 839 00e4 03       		.uleb128 0x3
- 840 00e5 0E       		.uleb128 0xe
- 841 00e6 3A       		.uleb128 0x3a
- 842 00e7 0B       		.uleb128 0xb
- 843 00e8 3B       		.uleb128 0x3b
- 844 00e9 0B       		.uleb128 0xb
- 845 00ea 27       		.uleb128 0x27
- 846 00eb 19       		.uleb128 0x19
- 847 00ec 3C       		.uleb128 0x3c
- 848 00ed 19       		.uleb128 0x19
- 849 00ee 00       		.byte	0
- 850 00ef 00       		.byte	0
- 851 00f0 13       		.uleb128 0x13
- 852 00f1 2E       		.uleb128 0x2e
- 853 00f2 01       		.byte	0x1
- 854 00f3 3F       		.uleb128 0x3f
- 855 00f4 19       		.uleb128 0x19
- 856 00f5 03       		.uleb128 0x3
- 857 00f6 0E       		.uleb128 0xe
- 858 00f7 3A       		.uleb128 0x3a
- 859 00f8 0B       		.uleb128 0xb
- 860 00f9 3B       		.uleb128 0x3b
- 861 00fa 0B       		.uleb128 0xb
- 862 00fb 27       		.uleb128 0x27
- 863 00fc 19       		.uleb128 0x19
- 864 00fd 3C       		.uleb128 0x3c
- 865 00fe 19       		.uleb128 0x19
- 866 00ff 01       		.uleb128 0x1
- 867 0100 13       		.uleb128 0x13
- 868 0101 00       		.byte	0
- 869 0102 00       		.byte	0
- 870 0103 14       		.uleb128 0x14
- 871 0104 05       		.uleb128 0x5
- 872 0105 00       		.byte	0
- 873 0106 49       		.uleb128 0x49
- 874 0107 13       		.uleb128 0x13
- 875 0108 00       		.byte	0
- 876 0109 00       		.byte	0
- 877 010a 00       		.byte	0
- 878              		.section	.debug_aranges,"",%progbits
- 879 0000 1C000000 		.4byte	0x1c
- 880 0004 0200     		.2byte	0x2
- 881 0006 00000000 		.4byte	.Ldebug_info0
- 882 000a 04       		.byte	0x4
- 883 000b 00       		.byte	0
- 884 000c 0000     		.2byte	0
- 885 000e 0000     		.2byte	0
- 886 0010 00000000 		.4byte	.LFB33
- 887 0014 CC000000 		.4byte	.LFE33-.LFB33
- 888 0018 00000000 		.4byte	0
- 889 001c 00000000 		.4byte	0
- 890              		.section	.debug_ranges,"",%progbits
- 891              	.Ldebug_ranges0:
- 892 0000 00000000 		.4byte	.LFB33
- 893 0004 CC000000 		.4byte	.LFE33
- 894 0008 00000000 		.4byte	0
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 18
+ 870 0040 0B       		.uleb128 0xb
+ 871 0041 0B       		.uleb128 0xb
+ 872 0042 3A       		.uleb128 0x3a
+ 873 0043 0B       		.uleb128 0xb
+ 874 0044 3B       		.uleb128 0x3b
+ 875 0045 0B       		.uleb128 0xb
+ 876 0046 01       		.uleb128 0x1
+ 877 0047 13       		.uleb128 0x13
+ 878 0048 00       		.byte	0
+ 879 0049 00       		.byte	0
+ 880 004a 07       		.uleb128 0x7
+ 881 004b 0D       		.uleb128 0xd
+ 882 004c 00       		.byte	0
+ 883 004d 03       		.uleb128 0x3
+ 884 004e 0E       		.uleb128 0xe
+ 885 004f 3A       		.uleb128 0x3a
+ 886 0050 0B       		.uleb128 0xb
+ 887 0051 3B       		.uleb128 0x3b
+ 888 0052 0B       		.uleb128 0xb
+ 889 0053 49       		.uleb128 0x49
+ 890 0054 13       		.uleb128 0x13
+ 891 0055 38       		.uleb128 0x38
+ 892 0056 0B       		.uleb128 0xb
+ 893 0057 00       		.byte	0
+ 894 0058 00       		.byte	0
+ 895 0059 08       		.uleb128 0x8
+ 896 005a 01       		.uleb128 0x1
+ 897 005b 01       		.byte	0x1
+ 898 005c 49       		.uleb128 0x49
+ 899 005d 13       		.uleb128 0x13
+ 900 005e 01       		.uleb128 0x1
+ 901 005f 13       		.uleb128 0x13
+ 902 0060 00       		.byte	0
+ 903 0061 00       		.byte	0
+ 904 0062 09       		.uleb128 0x9
+ 905 0063 21       		.uleb128 0x21
+ 906 0064 00       		.byte	0
+ 907 0065 49       		.uleb128 0x49
+ 908 0066 13       		.uleb128 0x13
+ 909 0067 2F       		.uleb128 0x2f
+ 910 0068 0B       		.uleb128 0xb
+ 911 0069 00       		.byte	0
+ 912 006a 00       		.byte	0
+ 913 006b 0A       		.uleb128 0xa
+ 914 006c 2E       		.uleb128 0x2e
+ 915 006d 01       		.byte	0x1
+ 916 006e 3F       		.uleb128 0x3f
+ 917 006f 19       		.uleb128 0x19
+ 918 0070 03       		.uleb128 0x3
+ 919 0071 0E       		.uleb128 0xe
+ 920 0072 3A       		.uleb128 0x3a
+ 921 0073 0B       		.uleb128 0xb
+ 922 0074 3B       		.uleb128 0x3b
+ 923 0075 0B       		.uleb128 0xb
+ 924 0076 11       		.uleb128 0x11
+ 925 0077 01       		.uleb128 0x1
+ 926 0078 12       		.uleb128 0x12
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 19
 
 
- 895 000c 00000000 		.4byte	0
- 896              		.section	.debug_line,"",%progbits
- 897              	.Ldebug_line0:
- 898 0000 C7000000 		.section	.debug_str,"MS",%progbits,1
- 898      02009100 
- 898      00000201 
- 898      FB0E0D00 
- 898      01010101 
- 899              	.LASF32:
- 900 0000 4C45445F 		.ascii	"LED_SEG_PWM_WriteCompare2\000"
- 900      5345475F 
- 900      50574D5F 
- 900      57726974 
- 900      65436F6D 
- 901              	.LASF19:
- 902 001a 53797374 		.ascii	"System_Timer\000"
- 902      656D5F54 
- 902      696D6572 
- 902      00
- 903              	.LASF33:
- 904 0027 5343425F 		.ascii	"SCB_1_Start\000"
- 904      315F5374 
- 904      61727400 
- 905              	.LASF40:
- 906 0033 57617463 		.ascii	"Watcher\000"
- 906      68657200 
- 907              	.LASF25:
- 908 003b 48444331 		.ascii	"HDC1050_Get_Temp_And_Humi\000"
- 908      3035305F 
- 908      4765745F 
- 908      54656D70 
- 908      5F416E64 
- 909              	.LASF3:
- 910 0055 73686F72 		.ascii	"short unsigned int\000"
- 910      7420756E 
- 910      7369676E 
- 910      65642069 
- 910      6E7400
- 911              	.LASF27:
- 912 0068 5343425F 		.ascii	"SCB_2_Start\000"
- 912      325F5374 
- 912      61727400 
- 913              	.LASF8:
- 914 0074 756E7369 		.ascii	"unsigned int\000"
- 914      676E6564 
- 914      20696E74 
- 914      00
- 915              	.LASF35:
- 916 0081 44697370 		.ascii	"Display_Write_Mem\000"
- 916      6C61795F 
- 916      57726974 
- 916      655F4D65 
- 916      6D00
- 917              	.LASF11:
- 918 0093 666C6F61 		.ascii	"float\000"
- 918      7400
- 919              	.LASF20:
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 19
+ 927 0079 06       		.uleb128 0x6
+ 928 007a 40       		.uleb128 0x40
+ 929 007b 18       		.uleb128 0x18
+ 930 007c 9742     		.uleb128 0x2117
+ 931 007e 19       		.uleb128 0x19
+ 932 007f 01       		.uleb128 0x1
+ 933 0080 13       		.uleb128 0x13
+ 934 0081 00       		.byte	0
+ 935 0082 00       		.byte	0
+ 936 0083 0B       		.uleb128 0xb
+ 937 0084 898201   		.uleb128 0x4109
+ 938 0087 00       		.byte	0
+ 939 0088 11       		.uleb128 0x11
+ 940 0089 01       		.uleb128 0x1
+ 941 008a 31       		.uleb128 0x31
+ 942 008b 13       		.uleb128 0x13
+ 943 008c 00       		.byte	0
+ 944 008d 00       		.byte	0
+ 945 008e 0C       		.uleb128 0xc
+ 946 008f 898201   		.uleb128 0x4109
+ 947 0092 01       		.byte	0x1
+ 948 0093 11       		.uleb128 0x11
+ 949 0094 01       		.uleb128 0x1
+ 950 0095 31       		.uleb128 0x31
+ 951 0096 13       		.uleb128 0x13
+ 952 0097 00       		.byte	0
+ 953 0098 00       		.byte	0
+ 954 0099 0D       		.uleb128 0xd
+ 955 009a 8A8201   		.uleb128 0x410a
+ 956 009d 00       		.byte	0
+ 957 009e 02       		.uleb128 0x2
+ 958 009f 18       		.uleb128 0x18
+ 959 00a0 9142     		.uleb128 0x2111
+ 960 00a2 18       		.uleb128 0x18
+ 961 00a3 00       		.byte	0
+ 962 00a4 00       		.byte	0
+ 963 00a5 0E       		.uleb128 0xe
+ 964 00a6 2E       		.uleb128 0x2e
+ 965 00a7 01       		.byte	0x1
+ 966 00a8 3F       		.uleb128 0x3f
+ 967 00a9 19       		.uleb128 0x19
+ 968 00aa 03       		.uleb128 0x3
+ 969 00ab 0E       		.uleb128 0xe
+ 970 00ac 3A       		.uleb128 0x3a
+ 971 00ad 0B       		.uleb128 0xb
+ 972 00ae 3B       		.uleb128 0x3b
+ 973 00af 0B       		.uleb128 0xb
+ 974 00b0 49       		.uleb128 0x49
+ 975 00b1 13       		.uleb128 0x13
+ 976 00b2 11       		.uleb128 0x11
+ 977 00b3 01       		.uleb128 0x1
+ 978 00b4 12       		.uleb128 0x12
+ 979 00b5 06       		.uleb128 0x6
+ 980 00b6 40       		.uleb128 0x40
+ 981 00b7 18       		.uleb128 0x18
+ 982 00b8 9742     		.uleb128 0x2117
+ 983 00ba 19       		.uleb128 0x19
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 20
 
 
- 920 0099 41637469 		.ascii	"ActionFlag\000"
- 920      6F6E466C 
- 920      616700
- 921              	.LASF1:
- 922 00a4 756E7369 		.ascii	"unsigned char\000"
- 922      676E6564 
- 922      20636861 
- 922      7200
- 923              	.LASF30:
- 924 00b2 4C45445F 		.ascii	"LED_SEG_PWM_Start\000"
- 924      5345475F 
- 924      50574D5F 
- 924      53746172 
- 924      7400
- 925              	.LASF5:
- 926 00c4 6C6F6E67 		.ascii	"long unsigned int\000"
- 926      20756E73 
- 926      69676E65 
- 926      6420696E 
- 926      7400
- 927              	.LASF28:
- 928 00d6 44697370 		.ascii	"Display_Set_Video_Memory\000"
- 928      6C61795F 
- 928      5365745F 
- 928      56696465 
- 928      6F5F4D65 
- 929              	.LASF9:
- 930 00ef 75696E74 		.ascii	"uint8\000"
- 930      3800
- 931              	.LASF23:
- 932 00f5 53797374 		.ascii	"System_Timer_Start\000"
- 932      656D5F54 
- 932      696D6572 
- 932      5F537461 
- 932      727400
- 933              	.LASF12:
- 934 0108 646F7562 		.ascii	"double\000"
- 934      6C6500
- 935              	.LASF37:
- 936 010f 2E5C6D61 		.ascii	".\\main.c\000"
- 936      696E2E63 
- 936      00
- 937              	.LASF22:
- 938 0118 436F756E 		.ascii	"Counter\000"
- 938      74657200 
- 939              	.LASF10:
- 940 0120 75696E74 		.ascii	"uint32\000"
- 940      333200
- 941              	.LASF39:
- 942 0127 6D61696E 		.ascii	"main\000"
- 942      00
- 943              	.LASF34:
- 944 012c 53797374 		.ascii	"System_Timer_Add\000"
- 944      656D5F54 
- 944      696D6572 
- 944      5F416464 
- 944      00
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 20
+ 984 00bb 01       		.uleb128 0x1
+ 985 00bc 13       		.uleb128 0x13
+ 986 00bd 00       		.byte	0
+ 987 00be 00       		.byte	0
+ 988 00bf 0F       		.uleb128 0xf
+ 989 00c0 898201   		.uleb128 0x4109
+ 990 00c3 01       		.byte	0x1
+ 991 00c4 11       		.uleb128 0x11
+ 992 00c5 01       		.uleb128 0x1
+ 993 00c6 31       		.uleb128 0x31
+ 994 00c7 13       		.uleb128 0x13
+ 995 00c8 01       		.uleb128 0x1
+ 996 00c9 13       		.uleb128 0x13
+ 997 00ca 00       		.byte	0
+ 998 00cb 00       		.byte	0
+ 999 00cc 10       		.uleb128 0x10
+ 1000 00cd 34       		.uleb128 0x34
+ 1001 00ce 00       		.byte	0
+ 1002 00cf 03       		.uleb128 0x3
+ 1003 00d0 0E       		.uleb128 0xe
+ 1004 00d1 3A       		.uleb128 0x3a
+ 1005 00d2 0B       		.uleb128 0xb
+ 1006 00d3 3B       		.uleb128 0x3b
+ 1007 00d4 0B       		.uleb128 0xb
+ 1008 00d5 49       		.uleb128 0x49
+ 1009 00d6 13       		.uleb128 0x13
+ 1010 00d7 3F       		.uleb128 0x3f
+ 1011 00d8 19       		.uleb128 0x19
+ 1012 00d9 02       		.uleb128 0x2
+ 1013 00da 18       		.uleb128 0x18
+ 1014 00db 00       		.byte	0
+ 1015 00dc 00       		.byte	0
+ 1016 00dd 11       		.uleb128 0x11
+ 1017 00de 34       		.uleb128 0x34
+ 1018 00df 00       		.byte	0
+ 1019 00e0 03       		.uleb128 0x3
+ 1020 00e1 0E       		.uleb128 0xe
+ 1021 00e2 3A       		.uleb128 0x3a
+ 1022 00e3 0B       		.uleb128 0xb
+ 1023 00e4 3B       		.uleb128 0x3b
+ 1024 00e5 0B       		.uleb128 0xb
+ 1025 00e6 49       		.uleb128 0x49
+ 1026 00e7 13       		.uleb128 0x13
+ 1027 00e8 3F       		.uleb128 0x3f
+ 1028 00e9 19       		.uleb128 0x19
+ 1029 00ea 3C       		.uleb128 0x3c
+ 1030 00eb 19       		.uleb128 0x19
+ 1031 00ec 00       		.byte	0
+ 1032 00ed 00       		.byte	0
+ 1033 00ee 12       		.uleb128 0x12
+ 1034 00ef 2E       		.uleb128 0x2e
+ 1035 00f0 01       		.byte	0x1
+ 1036 00f1 3F       		.uleb128 0x3f
+ 1037 00f2 19       		.uleb128 0x19
+ 1038 00f3 03       		.uleb128 0x3
+ 1039 00f4 0E       		.uleb128 0xe
+ 1040 00f5 3A       		.uleb128 0x3a
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 21
 
 
- 945              	.LASF26:
- 946 013d 496E6974 		.ascii	"Init_Video_Memory\000"
- 946      5F566964 
- 946      656F5F4D 
- 946      656D6F72 
- 946      7900
- 947              	.LASF15:
- 948 014f 4E756D62 		.ascii	"Number\000"
- 948      657200
- 949              	.LASF7:
- 950 0156 6C6F6E67 		.ascii	"long long unsigned int\000"
- 950      206C6F6E 
- 950      6720756E 
- 950      7369676E 
- 950      65642069 
- 951              	.LASF14:
- 952 016d 73697A65 		.ascii	"sizetype\000"
- 952      74797065 
- 952      00
- 953              	.LASF21:
- 954 0176 53696D6F 		.ascii	"Simofor\000"
- 954      666F7200 
- 955              	.LASF6:
- 956 017e 6C6F6E67 		.ascii	"long long int\000"
- 956      206C6F6E 
- 956      6720696E 
- 956      7400
- 957              	.LASF17:
- 958 018c 466C6167 		.ascii	"Flag\000"
- 958      00
- 959              	.LASF13:
- 960 0191 63686172 		.ascii	"char\000"
- 960      00
- 961              	.LASF36:
- 962 0196 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 962      4320342E 
- 962      392E3320 
- 962      32303135 
- 962      30333033 
- 963 01c9 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 963      20726576 
- 963      6973696F 
- 963      6E203232 
- 963      31323230 
- 964 01fc 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 964      66756E63 
- 964      74696F6E 
- 964      2D736563 
- 964      74696F6E 
- 965              	.LASF2:
- 966 0224 73686F72 		.ascii	"short int\000"
- 966      7420696E 
- 966      7400
- 967              	.LASF24:
- 968 022e 48444331 		.ascii	"HDC1050_Request_Conversion\000"
- 968      3035305F 
- 968      52657175 
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmNDRvL.s 			page 21
+ 1041 00f6 0B       		.uleb128 0xb
+ 1042 00f7 3B       		.uleb128 0x3b
+ 1043 00f8 0B       		.uleb128 0xb
+ 1044 00f9 3C       		.uleb128 0x3c
+ 1045 00fa 19       		.uleb128 0x19
+ 1046 00fb 01       		.uleb128 0x1
+ 1047 00fc 13       		.uleb128 0x13
+ 1048 00fd 00       		.byte	0
+ 1049 00fe 00       		.byte	0
+ 1050 00ff 13       		.uleb128 0x13
+ 1051 0100 18       		.uleb128 0x18
+ 1052 0101 00       		.byte	0
+ 1053 0102 00       		.byte	0
+ 1054 0103 00       		.byte	0
+ 1055 0104 14       		.uleb128 0x14
+ 1056 0105 2E       		.uleb128 0x2e
+ 1057 0106 00       		.byte	0
+ 1058 0107 3F       		.uleb128 0x3f
+ 1059 0108 19       		.uleb128 0x19
+ 1060 0109 03       		.uleb128 0x3
+ 1061 010a 0E       		.uleb128 0xe
+ 1062 010b 3A       		.uleb128 0x3a
+ 1063 010c 0B       		.uleb128 0xb
+ 1064 010d 3B       		.uleb128 0x3b
+ 1065 010e 0B       		.uleb128 0xb
+ 1066 010f 27       		.uleb128 0x27
+ 1067 0110 19       		.uleb128 0x19
+ 1068 0111 3C       		.uleb128 0x3c
+ 1069 0112 19       		.uleb128 0x19
+ 1070 0113 00       		.byte	0
+ 1071 0114 00       		.byte	0
+ 1072 0115 15       		.uleb128 0x15
+ 1073 0116 2E       		.uleb128 0x2e
+ 1074 0117 01       		.byte	0x1
+ 1075 0118 3F       		.uleb128 0x3f
+ 1076 0119 19       		.uleb128 0x19
+ 1077 011a 03       		.uleb128 0x3
+ 1078 011b 0E       		.uleb128 0xe
+ 1079 011c 3A       		.uleb128 0x3a
+ 1080 011d 0B       		.uleb128 0xb
+ 1081 011e 3B       		.uleb128 0x3b
+ 1082 011f 0B       		.uleb128 0xb
+ 1083 0120 27       		.uleb128 0x27
+ 1084 0121 19       		.uleb128 0x19
+ 1085 0122 3C       		.uleb128 0x3c
+ 1086 0123 19       		.uleb128 0x19
+ 1087 0124 01       		.uleb128 0x1
+ 1088 0125 13       		.uleb128 0x13
+ 1089 0126 00       		.byte	0
+ 1090 0127 00       		.byte	0
+ 1091 0128 16       		.uleb128 0x16
+ 1092 0129 05       		.uleb128 0x5
+ 1093 012a 00       		.byte	0
+ 1094 012b 49       		.uleb128 0x49
+ 1095 012c 13       		.uleb128 0x13
+ 1096 012d 00       		.byte	0
+ 1097 012e 00       		.byte	0
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 22
 
 
- 968      6573745F 
- 968      436F6E76 
- 969              	.LASF18:
- 970 0249 53797374 		.ascii	"System_Timer_Flag\000"
- 970      656D5F54 
- 970      696D6572 
- 970      5F466C61 
- 970      6700
- 971              	.LASF4:
- 972 025b 6C6F6E67 		.ascii	"long int\000"
- 972      20696E74 
- 972      00
- 973              	.LASF38:
- 974 0264 433A5C45 		.ascii	"C:\\EAGLE\\My\\Thermometr\\Thermometr.cydsn\000"
- 974      41474C45 
- 974      5C4D795C 
- 974      54686572 
- 974      6D6F6D65 
- 975              	.LASF0:
- 976 028c 7369676E 		.ascii	"signed char\000"
- 976      65642063 
- 976      68617200 
- 977              	.LASF29:
- 978 0298 44697370 		.ascii	"Display_Scroll_Video_Memory\000"
- 978      6C61795F 
- 978      5363726F 
- 978      6C6C5F56 
- 978      6964656F 
- 979              	.LASF31:
- 980 02b4 43794465 		.ascii	"CyDelay\000"
- 980      6C617900 
- 981              	.LASF16:
- 982 02bc 54696D65 		.ascii	"Time\000"
- 982      00
- 983              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 1098 012f 00       		.byte	0
+ 1099              		.section	.debug_aranges,"",%progbits
+ 1100 0000 34000000 		.4byte	0x34
+ 1101 0004 0200     		.2byte	0x2
+ 1102 0006 00000000 		.4byte	.Ldebug_info0
+ 1103 000a 04       		.byte	0x4
+ 1104 000b 00       		.byte	0
+ 1105 000c 0000     		.2byte	0
+ 1106 000e 0000     		.2byte	0
+ 1107 0010 00000000 		.4byte	.LFB33
+ 1108 0014 18000000 		.4byte	.LFE33-.LFB33
+ 1109 0018 00000000 		.4byte	.LFB34
+ 1110 001c 14000000 		.4byte	.LFE34-.LFB34
+ 1111 0020 00000000 		.4byte	.LFB35
+ 1112 0024 2C000000 		.4byte	.LFE35-.LFB35
+ 1113 0028 00000000 		.4byte	.LFB36
+ 1114 002c C0000000 		.4byte	.LFE36-.LFB36
+ 1115 0030 00000000 		.4byte	0
+ 1116 0034 00000000 		.4byte	0
+ 1117              		.section	.debug_ranges,"",%progbits
+ 1118              	.Ldebug_ranges0:
+ 1119 0000 00000000 		.4byte	.LFB33
+ 1120 0004 18000000 		.4byte	.LFE33
+ 1121 0008 00000000 		.4byte	.LFB34
+ 1122 000c 14000000 		.4byte	.LFE34
+ 1123 0010 00000000 		.4byte	.LFB35
+ 1124 0014 2C000000 		.4byte	.LFE35
+ 1125 0018 00000000 		.4byte	.LFB36
+ 1126 001c C0000000 		.4byte	.LFE36
+ 1127 0020 00000000 		.4byte	0
+ 1128 0024 00000000 		.4byte	0
+ 1129              		.section	.debug_line,"",%progbits
+ 1130              	.Ldebug_line0:
+ 1131 0000 FC000000 		.section	.debug_str,"MS",%progbits,1
+ 1131      02009100 
+ 1131      00000201 
+ 1131      FB0E0D00 
+ 1131      01010101 
+ 1132              	.LASF38:
+ 1133 0000 4C45445F 		.ascii	"LED_SEG_PWM_WriteCompare2\000"
+ 1133      5345475F 
+ 1133      50574D5F 
+ 1133      57726974 
+ 1133      65436F6D 
+ 1134              	.LASF22:
+ 1135 001a 53797374 		.ascii	"System_Timer\000"
+ 1135      656D5F54 
+ 1135      696D6572 
+ 1135      00
+ 1136              	.LASF27:
+ 1137 0027 56696465 		.ascii	"Video_Pointer\000"
+ 1137      6F5F506F 
+ 1137      696E7465 
+ 1137      7200
+ 1138              	.LASF39:
+ 1139 0035 5343425F 		.ascii	"SCB_1_Start\000"
+ 1139      315F5374 
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 23
+
+
+ 1139      61727400 
+ 1140              	.LASF18:
+ 1141 0041 4844435F 		.ascii	"HDC_Put_Result\000"
+ 1141      5075745F 
+ 1141      52657375 
+ 1141      6C7400
+ 1142              	.LASF28:
+ 1143 0050 48444331 		.ascii	"HDC1050_Get_Temp_And_Humi\000"
+ 1143      3035305F 
+ 1143      4765745F 
+ 1143      54656D70 
+ 1143      5F416E64 
+ 1144              	.LASF3:
+ 1145 006a 73686F72 		.ascii	"short unsigned int\000"
+ 1145      7420756E 
+ 1145      7369676E 
+ 1145      65642069 
+ 1145      6E7400
+ 1146              	.LASF34:
+ 1147 007d 5343425F 		.ascii	"SCB_2_Start\000"
+ 1147      325F5374 
+ 1147      61727400 
+ 1148              	.LASF8:
+ 1149 0089 756E7369 		.ascii	"unsigned int\000"
+ 1149      676E6564 
+ 1149      20696E74 
+ 1149      00
+ 1150              	.LASF11:
+ 1151 0096 666C6F61 		.ascii	"float\000"
+ 1151      7400
+ 1152              	.LASF24:
+ 1153 009c 41637469 		.ascii	"ActionFlag\000"
+ 1153      6F6E466C 
+ 1153      616700
+ 1154              	.LASF23:
+ 1155 00a7 56696465 		.ascii	"VideoMemory\000"
+ 1155      6F4D656D 
+ 1155      6F727900 
+ 1156              	.LASF37:
+ 1157 00b3 4C45445F 		.ascii	"LED_SEG_PWM_Start\000"
+ 1157      5345475F 
+ 1157      50574D5F 
+ 1157      53746172 
+ 1157      7400
+ 1158              	.LASF5:
+ 1159 00c5 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1159      20756E73 
+ 1159      69676E65 
+ 1159      6420696E 
+ 1159      7400
+ 1160              	.LASF33:
+ 1161 00d7 44697370 		.ascii	"Display_Set_Video_Memory\000"
+ 1161      6C61795F 
+ 1161      5365745F 
+ 1161      56696465 
+ 1161      6F5F4D65 
+ 1162              	.LASF9:
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 24
+
+
+ 1163 00f0 75696E74 		.ascii	"uint8\000"
+ 1163      3800
+ 1164              	.LASF31:
+ 1165 00f6 44697370 		.ascii	"Display_Scroll_Video_Memory\000"
+ 1165      6C61795F 
+ 1165      5363726F 
+ 1165      6C6C5F56 
+ 1165      6964656F 
+ 1166              	.LASF32:
+ 1167 0112 53797374 		.ascii	"System_Timer_Start\000"
+ 1167      656D5F54 
+ 1167      696D6572 
+ 1167      5F537461 
+ 1167      727400
+ 1168              	.LASF1:
+ 1169 0125 756E7369 		.ascii	"unsigned char\000"
+ 1169      676E6564 
+ 1169      20636861 
+ 1169      7200
+ 1170              	.LASF12:
+ 1171 0133 646F7562 		.ascii	"double\000"
+ 1171      6C6500
+ 1172              	.LASF41:
+ 1173 013a 2E5C6D61 		.ascii	".\\main.c\000"
+ 1173      696E2E63 
+ 1173      00
+ 1174              	.LASF26:
+ 1175 0143 436F756E 		.ascii	"Counter\000"
+ 1175      74657200 
+ 1176              	.LASF10:
+ 1177 014b 75696E74 		.ascii	"uint32\000"
+ 1177      333200
+ 1178              	.LASF43:
+ 1179 0152 6D61696E 		.ascii	"main\000"
+ 1179      00
+ 1180              	.LASF30:
+ 1181 0157 53797374 		.ascii	"System_Timer_Add\000"
+ 1181      656D5F54 
+ 1181      696D6572 
+ 1181      5F416464 
+ 1181      00
+ 1182              	.LASF36:
+ 1183 0168 496E6974 		.ascii	"Init_Video_Memory\000"
+ 1183      5F566964 
+ 1183      656F5F4D 
+ 1183      656D6F72 
+ 1183      7900
+ 1184              	.LASF15:
+ 1185 017a 4E756D62 		.ascii	"Number\000"
+ 1185      657200
+ 1186              	.LASF7:
+ 1187 0181 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1187      206C6F6E 
+ 1187      6720756E 
+ 1187      7369676E 
+ 1187      65642069 
+ 1188              	.LASF14:
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 25
+
+
+ 1189 0198 73697A65 		.ascii	"sizetype\000"
+ 1189      74797065 
+ 1189      00
+ 1190              	.LASF25:
+ 1191 01a1 53696D6F 		.ascii	"Simofor\000"
+ 1191      666F7200 
+ 1192              	.LASF6:
+ 1193 01a9 6C6F6E67 		.ascii	"long long int\000"
+ 1193      206C6F6E 
+ 1193      6720696E 
+ 1193      7400
+ 1194              	.LASF17:
+ 1195 01b7 466C6167 		.ascii	"Flag\000"
+ 1195      00
+ 1196              	.LASF13:
+ 1197 01bc 63686172 		.ascii	"char\000"
+ 1197      00
+ 1198              	.LASF40:
+ 1199 01c1 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1199      4320342E 
+ 1199      392E3320 
+ 1199      32303135 
+ 1199      30333033 
+ 1200 01f4 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 1200      20726576 
+ 1200      6973696F 
+ 1200      6E203232 
+ 1200      31323230 
+ 1201 0227 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1201      66756E63 
+ 1201      74696F6E 
+ 1201      2D736563 
+ 1201      74696F6E 
+ 1202              	.LASF2:
+ 1203 024f 73686F72 		.ascii	"short int\000"
+ 1203      7420696E 
+ 1203      7400
+ 1204              	.LASF29:
+ 1205 0259 48444331 		.ascii	"HDC1050_Request_Conversion\000"
+ 1205      3035305F 
+ 1205      52657175 
+ 1205      6573745F 
+ 1205      436F6E76 
+ 1206              	.LASF21:
+ 1207 0274 53797374 		.ascii	"System_Timer_Flag\000"
+ 1207      656D5F54 
+ 1207      696D6572 
+ 1207      5F466C61 
+ 1207      6700
+ 1208              	.LASF4:
+ 1209 0286 6C6F6E67 		.ascii	"long int\000"
+ 1209      20696E74 
+ 1209      00
+ 1210              	.LASF42:
+ 1211 028f 433A5C45 		.ascii	"C:\\EAGLE\\My\\Thermometr\\Thermometr.cydsn\000"
+ 1211      41474C45 
+ 1211      5C4D795C 
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccCTIIJ6.s 			page 26
+
+
+ 1211      54686572 
+ 1211      6D6F6D65 
+ 1212              	.LASF0:
+ 1213 02b7 7369676E 		.ascii	"signed char\000"
+ 1213      65642063 
+ 1213      68617200 
+ 1214              	.LASF20:
+ 1215 02c3 44697370 		.ascii	"Display_Print\000"
+ 1215      6C61795F 
+ 1215      5072696E 
+ 1215      7400
+ 1216              	.LASF35:
+ 1217 02d1 43794465 		.ascii	"CyDelay\000"
+ 1217      6C617900 
+ 1218              	.LASF19:
+ 1219 02d9 4844435F 		.ascii	"HDC_Start_Convert\000"
+ 1219      53746172 
+ 1219      745F436F 
+ 1219      6E766572 
+ 1219      7400
+ 1220              	.LASF16:
+ 1221 02eb 54696D65 		.ascii	"Time\000"
+ 1221      00
+ 1222              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

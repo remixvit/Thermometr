@@ -19,46 +19,7 @@ volatile uint8 VideoMemory[Video_Memory_Size];
 extern int8 Temp;
 extern uint8 Humi;
 
-void Display_Test_1()
-{
-    volatile uint8 Scroll = 0;
-    volatile uint8 Symbol = 0;
-    SCB_1_SpiSetActiveSlaveSelect(LCD_SPI_SS_Number);
-    for(Scroll = 0; Scroll < 4; Scroll++)
-    {
-        PWM_Mux_Reg_Write(Scroll);
-        for(Symbol = 0; Symbol < 10; Symbol++)
-        {
-            SCB_1_SpiUartWriteTxData(Font[Symbol]);
-            while (0u != (SCB_1_SpiUartGetTxBufferSize() + SCB_1_GET_TX_FIFO_SR_VALID))
-            {
-            }
-            CyDelay(500);
-        }
-    }
-}
-void Display_Test_2()
-{
-    volatile uint8 Scroll = 0;
-    volatile uint8 Symbol = 5;
-    volatile uint8 Brigh = 0;
-    SCB_1_SpiSetActiveSlaveSelect(LCD_SPI_SS_Number);
-    while(1)
-    {
-        PWM_Mux_Reg_Write(Scroll);
-        LED_SEG_PWM_WriteCompare2(Brigh);
-        SCB_1_SpiUartWriteTxData(Font[Symbol]);
-        while (0u != (SCB_1_SpiUartGetTxBufferSize() + SCB_1_GET_TX_FIFO_SR_VALID))
-        {
-        }
-        Scroll++;
-        if(Scroll > 4)
-        {
-            Scroll = 0;
-            Brigh++;
-        }
-    }
-}
+
 
 void Init_Video_Memory()
 {
@@ -92,13 +53,14 @@ void Display_Set_Video_Memory(void)
         if(Temp < 0)
         {
             VideoMemory[Scroll] = Symbol_minus;
+            Temp = abs(Temp);
             Scroll++;
         }
-        if(abs(Temp) > 10)
+        if(Temp > 9)
         {
-            VideoMemory[Scroll] = Font[(abs(Temp)) / 10];
+            VideoMemory[Scroll] = Font[Temp / 10];
             Scroll++;
-            VideoMemory[Scroll] = Font[(abs(Temp)) % 10];
+            VideoMemory[Scroll] = Font[Temp % 10];
             Scroll++;
         }
         else
@@ -134,37 +96,21 @@ void Display_Set_Video_Memory(void)
         Scroll++;
         VideoMemory[Scroll] = Symbol_Procent;
         Scroll++;
+        VideoMemory[Scroll] = Symbol_Stop;
 }
 
-void Display_Scroll_Video_Memory(void)
+void Display_Scroll_Video_Memory(uint8 Scroll)
 {
-    volatile uint8 Scroll = 0;
-    for(Scroll = 0; Scroll < 4; Scroll++)
+    uint8 Mux;
+    for(Mux = 0; Mux < 4; Mux++)
     {
-        VideoBufer[Scroll] = VideoMemory[Scroll];
-    }
-    for(Scroll = 0; Scroll < 16; Scroll++)
-    {
-        VideoMemory[Scroll] = VideoMemory[Scroll+1];
-    }
-}
-
-void Display_Write_Mem(void)
-{
-    volatile uint8 Scroll;
-    for(Scroll = 0; Scroll < 4; Scroll++)
-    {
-        if(VideoBufer[Scroll] == 0)
+        SCB_1_SpiUartWriteTxData(VideoBufer[Scroll + Mux]);
+        while (0u != (SCB_1_SpiUartGetTxBufferSize() + SCB_1_GET_TX_FIFO_SR_VALID))
         {
-            VideoBufer[Scroll] = Symbol_Space;
         }
-            SCB_1_SpiUartWriteTxData(VideoBufer[Scroll]);
-            while (0u != (SCB_1_SpiUartGetTxBufferSize() + SCB_1_GET_TX_FIFO_SR_VALID))
-            {
-            }
-            PWM_Mux_Reg_Write(Scroll);
-            CyDelayUs(Refresh_Time);
+        PWM_Mux_Reg_Write(Mux);
     }
 }
+
 
 /* [] END OF FILE */

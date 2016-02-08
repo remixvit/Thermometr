@@ -97,6 +97,7 @@
   <file name="C:\EAGLE\My\Thermometr\Thermometr.cydsn\codegentemp\SCB_2_SCB_IRQ.c" value="ARM_C_FILE;SCB_2_SCB_IRQ" />
   <file name="C:\EAGLE\My\Thermometr\Thermometr.cydsn\codegentemp\SCB_2_SCB_IRQ.h" value="NONE;SCB_2_SCB_IRQ" />
   <file name="C:\EAGLE\My\Thermometr\Thermometr.cydsn\codegentemp\cycodeshareimport.ld" value="NONE;" />
+  <file name="C:\EAGLE\My\Thermometr\Thermometr.cydsn\codegentemp\cycodeshareexport.ld" value="NONE;" />
   <file name="C:\EAGLE\My\Thermometr\Thermometr.cydsn\codegentemp\cycodeshareimport.scat" value="NONE;" />
   <file name="C:\EAGLE\My\Thermometr\Thermometr.cydsn\codegentemp\cm0gcc.ld" value="NONE;cy_boot" />
   <file name="C:\EAGLE\My\Thermometr\Thermometr.cydsn\codegentemp\Cm0RealView.scat" value="NONE;cy_boot" />

@@ -1,6 +1,6 @@
 -- Project:   Thermometr
--- Generated: 01/26/2016 09:01:01
--- PSoC Creator  3.3 CP1
+-- Generated: 02/08/2016 20:05:29
+-- PSoC Creator  3.3 SP1
 
 ENTITY Thermometr IS
     PORT(

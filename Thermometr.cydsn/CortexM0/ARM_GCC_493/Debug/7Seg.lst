@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 1
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -17,13 +17,13 @@ ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 1
   14              		.text
   15              	.Ltext0:
   16              		.cfi_sections	.debug_frame
-  17              		.section	.text.Display_Test_1,"ax",%progbits
+  17              		.section	.text.Init_Video_Memory,"ax",%progbits
   18              		.align	2
-  19              		.global	Display_Test_1
+  19              		.global	Init_Video_Memory
   20              		.code	16
   21              		.thumb_func
-  22              		.type	Display_Test_1, %function
-  23              	Display_Test_1:
+  22              		.type	Init_Video_Memory, %function
+  23              	Init_Video_Memory:
   24              	.LFB33:
   25              		.file 1 ".\\7Seg.c"
    1:.\7Seg.c      **** /* ========================================
@@ -47,2189 +47,1568 @@ ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 1
   19:.\7Seg.c      **** extern int8 Temp;
   20:.\7Seg.c      **** extern uint8 Humi;
   21:.\7Seg.c      **** 
-  22:.\7Seg.c      **** void Display_Test_1()
-  23:.\7Seg.c      **** {
-  26              		.loc 1 23 0
+  22:.\7Seg.c      **** 
+  23:.\7Seg.c      **** 
+  24:.\7Seg.c      **** void Init_Video_Memory()
+  25:.\7Seg.c      **** {
+  26              		.loc 1 25 0
   27              		.cfi_startproc
-  28 0000 30B5     		push	{r4, r5, lr}
-  29              		.cfi_def_cfa_offset 12
-  30              		.cfi_offset 4, -12
-  31              		.cfi_offset 5, -8
-  32              		.cfi_offset 14, -4
-  33 0002 83B0     		sub	sp, sp, #12
-  34              		.cfi_def_cfa_offset 24
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 2
+  28 0000 82B0     		sub	sp, sp, #8
+  29              		.cfi_def_cfa_offset 8
+  26:.\7Seg.c      ****     volatile uint8 Scroll;
+  27:.\7Seg.c      ****     for(Scroll = 0; Scroll < Video_Memory_Size; Scroll++)
+  30              		.loc 1 27 0
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 2
 
 
-  24:.\7Seg.c      ****     volatile uint8 Scroll = 0;
-  35              		.loc 1 24 0
-  36 0004 6B46     		mov	r3, sp
-  37 0006 DD1D     		add	r5, r3, #7
-  38 0008 0024     		mov	r4, #0
-  39 000a DC71     		strb	r4, [r3, #7]
-  25:.\7Seg.c      ****     volatile uint8 Symbol = 0;
-  40              		.loc 1 25 0
-  41 000c 9C71     		strb	r4, [r3, #6]
-  26:.\7Seg.c      ****     SCB_1_SpiSetActiveSlaveSelect(LCD_SPI_SS_Number);
-  42              		.loc 1 26 0
-  43 000e 0020     		mov	r0, #0
-  44 0010 FFF7FEFF 		bl	SCB_1_SpiSetActiveSlaveSelect
-  45              	.LVL0:
-  27:.\7Seg.c      ****     for(Scroll = 0; Scroll < 4; Scroll++)
-  46              		.loc 1 27 0
-  47 0014 2C70     		strb	r4, [r5]
-  48 0016 33E0     		b	.L2
-  49              	.L7:
+  31 0002 0022     		mov	r2, #0
+  32 0004 6B46     		mov	r3, sp
+  33 0006 DA71     		strb	r2, [r3, #7]
+  34 0008 0AE0     		b	.L2
+  35              	.L3:
   28:.\7Seg.c      ****     {
-  29:.\7Seg.c      ****         PWM_Mux_Reg_Write(Scroll);
-  50              		.loc 1 29 0
-  51 0018 6B46     		mov	r3, sp
-  52 001a D879     		ldrb	r0, [r3, #7]
-  53 001c C0B2     		uxtb	r0, r0
-  54 001e FFF7FEFF 		bl	PWM_Mux_Reg_Write
-  55              	.LVL1:
-  30:.\7Seg.c      ****         for(Symbol = 0; Symbol < 10; Symbol++)
-  56              		.loc 1 30 0
-  57 0022 0022     		mov	r2, #0
-  58 0024 6B46     		mov	r3, sp
-  59 0026 9A71     		strb	r2, [r3, #6]
-  60 0028 1EE0     		b	.L3
-  61              	.L6:
-  31:.\7Seg.c      ****         {
-  32:.\7Seg.c      ****             SCB_1_SpiUartWriteTxData(Font[Symbol]);
-  62              		.loc 1 32 0
-  63 002a 6B46     		mov	r3, sp
-  64 002c 0633     		add	r3, r3, #6
-  65 002e 1B78     		ldrb	r3, [r3]
-  66 0030 DBB2     		uxtb	r3, r3
-  67 0032 174A     		ldr	r2, .L8
-  68 0034 D05C     		ldrb	r0, [r2, r3]
-  69 0036 C0B2     		uxtb	r0, r0
-  70 0038 FFF7FEFF 		bl	SCB_1_SpiUartWriteTxData
-  71              	.LVL2:
-  72              	.L5:
-  33:.\7Seg.c      ****             while (0u != (SCB_1_SpiUartGetTxBufferSize() + SCB_1_GET_TX_FIFO_SR_VALID))
-  73              		.loc 1 33 0 discriminator 5
-  74 003c FFF7FEFF 		bl	SCB_1_SpiUartGetTxBufferSize
-  75              	.LVL3:
-  76 0040 144B     		ldr	r3, .L8+4
-  77 0042 1B68     		ldr	r3, [r3]
-  78 0044 8022     		mov	r2, #128
-  79 0046 1202     		lsl	r2, r2, #8
-  80 0048 1340     		and	r3, r2
-  81 004a 00D0     		beq	.L4
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 3
-
-
-  82              		.loc 1 33 0 is_stmt 0
-  83 004c 0123     		mov	r3, #1
-  84              	.L4:
-  85              		.loc 1 33 0 discriminator 4
-  86 004e C318     		add	r3, r0, r3
-  87 0050 002B     		cmp	r3, #0
-  88 0052 F3D1     		bne	.L5
-  34:.\7Seg.c      ****             {
-  35:.\7Seg.c      ****             }
-  36:.\7Seg.c      ****             CyDelay(500);
-  89              		.loc 1 36 0 is_stmt 1 discriminator 2
-  90 0054 FA20     		mov	r0, #250
-  91 0056 4000     		lsl	r0, r0, #1
-  92 0058 FFF7FEFF 		bl	CyDelay
-  93              	.LVL4:
-  30:.\7Seg.c      ****         {
-  94              		.loc 1 30 0 discriminator 2
-  95 005c 6B46     		mov	r3, sp
-  96 005e 9A1D     		add	r2, r3, #6
-  97 0060 9B79     		ldrb	r3, [r3, #6]
-  98 0062 0133     		add	r3, r3, #1
-  99 0064 DBB2     		uxtb	r3, r3
- 100 0066 1370     		strb	r3, [r2]
- 101              	.L3:
-  30:.\7Seg.c      ****         {
- 102              		.loc 1 30 0 is_stmt 0 discriminator 1
- 103 0068 6B46     		mov	r3, sp
- 104 006a 0633     		add	r3, r3, #6
- 105 006c 1B78     		ldrb	r3, [r3]
- 106 006e DBB2     		uxtb	r3, r3
- 107 0070 092B     		cmp	r3, #9
- 108 0072 DAD9     		bls	.L6
+  29:.\7Seg.c      ****         VideoMemory[Scroll] = 0x00;
+  36              		.loc 1 29 0 discriminator 3
+  37 000a 6B46     		mov	r3, sp
+  38 000c DA1D     		add	r2, r3, #7
+  39 000e DB79     		ldrb	r3, [r3, #7]
+  40 0010 DBB2     		uxtb	r3, r3
+  41 0012 0020     		mov	r0, #0
+  42 0014 0649     		ldr	r1, .L4
+  43 0016 C854     		strb	r0, [r1, r3]
   27:.\7Seg.c      ****     {
- 109              		.loc 1 27 0 is_stmt 1 discriminator 2
- 110 0074 6B46     		mov	r3, sp
- 111 0076 DA1D     		add	r2, r3, #7
- 112 0078 DB79     		ldrb	r3, [r3, #7]
- 113 007a 0133     		add	r3, r3, #1
- 114 007c DBB2     		uxtb	r3, r3
- 115 007e 1370     		strb	r3, [r2]
- 116              	.L2:
+  44              		.loc 1 27 0 discriminator 3
+  45 0018 1378     		ldrb	r3, [r2]
+  46 001a 0133     		add	r3, r3, #1
+  47 001c DBB2     		uxtb	r3, r3
+  48 001e 1370     		strb	r3, [r2]
+  49              	.L2:
   27:.\7Seg.c      ****     {
- 117              		.loc 1 27 0 is_stmt 0 discriminator 1
- 118 0080 6B46     		mov	r3, sp
- 119 0082 0733     		add	r3, r3, #7
- 120 0084 1B78     		ldrb	r3, [r3]
- 121 0086 DBB2     		uxtb	r3, r3
- 122 0088 032B     		cmp	r3, #3
- 123 008a C5D9     		bls	.L7
-  37:.\7Seg.c      ****         }
-  38:.\7Seg.c      ****     }
-  39:.\7Seg.c      **** }
- 124              		.loc 1 39 0 is_stmt 1
- 125 008c 03B0     		add	sp, sp, #12
- 126              		@ sp needed
- 127 008e 30BD     		pop	{r4, r5, pc}
- 128              	.L9:
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 4
-
-
- 129              		.align	2
- 130              	.L8:
- 131 0090 00000000 		.word	.LANCHOR0
- 132 0094 08020640 		.word	1074135560
- 133              		.cfi_endproc
- 134              	.LFE33:
- 135              		.size	Display_Test_1, .-Display_Test_1
- 136              		.section	.text.Display_Test_2,"ax",%progbits
- 137              		.align	2
- 138              		.global	Display_Test_2
- 139              		.code	16
- 140              		.thumb_func
- 141              		.type	Display_Test_2, %function
- 142              	Display_Test_2:
- 143              	.LFB34:
-  40:.\7Seg.c      **** void Display_Test_2()
-  41:.\7Seg.c      **** {
- 144              		.loc 1 41 0
- 145              		.cfi_startproc
- 146 0000 00B5     		push	{lr}
- 147              		.cfi_def_cfa_offset 4
- 148              		.cfi_offset 14, -4
- 149 0002 83B0     		sub	sp, sp, #12
- 150              		.cfi_def_cfa_offset 16
-  42:.\7Seg.c      ****     volatile uint8 Scroll = 0;
- 151              		.loc 1 42 0
- 152 0004 0023     		mov	r3, #0
- 153 0006 6A46     		mov	r2, sp
- 154 0008 D371     		strb	r3, [r2, #7]
-  43:.\7Seg.c      ****     volatile uint8 Symbol = 5;
- 155              		.loc 1 43 0
- 156 000a 0521     		mov	r1, #5
- 157 000c 6A46     		mov	r2, sp
- 158 000e 9171     		strb	r1, [r2, #6]
-  44:.\7Seg.c      ****     volatile uint8 Brigh = 0;
- 159              		.loc 1 44 0
- 160 0010 6A46     		mov	r2, sp
- 161 0012 5371     		strb	r3, [r2, #5]
-  45:.\7Seg.c      ****     SCB_1_SpiSetActiveSlaveSelect(LCD_SPI_SS_Number);
- 162              		.loc 1 45 0
- 163 0014 0020     		mov	r0, #0
- 164 0016 FFF7FEFF 		bl	SCB_1_SpiSetActiveSlaveSelect
- 165              	.LVL5:
- 166              	.L13:
-  46:.\7Seg.c      ****     while(1)
-  47:.\7Seg.c      ****     {
-  48:.\7Seg.c      ****         PWM_Mux_Reg_Write(Scroll);
- 167              		.loc 1 48 0
- 168 001a 6B46     		mov	r3, sp
- 169 001c D879     		ldrb	r0, [r3, #7]
- 170 001e C0B2     		uxtb	r0, r0
- 171 0020 FFF7FEFF 		bl	PWM_Mux_Reg_Write
- 172              	.LVL6:
-  49:.\7Seg.c      ****         LED_SEG_PWM_WriteCompare2(Brigh);
- 173              		.loc 1 49 0
- 174 0024 6B46     		mov	r3, sp
- 175 0026 5879     		ldrb	r0, [r3, #5]
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 5
-
-
- 176 0028 C0B2     		uxtb	r0, r0
- 177 002a FFF7FEFF 		bl	LED_SEG_PWM_WriteCompare2
- 178              	.LVL7:
-  50:.\7Seg.c      ****         SCB_1_SpiUartWriteTxData(Font[Symbol]);
- 179              		.loc 1 50 0
- 180 002e 6B46     		mov	r3, sp
- 181 0030 0633     		add	r3, r3, #6
- 182 0032 1B78     		ldrb	r3, [r3]
- 183 0034 DBB2     		uxtb	r3, r3
- 184 0036 124A     		ldr	r2, .L15
- 185 0038 D05C     		ldrb	r0, [r2, r3]
- 186 003a C0B2     		uxtb	r0, r0
- 187 003c FFF7FEFF 		bl	SCB_1_SpiUartWriteTxData
- 188              	.LVL8:
- 189              	.L12:
-  51:.\7Seg.c      ****         while (0u != (SCB_1_SpiUartGetTxBufferSize() + SCB_1_GET_TX_FIFO_SR_VALID))
- 190              		.loc 1 51 0 discriminator 5
- 191 0040 FFF7FEFF 		bl	SCB_1_SpiUartGetTxBufferSize
- 192              	.LVL9:
- 193 0044 0F4B     		ldr	r3, .L15+4
- 194 0046 1B68     		ldr	r3, [r3]
- 195 0048 8022     		mov	r2, #128
- 196 004a 1202     		lsl	r2, r2, #8
- 197 004c 1340     		and	r3, r2
- 198 004e 00D0     		beq	.L11
- 199              		.loc 1 51 0 is_stmt 0
- 200 0050 0123     		mov	r3, #1
- 201              	.L11:
- 202              		.loc 1 51 0 discriminator 4
- 203 0052 C318     		add	r3, r0, r3
- 204 0054 002B     		cmp	r3, #0
- 205 0056 F3D1     		bne	.L12
-  52:.\7Seg.c      ****         {
-  53:.\7Seg.c      ****         }
-  54:.\7Seg.c      ****         Scroll++;
- 206              		.loc 1 54 0 is_stmt 1
- 207 0058 6B46     		mov	r3, sp
- 208 005a DA1D     		add	r2, r3, #7
- 209 005c DB79     		ldrb	r3, [r3, #7]
- 210 005e 0133     		add	r3, r3, #1
- 211 0060 DBB2     		uxtb	r3, r3
- 212 0062 1370     		strb	r3, [r2]
-  55:.\7Seg.c      ****         if(Scroll > 4)
- 213              		.loc 1 55 0
- 214 0064 1378     		ldrb	r3, [r2]
- 215 0066 DBB2     		uxtb	r3, r3
- 216 0068 042B     		cmp	r3, #4
- 217 006a D6D9     		bls	.L13
-  56:.\7Seg.c      ****         {
-  57:.\7Seg.c      ****             Scroll = 0;
- 218              		.loc 1 57 0
- 219 006c 0022     		mov	r2, #0
- 220 006e 6B46     		mov	r3, sp
- 221 0070 DA71     		strb	r2, [r3, #7]
-  58:.\7Seg.c      ****             Brigh++;
- 222              		.loc 1 58 0
- 223 0072 6B46     		mov	r3, sp
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 6
-
-
- 224 0074 5A1D     		add	r2, r3, #5
- 225 0076 5B79     		ldrb	r3, [r3, #5]
- 226 0078 0133     		add	r3, r3, #1
- 227 007a DBB2     		uxtb	r3, r3
- 228 007c 1370     		strb	r3, [r2]
- 229 007e CCE7     		b	.L13
- 230              	.L16:
- 231              		.align	2
- 232              	.L15:
- 233 0080 00000000 		.word	.LANCHOR0
- 234 0084 08020640 		.word	1074135560
- 235              		.cfi_endproc
- 236              	.LFE34:
- 237              		.size	Display_Test_2, .-Display_Test_2
- 238              		.section	.text.Init_Video_Memory,"ax",%progbits
- 239              		.align	2
- 240              		.global	Init_Video_Memory
- 241              		.code	16
- 242              		.thumb_func
- 243              		.type	Init_Video_Memory, %function
- 244              	Init_Video_Memory:
- 245              	.LFB35:
-  59:.\7Seg.c      ****         }
-  60:.\7Seg.c      ****     }
-  61:.\7Seg.c      **** }
-  62:.\7Seg.c      **** 
-  63:.\7Seg.c      **** void Init_Video_Memory()
-  64:.\7Seg.c      **** {
- 246              		.loc 1 64 0
- 247              		.cfi_startproc
- 248 0000 82B0     		sub	sp, sp, #8
- 249              		.cfi_def_cfa_offset 8
-  65:.\7Seg.c      ****     volatile uint8 Scroll;
-  66:.\7Seg.c      ****     for(Scroll = 0; Scroll < Video_Memory_Size; Scroll++)
- 250              		.loc 1 66 0
- 251 0002 0022     		mov	r2, #0
- 252 0004 6B46     		mov	r3, sp
- 253 0006 DA71     		strb	r2, [r3, #7]
- 254 0008 0AE0     		b	.L18
- 255              	.L19:
-  67:.\7Seg.c      ****     {
-  68:.\7Seg.c      ****         VideoMemory[Scroll] = 0x00;
- 256              		.loc 1 68 0 discriminator 3
- 257 000a 6B46     		mov	r3, sp
- 258 000c DA1D     		add	r2, r3, #7
- 259 000e DB79     		ldrb	r3, [r3, #7]
- 260 0010 DBB2     		uxtb	r3, r3
- 261 0012 0020     		mov	r0, #0
- 262 0014 0649     		ldr	r1, .L20
- 263 0016 C854     		strb	r0, [r1, r3]
-  66:.\7Seg.c      ****     {
- 264              		.loc 1 66 0 discriminator 3
- 265 0018 1378     		ldrb	r3, [r2]
- 266 001a 0133     		add	r3, r3, #1
- 267 001c DBB2     		uxtb	r3, r3
- 268 001e 1370     		strb	r3, [r2]
- 269              	.L18:
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 7
-
-
-  66:.\7Seg.c      ****     {
- 270              		.loc 1 66 0 is_stmt 0 discriminator 1
- 271 0020 6B46     		mov	r3, sp
- 272 0022 0733     		add	r3, r3, #7
- 273 0024 1B78     		ldrb	r3, [r3]
- 274 0026 DBB2     		uxtb	r3, r3
- 275 0028 102B     		cmp	r3, #16
- 276 002a EED9     		bls	.L19
-  69:.\7Seg.c      ****     }
-  70:.\7Seg.c      **** }
- 277              		.loc 1 70 0 is_stmt 1
- 278 002c 02B0     		add	sp, sp, #8
- 279              		@ sp needed
- 280 002e 7047     		bx	lr
- 281              	.L21:
- 282              		.align	2
- 283              	.L20:
- 284 0030 00000000 		.word	VideoMemory
- 285              		.cfi_endproc
- 286              	.LFE35:
- 287              		.size	Init_Video_Memory, .-Init_Video_Memory
- 288              		.section	.text.Display_Write_Numer,"ax",%progbits
- 289              		.align	2
- 290              		.global	Display_Write_Numer
- 291              		.code	16
- 292              		.thumb_func
- 293              		.type	Display_Write_Numer, %function
- 294              	Display_Write_Numer:
- 295              	.LFB36:
-  71:.\7Seg.c      **** 
-  72:.\7Seg.c      **** void Display_Write_Numer(uint8 Number, uint8 Segment)
-  73:.\7Seg.c      **** {
- 296              		.loc 1 73 0
- 297              		.cfi_startproc
- 298              	.LVL10:
- 299 0000 10B5     		push	{r4, lr}
- 300              		.cfi_def_cfa_offset 8
- 301              		.cfi_offset 4, -8
- 302              		.cfi_offset 14, -4
-  74:.\7Seg.c      ****     if((Number < 10) && (Segment < Number_Of_Segments))
- 303              		.loc 1 74 0
- 304 0002 0928     		cmp	r0, #9
- 305 0004 16D8     		bhi	.L22
- 306              		.loc 1 74 0 is_stmt 0 discriminator 1
- 307 0006 0329     		cmp	r1, #3
- 308 0008 14D8     		bhi	.L22
- 309 000a 041C     		mov	r4, r0
-  75:.\7Seg.c      ****     {
-  76:.\7Seg.c      ****         PWM_Mux_Reg_Write(Segment);
- 310              		.loc 1 76 0 is_stmt 1
- 311 000c 081C     		mov	r0, r1
- 312              	.LVL11:
- 313 000e FFF7FEFF 		bl	PWM_Mux_Reg_Write
- 314              	.LVL12:
-  77:.\7Seg.c      ****         SCB_1_SpiUartWriteTxData(Font[Number]);
- 315              		.loc 1 77 0
- 316 0012 094B     		ldr	r3, .L26
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 8
-
-
- 317 0014 185D     		ldrb	r0, [r3, r4]
- 318 0016 C0B2     		uxtb	r0, r0
- 319 0018 FFF7FEFF 		bl	SCB_1_SpiUartWriteTxData
- 320              	.LVL13:
- 321              	.L25:
-  78:.\7Seg.c      ****         while (0u != (SCB_1_SpiUartGetTxBufferSize() + SCB_1_GET_TX_FIFO_SR_VALID))
- 322              		.loc 1 78 0 discriminator 5
- 323 001c FFF7FEFF 		bl	SCB_1_SpiUartGetTxBufferSize
- 324              	.LVL14:
- 325 0020 064B     		ldr	r3, .L26+4
- 326 0022 1B68     		ldr	r3, [r3]
- 327 0024 8022     		mov	r2, #128
- 328 0026 1202     		lsl	r2, r2, #8
- 329 0028 1340     		and	r3, r2
- 330 002a 00D0     		beq	.L24
- 331              		.loc 1 78 0 is_stmt 0
- 332 002c 0123     		mov	r3, #1
- 333              	.L24:
- 334              		.loc 1 78 0 discriminator 4
- 335 002e C318     		add	r3, r0, r3
- 336 0030 002B     		cmp	r3, #0
- 337 0032 F3D1     		bne	.L25
- 338              	.L22:
-  79:.\7Seg.c      ****         {
-  80:.\7Seg.c      ****         }
-  81:.\7Seg.c      ****     }
-  82:.\7Seg.c      **** }
- 339              		.loc 1 82 0 is_stmt 1
- 340              		@ sp needed
- 341 0034 10BD     		pop	{r4, pc}
- 342              	.L27:
- 343 0036 C046     		.align	2
- 344              	.L26:
- 345 0038 00000000 		.word	.LANCHOR0
- 346 003c 08020640 		.word	1074135560
- 347              		.cfi_endproc
- 348              	.LFE36:
- 349              		.size	Display_Write_Numer, .-Display_Write_Numer
- 350              		.global	__aeabi_idiv
- 351              		.global	__aeabi_idivmod
- 352              		.global	__aeabi_uidiv
- 353              		.global	__aeabi_uidivmod
- 354              		.section	.text.Display_Set_Video_Memory,"ax",%progbits
- 355              		.align	2
- 356              		.global	Display_Set_Video_Memory
- 357              		.code	16
- 358              		.thumb_func
- 359              		.type	Display_Set_Video_Memory, %function
- 360              	Display_Set_Video_Memory:
- 361              	.LFB37:
-  83:.\7Seg.c      **** 
-  84:.\7Seg.c      **** void Display_Set_Video_Memory(void)
-  85:.\7Seg.c      **** {
- 362              		.loc 1 85 0
- 363              		.cfi_startproc
- 364 0000 F0B5     		push	{r4, r5, r6, r7, lr}
- 365              		.cfi_def_cfa_offset 20
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 9
-
-
- 366              		.cfi_offset 4, -20
- 367              		.cfi_offset 5, -16
- 368              		.cfi_offset 6, -12
- 369              		.cfi_offset 7, -8
- 370              		.cfi_offset 14, -4
- 371 0002 4746     		mov	r7, r8
- 372 0004 80B4     		push	{r7}
- 373              		.cfi_def_cfa_offset 24
- 374              		.cfi_offset 8, -24
- 375 0006 82B0     		sub	sp, sp, #8
- 376              		.cfi_def_cfa_offset 32
-  86:.\7Seg.c      ****     volatile uint8 Scroll = 0;
- 377              		.loc 1 86 0
- 378 0008 6B46     		mov	r3, sp
- 379 000a 0022     		mov	r2, #0
- 380 000c DA71     		strb	r2, [r3, #7]
-  87:.\7Seg.c      ****     VideoMemory[Scroll] = Symbol_T;
- 381              		.loc 1 87 0
- 382 000e DA79     		ldrb	r2, [r3, #7]
- 383 0010 D2B2     		uxtb	r2, r2
- 384 0012 6249     		ldr	r1, .L34
- 385 0014 8720     		mov	r0, #135
- 386 0016 8854     		strb	r0, [r1, r2]
-  88:.\7Seg.c      ****     Scroll++;
- 387              		.loc 1 88 0
- 388 0018 DA79     		ldrb	r2, [r3, #7]
- 389 001a 0132     		add	r2, r2, #1
- 390 001c D2B2     		uxtb	r2, r2
- 391 001e DA71     		strb	r2, [r3, #7]
-  89:.\7Seg.c      ****     VideoMemory[Scroll] = Symbol_Space;
- 392              		.loc 1 89 0
- 393 0020 DA79     		ldrb	r2, [r3, #7]
- 394 0022 D2B2     		uxtb	r2, r2
- 395 0024 7830     		add	r0, r0, #120
- 396 0026 8854     		strb	r0, [r1, r2]
-  90:.\7Seg.c      ****     Scroll++;
- 397              		.loc 1 90 0
- 398 0028 DA79     		ldrb	r2, [r3, #7]
- 399 002a 0132     		add	r2, r2, #1
- 400 002c D2B2     		uxtb	r2, r2
- 401 002e DA71     		strb	r2, [r3, #7]
-  91:.\7Seg.c      ****     
-  92:.\7Seg.c      ****         if(Temp < 0)
- 402              		.loc 1 92 0
- 403 0030 5B4B     		ldr	r3, .L34+4
- 404 0032 1B78     		ldrb	r3, [r3]
- 405 0034 5AB2     		sxtb	r2, r3
- 406 0036 002A     		cmp	r2, #0
- 407 0038 0ADA     		bge	.L29
-  93:.\7Seg.c      ****         {
-  94:.\7Seg.c      ****             VideoMemory[Scroll] = Symbol_minus;
- 408              		.loc 1 94 0
- 409 003a 6A46     		mov	r2, sp
- 410 003c D11D     		add	r1, r2, #7
- 411 003e D279     		ldrb	r2, [r2, #7]
- 412 0040 D2B2     		uxtb	r2, r2
- 413 0042 BF24     		mov	r4, #191
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 10
-
-
- 414 0044 5548     		ldr	r0, .L34
- 415 0046 8454     		strb	r4, [r0, r2]
-  95:.\7Seg.c      ****             Scroll++;
- 416              		.loc 1 95 0
- 417 0048 0A78     		ldrb	r2, [r1]
- 418 004a 0132     		add	r2, r2, #1
- 419 004c D2B2     		uxtb	r2, r2
- 420 004e 0A70     		strb	r2, [r1]
- 421              	.L29:
-  96:.\7Seg.c      ****         }
-  97:.\7Seg.c      ****         if(abs(Temp) > 10)
- 422              		.loc 1 97 0
- 423 0050 5BB2     		sxtb	r3, r3
- 424 0052 DA17     		asr	r2, r3, #31
- 425 0054 9D18     		add	r5, r3, r2
- 426 0056 5540     		eor	r5, r2
- 427 0058 0A2D     		cmp	r5, #10
- 428 005a 20DD     		ble	.L30
-  98:.\7Seg.c      ****         {
-  99:.\7Seg.c      ****             VideoMemory[Scroll] = Font[(abs(Temp)) / 10];
- 429              		.loc 1 99 0
- 430 005c 6B46     		mov	r3, sp
- 431 005e DC1D     		add	r4, r3, #7
- 432 0060 DE79     		ldrb	r6, [r3, #7]
- 433 0062 F6B2     		uxtb	r6, r6
- 434 0064 281C     		mov	r0, r5
- 435 0066 0A21     		mov	r1, #10
- 436 0068 FFF7FEFF 		bl	__aeabi_idiv
- 437              	.LVL15:
- 438 006c 4D4B     		ldr	r3, .L34+8
- 439 006e 9846     		mov	r8, r3
- 440 0070 1B5C     		ldrb	r3, [r3, r0]
- 441 0072 DBB2     		uxtb	r3, r3
- 442 0074 494F     		ldr	r7, .L34
- 443 0076 BB55     		strb	r3, [r7, r6]
- 100:.\7Seg.c      ****             Scroll++;
- 444              		.loc 1 100 0
- 445 0078 2378     		ldrb	r3, [r4]
- 446 007a 0133     		add	r3, r3, #1
- 447 007c DBB2     		uxtb	r3, r3
- 448 007e 2370     		strb	r3, [r4]
- 101:.\7Seg.c      ****             VideoMemory[Scroll] = Font[(abs(Temp)) % 10];
- 449              		.loc 1 101 0
- 450 0080 2678     		ldrb	r6, [r4]
- 451 0082 F6B2     		uxtb	r6, r6
- 452 0084 281C     		mov	r0, r5
- 453 0086 0A21     		mov	r1, #10
- 454 0088 FFF7FEFF 		bl	__aeabi_idivmod
- 455              	.LVL16:
- 456 008c 4346     		mov	r3, r8
- 457 008e 5B5C     		ldrb	r3, [r3, r1]
- 458 0090 DBB2     		uxtb	r3, r3
- 459 0092 BB55     		strb	r3, [r7, r6]
- 102:.\7Seg.c      ****             Scroll++;
- 460              		.loc 1 102 0
- 461 0094 2378     		ldrb	r3, [r4]
- 462 0096 0133     		add	r3, r3, #1
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 11
-
-
- 463 0098 DBB2     		uxtb	r3, r3
- 464 009a 2370     		strb	r3, [r4]
- 465 009c 0BE0     		b	.L31
- 466              	.L30:
- 103:.\7Seg.c      ****         }
- 104:.\7Seg.c      ****         else
- 105:.\7Seg.c      ****         {
- 106:.\7Seg.c      ****             VideoMemory[Scroll] = Font[Temp];
- 467              		.loc 1 106 0
- 468 009e 6A46     		mov	r2, sp
- 469 00a0 D179     		ldrb	r1, [r2, #7]
- 470 00a2 C9B2     		uxtb	r1, r1
- 471 00a4 3F48     		ldr	r0, .L34+8
- 472 00a6 C35C     		ldrb	r3, [r0, r3]
- 473 00a8 DBB2     		uxtb	r3, r3
- 474 00aa 3C48     		ldr	r0, .L34
- 475 00ac 4354     		strb	r3, [r0, r1]
- 107:.\7Seg.c      ****             Scroll++;
- 476              		.loc 1 107 0
- 477 00ae D379     		ldrb	r3, [r2, #7]
- 478 00b0 0133     		add	r3, r3, #1
- 479 00b2 DBB2     		uxtb	r3, r3
- 480 00b4 D371     		strb	r3, [r2, #7]
- 481              	.L31:
- 108:.\7Seg.c      ****         }
- 109:.\7Seg.c      ****     
- 110:.\7Seg.c      ****     VideoMemory[Scroll] = Symbol_Degrees;
- 482              		.loc 1 110 0
- 483 00b6 6B46     		mov	r3, sp
- 484 00b8 D979     		ldrb	r1, [r3, #7]
- 485 00ba C9B2     		uxtb	r1, r1
- 486 00bc 374A     		ldr	r2, .L34
- 487 00be 9C20     		mov	r0, #156
- 488 00c0 5054     		strb	r0, [r2, r1]
- 111:.\7Seg.c      ****     Scroll++;
- 489              		.loc 1 111 0
- 490 00c2 D979     		ldrb	r1, [r3, #7]
- 491 00c4 0131     		add	r1, r1, #1
- 492 00c6 C9B2     		uxtb	r1, r1
- 493 00c8 D971     		strb	r1, [r3, #7]
- 112:.\7Seg.c      ****     VideoMemory[Scroll] = Symbol_C;
- 494              		.loc 1 112 0
- 495 00ca D979     		ldrb	r1, [r3, #7]
- 496 00cc C9B2     		uxtb	r1, r1
- 497 00ce 2A30     		add	r0, r0, #42
- 498 00d0 5054     		strb	r0, [r2, r1]
- 113:.\7Seg.c      ****     Scroll++;
- 499              		.loc 1 113 0
- 500 00d2 D979     		ldrb	r1, [r3, #7]
- 501 00d4 0131     		add	r1, r1, #1
- 502 00d6 C9B2     		uxtb	r1, r1
- 503 00d8 D971     		strb	r1, [r3, #7]
- 114:.\7Seg.c      ****     VideoMemory[Scroll] = Symbol_Space;
- 504              		.loc 1 114 0
- 505 00da D979     		ldrb	r1, [r3, #7]
- 506 00dc C9B2     		uxtb	r1, r1
- 507 00de 3930     		add	r0, r0, #57
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 12
-
-
- 508 00e0 5054     		strb	r0, [r2, r1]
- 115:.\7Seg.c      ****     Scroll++;
- 509              		.loc 1 115 0
- 510 00e2 D979     		ldrb	r1, [r3, #7]
- 511 00e4 0131     		add	r1, r1, #1
- 512 00e6 C9B2     		uxtb	r1, r1
- 513 00e8 D971     		strb	r1, [r3, #7]
- 116:.\7Seg.c      ****     VideoMemory[Scroll] = Symbol_H;
- 514              		.loc 1 116 0
- 515 00ea D979     		ldrb	r1, [r3, #7]
- 516 00ec C9B2     		uxtb	r1, r1
- 517 00ee 8924     		mov	r4, #137
- 518 00f0 5454     		strb	r4, [r2, r1]
- 117:.\7Seg.c      ****     Scroll++;
- 519              		.loc 1 117 0
- 520 00f2 D979     		ldrb	r1, [r3, #7]
- 521 00f4 0131     		add	r1, r1, #1
- 522 00f6 C9B2     		uxtb	r1, r1
- 523 00f8 D971     		strb	r1, [r3, #7]
- 118:.\7Seg.c      ****     VideoMemory[Scroll] = Symbol_Space;
- 524              		.loc 1 118 0
- 525 00fa D979     		ldrb	r1, [r3, #7]
- 526 00fc C9B2     		uxtb	r1, r1
- 527 00fe 5054     		strb	r0, [r2, r1]
- 119:.\7Seg.c      ****     Scroll++;
- 528              		.loc 1 119 0
- 529 0100 DA79     		ldrb	r2, [r3, #7]
- 530 0102 0132     		add	r2, r2, #1
- 531 0104 D2B2     		uxtb	r2, r2
- 532 0106 DA71     		strb	r2, [r3, #7]
- 120:.\7Seg.c      ****     
- 121:.\7Seg.c      ****         if(Humi > 10)
- 533              		.loc 1 121 0
- 534 0108 274B     		ldr	r3, .L34+12
- 535 010a 1C78     		ldrb	r4, [r3]
- 536 010c 0A2C     		cmp	r4, #10
- 537 010e 22D9     		bls	.L32
- 122:.\7Seg.c      ****         {
- 123:.\7Seg.c      ****             VideoMemory[Scroll] = Font[Humi / 10];
- 538              		.loc 1 123 0
- 539 0110 6B46     		mov	r3, sp
- 540 0112 DD1D     		add	r5, r3, #7
- 541 0114 DE79     		ldrb	r6, [r3, #7]
- 542 0116 F6B2     		uxtb	r6, r6
- 543 0118 201C     		mov	r0, r4
- 544 011a 0A21     		mov	r1, #10
- 545 011c FFF7FEFF 		bl	__aeabi_uidiv
- 546              	.LVL17:
- 547 0120 C0B2     		uxtb	r0, r0
- 548 0122 204B     		ldr	r3, .L34+8
- 549 0124 9846     		mov	r8, r3
- 550 0126 1B5C     		ldrb	r3, [r3, r0]
- 551 0128 DBB2     		uxtb	r3, r3
- 552 012a 1C4F     		ldr	r7, .L34
- 553 012c BB55     		strb	r3, [r7, r6]
- 124:.\7Seg.c      ****             Scroll++;
- 554              		.loc 1 124 0
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 13
-
-
- 555 012e 2B78     		ldrb	r3, [r5]
- 556 0130 0133     		add	r3, r3, #1
- 557 0132 DBB2     		uxtb	r3, r3
- 558 0134 2B70     		strb	r3, [r5]
- 125:.\7Seg.c      ****             VideoMemory[Scroll] = Font[Humi % 10];
- 559              		.loc 1 125 0
- 560 0136 2E78     		ldrb	r6, [r5]
- 561 0138 F6B2     		uxtb	r6, r6
- 562 013a 201C     		mov	r0, r4
- 563 013c 0A21     		mov	r1, #10
- 564 013e FFF7FEFF 		bl	__aeabi_uidivmod
- 565              	.LVL18:
- 566 0142 C9B2     		uxtb	r1, r1
- 567 0144 4346     		mov	r3, r8
- 568 0146 5B5C     		ldrb	r3, [r3, r1]
- 569 0148 DBB2     		uxtb	r3, r3
- 570 014a BB55     		strb	r3, [r7, r6]
- 126:.\7Seg.c      ****             Scroll++;
- 571              		.loc 1 126 0
- 572 014c 2B78     		ldrb	r3, [r5]
- 573 014e 0133     		add	r3, r3, #1
- 574 0150 DBB2     		uxtb	r3, r3
- 575 0152 2B70     		strb	r3, [r5]
- 576 0154 0CE0     		b	.L33
- 577              	.L32:
- 127:.\7Seg.c      ****         }
- 128:.\7Seg.c      ****         else
- 129:.\7Seg.c      ****         {
- 130:.\7Seg.c      ****             VideoMemory[Scroll] = Font[Humi];
- 578              		.loc 1 130 0
- 579 0156 6B46     		mov	r3, sp
- 580 0158 DA1D     		add	r2, r3, #7
- 581 015a DB79     		ldrb	r3, [r3, #7]
- 582 015c DBB2     		uxtb	r3, r3
- 583 015e 1149     		ldr	r1, .L34+8
- 584 0160 095D     		ldrb	r1, [r1, r4]
- 585 0162 C9B2     		uxtb	r1, r1
- 586 0164 0D48     		ldr	r0, .L34
- 587 0166 C154     		strb	r1, [r0, r3]
- 131:.\7Seg.c      ****             Scroll++;
- 588              		.loc 1 131 0
- 589 0168 1378     		ldrb	r3, [r2]
- 590 016a 0133     		add	r3, r3, #1
- 591 016c DBB2     		uxtb	r3, r3
- 592 016e 1370     		strb	r3, [r2]
- 593              	.L33:
- 132:.\7Seg.c      ****         }
- 133:.\7Seg.c      ****         VideoMemory[Scroll] = Symbol_Degrees;
- 594              		.loc 1 133 0
- 595 0170 6B46     		mov	r3, sp
- 596 0172 DA79     		ldrb	r2, [r3, #7]
- 597 0174 D2B2     		uxtb	r2, r2
- 598 0176 0949     		ldr	r1, .L34
- 599 0178 9C20     		mov	r0, #156
- 600 017a 8854     		strb	r0, [r1, r2]
- 134:.\7Seg.c      ****         Scroll++;
- 601              		.loc 1 134 0
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 14
-
-
- 602 017c DA79     		ldrb	r2, [r3, #7]
- 603 017e 0132     		add	r2, r2, #1
- 604 0180 D2B2     		uxtb	r2, r2
- 605 0182 DA71     		strb	r2, [r3, #7]
- 135:.\7Seg.c      ****         VideoMemory[Scroll] = Symbol_Procent;
- 606              		.loc 1 135 0
- 607 0184 DA79     		ldrb	r2, [r3, #7]
- 608 0186 D2B2     		uxtb	r2, r2
- 609 0188 0730     		add	r0, r0, #7
- 610 018a 8854     		strb	r0, [r1, r2]
- 136:.\7Seg.c      ****         Scroll++;
- 611              		.loc 1 136 0
- 612 018c DA79     		ldrb	r2, [r3, #7]
- 613 018e 0132     		add	r2, r2, #1
- 614 0190 D2B2     		uxtb	r2, r2
- 615 0192 DA71     		strb	r2, [r3, #7]
- 137:.\7Seg.c      **** }
- 616              		.loc 1 137 0
- 617 0194 02B0     		add	sp, sp, #8
- 618              		@ sp needed
- 619 0196 04BC     		pop	{r2}
- 620 0198 9046     		mov	r8, r2
- 621 019a F0BD     		pop	{r4, r5, r6, r7, pc}
- 622              	.L35:
- 623              		.align	2
- 624              	.L34:
- 625 019c 00000000 		.word	VideoMemory
- 626 01a0 00000000 		.word	Temp
- 627 01a4 00000000 		.word	.LANCHOR0
- 628 01a8 00000000 		.word	Humi
- 629              		.cfi_endproc
- 630              	.LFE37:
- 631              		.size	Display_Set_Video_Memory, .-Display_Set_Video_Memory
- 632              		.section	.text.Display_Scroll_Video_Memory,"ax",%progbits
- 633              		.align	2
- 634              		.global	Display_Scroll_Video_Memory
- 635              		.code	16
- 636              		.thumb_func
- 637              		.type	Display_Scroll_Video_Memory, %function
- 638              	Display_Scroll_Video_Memory:
- 639              	.LFB38:
- 138:.\7Seg.c      **** 
- 139:.\7Seg.c      **** void Display_Scroll_Video_Memory(void)
- 140:.\7Seg.c      **** {
- 640              		.loc 1 140 0
- 641              		.cfi_startproc
- 642 0000 82B0     		sub	sp, sp, #8
- 643              		.cfi_def_cfa_offset 8
- 141:.\7Seg.c      ****     volatile uint8 Scroll = 0;
- 644              		.loc 1 141 0
- 645 0002 6B46     		mov	r3, sp
- 646 0004 0022     		mov	r2, #0
- 647 0006 DA71     		strb	r2, [r3, #7]
- 142:.\7Seg.c      ****     for(Scroll = 0; Scroll < 4; Scroll++)
- 648              		.loc 1 142 0
- 649 0008 DA71     		strb	r2, [r3, #7]
- 650 000a 0EE0     		b	.L37
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 15
-
-
- 651              	.L38:
- 143:.\7Seg.c      ****     {
- 144:.\7Seg.c      ****         VideoBufer[Scroll] = VideoMemory[Scroll];
- 652              		.loc 1 144 0 discriminator 3
- 653 000c 6B46     		mov	r3, sp
- 654 000e DA1D     		add	r2, r3, #7
- 655 0010 DB79     		ldrb	r3, [r3, #7]
- 656 0012 DBB2     		uxtb	r3, r3
- 657 0014 1178     		ldrb	r1, [r2]
- 658 0016 C9B2     		uxtb	r1, r1
- 659 0018 1448     		ldr	r0, .L41
- 660 001a 415C     		ldrb	r1, [r0, r1]
- 661 001c C9B2     		uxtb	r1, r1
- 662 001e 1448     		ldr	r0, .L41+4
- 663 0020 C154     		strb	r1, [r0, r3]
- 142:.\7Seg.c      ****     for(Scroll = 0; Scroll < 4; Scroll++)
- 664              		.loc 1 142 0 discriminator 3
- 665 0022 1378     		ldrb	r3, [r2]
- 666 0024 0133     		add	r3, r3, #1
- 667 0026 DBB2     		uxtb	r3, r3
- 668 0028 1370     		strb	r3, [r2]
- 669              	.L37:
- 142:.\7Seg.c      ****     for(Scroll = 0; Scroll < 4; Scroll++)
- 670              		.loc 1 142 0 is_stmt 0 discriminator 1
- 671 002a 6B46     		mov	r3, sp
- 672 002c 0733     		add	r3, r3, #7
- 673 002e 1B78     		ldrb	r3, [r3]
- 674 0030 DBB2     		uxtb	r3, r3
- 675 0032 032B     		cmp	r3, #3
- 676 0034 EAD9     		bls	.L38
- 145:.\7Seg.c      ****     }
- 146:.\7Seg.c      ****     for(Scroll = 0; Scroll < 16; Scroll++)
- 677              		.loc 1 146 0 is_stmt 1
- 678 0036 0022     		mov	r2, #0
- 679 0038 6B46     		mov	r3, sp
- 680 003a DA71     		strb	r2, [r3, #7]
- 681 003c 0DE0     		b	.L39
- 682              	.L40:
- 147:.\7Seg.c      ****     {
- 148:.\7Seg.c      ****         VideoMemory[Scroll] = VideoMemory[Scroll+1];
- 683              		.loc 1 148 0 discriminator 3
- 684 003e 6B46     		mov	r3, sp
- 685 0040 DA1D     		add	r2, r3, #7
- 686 0042 DB79     		ldrb	r3, [r3, #7]
- 687 0044 DBB2     		uxtb	r3, r3
- 688 0046 1178     		ldrb	r1, [r2]
- 689 0048 0131     		add	r1, r1, #1
- 690 004a 0848     		ldr	r0, .L41
- 691 004c 415C     		ldrb	r1, [r0, r1]
- 692 004e C9B2     		uxtb	r1, r1
- 693 0050 C154     		strb	r1, [r0, r3]
- 146:.\7Seg.c      ****     {
- 694              		.loc 1 146 0 discriminator 3
- 695 0052 1378     		ldrb	r3, [r2]
- 696 0054 0133     		add	r3, r3, #1
- 697 0056 DBB2     		uxtb	r3, r3
- 698 0058 1370     		strb	r3, [r2]
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 16
-
-
- 699              	.L39:
- 146:.\7Seg.c      ****     {
- 700              		.loc 1 146 0 is_stmt 0 discriminator 1
- 701 005a 6B46     		mov	r3, sp
- 702 005c 0733     		add	r3, r3, #7
- 703 005e 1B78     		ldrb	r3, [r3]
- 704 0060 DBB2     		uxtb	r3, r3
- 705 0062 0F2B     		cmp	r3, #15
- 706 0064 EBD9     		bls	.L40
- 149:.\7Seg.c      ****     }
- 150:.\7Seg.c      **** }
- 707              		.loc 1 150 0 is_stmt 1
- 708 0066 02B0     		add	sp, sp, #8
- 709              		@ sp needed
- 710 0068 7047     		bx	lr
- 711              	.L42:
- 712 006a C046     		.align	2
- 713              	.L41:
- 714 006c 00000000 		.word	VideoMemory
- 715 0070 00000000 		.word	VideoBufer
- 716              		.cfi_endproc
- 717              	.LFE38:
- 718              		.size	Display_Scroll_Video_Memory, .-Display_Scroll_Video_Memory
- 719              		.section	.text.Display_Write_Mem,"ax",%progbits
- 720              		.align	2
- 721              		.global	Display_Write_Mem
- 722              		.code	16
- 723              		.thumb_func
- 724              		.type	Display_Write_Mem, %function
- 725              	Display_Write_Mem:
- 726              	.LFB39:
- 151:.\7Seg.c      **** 
- 152:.\7Seg.c      **** void Display_Write_Mem(void)
- 153:.\7Seg.c      **** {
- 727              		.loc 1 153 0
- 728              		.cfi_startproc
- 729 0000 10B5     		push	{r4, lr}
- 730              		.cfi_def_cfa_offset 8
- 731              		.cfi_offset 4, -8
- 732              		.cfi_offset 14, -4
- 733 0002 82B0     		sub	sp, sp, #8
- 734              		.cfi_def_cfa_offset 16
- 154:.\7Seg.c      ****     volatile uint8 Scroll;
- 155:.\7Seg.c      ****     for(Scroll = 0; Scroll < 4; Scroll++)
- 735              		.loc 1 155 0
- 736 0004 0022     		mov	r2, #0
- 737 0006 6B46     		mov	r3, sp
- 738 0008 DA71     		strb	r2, [r3, #7]
- 739 000a 2FE0     		b	.L44
- 740              	.L48:
- 156:.\7Seg.c      ****     {
- 157:.\7Seg.c      ****         if(VideoBufer[Scroll] == 0)
- 741              		.loc 1 157 0
- 742 000c 6B46     		mov	r3, sp
- 743 000e 0733     		add	r3, r3, #7
- 744 0010 1B78     		ldrb	r3, [r3]
- 745 0012 DBB2     		uxtb	r3, r3
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 17
-
-
- 746 0014 194A     		ldr	r2, .L49
- 747 0016 D35C     		ldrb	r3, [r2, r3]
- 748 0018 002B     		cmp	r3, #0
- 749 001a 05D1     		bne	.L45
- 158:.\7Seg.c      ****         {
- 159:.\7Seg.c      ****             VideoBufer[Scroll] = Symbol_Space;
- 750              		.loc 1 159 0
- 751 001c 6B46     		mov	r3, sp
- 752 001e 0733     		add	r3, r3, #7
- 753 0020 1B78     		ldrb	r3, [r3]
- 754 0022 DBB2     		uxtb	r3, r3
- 755 0024 FF21     		mov	r1, #255
- 756 0026 D154     		strb	r1, [r2, r3]
- 757              	.L45:
- 160:.\7Seg.c      ****         }
- 161:.\7Seg.c      ****             SCB_1_SpiUartWriteTxData(VideoBufer[Scroll]);
- 758              		.loc 1 161 0
- 759 0028 6B46     		mov	r3, sp
- 760 002a 0733     		add	r3, r3, #7
- 761 002c 1B78     		ldrb	r3, [r3]
- 762 002e DBB2     		uxtb	r3, r3
- 763 0030 124A     		ldr	r2, .L49
- 764 0032 D05C     		ldrb	r0, [r2, r3]
- 765 0034 C0B2     		uxtb	r0, r0
- 766 0036 FFF7FEFF 		bl	SCB_1_SpiUartWriteTxData
- 767              	.LVL19:
- 768              	.L47:
- 162:.\7Seg.c      ****             while (0u != (SCB_1_SpiUartGetTxBufferSize() + SCB_1_GET_TX_FIFO_SR_VALID))
- 769              		.loc 1 162 0 discriminator 5
- 770 003a FFF7FEFF 		bl	SCB_1_SpiUartGetTxBufferSize
- 771              	.LVL20:
- 772 003e 104B     		ldr	r3, .L49+4
- 773 0040 1B68     		ldr	r3, [r3]
- 774 0042 8022     		mov	r2, #128
- 775 0044 1202     		lsl	r2, r2, #8
- 776 0046 1340     		and	r3, r2
- 777 0048 00D0     		beq	.L46
- 778              		.loc 1 162 0 is_stmt 0
- 779 004a 0123     		mov	r3, #1
- 780              	.L46:
- 781              		.loc 1 162 0 discriminator 4
- 782 004c C318     		add	r3, r0, r3
- 783 004e 002B     		cmp	r3, #0
- 784 0050 F3D1     		bne	.L47
- 163:.\7Seg.c      ****             {
- 164:.\7Seg.c      ****             }
- 165:.\7Seg.c      ****             PWM_Mux_Reg_Write(Scroll);
- 785              		.loc 1 165 0 is_stmt 1 discriminator 2
- 786 0052 6B46     		mov	r3, sp
- 787 0054 DC1D     		add	r4, r3, #7
- 788 0056 D879     		ldrb	r0, [r3, #7]
- 789 0058 C0B2     		uxtb	r0, r0
- 790 005a FFF7FEFF 		bl	PWM_Mux_Reg_Write
- 791              	.LVL21:
- 166:.\7Seg.c      ****             CyDelayUs(Refresh_Time);
- 792              		.loc 1 166 0 discriminator 2
- 793 005e C820     		mov	r0, #200
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 18
-
-
- 794 0060 FFF7FEFF 		bl	CyDelayUs
- 795              	.LVL22:
- 155:.\7Seg.c      ****     {
- 796              		.loc 1 155 0 discriminator 2
- 797 0064 2378     		ldrb	r3, [r4]
- 798 0066 0133     		add	r3, r3, #1
- 799 0068 DBB2     		uxtb	r3, r3
- 800 006a 2370     		strb	r3, [r4]
- 801              	.L44:
- 155:.\7Seg.c      ****     {
- 802              		.loc 1 155 0 is_stmt 0 discriminator 1
- 803 006c 6B46     		mov	r3, sp
- 804 006e 0733     		add	r3, r3, #7
- 805 0070 1B78     		ldrb	r3, [r3]
- 806 0072 DBB2     		uxtb	r3, r3
- 807 0074 032B     		cmp	r3, #3
- 808 0076 C9D9     		bls	.L48
- 167:.\7Seg.c      ****     }
- 168:.\7Seg.c      **** }
- 809              		.loc 1 168 0 is_stmt 1
- 810 0078 02B0     		add	sp, sp, #8
- 811              		@ sp needed
- 812 007a 10BD     		pop	{r4, pc}
- 813              	.L50:
- 814              		.align	2
- 815              	.L49:
- 816 007c 00000000 		.word	VideoBufer
- 817 0080 08020640 		.word	1074135560
- 818              		.cfi_endproc
- 819              	.LFE39:
- 820              		.size	Display_Write_Mem, .-Display_Write_Mem
- 821              		.comm	VideoMemory,17,4
- 822              		.comm	VideoBufer,4,4
- 823              		.global	Font
- 824              		.data
- 825              		.align	2
- 826              		.set	.LANCHOR0,. + 0
- 827              		.type	Font, %object
- 828              		.size	Font, 10
- 829              	Font:
- 830 0000 C0       		.byte	-64
- 831 0001 F9       		.byte	-7
- 832 0002 A4       		.byte	-92
- 833 0003 B0       		.byte	-80
- 834 0004 99       		.byte	-103
- 835 0005 92       		.byte	-110
- 836 0006 82       		.byte	-126
- 837 0007 F8       		.byte	-8
- 838 0008 80       		.byte	-128
- 839 0009 90       		.byte	-112
- 840 000a 0000     		.text
- 841              	.Letext0:
- 842              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
- 843              		.file 3 "Generated_Source\\PSoC4/SCB_1_SPI_UART.h"
- 844              		.file 4 "Generated_Source\\PSoC4/PWM_Mux_Reg.h"
- 845              		.file 5 "Generated_Source\\PSoC4/CyLib.h"
- 846              		.file 6 "Generated_Source\\PSoC4/LED_SEG_PWM.h"
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 19
-
-
- 847              		.section	.debug_info,"",%progbits
- 848              	.Ldebug_info0:
- 849 0000 B6030000 		.4byte	0x3b6
- 850 0004 0400     		.2byte	0x4
- 851 0006 00000000 		.4byte	.Ldebug_abbrev0
- 852 000a 04       		.byte	0x4
- 853 000b 01       		.uleb128 0x1
- 854 000c 8B010000 		.4byte	.LASF39
- 855 0010 01       		.byte	0x1
- 856 0011 51020000 		.4byte	.LASF40
- 857 0015 80020000 		.4byte	.LASF41
- 858 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 859 001d 00000000 		.4byte	0
- 860 0021 00000000 		.4byte	.Ldebug_line0
- 861 0025 02       		.uleb128 0x2
- 862 0026 01       		.byte	0x1
- 863 0027 06       		.byte	0x6
- 864 0028 A8020000 		.4byte	.LASF0
- 865 002c 02       		.uleb128 0x2
- 866 002d 01       		.byte	0x1
- 867 002e 08       		.byte	0x8
- 868 002f D5000000 		.4byte	.LASF1
- 869 0033 02       		.uleb128 0x2
- 870 0034 02       		.byte	0x2
- 871 0035 05       		.byte	0x5
- 872 0036 F1000000 		.4byte	.LASF2
- 873 003a 02       		.uleb128 0x2
- 874 003b 02       		.byte	0x2
- 875 003c 07       		.byte	0x7
- 876 003d 0D000000 		.4byte	.LASF3
- 877 0041 02       		.uleb128 0x2
- 878 0042 04       		.byte	0x4
- 879 0043 05       		.byte	0x5
- 880 0044 77020000 		.4byte	.LASF4
- 881 0048 02       		.uleb128 0x2
- 882 0049 04       		.byte	0x4
- 883 004a 07       		.byte	0x7
- 884 004b 79000000 		.4byte	.LASF5
- 885 004f 02       		.uleb128 0x2
- 886 0050 08       		.byte	0x8
- 887 0051 05       		.byte	0x5
- 888 0052 68010000 		.4byte	.LASF6
- 889 0056 02       		.uleb128 0x2
- 890 0057 08       		.byte	0x8
- 891 0058 07       		.byte	0x7
- 892 0059 36010000 		.4byte	.LASF7
- 893 005d 03       		.uleb128 0x3
- 894 005e 04       		.byte	0x4
- 895 005f 05       		.byte	0x5
- 896 0060 696E7400 		.ascii	"int\000"
- 897 0064 02       		.uleb128 0x2
- 898 0065 04       		.byte	0x4
- 899 0066 07       		.byte	0x7
- 900 0067 20000000 		.4byte	.LASF8
- 901 006b 04       		.uleb128 0x4
- 902 006c A4000000 		.4byte	.LASF9
- 903 0070 02       		.byte	0x2
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 20
-
-
- 904 0071 C2       		.byte	0xc2
- 905 0072 2C000000 		.4byte	0x2c
- 906 0076 04       		.uleb128 0x4
- 907 0077 FB000000 		.4byte	.LASF10
- 908 007b 02       		.byte	0x2
- 909 007c C3       		.byte	0xc3
- 910 007d 3A000000 		.4byte	0x3a
- 911 0081 04       		.uleb128 0x4
- 912 0082 16010000 		.4byte	.LASF11
- 913 0086 02       		.byte	0x2
- 914 0087 C4       		.byte	0xc4
- 915 0088 48000000 		.4byte	0x48
- 916 008c 04       		.uleb128 0x4
- 917 008d 02010000 		.4byte	.LASF12
- 918 0091 02       		.byte	0x2
- 919 0092 C5       		.byte	0xc5
- 920 0093 25000000 		.4byte	0x25
- 921 0097 02       		.uleb128 0x2
- 922 0098 04       		.byte	0x4
- 923 0099 04       		.byte	0x4
- 924 009a 58000000 		.4byte	.LASF13
- 925 009e 02       		.uleb128 0x2
- 926 009f 08       		.byte	0x8
- 927 00a0 04       		.byte	0x4
- 928 00a1 EA000000 		.4byte	.LASF14
- 929 00a5 02       		.uleb128 0x2
- 930 00a6 01       		.byte	0x1
- 931 00a7 08       		.byte	0x8
- 932 00a8 80010000 		.4byte	.LASF15
- 933 00ac 05       		.uleb128 0x5
- 934 00ad 6B000000 		.4byte	0x6b
- 935 00b1 06       		.uleb128 0x6
- 936 00b2 00000000 		.4byte	.LASF16
- 937 00b6 02       		.byte	0x2
- 938 00b7 6E01     		.2byte	0x16e
- 939 00b9 BD000000 		.4byte	0xbd
- 940 00bd 05       		.uleb128 0x5
- 941 00be 81000000 		.4byte	0x81
- 942 00c2 02       		.uleb128 0x2
- 943 00c3 04       		.byte	0x4
- 944 00c4 07       		.byte	0x7
- 945 00c5 5F010000 		.4byte	.LASF17
- 946 00c9 07       		.uleb128 0x7
- 947 00ca 07010000 		.4byte	.LASF20
- 948 00ce 01       		.byte	0x1
- 949 00cf 16       		.byte	0x16
- 950 00d0 00000000 		.4byte	.LFB33
- 951 00d4 98000000 		.4byte	.LFE33-.LFB33
- 952 00d8 01       		.uleb128 0x1
- 953 00d9 9C       		.byte	0x9c
- 954 00da 3B010000 		.4byte	0x13b
- 955 00de 08       		.uleb128 0x8
- 956 00df 06000000 		.4byte	.LASF18
- 957 00e3 01       		.byte	0x1
- 958 00e4 18       		.byte	0x18
- 959 00e5 AC000000 		.4byte	0xac
- 960 00e9 02       		.uleb128 0x2
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 21
-
-
- 961 00ea 91       		.byte	0x91
- 962 00eb 6F       		.sleb128 -17
- 963 00ec 08       		.uleb128 0x8
- 964 00ed E3000000 		.4byte	.LASF19
- 965 00f1 01       		.byte	0x1
- 966 00f2 19       		.byte	0x19
- 967 00f3 AC000000 		.4byte	0xac
- 968 00f7 02       		.uleb128 0x2
- 969 00f8 91       		.byte	0x91
- 970 00f9 6E       		.sleb128 -18
- 971 00fa 09       		.uleb128 0x9
- 972 00fb 14000000 		.4byte	.LVL0
- 973 00ff 49030000 		.4byte	0x349
- 974 0103 0E010000 		.4byte	0x10e
- 975 0107 0A       		.uleb128 0xa
- 976 0108 01       		.uleb128 0x1
- 977 0109 50       		.byte	0x50
- 978 010a 02       		.uleb128 0x2
- 979 010b 74       		.byte	0x74
- 980 010c 00       		.sleb128 0
- 981 010d 00       		.byte	0
- 982 010e 0B       		.uleb128 0xb
- 983 010f 22000000 		.4byte	.LVL1
- 984 0113 5B030000 		.4byte	0x35b
- 985 0117 0B       		.uleb128 0xb
- 986 0118 3C000000 		.4byte	.LVL2
- 987 011c 6C030000 		.4byte	0x36c
- 988 0120 0B       		.uleb128 0xb
- 989 0121 40000000 		.4byte	.LVL3
- 990 0125 7E030000 		.4byte	0x37e
- 991 0129 0C       		.uleb128 0xc
- 992 012a 5C000000 		.4byte	.LVL4
- 993 012e 8A030000 		.4byte	0x38a
- 994 0132 0A       		.uleb128 0xa
- 995 0133 01       		.uleb128 0x1
- 996 0134 50       		.byte	0x50
- 997 0135 03       		.uleb128 0x3
- 998 0136 0A       		.byte	0xa
- 999 0137 F401     		.2byte	0x1f4
- 1000 0139 00       		.byte	0
- 1001 013a 00       		.byte	0
- 1002 013b 07       		.uleb128 0x7
- 1003 013c 6A000000 		.4byte	.LASF21
- 1004 0140 01       		.byte	0x1
- 1005 0141 28       		.byte	0x28
- 1006 0142 00000000 		.4byte	.LFB34
- 1007 0146 88000000 		.4byte	.LFE34-.LFB34
- 1008 014a 01       		.uleb128 0x1
- 1009 014b 9C       		.byte	0x9c
- 1010 014c B2010000 		.4byte	0x1b2
- 1011 0150 08       		.uleb128 0x8
- 1012 0151 06000000 		.4byte	.LASF18
- 1013 0155 01       		.byte	0x1
- 1014 0156 2A       		.byte	0x2a
- 1015 0157 AC000000 		.4byte	0xac
- 1016 015b 02       		.uleb128 0x2
- 1017 015c 91       		.byte	0x91
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 22
-
-
- 1018 015d 77       		.sleb128 -9
- 1019 015e 08       		.uleb128 0x8
- 1020 015f E3000000 		.4byte	.LASF19
- 1021 0163 01       		.byte	0x1
- 1022 0164 2B       		.byte	0x2b
- 1023 0165 AC000000 		.4byte	0xac
- 1024 0169 02       		.uleb128 0x2
- 1025 016a 91       		.byte	0x91
- 1026 016b 76       		.sleb128 -10
- 1027 016c 08       		.uleb128 0x8
- 1028 016d 85010000 		.4byte	.LASF22
- 1029 0171 01       		.byte	0x1
- 1030 0172 2C       		.byte	0x2c
- 1031 0173 AC000000 		.4byte	0xac
- 1032 0177 02       		.uleb128 0x2
- 1033 0178 91       		.byte	0x91
- 1034 0179 75       		.sleb128 -11
- 1035 017a 09       		.uleb128 0x9
- 1036 017b 1A000000 		.4byte	.LVL5
- 1037 017f 49030000 		.4byte	0x349
- 1038 0183 8D010000 		.4byte	0x18d
- 1039 0187 0A       		.uleb128 0xa
- 1040 0188 01       		.uleb128 0x1
- 1041 0189 50       		.byte	0x50
- 1042 018a 01       		.uleb128 0x1
- 1043 018b 30       		.byte	0x30
- 1044 018c 00       		.byte	0
- 1045 018d 0B       		.uleb128 0xb
- 1046 018e 24000000 		.4byte	.LVL6
- 1047 0192 5B030000 		.4byte	0x35b
- 1048 0196 0B       		.uleb128 0xb
- 1049 0197 2E000000 		.4byte	.LVL7
- 1050 019b 9B030000 		.4byte	0x39b
- 1051 019f 0B       		.uleb128 0xb
- 1052 01a0 40000000 		.4byte	.LVL8
- 1053 01a4 6C030000 		.4byte	0x36c
- 1054 01a8 0B       		.uleb128 0xb
- 1055 01a9 44000000 		.4byte	.LVL9
- 1056 01ad 7E030000 		.4byte	0x37e
- 1057 01b1 00       		.byte	0
- 1058 01b2 0D       		.uleb128 0xd
- 1059 01b3 1D010000 		.4byte	.LASF42
- 1060 01b7 01       		.byte	0x1
- 1061 01b8 3F       		.byte	0x3f
- 1062 01b9 00000000 		.4byte	.LFB35
- 1063 01bd 34000000 		.4byte	.LFE35-.LFB35
- 1064 01c1 01       		.uleb128 0x1
- 1065 01c2 9C       		.byte	0x9c
- 1066 01c3 D6010000 		.4byte	0x1d6
- 1067 01c7 08       		.uleb128 0x8
- 1068 01c8 06000000 		.4byte	.LASF18
- 1069 01cc 01       		.byte	0x1
- 1070 01cd 41       		.byte	0x41
- 1071 01ce AC000000 		.4byte	0xac
- 1072 01d2 02       		.uleb128 0x2
- 1073 01d3 91       		.byte	0x91
- 1074 01d4 7F       		.sleb128 -1
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 23
-
-
- 1075 01d5 00       		.byte	0
- 1076 01d6 07       		.uleb128 0x7
- 1077 01d7 44000000 		.4byte	.LASF23
- 1078 01db 01       		.byte	0x1
- 1079 01dc 48       		.byte	0x48
- 1080 01dd 00000000 		.4byte	.LFB36
- 1081 01e1 40000000 		.4byte	.LFE36-.LFB36
- 1082 01e5 01       		.uleb128 0x1
- 1083 01e6 9C       		.byte	0x9c
- 1084 01e7 25020000 		.4byte	0x225
- 1085 01eb 0E       		.uleb128 0xe
- 1086 01ec 2F010000 		.4byte	.LASF24
- 1087 01f0 01       		.byte	0x1
- 1088 01f1 48       		.byte	0x48
- 1089 01f2 6B000000 		.4byte	0x6b
- 1090 01f6 00000000 		.4byte	.LLST0
- 1091 01fa 0E       		.uleb128 0xe
- 1092 01fb 52010000 		.4byte	.LASF25
- 1093 01ff 01       		.byte	0x1
- 1094 0200 48       		.byte	0x48
- 1095 0201 6B000000 		.4byte	0x6b
- 1096 0205 21000000 		.4byte	.LLST1
- 1097 0209 0B       		.uleb128 0xb
- 1098 020a 12000000 		.4byte	.LVL12
- 1099 020e 5B030000 		.4byte	0x35b
- 1100 0212 0B       		.uleb128 0xb
- 1101 0213 1C000000 		.4byte	.LVL13
- 1102 0217 6C030000 		.4byte	0x36c
- 1103 021b 0B       		.uleb128 0xb
- 1104 021c 20000000 		.4byte	.LVL14
- 1105 0220 7E030000 		.4byte	0x37e
- 1106 0224 00       		.byte	0
- 1107 0225 0F       		.uleb128 0xf
- 1108 0226 8B000000 		.4byte	.LASF26
- 1109 022a 01       		.byte	0x1
- 1110 022b 54       		.byte	0x54
- 1111 022c 00000000 		.4byte	.LFB37
- 1112 0230 AC010000 		.4byte	.LFE37-.LFB37
- 1113 0234 01       		.uleb128 0x1
- 1114 0235 9C       		.byte	0x9c
- 1115 0236 49020000 		.4byte	0x249
- 1116 023a 08       		.uleb128 0x8
- 1117 023b 06000000 		.4byte	.LASF18
- 1118 023f 01       		.byte	0x1
- 1119 0240 56       		.byte	0x56
- 1120 0241 AC000000 		.4byte	0xac
- 1121 0245 02       		.uleb128 0x2
- 1122 0246 91       		.byte	0x91
- 1123 0247 67       		.sleb128 -25
- 1124 0248 00       		.byte	0
- 1125 0249 07       		.uleb128 0x7
- 1126 024a B4020000 		.4byte	.LASF27
- 1127 024e 01       		.byte	0x1
- 1128 024f 8B       		.byte	0x8b
- 1129 0250 00000000 		.4byte	.LFB38
- 1130 0254 74000000 		.4byte	.LFE38-.LFB38
- 1131 0258 01       		.uleb128 0x1
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 24
-
-
- 1132 0259 9C       		.byte	0x9c
- 1133 025a 6D020000 		.4byte	0x26d
- 1134 025e 08       		.uleb128 0x8
- 1135 025f 06000000 		.4byte	.LASF18
- 1136 0263 01       		.byte	0x1
- 1137 0264 8D       		.byte	0x8d
- 1138 0265 AC000000 		.4byte	0xac
- 1139 0269 02       		.uleb128 0x2
- 1140 026a 91       		.byte	0x91
- 1141 026b 7F       		.sleb128 -1
- 1142 026c 00       		.byte	0
- 1143 026d 07       		.uleb128 0x7
- 1144 026e 2D000000 		.4byte	.LASF28
- 1145 0272 01       		.byte	0x1
- 1146 0273 98       		.byte	0x98
- 1147 0274 00000000 		.4byte	.LFB39
- 1148 0278 84000000 		.4byte	.LFE39-.LFB39
- 1149 027c 01       		.uleb128 0x1
- 1150 027d 9C       		.byte	0x9c
- 1151 027e BC020000 		.4byte	0x2bc
- 1152 0282 08       		.uleb128 0x8
- 1153 0283 06000000 		.4byte	.LASF18
- 1154 0287 01       		.byte	0x1
- 1155 0288 9A       		.byte	0x9a
- 1156 0289 AC000000 		.4byte	0xac
- 1157 028d 02       		.uleb128 0x2
- 1158 028e 91       		.byte	0x91
- 1159 028f 77       		.sleb128 -9
- 1160 0290 0B       		.uleb128 0xb
- 1161 0291 3A000000 		.4byte	.LVL19
- 1162 0295 6C030000 		.4byte	0x36c
- 1163 0299 0B       		.uleb128 0xb
- 1164 029a 3E000000 		.4byte	.LVL20
- 1165 029e 7E030000 		.4byte	0x37e
- 1166 02a2 0B       		.uleb128 0xb
- 1167 02a3 5E000000 		.4byte	.LVL21
- 1168 02a7 5B030000 		.4byte	0x35b
- 1169 02ab 0C       		.uleb128 0xc
- 1170 02ac 64000000 		.4byte	.LVL22
- 1171 02b0 AC030000 		.4byte	0x3ac
- 1172 02b4 0A       		.uleb128 0xa
- 1173 02b5 01       		.uleb128 0x1
- 1174 02b6 50       		.byte	0x50
- 1175 02b7 02       		.uleb128 0x2
- 1176 02b8 08       		.byte	0x8
- 1177 02b9 C8       		.byte	0xc8
- 1178 02ba 00       		.byte	0
- 1179 02bb 00       		.byte	0
- 1180 02bc 10       		.uleb128 0x10
- 1181 02bd 6B000000 		.4byte	0x6b
- 1182 02c1 CC020000 		.4byte	0x2cc
- 1183 02c5 11       		.uleb128 0x11
- 1184 02c6 C2000000 		.4byte	0xc2
- 1185 02ca 09       		.byte	0x9
- 1186 02cb 00       		.byte	0
- 1187 02cc 12       		.uleb128 0x12
- 1188 02cd 3F000000 		.4byte	.LASF29
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 25
-
-
- 1189 02d1 01       		.byte	0x1
- 1190 02d2 10       		.byte	0x10
- 1191 02d3 DD020000 		.4byte	0x2dd
- 1192 02d7 05       		.uleb128 0x5
- 1193 02d8 03       		.byte	0x3
- 1194 02d9 00000000 		.4byte	Font
- 1195 02dd 13       		.uleb128 0x13
- 1196 02de E2020000 		.4byte	0x2e2
- 1197 02e2 05       		.uleb128 0x5
- 1198 02e3 BC020000 		.4byte	0x2bc
- 1199 02e7 10       		.uleb128 0x10
- 1200 02e8 6B000000 		.4byte	0x6b
- 1201 02ec F7020000 		.4byte	0x2f7
- 1202 02f0 11       		.uleb128 0x11
- 1203 02f1 C2000000 		.4byte	0xc2
- 1204 02f5 03       		.byte	0x3
- 1205 02f6 00       		.byte	0
- 1206 02f7 12       		.uleb128 0x12
- 1207 02f8 D0020000 		.4byte	.LASF30
- 1208 02fc 01       		.byte	0x1
- 1209 02fd 11       		.byte	0x11
- 1210 02fe 08030000 		.4byte	0x308
- 1211 0302 05       		.uleb128 0x5
- 1212 0303 03       		.byte	0x3
- 1213 0304 00000000 		.4byte	VideoBufer
- 1214 0308 05       		.uleb128 0x5
- 1215 0309 E7020000 		.4byte	0x2e7
- 1216 030d 10       		.uleb128 0x10
- 1217 030e 6B000000 		.4byte	0x6b
- 1218 0312 1D030000 		.4byte	0x31d
- 1219 0316 11       		.uleb128 0x11
- 1220 0317 C2000000 		.4byte	0xc2
- 1221 031b 10       		.byte	0x10
- 1222 031c 00       		.byte	0
- 1223 031d 12       		.uleb128 0x12
- 1224 031e 5E000000 		.4byte	.LASF31
- 1225 0322 01       		.byte	0x1
- 1226 0323 12       		.byte	0x12
- 1227 0324 2E030000 		.4byte	0x32e
- 1228 0328 05       		.uleb128 0x5
- 1229 0329 03       		.byte	0x3
- 1230 032a 00000000 		.4byte	VideoMemory
- 1231 032e 05       		.uleb128 0x5
- 1232 032f 0D030000 		.4byte	0x30d
- 1233 0333 14       		.uleb128 0x14
- 1234 0334 5A010000 		.4byte	.LASF32
- 1235 0338 01       		.byte	0x1
- 1236 0339 13       		.byte	0x13
- 1237 033a 8C000000 		.4byte	0x8c
- 1238 033e 14       		.uleb128 0x14
- 1239 033f 4D010000 		.4byte	.LASF33
- 1240 0343 01       		.byte	0x1
- 1241 0344 14       		.byte	0x14
- 1242 0345 6B000000 		.4byte	0x6b
- 1243 0349 15       		.uleb128 0x15
- 1244 034a 33020000 		.4byte	.LASF34
- 1245 034e 03       		.byte	0x3
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 26
-
-
- 1246 034f 5701     		.2byte	0x157
- 1247 0351 5B030000 		.4byte	0x35b
- 1248 0355 16       		.uleb128 0x16
- 1249 0356 81000000 		.4byte	0x81
- 1250 035a 00       		.byte	0
- 1251 035b 17       		.uleb128 0x17
- 1252 035c AA000000 		.4byte	.LASF35
- 1253 0360 04       		.byte	0x4
- 1254 0361 27       		.byte	0x27
- 1255 0362 6C030000 		.4byte	0x36c
- 1256 0366 16       		.uleb128 0x16
- 1257 0367 6B000000 		.4byte	0x6b
- 1258 036b 00       		.byte	0
- 1259 036c 15       		.uleb128 0x15
- 1260 036d BC000000 		.4byte	.LASF36
- 1261 0371 03       		.byte	0x3
- 1262 0372 8C01     		.2byte	0x18c
- 1263 0374 7E030000 		.4byte	0x37e
- 1264 0378 16       		.uleb128 0x16
- 1265 0379 81000000 		.4byte	0x81
- 1266 037d 00       		.byte	0
- 1267 037e 18       		.uleb128 0x18
- 1268 037f 5A020000 		.4byte	.LASF43
- 1269 0383 03       		.byte	0x3
- 1270 0384 8E01     		.2byte	0x18e
- 1271 0386 81000000 		.4byte	0x81
- 1272 038a 17       		.uleb128 0x17
- 1273 038b DB020000 		.4byte	.LASF37
- 1274 038f 05       		.byte	0x5
- 1275 0390 57       		.byte	0x57
- 1276 0391 9B030000 		.4byte	0x39b
- 1277 0395 16       		.uleb128 0x16
- 1278 0396 81000000 		.4byte	0x81
- 1279 039a 00       		.byte	0
- 1280 039b 17       		.uleb128 0x17
- 1281 039c 19020000 		.4byte	.LASF38
- 1282 03a0 06       		.byte	0x6
- 1283 03a1 CA       		.byte	0xca
- 1284 03a2 AC030000 		.4byte	0x3ac
- 1285 03a6 16       		.uleb128 0x16
- 1286 03a7 6B000000 		.4byte	0x6b
- 1287 03ab 00       		.byte	0
- 1288 03ac 19       		.uleb128 0x19
- 1289 03ad 76010000 		.4byte	.LASF44
- 1290 03b1 05       		.byte	0x5
- 1291 03b2 58       		.byte	0x58
- 1292 03b3 16       		.uleb128 0x16
- 1293 03b4 76000000 		.4byte	0x76
- 1294 03b8 00       		.byte	0
- 1295 03b9 00       		.byte	0
- 1296              		.section	.debug_abbrev,"",%progbits
- 1297              	.Ldebug_abbrev0:
- 1298 0000 01       		.uleb128 0x1
- 1299 0001 11       		.uleb128 0x11
- 1300 0002 01       		.byte	0x1
- 1301 0003 25       		.uleb128 0x25
- 1302 0004 0E       		.uleb128 0xe
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 27
-
-
- 1303 0005 13       		.uleb128 0x13
- 1304 0006 0B       		.uleb128 0xb
- 1305 0007 03       		.uleb128 0x3
- 1306 0008 0E       		.uleb128 0xe
- 1307 0009 1B       		.uleb128 0x1b
- 1308 000a 0E       		.uleb128 0xe
- 1309 000b 55       		.uleb128 0x55
- 1310 000c 17       		.uleb128 0x17
- 1311 000d 11       		.uleb128 0x11
- 1312 000e 01       		.uleb128 0x1
- 1313 000f 10       		.uleb128 0x10
- 1314 0010 17       		.uleb128 0x17
- 1315 0011 00       		.byte	0
- 1316 0012 00       		.byte	0
- 1317 0013 02       		.uleb128 0x2
- 1318 0014 24       		.uleb128 0x24
- 1319 0015 00       		.byte	0
- 1320 0016 0B       		.uleb128 0xb
- 1321 0017 0B       		.uleb128 0xb
- 1322 0018 3E       		.uleb128 0x3e
- 1323 0019 0B       		.uleb128 0xb
- 1324 001a 03       		.uleb128 0x3
- 1325 001b 0E       		.uleb128 0xe
- 1326 001c 00       		.byte	0
- 1327 001d 00       		.byte	0
- 1328 001e 03       		.uleb128 0x3
- 1329 001f 24       		.uleb128 0x24
- 1330 0020 00       		.byte	0
- 1331 0021 0B       		.uleb128 0xb
- 1332 0022 0B       		.uleb128 0xb
- 1333 0023 3E       		.uleb128 0x3e
- 1334 0024 0B       		.uleb128 0xb
- 1335 0025 03       		.uleb128 0x3
- 1336 0026 08       		.uleb128 0x8
- 1337 0027 00       		.byte	0
- 1338 0028 00       		.byte	0
- 1339 0029 04       		.uleb128 0x4
- 1340 002a 16       		.uleb128 0x16
- 1341 002b 00       		.byte	0
- 1342 002c 03       		.uleb128 0x3
- 1343 002d 0E       		.uleb128 0xe
- 1344 002e 3A       		.uleb128 0x3a
- 1345 002f 0B       		.uleb128 0xb
- 1346 0030 3B       		.uleb128 0x3b
- 1347 0031 0B       		.uleb128 0xb
- 1348 0032 49       		.uleb128 0x49
- 1349 0033 13       		.uleb128 0x13
- 1350 0034 00       		.byte	0
- 1351 0035 00       		.byte	0
- 1352 0036 05       		.uleb128 0x5
- 1353 0037 35       		.uleb128 0x35
- 1354 0038 00       		.byte	0
- 1355 0039 49       		.uleb128 0x49
- 1356 003a 13       		.uleb128 0x13
- 1357 003b 00       		.byte	0
- 1358 003c 00       		.byte	0
- 1359 003d 06       		.uleb128 0x6
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 28
-
-
- 1360 003e 16       		.uleb128 0x16
- 1361 003f 00       		.byte	0
- 1362 0040 03       		.uleb128 0x3
- 1363 0041 0E       		.uleb128 0xe
- 1364 0042 3A       		.uleb128 0x3a
- 1365 0043 0B       		.uleb128 0xb
- 1366 0044 3B       		.uleb128 0x3b
- 1367 0045 05       		.uleb128 0x5
- 1368 0046 49       		.uleb128 0x49
- 1369 0047 13       		.uleb128 0x13
- 1370 0048 00       		.byte	0
- 1371 0049 00       		.byte	0
- 1372 004a 07       		.uleb128 0x7
- 1373 004b 2E       		.uleb128 0x2e
- 1374 004c 01       		.byte	0x1
- 1375 004d 3F       		.uleb128 0x3f
- 1376 004e 19       		.uleb128 0x19
- 1377 004f 03       		.uleb128 0x3
- 1378 0050 0E       		.uleb128 0xe
- 1379 0051 3A       		.uleb128 0x3a
- 1380 0052 0B       		.uleb128 0xb
- 1381 0053 3B       		.uleb128 0x3b
- 1382 0054 0B       		.uleb128 0xb
- 1383 0055 27       		.uleb128 0x27
- 1384 0056 19       		.uleb128 0x19
- 1385 0057 11       		.uleb128 0x11
- 1386 0058 01       		.uleb128 0x1
- 1387 0059 12       		.uleb128 0x12
- 1388 005a 06       		.uleb128 0x6
- 1389 005b 40       		.uleb128 0x40
- 1390 005c 18       		.uleb128 0x18
- 1391 005d 9742     		.uleb128 0x2117
- 1392 005f 19       		.uleb128 0x19
- 1393 0060 01       		.uleb128 0x1
- 1394 0061 13       		.uleb128 0x13
- 1395 0062 00       		.byte	0
- 1396 0063 00       		.byte	0
- 1397 0064 08       		.uleb128 0x8
- 1398 0065 34       		.uleb128 0x34
- 1399 0066 00       		.byte	0
- 1400 0067 03       		.uleb128 0x3
- 1401 0068 0E       		.uleb128 0xe
- 1402 0069 3A       		.uleb128 0x3a
- 1403 006a 0B       		.uleb128 0xb
- 1404 006b 3B       		.uleb128 0x3b
- 1405 006c 0B       		.uleb128 0xb
- 1406 006d 49       		.uleb128 0x49
- 1407 006e 13       		.uleb128 0x13
- 1408 006f 02       		.uleb128 0x2
- 1409 0070 18       		.uleb128 0x18
- 1410 0071 00       		.byte	0
- 1411 0072 00       		.byte	0
- 1412 0073 09       		.uleb128 0x9
- 1413 0074 898201   		.uleb128 0x4109
- 1414 0077 01       		.byte	0x1
- 1415 0078 11       		.uleb128 0x11
- 1416 0079 01       		.uleb128 0x1
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 29
-
-
- 1417 007a 31       		.uleb128 0x31
- 1418 007b 13       		.uleb128 0x13
- 1419 007c 01       		.uleb128 0x1
- 1420 007d 13       		.uleb128 0x13
- 1421 007e 00       		.byte	0
- 1422 007f 00       		.byte	0
- 1423 0080 0A       		.uleb128 0xa
- 1424 0081 8A8201   		.uleb128 0x410a
- 1425 0084 00       		.byte	0
- 1426 0085 02       		.uleb128 0x2
- 1427 0086 18       		.uleb128 0x18
- 1428 0087 9142     		.uleb128 0x2111
- 1429 0089 18       		.uleb128 0x18
- 1430 008a 00       		.byte	0
- 1431 008b 00       		.byte	0
- 1432 008c 0B       		.uleb128 0xb
- 1433 008d 898201   		.uleb128 0x4109
- 1434 0090 00       		.byte	0
- 1435 0091 11       		.uleb128 0x11
- 1436 0092 01       		.uleb128 0x1
- 1437 0093 31       		.uleb128 0x31
- 1438 0094 13       		.uleb128 0x13
- 1439 0095 00       		.byte	0
- 1440 0096 00       		.byte	0
- 1441 0097 0C       		.uleb128 0xc
- 1442 0098 898201   		.uleb128 0x4109
- 1443 009b 01       		.byte	0x1
- 1444 009c 11       		.uleb128 0x11
- 1445 009d 01       		.uleb128 0x1
- 1446 009e 31       		.uleb128 0x31
- 1447 009f 13       		.uleb128 0x13
- 1448 00a0 00       		.byte	0
- 1449 00a1 00       		.byte	0
- 1450 00a2 0D       		.uleb128 0xd
- 1451 00a3 2E       		.uleb128 0x2e
- 1452 00a4 01       		.byte	0x1
- 1453 00a5 3F       		.uleb128 0x3f
- 1454 00a6 19       		.uleb128 0x19
- 1455 00a7 03       		.uleb128 0x3
- 1456 00a8 0E       		.uleb128 0xe
- 1457 00a9 3A       		.uleb128 0x3a
- 1458 00aa 0B       		.uleb128 0xb
- 1459 00ab 3B       		.uleb128 0x3b
- 1460 00ac 0B       		.uleb128 0xb
- 1461 00ad 11       		.uleb128 0x11
- 1462 00ae 01       		.uleb128 0x1
- 1463 00af 12       		.uleb128 0x12
- 1464 00b0 06       		.uleb128 0x6
- 1465 00b1 40       		.uleb128 0x40
- 1466 00b2 18       		.uleb128 0x18
- 1467 00b3 9742     		.uleb128 0x2117
- 1468 00b5 19       		.uleb128 0x19
- 1469 00b6 01       		.uleb128 0x1
- 1470 00b7 13       		.uleb128 0x13
- 1471 00b8 00       		.byte	0
- 1472 00b9 00       		.byte	0
- 1473 00ba 0E       		.uleb128 0xe
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 30
-
-
- 1474 00bb 05       		.uleb128 0x5
- 1475 00bc 00       		.byte	0
- 1476 00bd 03       		.uleb128 0x3
- 1477 00be 0E       		.uleb128 0xe
- 1478 00bf 3A       		.uleb128 0x3a
- 1479 00c0 0B       		.uleb128 0xb
- 1480 00c1 3B       		.uleb128 0x3b
- 1481 00c2 0B       		.uleb128 0xb
- 1482 00c3 49       		.uleb128 0x49
- 1483 00c4 13       		.uleb128 0x13
- 1484 00c5 02       		.uleb128 0x2
- 1485 00c6 17       		.uleb128 0x17
- 1486 00c7 00       		.byte	0
- 1487 00c8 00       		.byte	0
- 1488 00c9 0F       		.uleb128 0xf
- 1489 00ca 2E       		.uleb128 0x2e
- 1490 00cb 01       		.byte	0x1
- 1491 00cc 3F       		.uleb128 0x3f
- 1492 00cd 19       		.uleb128 0x19
- 1493 00ce 03       		.uleb128 0x3
- 1494 00cf 0E       		.uleb128 0xe
- 1495 00d0 3A       		.uleb128 0x3a
- 1496 00d1 0B       		.uleb128 0xb
- 1497 00d2 3B       		.uleb128 0x3b
- 1498 00d3 0B       		.uleb128 0xb
- 1499 00d4 27       		.uleb128 0x27
- 1500 00d5 19       		.uleb128 0x19
- 1501 00d6 11       		.uleb128 0x11
- 1502 00d7 01       		.uleb128 0x1
- 1503 00d8 12       		.uleb128 0x12
- 1504 00d9 06       		.uleb128 0x6
- 1505 00da 40       		.uleb128 0x40
- 1506 00db 18       		.uleb128 0x18
- 1507 00dc 9642     		.uleb128 0x2116
- 1508 00de 19       		.uleb128 0x19
- 1509 00df 01       		.uleb128 0x1
- 1510 00e0 13       		.uleb128 0x13
- 1511 00e1 00       		.byte	0
- 1512 00e2 00       		.byte	0
- 1513 00e3 10       		.uleb128 0x10
- 1514 00e4 01       		.uleb128 0x1
- 1515 00e5 01       		.byte	0x1
- 1516 00e6 49       		.uleb128 0x49
- 1517 00e7 13       		.uleb128 0x13
- 1518 00e8 01       		.uleb128 0x1
- 1519 00e9 13       		.uleb128 0x13
- 1520 00ea 00       		.byte	0
- 1521 00eb 00       		.byte	0
- 1522 00ec 11       		.uleb128 0x11
- 1523 00ed 21       		.uleb128 0x21
- 1524 00ee 00       		.byte	0
- 1525 00ef 49       		.uleb128 0x49
- 1526 00f0 13       		.uleb128 0x13
- 1527 00f1 2F       		.uleb128 0x2f
- 1528 00f2 0B       		.uleb128 0xb
- 1529 00f3 00       		.byte	0
- 1530 00f4 00       		.byte	0
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 31
-
-
- 1531 00f5 12       		.uleb128 0x12
- 1532 00f6 34       		.uleb128 0x34
- 1533 00f7 00       		.byte	0
- 1534 00f8 03       		.uleb128 0x3
- 1535 00f9 0E       		.uleb128 0xe
- 1536 00fa 3A       		.uleb128 0x3a
- 1537 00fb 0B       		.uleb128 0xb
- 1538 00fc 3B       		.uleb128 0x3b
- 1539 00fd 0B       		.uleb128 0xb
- 1540 00fe 49       		.uleb128 0x49
- 1541 00ff 13       		.uleb128 0x13
- 1542 0100 3F       		.uleb128 0x3f
- 1543 0101 19       		.uleb128 0x19
- 1544 0102 02       		.uleb128 0x2
- 1545 0103 18       		.uleb128 0x18
- 1546 0104 00       		.byte	0
- 1547 0105 00       		.byte	0
- 1548 0106 13       		.uleb128 0x13
- 1549 0107 26       		.uleb128 0x26
- 1550 0108 00       		.byte	0
- 1551 0109 49       		.uleb128 0x49
- 1552 010a 13       		.uleb128 0x13
- 1553 010b 00       		.byte	0
- 1554 010c 00       		.byte	0
- 1555 010d 14       		.uleb128 0x14
- 1556 010e 34       		.uleb128 0x34
- 1557 010f 00       		.byte	0
- 1558 0110 03       		.uleb128 0x3
- 1559 0111 0E       		.uleb128 0xe
- 1560 0112 3A       		.uleb128 0x3a
- 1561 0113 0B       		.uleb128 0xb
- 1562 0114 3B       		.uleb128 0x3b
- 1563 0115 0B       		.uleb128 0xb
- 1564 0116 49       		.uleb128 0x49
- 1565 0117 13       		.uleb128 0x13
- 1566 0118 3F       		.uleb128 0x3f
- 1567 0119 19       		.uleb128 0x19
- 1568 011a 3C       		.uleb128 0x3c
- 1569 011b 19       		.uleb128 0x19
- 1570 011c 00       		.byte	0
- 1571 011d 00       		.byte	0
- 1572 011e 15       		.uleb128 0x15
- 1573 011f 2E       		.uleb128 0x2e
- 1574 0120 01       		.byte	0x1
- 1575 0121 3F       		.uleb128 0x3f
- 1576 0122 19       		.uleb128 0x19
- 1577 0123 03       		.uleb128 0x3
- 1578 0124 0E       		.uleb128 0xe
- 1579 0125 3A       		.uleb128 0x3a
- 1580 0126 0B       		.uleb128 0xb
- 1581 0127 3B       		.uleb128 0x3b
- 1582 0128 05       		.uleb128 0x5
- 1583 0129 27       		.uleb128 0x27
- 1584 012a 19       		.uleb128 0x19
- 1585 012b 3C       		.uleb128 0x3c
- 1586 012c 19       		.uleb128 0x19
- 1587 012d 01       		.uleb128 0x1
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 32
-
-
- 1588 012e 13       		.uleb128 0x13
- 1589 012f 00       		.byte	0
- 1590 0130 00       		.byte	0
- 1591 0131 16       		.uleb128 0x16
- 1592 0132 05       		.uleb128 0x5
- 1593 0133 00       		.byte	0
- 1594 0134 49       		.uleb128 0x49
- 1595 0135 13       		.uleb128 0x13
- 1596 0136 00       		.byte	0
- 1597 0137 00       		.byte	0
- 1598 0138 17       		.uleb128 0x17
- 1599 0139 2E       		.uleb128 0x2e
- 1600 013a 01       		.byte	0x1
- 1601 013b 3F       		.uleb128 0x3f
- 1602 013c 19       		.uleb128 0x19
- 1603 013d 03       		.uleb128 0x3
- 1604 013e 0E       		.uleb128 0xe
- 1605 013f 3A       		.uleb128 0x3a
- 1606 0140 0B       		.uleb128 0xb
- 1607 0141 3B       		.uleb128 0x3b
- 1608 0142 0B       		.uleb128 0xb
- 1609 0143 27       		.uleb128 0x27
- 1610 0144 19       		.uleb128 0x19
- 1611 0145 3C       		.uleb128 0x3c
- 1612 0146 19       		.uleb128 0x19
- 1613 0147 01       		.uleb128 0x1
- 1614 0148 13       		.uleb128 0x13
- 1615 0149 00       		.byte	0
- 1616 014a 00       		.byte	0
- 1617 014b 18       		.uleb128 0x18
- 1618 014c 2E       		.uleb128 0x2e
- 1619 014d 00       		.byte	0
- 1620 014e 3F       		.uleb128 0x3f
- 1621 014f 19       		.uleb128 0x19
- 1622 0150 03       		.uleb128 0x3
- 1623 0151 0E       		.uleb128 0xe
- 1624 0152 3A       		.uleb128 0x3a
- 1625 0153 0B       		.uleb128 0xb
- 1626 0154 3B       		.uleb128 0x3b
- 1627 0155 05       		.uleb128 0x5
- 1628 0156 27       		.uleb128 0x27
- 1629 0157 19       		.uleb128 0x19
- 1630 0158 49       		.uleb128 0x49
- 1631 0159 13       		.uleb128 0x13
- 1632 015a 3C       		.uleb128 0x3c
- 1633 015b 19       		.uleb128 0x19
- 1634 015c 00       		.byte	0
- 1635 015d 00       		.byte	0
- 1636 015e 19       		.uleb128 0x19
- 1637 015f 2E       		.uleb128 0x2e
- 1638 0160 01       		.byte	0x1
- 1639 0161 3F       		.uleb128 0x3f
- 1640 0162 19       		.uleb128 0x19
- 1641 0163 03       		.uleb128 0x3
- 1642 0164 0E       		.uleb128 0xe
- 1643 0165 3A       		.uleb128 0x3a
- 1644 0166 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 33
-
-
- 1645 0167 3B       		.uleb128 0x3b
- 1646 0168 0B       		.uleb128 0xb
- 1647 0169 27       		.uleb128 0x27
- 1648 016a 19       		.uleb128 0x19
- 1649 016b 3C       		.uleb128 0x3c
- 1650 016c 19       		.uleb128 0x19
- 1651 016d 00       		.byte	0
- 1652 016e 00       		.byte	0
- 1653 016f 00       		.byte	0
- 1654              		.section	.debug_loc,"",%progbits
- 1655              	.Ldebug_loc0:
- 1656              	.LLST0:
- 1657 0000 00000000 		.4byte	.LVL10
- 1658 0004 0E000000 		.4byte	.LVL11
- 1659 0008 0100     		.2byte	0x1
- 1660 000a 50       		.byte	0x50
- 1661 000b 0E000000 		.4byte	.LVL11
- 1662 000f 40000000 		.4byte	.LFE36
- 1663 0013 0400     		.2byte	0x4
- 1664 0015 F3       		.byte	0xf3
- 1665 0016 01       		.uleb128 0x1
- 1666 0017 50       		.byte	0x50
- 1667 0018 9F       		.byte	0x9f
- 1668 0019 00000000 		.4byte	0
- 1669 001d 00000000 		.4byte	0
- 1670              	.LLST1:
- 1671 0021 00000000 		.4byte	.LVL10
- 1672 0025 11000000 		.4byte	.LVL12-1
- 1673 0029 0100     		.2byte	0x1
- 1674 002b 51       		.byte	0x51
- 1675 002c 11000000 		.4byte	.LVL12-1
- 1676 0030 40000000 		.4byte	.LFE36
- 1677 0034 0400     		.2byte	0x4
- 1678 0036 F3       		.byte	0xf3
- 1679 0037 01       		.uleb128 0x1
- 1680 0038 51       		.byte	0x51
- 1681 0039 9F       		.byte	0x9f
- 1682 003a 00000000 		.4byte	0
- 1683 003e 00000000 		.4byte	0
- 1684              		.section	.debug_aranges,"",%progbits
- 1685 0000 4C000000 		.4byte	0x4c
- 1686 0004 0200     		.2byte	0x2
- 1687 0006 00000000 		.4byte	.Ldebug_info0
- 1688 000a 04       		.byte	0x4
- 1689 000b 00       		.byte	0
- 1690 000c 0000     		.2byte	0
- 1691 000e 0000     		.2byte	0
- 1692 0010 00000000 		.4byte	.LFB33
- 1693 0014 98000000 		.4byte	.LFE33-.LFB33
- 1694 0018 00000000 		.4byte	.LFB34
- 1695 001c 88000000 		.4byte	.LFE34-.LFB34
- 1696 0020 00000000 		.4byte	.LFB35
- 1697 0024 34000000 		.4byte	.LFE35-.LFB35
- 1698 0028 00000000 		.4byte	.LFB36
- 1699 002c 40000000 		.4byte	.LFE36-.LFB36
- 1700 0030 00000000 		.4byte	.LFB37
- 1701 0034 AC010000 		.4byte	.LFE37-.LFB37
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 34
-
-
- 1702 0038 00000000 		.4byte	.LFB38
- 1703 003c 74000000 		.4byte	.LFE38-.LFB38
- 1704 0040 00000000 		.4byte	.LFB39
- 1705 0044 84000000 		.4byte	.LFE39-.LFB39
- 1706 0048 00000000 		.4byte	0
- 1707 004c 00000000 		.4byte	0
- 1708              		.section	.debug_ranges,"",%progbits
- 1709              	.Ldebug_ranges0:
- 1710 0000 00000000 		.4byte	.LFB33
- 1711 0004 98000000 		.4byte	.LFE33
- 1712 0008 00000000 		.4byte	.LFB34
- 1713 000c 88000000 		.4byte	.LFE34
- 1714 0010 00000000 		.4byte	.LFB35
- 1715 0014 34000000 		.4byte	.LFE35
- 1716 0018 00000000 		.4byte	.LFB36
- 1717 001c 40000000 		.4byte	.LFE36
- 1718 0020 00000000 		.4byte	.LFB37
- 1719 0024 AC010000 		.4byte	.LFE37
- 1720 0028 00000000 		.4byte	.LFB38
- 1721 002c 74000000 		.4byte	.LFE38
- 1722 0030 00000000 		.4byte	.LFB39
- 1723 0034 84000000 		.4byte	.LFE39
- 1724 0038 00000000 		.4byte	0
- 1725 003c 00000000 		.4byte	0
- 1726              		.section	.debug_line,"",%progbits
- 1727              	.Ldebug_line0:
- 1728 0000 E7010000 		.section	.debug_str,"MS",%progbits,1
- 1728      02008400 
- 1728      00000201 
- 1728      FB0E0D00 
- 1728      01010101 
- 1729              	.LASF16:
- 1730 0000 72656733 		.ascii	"reg32\000"
- 1730      3200
- 1731              	.LASF18:
- 1732 0006 5363726F 		.ascii	"Scroll\000"
- 1732      6C6C00
- 1733              	.LASF3:
- 1734 000d 73686F72 		.ascii	"short unsigned int\000"
- 1734      7420756E 
- 1734      7369676E 
- 1734      65642069 
- 1734      6E7400
- 1735              	.LASF8:
- 1736 0020 756E7369 		.ascii	"unsigned int\000"
- 1736      676E6564 
- 1736      20696E74 
- 1736      00
- 1737              	.LASF28:
- 1738 002d 44697370 		.ascii	"Display_Write_Mem\000"
- 1738      6C61795F 
- 1738      57726974 
- 1738      655F4D65 
- 1738      6D00
- 1739              	.LASF29:
- 1740 003f 466F6E74 		.ascii	"Font\000"
- 1740      00
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 35
-
-
- 1741              	.LASF23:
- 1742 0044 44697370 		.ascii	"Display_Write_Numer\000"
- 1742      6C61795F 
- 1742      57726974 
- 1742      655F4E75 
- 1742      6D657200 
- 1743              	.LASF13:
- 1744 0058 666C6F61 		.ascii	"float\000"
- 1744      7400
- 1745              	.LASF31:
- 1746 005e 56696465 		.ascii	"VideoMemory\000"
- 1746      6F4D656D 
- 1746      6F727900 
- 1747              	.LASF21:
- 1748 006a 44697370 		.ascii	"Display_Test_2\000"
- 1748      6C61795F 
- 1748      54657374 
- 1748      5F3200
- 1749              	.LASF5:
- 1750 0079 6C6F6E67 		.ascii	"long unsigned int\000"
- 1750      20756E73 
- 1750      69676E65 
- 1750      6420696E 
- 1750      7400
- 1751              	.LASF26:
- 1752 008b 44697370 		.ascii	"Display_Set_Video_Memory\000"
- 1752      6C61795F 
- 1752      5365745F 
- 1752      56696465 
- 1752      6F5F4D65 
- 1753              	.LASF9:
- 1754 00a4 75696E74 		.ascii	"uint8\000"
- 1754      3800
- 1755              	.LASF35:
- 1756 00aa 50574D5F 		.ascii	"PWM_Mux_Reg_Write\000"
- 1756      4D75785F 
- 1756      5265675F 
- 1756      57726974 
- 1756      6500
- 1757              	.LASF36:
- 1758 00bc 5343425F 		.ascii	"SCB_1_SpiUartWriteTxData\000"
- 1758      315F5370 
- 1758      69556172 
- 1758      74577269 
- 1758      74655478 
- 1759              	.LASF1:
- 1760 00d5 756E7369 		.ascii	"unsigned char\000"
- 1760      676E6564 
- 1760      20636861 
- 1760      7200
- 1761              	.LASF19:
- 1762 00e3 53796D62 		.ascii	"Symbol\000"
- 1762      6F6C00
- 1763              	.LASF14:
- 1764 00ea 646F7562 		.ascii	"double\000"
- 1764      6C6500
- 1765              	.LASF2:
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 36
-
-
- 1766 00f1 73686F72 		.ascii	"short int\000"
- 1766      7420696E 
- 1766      7400
- 1767              	.LASF10:
- 1768 00fb 75696E74 		.ascii	"uint16\000"
- 1768      313600
- 1769              	.LASF12:
- 1770 0102 696E7438 		.ascii	"int8\000"
- 1770      00
- 1771              	.LASF20:
- 1772 0107 44697370 		.ascii	"Display_Test_1\000"
- 1772      6C61795F 
- 1772      54657374 
- 1772      5F3100
- 1773              	.LASF11:
- 1774 0116 75696E74 		.ascii	"uint32\000"
- 1774      333200
- 1775              	.LASF42:
- 1776 011d 496E6974 		.ascii	"Init_Video_Memory\000"
- 1776      5F566964 
- 1776      656F5F4D 
- 1776      656D6F72 
- 1776      7900
- 1777              	.LASF24:
- 1778 012f 4E756D62 		.ascii	"Number\000"
- 1778      657200
- 1779              	.LASF7:
- 1780 0136 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1780      206C6F6E 
- 1780      6720756E 
- 1780      7369676E 
- 1780      65642069 
- 1781              	.LASF33:
- 1782 014d 48756D69 		.ascii	"Humi\000"
- 1782      00
- 1783              	.LASF25:
- 1784 0152 5365676D 		.ascii	"Segment\000"
- 1784      656E7400 
- 1785              	.LASF32:
- 1786 015a 54656D70 		.ascii	"Temp\000"
- 1786      00
- 1787              	.LASF17:
- 1788 015f 73697A65 		.ascii	"sizetype\000"
- 1788      74797065 
- 1788      00
- 1789              	.LASF6:
- 1790 0168 6C6F6E67 		.ascii	"long long int\000"
- 1790      206C6F6E 
- 1790      6720696E 
- 1790      7400
- 1791              	.LASF44:
- 1792 0176 43794465 		.ascii	"CyDelayUs\000"
- 1792      6C617955 
- 1792      7300
- 1793              	.LASF15:
- 1794 0180 63686172 		.ascii	"char\000"
- 1794      00
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 37
-
-
- 1795              	.LASF22:
- 1796 0185 42726967 		.ascii	"Brigh\000"
- 1796      6800
- 1797              	.LASF39:
- 1798 018b 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1798      4320342E 
- 1798      392E3320 
- 1798      32303135 
- 1798      30333033 
- 1799 01be 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 1799      20726576 
- 1799      6973696F 
- 1799      6E203232 
- 1799      31323230 
- 1800 01f1 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1800      66756E63 
- 1800      74696F6E 
- 1800      2D736563 
- 1800      74696F6E 
- 1801              	.LASF38:
- 1802 0219 4C45445F 		.ascii	"LED_SEG_PWM_WriteCompare2\000"
- 1802      5345475F 
- 1802      50574D5F 
- 1802      57726974 
- 1802      65436F6D 
- 1803              	.LASF34:
- 1804 0233 5343425F 		.ascii	"SCB_1_SpiSetActiveSlaveSelect\000"
- 1804      315F5370 
- 1804      69536574 
- 1804      41637469 
- 1804      7665536C 
- 1805              	.LASF40:
- 1806 0251 2E5C3753 		.ascii	".\\7Seg.c\000"
- 1806      65672E63 
- 1806      00
- 1807              	.LASF43:
- 1808 025a 5343425F 		.ascii	"SCB_1_SpiUartGetTxBufferSize\000"
- 1808      315F5370 
- 1808      69556172 
- 1808      74476574 
- 1808      54784275 
- 1809              	.LASF4:
- 1810 0277 6C6F6E67 		.ascii	"long int\000"
- 1810      20696E74 
- 1810      00
- 1811              	.LASF41:
- 1812 0280 433A5C45 		.ascii	"C:\\EAGLE\\My\\Thermometr\\Thermometr.cydsn\000"
- 1812      41474C45 
- 1812      5C4D795C 
- 1812      54686572 
- 1812      6D6F6D65 
- 1813              	.LASF0:
- 1814 02a8 7369676E 		.ascii	"signed char\000"
- 1814      65642063 
- 1814      68617200 
- 1815              	.LASF27:
- 1816 02b4 44697370 		.ascii	"Display_Scroll_Video_Memory\000"
-ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\cclkFqAu.s 			page 38
-
-
- 1816      6C61795F 
- 1816      5363726F 
- 1816      6C6C5F56 
- 1816      6964656F 
- 1817              	.LASF30:
- 1818 02d0 56696465 		.ascii	"VideoBufer\000"
- 1818      6F427566 
- 1818      657200
- 1819              	.LASF37:
- 1820 02db 43794465 		.ascii	"CyDelay\000"
- 1820      6C617900 
- 1821              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+  50              		.loc 1 27 0 is_stmt 0 discriminator 1
+  51 0020 6B46     		mov	r3, sp
+  52 0022 0733     		add	r3, r3, #7
+  53 0024 1B78     		ldrb	r3, [r3]
+  54 0026 DBB2     		uxtb	r3, r3
+  55 0028 102B     		cmp	r3, #16
+  56 002a EED9     		bls	.L3
+  30:.\7Seg.c      ****     }
+  31:.\7Seg.c      **** }
+  57              		.loc 1 31 0 is_stmt 1
+  58 002c 02B0     		add	sp, sp, #8
+  59              		@ sp needed
+  60 002e 7047     		bx	lr
+  61              	.L5:
+  62              		.align	2
+  63              	.L4:
+  64 0030 00000000 		.word	VideoMemory
+  65              		.cfi_endproc
+  66              	.LFE33:
+  67              		.size	Init_Video_Memory, .-Init_Video_Memory
+  68              		.section	.text.Display_Write_Numer,"ax",%progbits
+  69              		.align	2
+  70              		.global	Display_Write_Numer
+  71              		.code	16
+  72              		.thumb_func
+  73              		.type	Display_Write_Numer, %function
+  74              	Display_Write_Numer:
+  75              	.LFB34:
+  32:.\7Seg.c      **** 
+  33:.\7Seg.c      **** void Display_Write_Numer(uint8 Number, uint8 Segment)
+  34:.\7Seg.c      **** {
+  76              		.loc 1 34 0
+  77              		.cfi_startproc
+  78              	.LVL0:
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 3
+
+
+  79 0000 10B5     		push	{r4, lr}
+  80              		.cfi_def_cfa_offset 8
+  81              		.cfi_offset 4, -8
+  82              		.cfi_offset 14, -4
+  35:.\7Seg.c      ****     if((Number < 10) && (Segment < Number_Of_Segments))
+  83              		.loc 1 35 0
+  84 0002 0928     		cmp	r0, #9
+  85 0004 16D8     		bhi	.L6
+  86              		.loc 1 35 0 is_stmt 0 discriminator 1
+  87 0006 0329     		cmp	r1, #3
+  88 0008 14D8     		bhi	.L6
+  89 000a 041C     		mov	r4, r0
+  36:.\7Seg.c      ****     {
+  37:.\7Seg.c      ****         PWM_Mux_Reg_Write(Segment);
+  90              		.loc 1 37 0 is_stmt 1
+  91 000c 081C     		mov	r0, r1
+  92              	.LVL1:
+  93 000e FFF7FEFF 		bl	PWM_Mux_Reg_Write
+  94              	.LVL2:
+  38:.\7Seg.c      ****         SCB_1_SpiUartWriteTxData(Font[Number]);
+  95              		.loc 1 38 0
+  96 0012 094B     		ldr	r3, .L10
+  97 0014 185D     		ldrb	r0, [r3, r4]
+  98 0016 C0B2     		uxtb	r0, r0
+  99 0018 FFF7FEFF 		bl	SCB_1_SpiUartWriteTxData
+ 100              	.LVL3:
+ 101              	.L9:
+  39:.\7Seg.c      ****         while (0u != (SCB_1_SpiUartGetTxBufferSize() + SCB_1_GET_TX_FIFO_SR_VALID))
+ 102              		.loc 1 39 0 discriminator 5
+ 103 001c FFF7FEFF 		bl	SCB_1_SpiUartGetTxBufferSize
+ 104              	.LVL4:
+ 105 0020 064B     		ldr	r3, .L10+4
+ 106 0022 1B68     		ldr	r3, [r3]
+ 107 0024 8022     		mov	r2, #128
+ 108 0026 1202     		lsl	r2, r2, #8
+ 109 0028 1340     		and	r3, r2
+ 110 002a 00D0     		beq	.L8
+ 111              		.loc 1 39 0 is_stmt 0
+ 112 002c 0123     		mov	r3, #1
+ 113              	.L8:
+ 114              		.loc 1 39 0 discriminator 4
+ 115 002e C318     		add	r3, r0, r3
+ 116 0030 002B     		cmp	r3, #0
+ 117 0032 F3D1     		bne	.L9
+ 118              	.L6:
+  40:.\7Seg.c      ****         {
+  41:.\7Seg.c      ****         }
+  42:.\7Seg.c      ****     }
+  43:.\7Seg.c      **** }
+ 119              		.loc 1 43 0 is_stmt 1
+ 120              		@ sp needed
+ 121 0034 10BD     		pop	{r4, pc}
+ 122              	.L11:
+ 123 0036 C046     		.align	2
+ 124              	.L10:
+ 125 0038 00000000 		.word	.LANCHOR0
+ 126 003c 08020640 		.word	1074135560
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 4
+
+
+ 127              		.cfi_endproc
+ 128              	.LFE34:
+ 129              		.size	Display_Write_Numer, .-Display_Write_Numer
+ 130              		.global	__aeabi_idiv
+ 131              		.global	__aeabi_idivmod
+ 132              		.global	__aeabi_uidiv
+ 133              		.global	__aeabi_uidivmod
+ 134              		.section	.text.Display_Set_Video_Memory,"ax",%progbits
+ 135              		.align	2
+ 136              		.global	Display_Set_Video_Memory
+ 137              		.code	16
+ 138              		.thumb_func
+ 139              		.type	Display_Set_Video_Memory, %function
+ 140              	Display_Set_Video_Memory:
+ 141              	.LFB35:
+  44:.\7Seg.c      **** 
+  45:.\7Seg.c      **** void Display_Set_Video_Memory(void)
+  46:.\7Seg.c      **** {
+ 142              		.loc 1 46 0
+ 143              		.cfi_startproc
+ 144 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 145              		.cfi_def_cfa_offset 20
+ 146              		.cfi_offset 4, -20
+ 147              		.cfi_offset 5, -16
+ 148              		.cfi_offset 6, -12
+ 149              		.cfi_offset 7, -8
+ 150              		.cfi_offset 14, -4
+ 151 0002 4746     		mov	r7, r8
+ 152 0004 80B4     		push	{r7}
+ 153              		.cfi_def_cfa_offset 24
+ 154              		.cfi_offset 8, -24
+ 155 0006 84B0     		sub	sp, sp, #16
+ 156              		.cfi_def_cfa_offset 40
+  47:.\7Seg.c      ****     volatile uint8 Scroll = 0;
+ 157              		.loc 1 47 0
+ 158 0008 02AB     		add	r3, sp, #8
+ 159 000a 0022     		mov	r2, #0
+ 160 000c DA71     		strb	r2, [r3, #7]
+  48:.\7Seg.c      ****     VideoMemory[Scroll] = Symbol_T;
+ 161              		.loc 1 48 0
+ 162 000e DA79     		ldrb	r2, [r3, #7]
+ 163 0010 D2B2     		uxtb	r2, r2
+ 164 0012 6949     		ldr	r1, .L18
+ 165 0014 8720     		mov	r0, #135
+ 166 0016 8854     		strb	r0, [r1, r2]
+  49:.\7Seg.c      ****     Scroll++;
+ 167              		.loc 1 49 0
+ 168 0018 DA79     		ldrb	r2, [r3, #7]
+ 169 001a 0132     		add	r2, r2, #1
+ 170 001c D2B2     		uxtb	r2, r2
+ 171 001e DA71     		strb	r2, [r3, #7]
+  50:.\7Seg.c      ****     VideoMemory[Scroll] = Symbol_Space;
+ 172              		.loc 1 50 0
+ 173 0020 DA79     		ldrb	r2, [r3, #7]
+ 174 0022 D2B2     		uxtb	r2, r2
+ 175 0024 7830     		add	r0, r0, #120
+ 176 0026 8854     		strb	r0, [r1, r2]
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 5
+
+
+  51:.\7Seg.c      ****     Scroll++;
+ 177              		.loc 1 51 0
+ 178 0028 DA79     		ldrb	r2, [r3, #7]
+ 179 002a 0132     		add	r2, r2, #1
+ 180 002c D2B2     		uxtb	r2, r2
+ 181 002e DA71     		strb	r2, [r3, #7]
+  52:.\7Seg.c      ****     
+  53:.\7Seg.c      ****         if(Temp < 0)
+ 182              		.loc 1 53 0
+ 183 0030 624B     		ldr	r3, .L18+4
+ 184 0032 1B78     		ldrb	r3, [r3]
+ 185 0034 5AB2     		sxtb	r2, r3
+ 186 0036 002A     		cmp	r2, #0
+ 187 0038 0FDA     		bge	.L13
+  54:.\7Seg.c      ****         {
+  55:.\7Seg.c      ****             VideoMemory[Scroll] = Symbol_minus;
+ 188              		.loc 1 55 0
+ 189 003a 02AA     		add	r2, sp, #8
+ 190 003c D179     		ldrb	r1, [r2, #7]
+ 191 003e C9B2     		uxtb	r1, r1
+ 192 0040 BF24     		mov	r4, #191
+ 193 0042 5D48     		ldr	r0, .L18
+ 194 0044 4454     		strb	r4, [r0, r1]
+  56:.\7Seg.c      ****             Temp = abs(Temp);
+ 195              		.loc 1 56 0
+ 196 0046 5BB2     		sxtb	r3, r3
+ 197 0048 D917     		asr	r1, r3, #31
+ 198 004a 5B18     		add	r3, r3, r1
+ 199 004c 4B40     		eor	r3, r1
+ 200 004e 5B49     		ldr	r1, .L18+4
+ 201 0050 0B70     		strb	r3, [r1]
+  57:.\7Seg.c      ****             Scroll++;
+ 202              		.loc 1 57 0
+ 203 0052 D379     		ldrb	r3, [r2, #7]
+ 204 0054 0133     		add	r3, r3, #1
+ 205 0056 DBB2     		uxtb	r3, r3
+ 206 0058 D371     		strb	r3, [r2, #7]
+ 207              	.L13:
+  58:.\7Seg.c      ****         }
+  59:.\7Seg.c      ****         if(Temp > 9)
+ 208              		.loc 1 59 0
+ 209 005a 584B     		ldr	r3, .L18+4
+ 210 005c 1878     		ldrb	r0, [r3]
+ 211 005e 43B2     		sxtb	r3, r0
+ 212 0060 092B     		cmp	r3, #9
+ 213 0062 22DD     		ble	.L14
+  60:.\7Seg.c      ****         {
+  61:.\7Seg.c      ****             VideoMemory[Scroll] = Font[Temp / 10];
+ 214              		.loc 1 61 0
+ 215 0064 02AB     		add	r3, sp, #8
+ 216 0066 DD1D     		add	r5, r3, #7
+ 217 0068 DE79     		ldrb	r6, [r3, #7]
+ 218 006a F6B2     		uxtb	r6, r6
+ 219 006c 43B2     		sxtb	r3, r0
+ 220 006e 0193     		str	r3, [sp, #4]
+ 221 0070 181C     		mov	r0, r3
+ 222 0072 0A21     		mov	r1, #10
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 6
+
+
+ 223 0074 FFF7FEFF 		bl	__aeabi_idiv
+ 224              	.LVL5:
+ 225 0078 40B2     		sxtb	r0, r0
+ 226 007a 514C     		ldr	r4, .L18+8
+ 227 007c 235C     		ldrb	r3, [r4, r0]
+ 228 007e DBB2     		uxtb	r3, r3
+ 229 0080 4D4F     		ldr	r7, .L18
+ 230 0082 BB55     		strb	r3, [r7, r6]
+  62:.\7Seg.c      ****             Scroll++;
+ 231              		.loc 1 62 0
+ 232 0084 2B78     		ldrb	r3, [r5]
+ 233 0086 0133     		add	r3, r3, #1
+ 234 0088 DBB2     		uxtb	r3, r3
+ 235 008a 2B70     		strb	r3, [r5]
+  63:.\7Seg.c      ****             VideoMemory[Scroll] = Font[Temp % 10];
+ 236              		.loc 1 63 0
+ 237 008c 2E78     		ldrb	r6, [r5]
+ 238 008e F6B2     		uxtb	r6, r6
+ 239 0090 0198     		ldr	r0, [sp, #4]
+ 240 0092 0A21     		mov	r1, #10
+ 241 0094 FFF7FEFF 		bl	__aeabi_idivmod
+ 242              	.LVL6:
+ 243 0098 49B2     		sxtb	r1, r1
+ 244 009a 635C     		ldrb	r3, [r4, r1]
+ 245 009c DBB2     		uxtb	r3, r3
+ 246 009e BB55     		strb	r3, [r7, r6]
+  64:.\7Seg.c      ****             Scroll++;
+ 247              		.loc 1 64 0
+ 248 00a0 2B78     		ldrb	r3, [r5]
+ 249 00a2 0133     		add	r3, r3, #1
+ 250 00a4 DBB2     		uxtb	r3, r3
+ 251 00a6 2B70     		strb	r3, [r5]
+ 252 00a8 0DE0     		b	.L15
+ 253              	.L14:
+  65:.\7Seg.c      ****         }
+  66:.\7Seg.c      ****         else
+  67:.\7Seg.c      ****         {
+  68:.\7Seg.c      ****             VideoMemory[Scroll] = Font[Temp];
+ 254              		.loc 1 68 0
+ 255 00aa 02AB     		add	r3, sp, #8
+ 256 00ac DA1D     		add	r2, r3, #7
+ 257 00ae DB79     		ldrb	r3, [r3, #7]
+ 258 00b0 DBB2     		uxtb	r3, r3
+ 259 00b2 40B2     		sxtb	r0, r0
+ 260 00b4 4249     		ldr	r1, .L18+8
+ 261 00b6 095C     		ldrb	r1, [r1, r0]
+ 262 00b8 C9B2     		uxtb	r1, r1
+ 263 00ba 3F48     		ldr	r0, .L18
+ 264 00bc C154     		strb	r1, [r0, r3]
+  69:.\7Seg.c      ****             Scroll++;
+ 265              		.loc 1 69 0
+ 266 00be 1378     		ldrb	r3, [r2]
+ 267 00c0 0133     		add	r3, r3, #1
+ 268 00c2 DBB2     		uxtb	r3, r3
+ 269 00c4 1370     		strb	r3, [r2]
+ 270              	.L15:
+  70:.\7Seg.c      ****         }
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 7
+
+
+  71:.\7Seg.c      ****     
+  72:.\7Seg.c      ****     VideoMemory[Scroll] = Symbol_Degrees;
+ 271              		.loc 1 72 0
+ 272 00c6 02AB     		add	r3, sp, #8
+ 273 00c8 D979     		ldrb	r1, [r3, #7]
+ 274 00ca C9B2     		uxtb	r1, r1
+ 275 00cc 3A4A     		ldr	r2, .L18
+ 276 00ce 9C20     		mov	r0, #156
+ 277 00d0 5054     		strb	r0, [r2, r1]
+  73:.\7Seg.c      ****     Scroll++;
+ 278              		.loc 1 73 0
+ 279 00d2 D979     		ldrb	r1, [r3, #7]
+ 280 00d4 0131     		add	r1, r1, #1
+ 281 00d6 C9B2     		uxtb	r1, r1
+ 282 00d8 D971     		strb	r1, [r3, #7]
+  74:.\7Seg.c      ****     VideoMemory[Scroll] = Symbol_C;
+ 283              		.loc 1 74 0
+ 284 00da D979     		ldrb	r1, [r3, #7]
+ 285 00dc C9B2     		uxtb	r1, r1
+ 286 00de 2A30     		add	r0, r0, #42
+ 287 00e0 5054     		strb	r0, [r2, r1]
+  75:.\7Seg.c      ****     Scroll++;
+ 288              		.loc 1 75 0
+ 289 00e2 D979     		ldrb	r1, [r3, #7]
+ 290 00e4 0131     		add	r1, r1, #1
+ 291 00e6 C9B2     		uxtb	r1, r1
+ 292 00e8 D971     		strb	r1, [r3, #7]
+  76:.\7Seg.c      ****     VideoMemory[Scroll] = Symbol_Space;
+ 293              		.loc 1 76 0
+ 294 00ea D979     		ldrb	r1, [r3, #7]
+ 295 00ec C9B2     		uxtb	r1, r1
+ 296 00ee 3930     		add	r0, r0, #57
+ 297 00f0 5054     		strb	r0, [r2, r1]
+  77:.\7Seg.c      ****     Scroll++;
+ 298              		.loc 1 77 0
+ 299 00f2 D979     		ldrb	r1, [r3, #7]
+ 300 00f4 0131     		add	r1, r1, #1
+ 301 00f6 C9B2     		uxtb	r1, r1
+ 302 00f8 D971     		strb	r1, [r3, #7]
+  78:.\7Seg.c      ****     VideoMemory[Scroll] = Symbol_H;
+ 303              		.loc 1 78 0
+ 304 00fa D979     		ldrb	r1, [r3, #7]
+ 305 00fc C9B2     		uxtb	r1, r1
+ 306 00fe 8924     		mov	r4, #137
+ 307 0100 5454     		strb	r4, [r2, r1]
+  79:.\7Seg.c      ****     Scroll++;
+ 308              		.loc 1 79 0
+ 309 0102 D979     		ldrb	r1, [r3, #7]
+ 310 0104 0131     		add	r1, r1, #1
+ 311 0106 C9B2     		uxtb	r1, r1
+ 312 0108 D971     		strb	r1, [r3, #7]
+  80:.\7Seg.c      ****     VideoMemory[Scroll] = Symbol_Space;
+ 313              		.loc 1 80 0
+ 314 010a D979     		ldrb	r1, [r3, #7]
+ 315 010c C9B2     		uxtb	r1, r1
+ 316 010e 5054     		strb	r0, [r2, r1]
+  81:.\7Seg.c      ****     Scroll++;
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 8
+
+
+ 317              		.loc 1 81 0
+ 318 0110 DA79     		ldrb	r2, [r3, #7]
+ 319 0112 0132     		add	r2, r2, #1
+ 320 0114 D2B2     		uxtb	r2, r2
+ 321 0116 DA71     		strb	r2, [r3, #7]
+  82:.\7Seg.c      ****     
+  83:.\7Seg.c      ****         if(Humi > 10)
+ 322              		.loc 1 83 0
+ 323 0118 2A4B     		ldr	r3, .L18+12
+ 324 011a 1C78     		ldrb	r4, [r3]
+ 325 011c 0A2C     		cmp	r4, #10
+ 326 011e 22D9     		bls	.L16
+  84:.\7Seg.c      ****         {
+  85:.\7Seg.c      ****             VideoMemory[Scroll] = Font[Humi / 10];
+ 327              		.loc 1 85 0
+ 328 0120 02AB     		add	r3, sp, #8
+ 329 0122 DD1D     		add	r5, r3, #7
+ 330 0124 DE79     		ldrb	r6, [r3, #7]
+ 331 0126 F6B2     		uxtb	r6, r6
+ 332 0128 201C     		mov	r0, r4
+ 333 012a 0A21     		mov	r1, #10
+ 334 012c FFF7FEFF 		bl	__aeabi_uidiv
+ 335              	.LVL7:
+ 336 0130 C0B2     		uxtb	r0, r0
+ 337 0132 234B     		ldr	r3, .L18+8
+ 338 0134 9846     		mov	r8, r3
+ 339 0136 1B5C     		ldrb	r3, [r3, r0]
+ 340 0138 DBB2     		uxtb	r3, r3
+ 341 013a 1F4F     		ldr	r7, .L18
+ 342 013c BB55     		strb	r3, [r7, r6]
+  86:.\7Seg.c      ****             Scroll++;
+ 343              		.loc 1 86 0
+ 344 013e 2B78     		ldrb	r3, [r5]
+ 345 0140 0133     		add	r3, r3, #1
+ 346 0142 DBB2     		uxtb	r3, r3
+ 347 0144 2B70     		strb	r3, [r5]
+  87:.\7Seg.c      ****             VideoMemory[Scroll] = Font[Humi % 10];
+ 348              		.loc 1 87 0
+ 349 0146 2E78     		ldrb	r6, [r5]
+ 350 0148 F6B2     		uxtb	r6, r6
+ 351 014a 201C     		mov	r0, r4
+ 352 014c 0A21     		mov	r1, #10
+ 353 014e FFF7FEFF 		bl	__aeabi_uidivmod
+ 354              	.LVL8:
+ 355 0152 C9B2     		uxtb	r1, r1
+ 356 0154 4346     		mov	r3, r8
+ 357 0156 5B5C     		ldrb	r3, [r3, r1]
+ 358 0158 DBB2     		uxtb	r3, r3
+ 359 015a BB55     		strb	r3, [r7, r6]
+  88:.\7Seg.c      ****             Scroll++;
+ 360              		.loc 1 88 0
+ 361 015c 2B78     		ldrb	r3, [r5]
+ 362 015e 0133     		add	r3, r3, #1
+ 363 0160 DBB2     		uxtb	r3, r3
+ 364 0162 2B70     		strb	r3, [r5]
+ 365 0164 0CE0     		b	.L17
+ 366              	.L16:
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 9
+
+
+  89:.\7Seg.c      ****         }
+  90:.\7Seg.c      ****         else
+  91:.\7Seg.c      ****         {
+  92:.\7Seg.c      ****             VideoMemory[Scroll] = Font[Humi];
+ 367              		.loc 1 92 0
+ 368 0166 02AB     		add	r3, sp, #8
+ 369 0168 DA1D     		add	r2, r3, #7
+ 370 016a DB79     		ldrb	r3, [r3, #7]
+ 371 016c DBB2     		uxtb	r3, r3
+ 372 016e 1449     		ldr	r1, .L18+8
+ 373 0170 095D     		ldrb	r1, [r1, r4]
+ 374 0172 C9B2     		uxtb	r1, r1
+ 375 0174 1048     		ldr	r0, .L18
+ 376 0176 C154     		strb	r1, [r0, r3]
+  93:.\7Seg.c      ****             Scroll++;
+ 377              		.loc 1 93 0
+ 378 0178 1378     		ldrb	r3, [r2]
+ 379 017a 0133     		add	r3, r3, #1
+ 380 017c DBB2     		uxtb	r3, r3
+ 381 017e 1370     		strb	r3, [r2]
+ 382              	.L17:
+  94:.\7Seg.c      ****         }
+  95:.\7Seg.c      ****         VideoMemory[Scroll] = Symbol_Degrees;
+ 383              		.loc 1 95 0
+ 384 0180 02AB     		add	r3, sp, #8
+ 385 0182 DA79     		ldrb	r2, [r3, #7]
+ 386 0184 D2B2     		uxtb	r2, r2
+ 387 0186 0C49     		ldr	r1, .L18
+ 388 0188 9C20     		mov	r0, #156
+ 389 018a 8854     		strb	r0, [r1, r2]
+  96:.\7Seg.c      ****         Scroll++;
+ 390              		.loc 1 96 0
+ 391 018c DA79     		ldrb	r2, [r3, #7]
+ 392 018e 0132     		add	r2, r2, #1
+ 393 0190 D2B2     		uxtb	r2, r2
+ 394 0192 DA71     		strb	r2, [r3, #7]
+  97:.\7Seg.c      ****         VideoMemory[Scroll] = Symbol_Procent;
+ 395              		.loc 1 97 0
+ 396 0194 DA79     		ldrb	r2, [r3, #7]
+ 397 0196 D2B2     		uxtb	r2, r2
+ 398 0198 0730     		add	r0, r0, #7
+ 399 019a 8854     		strb	r0, [r1, r2]
+  98:.\7Seg.c      ****         Scroll++;
+ 400              		.loc 1 98 0
+ 401 019c DA79     		ldrb	r2, [r3, #7]
+ 402 019e 0132     		add	r2, r2, #1
+ 403 01a0 D2B2     		uxtb	r2, r2
+ 404 01a2 DA71     		strb	r2, [r3, #7]
+  95:.\7Seg.c      ****         Scroll++;
+ 405              		.loc 1 95 0
+ 406 01a4 0733     		add	r3, r3, #7
+  99:.\7Seg.c      ****         VideoMemory[Scroll] = Symbol_Stop;
+ 407              		.loc 1 99 0
+ 408 01a6 1B78     		ldrb	r3, [r3]
+ 409 01a8 DBB2     		uxtb	r3, r3
+ 410 01aa 1122     		mov	r2, #17
+ 411 01ac CA54     		strb	r2, [r1, r3]
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 10
+
+
+ 100:.\7Seg.c      **** }
+ 412              		.loc 1 100 0
+ 413 01ae 04B0     		add	sp, sp, #16
+ 414              		@ sp needed
+ 415 01b0 04BC     		pop	{r2}
+ 416 01b2 9046     		mov	r8, r2
+ 417 01b4 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 418              	.L19:
+ 419 01b6 C046     		.align	2
+ 420              	.L18:
+ 421 01b8 00000000 		.word	VideoMemory
+ 422 01bc 00000000 		.word	Temp
+ 423 01c0 00000000 		.word	.LANCHOR0
+ 424 01c4 00000000 		.word	Humi
+ 425              		.cfi_endproc
+ 426              	.LFE35:
+ 427              		.size	Display_Set_Video_Memory, .-Display_Set_Video_Memory
+ 428              		.section	.text.Display_Scroll_Video_Memory,"ax",%progbits
+ 429              		.align	2
+ 430              		.global	Display_Scroll_Video_Memory
+ 431              		.code	16
+ 432              		.thumb_func
+ 433              		.type	Display_Scroll_Video_Memory, %function
+ 434              	Display_Scroll_Video_Memory:
+ 435              	.LFB36:
+ 101:.\7Seg.c      **** 
+ 102:.\7Seg.c      **** void Display_Scroll_Video_Memory(uint8 Scroll)
+ 103:.\7Seg.c      **** {
+ 436              		.loc 1 103 0
+ 437              		.cfi_startproc
+ 438              	.LVL9:
+ 439 0000 38B5     		push	{r3, r4, r5, lr}
+ 440              		.cfi_def_cfa_offset 16
+ 441              		.cfi_offset 3, -16
+ 442              		.cfi_offset 4, -12
+ 443              		.cfi_offset 5, -8
+ 444              		.cfi_offset 14, -4
+ 445 0002 051C     		mov	r5, r0
+ 446              	.LVL10:
+ 104:.\7Seg.c      ****     uint8 Mux;
+ 105:.\7Seg.c      ****     for(Mux = 0; Mux < 4; Mux++)
+ 447              		.loc 1 105 0
+ 448 0004 0024     		mov	r4, #0
+ 449 0006 16E0     		b	.L21
+ 450              	.LVL11:
+ 451              	.L24:
+ 106:.\7Seg.c      ****     {
+ 107:.\7Seg.c      ****         SCB_1_SpiUartWriteTxData(VideoBufer[Scroll + Mux]);
+ 452              		.loc 1 107 0
+ 453 0008 2B19     		add	r3, r5, r4
+ 454 000a 0C4A     		ldr	r2, .L25
+ 455 000c D05C     		ldrb	r0, [r2, r3]
+ 456 000e C0B2     		uxtb	r0, r0
+ 457 0010 FFF7FEFF 		bl	SCB_1_SpiUartWriteTxData
+ 458              	.LVL12:
+ 459              	.L23:
+ 108:.\7Seg.c      ****         while (0u != (SCB_1_SpiUartGetTxBufferSize() + SCB_1_GET_TX_FIFO_SR_VALID))
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 11
+
+
+ 460              		.loc 1 108 0 discriminator 5
+ 461 0014 FFF7FEFF 		bl	SCB_1_SpiUartGetTxBufferSize
+ 462              	.LVL13:
+ 463 0018 094B     		ldr	r3, .L25+4
+ 464 001a 1B68     		ldr	r3, [r3]
+ 465 001c 8022     		mov	r2, #128
+ 466 001e 1202     		lsl	r2, r2, #8
+ 467 0020 1340     		and	r3, r2
+ 468 0022 00D0     		beq	.L22
+ 469              		.loc 1 108 0 is_stmt 0
+ 470 0024 0123     		mov	r3, #1
+ 471              	.L22:
+ 472              		.loc 1 108 0 discriminator 4
+ 473 0026 C318     		add	r3, r0, r3
+ 474 0028 002B     		cmp	r3, #0
+ 475 002a F3D1     		bne	.L23
+ 109:.\7Seg.c      ****         {
+ 110:.\7Seg.c      ****         }
+ 111:.\7Seg.c      ****         PWM_Mux_Reg_Write(Mux);
+ 476              		.loc 1 111 0 is_stmt 1 discriminator 2
+ 477 002c 201C     		mov	r0, r4
+ 478 002e FFF7FEFF 		bl	PWM_Mux_Reg_Write
+ 479              	.LVL14:
+ 105:.\7Seg.c      ****     {
+ 480              		.loc 1 105 0 discriminator 2
+ 481 0032 0134     		add	r4, r4, #1
+ 482              	.LVL15:
+ 483 0034 E4B2     		uxtb	r4, r4
+ 484              	.LVL16:
+ 485              	.L21:
+ 105:.\7Seg.c      ****     {
+ 486              		.loc 1 105 0 is_stmt 0 discriminator 1
+ 487 0036 032C     		cmp	r4, #3
+ 488 0038 E6D9     		bls	.L24
+ 112:.\7Seg.c      ****     }
+ 113:.\7Seg.c      **** }
+ 489              		.loc 1 113 0 is_stmt 1
+ 490              		@ sp needed
+ 491              	.LVL17:
+ 492 003a 38BD     		pop	{r3, r4, r5, pc}
+ 493              	.L26:
+ 494              		.align	2
+ 495              	.L25:
+ 496 003c 00000000 		.word	VideoBufer
+ 497 0040 08020640 		.word	1074135560
+ 498              		.cfi_endproc
+ 499              	.LFE36:
+ 500              		.size	Display_Scroll_Video_Memory, .-Display_Scroll_Video_Memory
+ 501              		.comm	VideoMemory,17,4
+ 502              		.comm	VideoBufer,4,4
+ 503              		.global	Font
+ 504              		.data
+ 505              		.align	2
+ 506              		.set	.LANCHOR0,. + 0
+ 507              		.type	Font, %object
+ 508              		.size	Font, 10
+ 509              	Font:
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 12
+
+
+ 510 0000 C0       		.byte	-64
+ 511 0001 F9       		.byte	-7
+ 512 0002 A4       		.byte	-92
+ 513 0003 B0       		.byte	-80
+ 514 0004 99       		.byte	-103
+ 515 0005 92       		.byte	-110
+ 516 0006 82       		.byte	-126
+ 517 0007 F8       		.byte	-8
+ 518 0008 80       		.byte	-128
+ 519 0009 90       		.byte	-112
+ 520 000a 0000     		.text
+ 521              	.Letext0:
+ 522              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 523              		.file 3 "Generated_Source\\PSoC4/PWM_Mux_Reg.h"
+ 524              		.file 4 "Generated_Source\\PSoC4/SCB_1_SPI_UART.h"
+ 525              		.section	.debug_info,"",%progbits
+ 526              	.Ldebug_info0:
+ 527 0000 64020000 		.4byte	0x264
+ 528 0004 0400     		.2byte	0x4
+ 529 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 530 000a 04       		.byte	0x4
+ 531 000b 01       		.uleb128 0x1
+ 532 000c 48010000 		.4byte	.LASF30
+ 533 0010 01       		.byte	0x1
+ 534 0011 D6010000 		.4byte	.LASF31
+ 535 0015 05020000 		.4byte	.LASF32
+ 536 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 537 001d 00000000 		.4byte	0
+ 538 0021 00000000 		.4byte	.Ldebug_line0
+ 539 0025 02       		.uleb128 0x2
+ 540 0026 01       		.byte	0x1
+ 541 0027 06       		.byte	0x6
+ 542 0028 2D020000 		.4byte	.LASF0
+ 543 002c 02       		.uleb128 0x2
+ 544 002d 01       		.byte	0x1
+ 545 002e 08       		.byte	0x8
+ 546 002f B4000000 		.4byte	.LASF1
+ 547 0033 02       		.uleb128 0x2
+ 548 0034 02       		.byte	0x2
+ 549 0035 05       		.byte	0x5
+ 550 0036 C9000000 		.4byte	.LASF2
+ 551 003a 02       		.uleb128 0x2
+ 552 003b 02       		.byte	0x2
+ 553 003c 07       		.byte	0x7
+ 554 003d 0D000000 		.4byte	.LASF3
+ 555 0041 02       		.uleb128 0x2
+ 556 0042 04       		.byte	0x4
+ 557 0043 05       		.byte	0x5
+ 558 0044 FC010000 		.4byte	.LASF4
+ 559 0048 02       		.uleb128 0x2
+ 560 0049 04       		.byte	0x4
+ 561 004a 07       		.byte	0x7
+ 562 004b 58000000 		.4byte	.LASF5
+ 563 004f 02       		.uleb128 0x2
+ 564 0050 08       		.byte	0x8
+ 565 0051 05       		.byte	0x5
+ 566 0052 2A010000 		.4byte	.LASF6
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 13
+
+
+ 567 0056 02       		.uleb128 0x2
+ 568 0057 08       		.byte	0x8
+ 569 0058 07       		.byte	0x7
+ 570 0059 F8000000 		.4byte	.LASF7
+ 571 005d 03       		.uleb128 0x3
+ 572 005e 04       		.byte	0x4
+ 573 005f 05       		.byte	0x5
+ 574 0060 696E7400 		.ascii	"int\000"
+ 575 0064 02       		.uleb128 0x2
+ 576 0065 04       		.byte	0x4
+ 577 0066 07       		.byte	0x7
+ 578 0067 20000000 		.4byte	.LASF8
+ 579 006b 04       		.uleb128 0x4
+ 580 006c 83000000 		.4byte	.LASF9
+ 581 0070 02       		.byte	0x2
+ 582 0071 C2       		.byte	0xc2
+ 583 0072 2C000000 		.4byte	0x2c
+ 584 0076 04       		.uleb128 0x4
+ 585 0077 D8000000 		.4byte	.LASF10
+ 586 007b 02       		.byte	0x2
+ 587 007c C4       		.byte	0xc4
+ 588 007d 48000000 		.4byte	0x48
+ 589 0081 04       		.uleb128 0x4
+ 590 0082 D3000000 		.4byte	.LASF11
+ 591 0086 02       		.byte	0x2
+ 592 0087 C5       		.byte	0xc5
+ 593 0088 25000000 		.4byte	0x25
+ 594 008c 02       		.uleb128 0x2
+ 595 008d 04       		.byte	0x4
+ 596 008e 04       		.byte	0x4
+ 597 008f 46000000 		.4byte	.LASF12
+ 598 0093 02       		.uleb128 0x2
+ 599 0094 08       		.byte	0x8
+ 600 0095 04       		.byte	0x4
+ 601 0096 C2000000 		.4byte	.LASF13
+ 602 009a 02       		.uleb128 0x2
+ 603 009b 01       		.byte	0x1
+ 604 009c 08       		.byte	0x8
+ 605 009d 43010000 		.4byte	.LASF14
+ 606 00a1 05       		.uleb128 0x5
+ 607 00a2 6B000000 		.4byte	0x6b
+ 608 00a6 06       		.uleb128 0x6
+ 609 00a7 00000000 		.4byte	.LASF15
+ 610 00ab 02       		.byte	0x2
+ 611 00ac 6E01     		.2byte	0x16e
+ 612 00ae B2000000 		.4byte	0xb2
+ 613 00b2 05       		.uleb128 0x5
+ 614 00b3 76000000 		.4byte	0x76
+ 615 00b7 02       		.uleb128 0x2
+ 616 00b8 04       		.byte	0x4
+ 617 00b9 07       		.byte	0x7
+ 618 00ba 21010000 		.4byte	.LASF16
+ 619 00be 07       		.uleb128 0x7
+ 620 00bf DF000000 		.4byte	.LASF33
+ 621 00c3 01       		.byte	0x1
+ 622 00c4 18       		.byte	0x18
+ 623 00c5 00000000 		.4byte	.LFB33
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 14
+
+
+ 624 00c9 34000000 		.4byte	.LFE33-.LFB33
+ 625 00cd 01       		.uleb128 0x1
+ 626 00ce 9C       		.byte	0x9c
+ 627 00cf E2000000 		.4byte	0xe2
+ 628 00d3 08       		.uleb128 0x8
+ 629 00d4 06000000 		.4byte	.LASF21
+ 630 00d8 01       		.byte	0x1
+ 631 00d9 1A       		.byte	0x1a
+ 632 00da A1000000 		.4byte	0xa1
+ 633 00de 02       		.uleb128 0x2
+ 634 00df 91       		.byte	0x91
+ 635 00e0 7F       		.sleb128 -1
+ 636 00e1 00       		.byte	0
+ 637 00e2 09       		.uleb128 0x9
+ 638 00e3 32000000 		.4byte	.LASF19
+ 639 00e7 01       		.byte	0x1
+ 640 00e8 21       		.byte	0x21
+ 641 00e9 00000000 		.4byte	.LFB34
+ 642 00ed 40000000 		.4byte	.LFE34-.LFB34
+ 643 00f1 01       		.uleb128 0x1
+ 644 00f2 9C       		.byte	0x9c
+ 645 00f3 31010000 		.4byte	0x131
+ 646 00f7 0A       		.uleb128 0xa
+ 647 00f8 F1000000 		.4byte	.LASF17
+ 648 00fc 01       		.byte	0x1
+ 649 00fd 21       		.byte	0x21
+ 650 00fe 6B000000 		.4byte	0x6b
+ 651 0102 00000000 		.4byte	.LLST0
+ 652 0106 0A       		.uleb128 0xa
+ 653 0107 14010000 		.4byte	.LASF18
+ 654 010b 01       		.byte	0x1
+ 655 010c 21       		.byte	0x21
+ 656 010d 6B000000 		.4byte	0x6b
+ 657 0111 21000000 		.4byte	.LLST1
+ 658 0115 0B       		.uleb128 0xb
+ 659 0116 12000000 		.4byte	.LVL2
+ 660 011a 38020000 		.4byte	0x238
+ 661 011e 0B       		.uleb128 0xb
+ 662 011f 1C000000 		.4byte	.LVL3
+ 663 0123 49020000 		.4byte	0x249
+ 664 0127 0B       		.uleb128 0xb
+ 665 0128 20000000 		.4byte	.LVL4
+ 666 012c 5B020000 		.4byte	0x25b
+ 667 0130 00       		.byte	0
+ 668 0131 0C       		.uleb128 0xc
+ 669 0132 6A000000 		.4byte	.LASF20
+ 670 0136 01       		.byte	0x1
+ 671 0137 2D       		.byte	0x2d
+ 672 0138 00000000 		.4byte	.LFB35
+ 673 013c C8010000 		.4byte	.LFE35-.LFB35
+ 674 0140 01       		.uleb128 0x1
+ 675 0141 9C       		.byte	0x9c
+ 676 0142 55010000 		.4byte	0x155
+ 677 0146 08       		.uleb128 0x8
+ 678 0147 06000000 		.4byte	.LASF21
+ 679 014b 01       		.byte	0x1
+ 680 014c 2F       		.byte	0x2f
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 15
+
+
+ 681 014d A1000000 		.4byte	0xa1
+ 682 0151 02       		.uleb128 0x2
+ 683 0152 91       		.byte	0x91
+ 684 0153 67       		.sleb128 -25
+ 685 0154 00       		.byte	0
+ 686 0155 09       		.uleb128 0x9
+ 687 0156 39020000 		.4byte	.LASF22
+ 688 015a 01       		.byte	0x1
+ 689 015b 66       		.byte	0x66
+ 690 015c 00000000 		.4byte	.LFB36
+ 691 0160 44000000 		.4byte	.LFE36-.LFB36
+ 692 0164 01       		.uleb128 0x1
+ 693 0165 9C       		.byte	0x9c
+ 694 0166 AB010000 		.4byte	0x1ab
+ 695 016a 0A       		.uleb128 0xa
+ 696 016b 06000000 		.4byte	.LASF21
+ 697 016f 01       		.byte	0x1
+ 698 0170 66       		.byte	0x66
+ 699 0171 6B000000 		.4byte	0x6b
+ 700 0175 42000000 		.4byte	.LLST2
+ 701 0179 0D       		.uleb128 0xd
+ 702 017a 4D757800 		.ascii	"Mux\000"
+ 703 017e 01       		.byte	0x1
+ 704 017f 68       		.byte	0x68
+ 705 0180 6B000000 		.4byte	0x6b
+ 706 0184 63000000 		.4byte	.LLST3
+ 707 0188 0B       		.uleb128 0xb
+ 708 0189 14000000 		.4byte	.LVL12
+ 709 018d 49020000 		.4byte	0x249
+ 710 0191 0B       		.uleb128 0xb
+ 711 0192 18000000 		.4byte	.LVL13
+ 712 0196 5B020000 		.4byte	0x25b
+ 713 019a 0E       		.uleb128 0xe
+ 714 019b 32000000 		.4byte	.LVL14
+ 715 019f 38020000 		.4byte	0x238
+ 716 01a3 0F       		.uleb128 0xf
+ 717 01a4 01       		.uleb128 0x1
+ 718 01a5 50       		.byte	0x50
+ 719 01a6 02       		.uleb128 0x2
+ 720 01a7 74       		.byte	0x74
+ 721 01a8 00       		.sleb128 0
+ 722 01a9 00       		.byte	0
+ 723 01aa 00       		.byte	0
+ 724 01ab 10       		.uleb128 0x10
+ 725 01ac 6B000000 		.4byte	0x6b
+ 726 01b0 BB010000 		.4byte	0x1bb
+ 727 01b4 11       		.uleb128 0x11
+ 728 01b5 B7000000 		.4byte	0xb7
+ 729 01b9 09       		.byte	0x9
+ 730 01ba 00       		.byte	0
+ 731 01bb 12       		.uleb128 0x12
+ 732 01bc 2D000000 		.4byte	.LASF23
+ 733 01c0 01       		.byte	0x1
+ 734 01c1 10       		.byte	0x10
+ 735 01c2 CC010000 		.4byte	0x1cc
+ 736 01c6 05       		.uleb128 0x5
+ 737 01c7 03       		.byte	0x3
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 16
+
+
+ 738 01c8 00000000 		.4byte	Font
+ 739 01cc 13       		.uleb128 0x13
+ 740 01cd D1010000 		.4byte	0x1d1
+ 741 01d1 05       		.uleb128 0x5
+ 742 01d2 AB010000 		.4byte	0x1ab
+ 743 01d6 10       		.uleb128 0x10
+ 744 01d7 6B000000 		.4byte	0x6b
+ 745 01db E6010000 		.4byte	0x1e6
+ 746 01df 11       		.uleb128 0x11
+ 747 01e0 B7000000 		.4byte	0xb7
+ 748 01e4 03       		.byte	0x3
+ 749 01e5 00       		.byte	0
+ 750 01e6 12       		.uleb128 0x12
+ 751 01e7 38010000 		.4byte	.LASF24
+ 752 01eb 01       		.byte	0x1
+ 753 01ec 11       		.byte	0x11
+ 754 01ed F7010000 		.4byte	0x1f7
+ 755 01f1 05       		.uleb128 0x5
+ 756 01f2 03       		.byte	0x3
+ 757 01f3 00000000 		.4byte	VideoBufer
+ 758 01f7 05       		.uleb128 0x5
+ 759 01f8 D6010000 		.4byte	0x1d6
+ 760 01fc 10       		.uleb128 0x10
+ 761 01fd 6B000000 		.4byte	0x6b
+ 762 0201 0C020000 		.4byte	0x20c
+ 763 0205 11       		.uleb128 0x11
+ 764 0206 B7000000 		.4byte	0xb7
+ 765 020a 10       		.byte	0x10
+ 766 020b 00       		.byte	0
+ 767 020c 12       		.uleb128 0x12
+ 768 020d 4C000000 		.4byte	.LASF25
+ 769 0211 01       		.byte	0x1
+ 770 0212 12       		.byte	0x12
+ 771 0213 1D020000 		.4byte	0x21d
+ 772 0217 05       		.uleb128 0x5
+ 773 0218 03       		.byte	0x3
+ 774 0219 00000000 		.4byte	VideoMemory
+ 775 021d 05       		.uleb128 0x5
+ 776 021e FC010000 		.4byte	0x1fc
+ 777 0222 14       		.uleb128 0x14
+ 778 0223 1C010000 		.4byte	.LASF26
+ 779 0227 01       		.byte	0x1
+ 780 0228 13       		.byte	0x13
+ 781 0229 81000000 		.4byte	0x81
+ 782 022d 14       		.uleb128 0x14
+ 783 022e 0F010000 		.4byte	.LASF27
+ 784 0232 01       		.byte	0x1
+ 785 0233 14       		.byte	0x14
+ 786 0234 6B000000 		.4byte	0x6b
+ 787 0238 15       		.uleb128 0x15
+ 788 0239 89000000 		.4byte	.LASF28
+ 789 023d 03       		.byte	0x3
+ 790 023e 27       		.byte	0x27
+ 791 023f 49020000 		.4byte	0x249
+ 792 0243 16       		.uleb128 0x16
+ 793 0244 6B000000 		.4byte	0x6b
+ 794 0248 00       		.byte	0
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 17
+
+
+ 795 0249 17       		.uleb128 0x17
+ 796 024a 9B000000 		.4byte	.LASF29
+ 797 024e 04       		.byte	0x4
+ 798 024f 8C01     		.2byte	0x18c
+ 799 0251 5B020000 		.4byte	0x25b
+ 800 0255 16       		.uleb128 0x16
+ 801 0256 76000000 		.4byte	0x76
+ 802 025a 00       		.byte	0
+ 803 025b 18       		.uleb128 0x18
+ 804 025c DF010000 		.4byte	.LASF34
+ 805 0260 04       		.byte	0x4
+ 806 0261 8E01     		.2byte	0x18e
+ 807 0263 76000000 		.4byte	0x76
+ 808 0267 00       		.byte	0
+ 809              		.section	.debug_abbrev,"",%progbits
+ 810              	.Ldebug_abbrev0:
+ 811 0000 01       		.uleb128 0x1
+ 812 0001 11       		.uleb128 0x11
+ 813 0002 01       		.byte	0x1
+ 814 0003 25       		.uleb128 0x25
+ 815 0004 0E       		.uleb128 0xe
+ 816 0005 13       		.uleb128 0x13
+ 817 0006 0B       		.uleb128 0xb
+ 818 0007 03       		.uleb128 0x3
+ 819 0008 0E       		.uleb128 0xe
+ 820 0009 1B       		.uleb128 0x1b
+ 821 000a 0E       		.uleb128 0xe
+ 822 000b 55       		.uleb128 0x55
+ 823 000c 17       		.uleb128 0x17
+ 824 000d 11       		.uleb128 0x11
+ 825 000e 01       		.uleb128 0x1
+ 826 000f 10       		.uleb128 0x10
+ 827 0010 17       		.uleb128 0x17
+ 828 0011 00       		.byte	0
+ 829 0012 00       		.byte	0
+ 830 0013 02       		.uleb128 0x2
+ 831 0014 24       		.uleb128 0x24
+ 832 0015 00       		.byte	0
+ 833 0016 0B       		.uleb128 0xb
+ 834 0017 0B       		.uleb128 0xb
+ 835 0018 3E       		.uleb128 0x3e
+ 836 0019 0B       		.uleb128 0xb
+ 837 001a 03       		.uleb128 0x3
+ 838 001b 0E       		.uleb128 0xe
+ 839 001c 00       		.byte	0
+ 840 001d 00       		.byte	0
+ 841 001e 03       		.uleb128 0x3
+ 842 001f 24       		.uleb128 0x24
+ 843 0020 00       		.byte	0
+ 844 0021 0B       		.uleb128 0xb
+ 845 0022 0B       		.uleb128 0xb
+ 846 0023 3E       		.uleb128 0x3e
+ 847 0024 0B       		.uleb128 0xb
+ 848 0025 03       		.uleb128 0x3
+ 849 0026 08       		.uleb128 0x8
+ 850 0027 00       		.byte	0
+ 851 0028 00       		.byte	0
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 18
+
+
+ 852 0029 04       		.uleb128 0x4
+ 853 002a 16       		.uleb128 0x16
+ 854 002b 00       		.byte	0
+ 855 002c 03       		.uleb128 0x3
+ 856 002d 0E       		.uleb128 0xe
+ 857 002e 3A       		.uleb128 0x3a
+ 858 002f 0B       		.uleb128 0xb
+ 859 0030 3B       		.uleb128 0x3b
+ 860 0031 0B       		.uleb128 0xb
+ 861 0032 49       		.uleb128 0x49
+ 862 0033 13       		.uleb128 0x13
+ 863 0034 00       		.byte	0
+ 864 0035 00       		.byte	0
+ 865 0036 05       		.uleb128 0x5
+ 866 0037 35       		.uleb128 0x35
+ 867 0038 00       		.byte	0
+ 868 0039 49       		.uleb128 0x49
+ 869 003a 13       		.uleb128 0x13
+ 870 003b 00       		.byte	0
+ 871 003c 00       		.byte	0
+ 872 003d 06       		.uleb128 0x6
+ 873 003e 16       		.uleb128 0x16
+ 874 003f 00       		.byte	0
+ 875 0040 03       		.uleb128 0x3
+ 876 0041 0E       		.uleb128 0xe
+ 877 0042 3A       		.uleb128 0x3a
+ 878 0043 0B       		.uleb128 0xb
+ 879 0044 3B       		.uleb128 0x3b
+ 880 0045 05       		.uleb128 0x5
+ 881 0046 49       		.uleb128 0x49
+ 882 0047 13       		.uleb128 0x13
+ 883 0048 00       		.byte	0
+ 884 0049 00       		.byte	0
+ 885 004a 07       		.uleb128 0x7
+ 886 004b 2E       		.uleb128 0x2e
+ 887 004c 01       		.byte	0x1
+ 888 004d 3F       		.uleb128 0x3f
+ 889 004e 19       		.uleb128 0x19
+ 890 004f 03       		.uleb128 0x3
+ 891 0050 0E       		.uleb128 0xe
+ 892 0051 3A       		.uleb128 0x3a
+ 893 0052 0B       		.uleb128 0xb
+ 894 0053 3B       		.uleb128 0x3b
+ 895 0054 0B       		.uleb128 0xb
+ 896 0055 11       		.uleb128 0x11
+ 897 0056 01       		.uleb128 0x1
+ 898 0057 12       		.uleb128 0x12
+ 899 0058 06       		.uleb128 0x6
+ 900 0059 40       		.uleb128 0x40
+ 901 005a 18       		.uleb128 0x18
+ 902 005b 9742     		.uleb128 0x2117
+ 903 005d 19       		.uleb128 0x19
+ 904 005e 01       		.uleb128 0x1
+ 905 005f 13       		.uleb128 0x13
+ 906 0060 00       		.byte	0
+ 907 0061 00       		.byte	0
+ 908 0062 08       		.uleb128 0x8
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 19
+
+
+ 909 0063 34       		.uleb128 0x34
+ 910 0064 00       		.byte	0
+ 911 0065 03       		.uleb128 0x3
+ 912 0066 0E       		.uleb128 0xe
+ 913 0067 3A       		.uleb128 0x3a
+ 914 0068 0B       		.uleb128 0xb
+ 915 0069 3B       		.uleb128 0x3b
+ 916 006a 0B       		.uleb128 0xb
+ 917 006b 49       		.uleb128 0x49
+ 918 006c 13       		.uleb128 0x13
+ 919 006d 02       		.uleb128 0x2
+ 920 006e 18       		.uleb128 0x18
+ 921 006f 00       		.byte	0
+ 922 0070 00       		.byte	0
+ 923 0071 09       		.uleb128 0x9
+ 924 0072 2E       		.uleb128 0x2e
+ 925 0073 01       		.byte	0x1
+ 926 0074 3F       		.uleb128 0x3f
+ 927 0075 19       		.uleb128 0x19
+ 928 0076 03       		.uleb128 0x3
+ 929 0077 0E       		.uleb128 0xe
+ 930 0078 3A       		.uleb128 0x3a
+ 931 0079 0B       		.uleb128 0xb
+ 932 007a 3B       		.uleb128 0x3b
+ 933 007b 0B       		.uleb128 0xb
+ 934 007c 27       		.uleb128 0x27
+ 935 007d 19       		.uleb128 0x19
+ 936 007e 11       		.uleb128 0x11
+ 937 007f 01       		.uleb128 0x1
+ 938 0080 12       		.uleb128 0x12
+ 939 0081 06       		.uleb128 0x6
+ 940 0082 40       		.uleb128 0x40
+ 941 0083 18       		.uleb128 0x18
+ 942 0084 9742     		.uleb128 0x2117
+ 943 0086 19       		.uleb128 0x19
+ 944 0087 01       		.uleb128 0x1
+ 945 0088 13       		.uleb128 0x13
+ 946 0089 00       		.byte	0
+ 947 008a 00       		.byte	0
+ 948 008b 0A       		.uleb128 0xa
+ 949 008c 05       		.uleb128 0x5
+ 950 008d 00       		.byte	0
+ 951 008e 03       		.uleb128 0x3
+ 952 008f 0E       		.uleb128 0xe
+ 953 0090 3A       		.uleb128 0x3a
+ 954 0091 0B       		.uleb128 0xb
+ 955 0092 3B       		.uleb128 0x3b
+ 956 0093 0B       		.uleb128 0xb
+ 957 0094 49       		.uleb128 0x49
+ 958 0095 13       		.uleb128 0x13
+ 959 0096 02       		.uleb128 0x2
+ 960 0097 17       		.uleb128 0x17
+ 961 0098 00       		.byte	0
+ 962 0099 00       		.byte	0
+ 963 009a 0B       		.uleb128 0xb
+ 964 009b 898201   		.uleb128 0x4109
+ 965 009e 00       		.byte	0
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 20
+
+
+ 966 009f 11       		.uleb128 0x11
+ 967 00a0 01       		.uleb128 0x1
+ 968 00a1 31       		.uleb128 0x31
+ 969 00a2 13       		.uleb128 0x13
+ 970 00a3 00       		.byte	0
+ 971 00a4 00       		.byte	0
+ 972 00a5 0C       		.uleb128 0xc
+ 973 00a6 2E       		.uleb128 0x2e
+ 974 00a7 01       		.byte	0x1
+ 975 00a8 3F       		.uleb128 0x3f
+ 976 00a9 19       		.uleb128 0x19
+ 977 00aa 03       		.uleb128 0x3
+ 978 00ab 0E       		.uleb128 0xe
+ 979 00ac 3A       		.uleb128 0x3a
+ 980 00ad 0B       		.uleb128 0xb
+ 981 00ae 3B       		.uleb128 0x3b
+ 982 00af 0B       		.uleb128 0xb
+ 983 00b0 27       		.uleb128 0x27
+ 984 00b1 19       		.uleb128 0x19
+ 985 00b2 11       		.uleb128 0x11
+ 986 00b3 01       		.uleb128 0x1
+ 987 00b4 12       		.uleb128 0x12
+ 988 00b5 06       		.uleb128 0x6
+ 989 00b6 40       		.uleb128 0x40
+ 990 00b7 18       		.uleb128 0x18
+ 991 00b8 9642     		.uleb128 0x2116
+ 992 00ba 19       		.uleb128 0x19
+ 993 00bb 01       		.uleb128 0x1
+ 994 00bc 13       		.uleb128 0x13
+ 995 00bd 00       		.byte	0
+ 996 00be 00       		.byte	0
+ 997 00bf 0D       		.uleb128 0xd
+ 998 00c0 34       		.uleb128 0x34
+ 999 00c1 00       		.byte	0
+ 1000 00c2 03       		.uleb128 0x3
+ 1001 00c3 08       		.uleb128 0x8
+ 1002 00c4 3A       		.uleb128 0x3a
+ 1003 00c5 0B       		.uleb128 0xb
+ 1004 00c6 3B       		.uleb128 0x3b
+ 1005 00c7 0B       		.uleb128 0xb
+ 1006 00c8 49       		.uleb128 0x49
+ 1007 00c9 13       		.uleb128 0x13
+ 1008 00ca 02       		.uleb128 0x2
+ 1009 00cb 17       		.uleb128 0x17
+ 1010 00cc 00       		.byte	0
+ 1011 00cd 00       		.byte	0
+ 1012 00ce 0E       		.uleb128 0xe
+ 1013 00cf 898201   		.uleb128 0x4109
+ 1014 00d2 01       		.byte	0x1
+ 1015 00d3 11       		.uleb128 0x11
+ 1016 00d4 01       		.uleb128 0x1
+ 1017 00d5 31       		.uleb128 0x31
+ 1018 00d6 13       		.uleb128 0x13
+ 1019 00d7 00       		.byte	0
+ 1020 00d8 00       		.byte	0
+ 1021 00d9 0F       		.uleb128 0xf
+ 1022 00da 8A8201   		.uleb128 0x410a
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 21
+
+
+ 1023 00dd 00       		.byte	0
+ 1024 00de 02       		.uleb128 0x2
+ 1025 00df 18       		.uleb128 0x18
+ 1026 00e0 9142     		.uleb128 0x2111
+ 1027 00e2 18       		.uleb128 0x18
+ 1028 00e3 00       		.byte	0
+ 1029 00e4 00       		.byte	0
+ 1030 00e5 10       		.uleb128 0x10
+ 1031 00e6 01       		.uleb128 0x1
+ 1032 00e7 01       		.byte	0x1
+ 1033 00e8 49       		.uleb128 0x49
+ 1034 00e9 13       		.uleb128 0x13
+ 1035 00ea 01       		.uleb128 0x1
+ 1036 00eb 13       		.uleb128 0x13
+ 1037 00ec 00       		.byte	0
+ 1038 00ed 00       		.byte	0
+ 1039 00ee 11       		.uleb128 0x11
+ 1040 00ef 21       		.uleb128 0x21
+ 1041 00f0 00       		.byte	0
+ 1042 00f1 49       		.uleb128 0x49
+ 1043 00f2 13       		.uleb128 0x13
+ 1044 00f3 2F       		.uleb128 0x2f
+ 1045 00f4 0B       		.uleb128 0xb
+ 1046 00f5 00       		.byte	0
+ 1047 00f6 00       		.byte	0
+ 1048 00f7 12       		.uleb128 0x12
+ 1049 00f8 34       		.uleb128 0x34
+ 1050 00f9 00       		.byte	0
+ 1051 00fa 03       		.uleb128 0x3
+ 1052 00fb 0E       		.uleb128 0xe
+ 1053 00fc 3A       		.uleb128 0x3a
+ 1054 00fd 0B       		.uleb128 0xb
+ 1055 00fe 3B       		.uleb128 0x3b
+ 1056 00ff 0B       		.uleb128 0xb
+ 1057 0100 49       		.uleb128 0x49
+ 1058 0101 13       		.uleb128 0x13
+ 1059 0102 3F       		.uleb128 0x3f
+ 1060 0103 19       		.uleb128 0x19
+ 1061 0104 02       		.uleb128 0x2
+ 1062 0105 18       		.uleb128 0x18
+ 1063 0106 00       		.byte	0
+ 1064 0107 00       		.byte	0
+ 1065 0108 13       		.uleb128 0x13
+ 1066 0109 26       		.uleb128 0x26
+ 1067 010a 00       		.byte	0
+ 1068 010b 49       		.uleb128 0x49
+ 1069 010c 13       		.uleb128 0x13
+ 1070 010d 00       		.byte	0
+ 1071 010e 00       		.byte	0
+ 1072 010f 14       		.uleb128 0x14
+ 1073 0110 34       		.uleb128 0x34
+ 1074 0111 00       		.byte	0
+ 1075 0112 03       		.uleb128 0x3
+ 1076 0113 0E       		.uleb128 0xe
+ 1077 0114 3A       		.uleb128 0x3a
+ 1078 0115 0B       		.uleb128 0xb
+ 1079 0116 3B       		.uleb128 0x3b
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 22
+
+
+ 1080 0117 0B       		.uleb128 0xb
+ 1081 0118 49       		.uleb128 0x49
+ 1082 0119 13       		.uleb128 0x13
+ 1083 011a 3F       		.uleb128 0x3f
+ 1084 011b 19       		.uleb128 0x19
+ 1085 011c 3C       		.uleb128 0x3c
+ 1086 011d 19       		.uleb128 0x19
+ 1087 011e 00       		.byte	0
+ 1088 011f 00       		.byte	0
+ 1089 0120 15       		.uleb128 0x15
+ 1090 0121 2E       		.uleb128 0x2e
+ 1091 0122 01       		.byte	0x1
+ 1092 0123 3F       		.uleb128 0x3f
+ 1093 0124 19       		.uleb128 0x19
+ 1094 0125 03       		.uleb128 0x3
+ 1095 0126 0E       		.uleb128 0xe
+ 1096 0127 3A       		.uleb128 0x3a
+ 1097 0128 0B       		.uleb128 0xb
+ 1098 0129 3B       		.uleb128 0x3b
+ 1099 012a 0B       		.uleb128 0xb
+ 1100 012b 27       		.uleb128 0x27
+ 1101 012c 19       		.uleb128 0x19
+ 1102 012d 3C       		.uleb128 0x3c
+ 1103 012e 19       		.uleb128 0x19
+ 1104 012f 01       		.uleb128 0x1
+ 1105 0130 13       		.uleb128 0x13
+ 1106 0131 00       		.byte	0
+ 1107 0132 00       		.byte	0
+ 1108 0133 16       		.uleb128 0x16
+ 1109 0134 05       		.uleb128 0x5
+ 1110 0135 00       		.byte	0
+ 1111 0136 49       		.uleb128 0x49
+ 1112 0137 13       		.uleb128 0x13
+ 1113 0138 00       		.byte	0
+ 1114 0139 00       		.byte	0
+ 1115 013a 17       		.uleb128 0x17
+ 1116 013b 2E       		.uleb128 0x2e
+ 1117 013c 01       		.byte	0x1
+ 1118 013d 3F       		.uleb128 0x3f
+ 1119 013e 19       		.uleb128 0x19
+ 1120 013f 03       		.uleb128 0x3
+ 1121 0140 0E       		.uleb128 0xe
+ 1122 0141 3A       		.uleb128 0x3a
+ 1123 0142 0B       		.uleb128 0xb
+ 1124 0143 3B       		.uleb128 0x3b
+ 1125 0144 05       		.uleb128 0x5
+ 1126 0145 27       		.uleb128 0x27
+ 1127 0146 19       		.uleb128 0x19
+ 1128 0147 3C       		.uleb128 0x3c
+ 1129 0148 19       		.uleb128 0x19
+ 1130 0149 01       		.uleb128 0x1
+ 1131 014a 13       		.uleb128 0x13
+ 1132 014b 00       		.byte	0
+ 1133 014c 00       		.byte	0
+ 1134 014d 18       		.uleb128 0x18
+ 1135 014e 2E       		.uleb128 0x2e
+ 1136 014f 00       		.byte	0
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 23
+
+
+ 1137 0150 3F       		.uleb128 0x3f
+ 1138 0151 19       		.uleb128 0x19
+ 1139 0152 03       		.uleb128 0x3
+ 1140 0153 0E       		.uleb128 0xe
+ 1141 0154 3A       		.uleb128 0x3a
+ 1142 0155 0B       		.uleb128 0xb
+ 1143 0156 3B       		.uleb128 0x3b
+ 1144 0157 05       		.uleb128 0x5
+ 1145 0158 27       		.uleb128 0x27
+ 1146 0159 19       		.uleb128 0x19
+ 1147 015a 49       		.uleb128 0x49
+ 1148 015b 13       		.uleb128 0x13
+ 1149 015c 3C       		.uleb128 0x3c
+ 1150 015d 19       		.uleb128 0x19
+ 1151 015e 00       		.byte	0
+ 1152 015f 00       		.byte	0
+ 1153 0160 00       		.byte	0
+ 1154              		.section	.debug_loc,"",%progbits
+ 1155              	.Ldebug_loc0:
+ 1156              	.LLST0:
+ 1157 0000 00000000 		.4byte	.LVL0
+ 1158 0004 0E000000 		.4byte	.LVL1
+ 1159 0008 0100     		.2byte	0x1
+ 1160 000a 50       		.byte	0x50
+ 1161 000b 0E000000 		.4byte	.LVL1
+ 1162 000f 40000000 		.4byte	.LFE34
+ 1163 0013 0400     		.2byte	0x4
+ 1164 0015 F3       		.byte	0xf3
+ 1165 0016 01       		.uleb128 0x1
+ 1166 0017 50       		.byte	0x50
+ 1167 0018 9F       		.byte	0x9f
+ 1168 0019 00000000 		.4byte	0
+ 1169 001d 00000000 		.4byte	0
+ 1170              	.LLST1:
+ 1171 0021 00000000 		.4byte	.LVL0
+ 1172 0025 11000000 		.4byte	.LVL2-1
+ 1173 0029 0100     		.2byte	0x1
+ 1174 002b 51       		.byte	0x51
+ 1175 002c 11000000 		.4byte	.LVL2-1
+ 1176 0030 40000000 		.4byte	.LFE34
+ 1177 0034 0400     		.2byte	0x4
+ 1178 0036 F3       		.byte	0xf3
+ 1179 0037 01       		.uleb128 0x1
+ 1180 0038 51       		.byte	0x51
+ 1181 0039 9F       		.byte	0x9f
+ 1182 003a 00000000 		.4byte	0
+ 1183 003e 00000000 		.4byte	0
+ 1184              	.LLST2:
+ 1185 0042 00000000 		.4byte	.LVL9
+ 1186 0046 08000000 		.4byte	.LVL11
+ 1187 004a 0100     		.2byte	0x1
+ 1188 004c 50       		.byte	0x50
+ 1189 004d 08000000 		.4byte	.LVL11
+ 1190 0051 44000000 		.4byte	.LFE36
+ 1191 0055 0400     		.2byte	0x4
+ 1192 0057 F3       		.byte	0xf3
+ 1193 0058 01       		.uleb128 0x1
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 24
+
+
+ 1194 0059 50       		.byte	0x50
+ 1195 005a 9F       		.byte	0x9f
+ 1196 005b 00000000 		.4byte	0
+ 1197 005f 00000000 		.4byte	0
+ 1198              	.LLST3:
+ 1199 0063 04000000 		.4byte	.LVL10
+ 1200 0067 08000000 		.4byte	.LVL11
+ 1201 006b 0200     		.2byte	0x2
+ 1202 006d 30       		.byte	0x30
+ 1203 006e 9F       		.byte	0x9f
+ 1204 006f 08000000 		.4byte	.LVL11
+ 1205 0073 34000000 		.4byte	.LVL15
+ 1206 0077 0100     		.2byte	0x1
+ 1207 0079 54       		.byte	0x54
+ 1208 007a 36000000 		.4byte	.LVL16
+ 1209 007e 3A000000 		.4byte	.LVL17
+ 1210 0082 0100     		.2byte	0x1
+ 1211 0084 54       		.byte	0x54
+ 1212 0085 00000000 		.4byte	0
+ 1213 0089 00000000 		.4byte	0
+ 1214              		.section	.debug_aranges,"",%progbits
+ 1215 0000 34000000 		.4byte	0x34
+ 1216 0004 0200     		.2byte	0x2
+ 1217 0006 00000000 		.4byte	.Ldebug_info0
+ 1218 000a 04       		.byte	0x4
+ 1219 000b 00       		.byte	0
+ 1220 000c 0000     		.2byte	0
+ 1221 000e 0000     		.2byte	0
+ 1222 0010 00000000 		.4byte	.LFB33
+ 1223 0014 34000000 		.4byte	.LFE33-.LFB33
+ 1224 0018 00000000 		.4byte	.LFB34
+ 1225 001c 40000000 		.4byte	.LFE34-.LFB34
+ 1226 0020 00000000 		.4byte	.LFB35
+ 1227 0024 C8010000 		.4byte	.LFE35-.LFB35
+ 1228 0028 00000000 		.4byte	.LFB36
+ 1229 002c 44000000 		.4byte	.LFE36-.LFB36
+ 1230 0030 00000000 		.4byte	0
+ 1231 0034 00000000 		.4byte	0
+ 1232              		.section	.debug_ranges,"",%progbits
+ 1233              	.Ldebug_ranges0:
+ 1234 0000 00000000 		.4byte	.LFB33
+ 1235 0004 34000000 		.4byte	.LFE33
+ 1236 0008 00000000 		.4byte	.LFB34
+ 1237 000c 40000000 		.4byte	.LFE34
+ 1238 0010 00000000 		.4byte	.LFB35
+ 1239 0014 C8010000 		.4byte	.LFE35
+ 1240 0018 00000000 		.4byte	.LFB36
+ 1241 001c 44000000 		.4byte	.LFE36
+ 1242 0020 00000000 		.4byte	0
+ 1243 0024 00000000 		.4byte	0
+ 1244              		.section	.debug_line,"",%progbits
+ 1245              	.Ldebug_line0:
+ 1246 0000 21010000 		.section	.debug_str,"MS",%progbits,1
+ 1246      02006800 
+ 1246      00000201 
+ 1246      FB0E0D00 
+ 1246      01010101 
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 25
+
+
+ 1247              	.LASF15:
+ 1248 0000 72656733 		.ascii	"reg32\000"
+ 1248      3200
+ 1249              	.LASF21:
+ 1250 0006 5363726F 		.ascii	"Scroll\000"
+ 1250      6C6C00
+ 1251              	.LASF3:
+ 1252 000d 73686F72 		.ascii	"short unsigned int\000"
+ 1252      7420756E 
+ 1252      7369676E 
+ 1252      65642069 
+ 1252      6E7400
+ 1253              	.LASF8:
+ 1254 0020 756E7369 		.ascii	"unsigned int\000"
+ 1254      676E6564 
+ 1254      20696E74 
+ 1254      00
+ 1255              	.LASF23:
+ 1256 002d 466F6E74 		.ascii	"Font\000"
+ 1256      00
+ 1257              	.LASF19:
+ 1258 0032 44697370 		.ascii	"Display_Write_Numer\000"
+ 1258      6C61795F 
+ 1258      57726974 
+ 1258      655F4E75 
+ 1258      6D657200 
+ 1259              	.LASF12:
+ 1260 0046 666C6F61 		.ascii	"float\000"
+ 1260      7400
+ 1261              	.LASF25:
+ 1262 004c 56696465 		.ascii	"VideoMemory\000"
+ 1262      6F4D656D 
+ 1262      6F727900 
+ 1263              	.LASF5:
+ 1264 0058 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1264      20756E73 
+ 1264      69676E65 
+ 1264      6420696E 
+ 1264      7400
+ 1265              	.LASF20:
+ 1266 006a 44697370 		.ascii	"Display_Set_Video_Memory\000"
+ 1266      6C61795F 
+ 1266      5365745F 
+ 1266      56696465 
+ 1266      6F5F4D65 
+ 1267              	.LASF9:
+ 1268 0083 75696E74 		.ascii	"uint8\000"
+ 1268      3800
+ 1269              	.LASF28:
+ 1270 0089 50574D5F 		.ascii	"PWM_Mux_Reg_Write\000"
+ 1270      4D75785F 
+ 1270      5265675F 
+ 1270      57726974 
+ 1270      6500
+ 1271              	.LASF29:
+ 1272 009b 5343425F 		.ascii	"SCB_1_SpiUartWriteTxData\000"
+ 1272      315F5370 
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 26
+
+
+ 1272      69556172 
+ 1272      74577269 
+ 1272      74655478 
+ 1273              	.LASF1:
+ 1274 00b4 756E7369 		.ascii	"unsigned char\000"
+ 1274      676E6564 
+ 1274      20636861 
+ 1274      7200
+ 1275              	.LASF13:
+ 1276 00c2 646F7562 		.ascii	"double\000"
+ 1276      6C6500
+ 1277              	.LASF2:
+ 1278 00c9 73686F72 		.ascii	"short int\000"
+ 1278      7420696E 
+ 1278      7400
+ 1279              	.LASF11:
+ 1280 00d3 696E7438 		.ascii	"int8\000"
+ 1280      00
+ 1281              	.LASF10:
+ 1282 00d8 75696E74 		.ascii	"uint32\000"
+ 1282      333200
+ 1283              	.LASF33:
+ 1284 00df 496E6974 		.ascii	"Init_Video_Memory\000"
+ 1284      5F566964 
+ 1284      656F5F4D 
+ 1284      656D6F72 
+ 1284      7900
+ 1285              	.LASF17:
+ 1286 00f1 4E756D62 		.ascii	"Number\000"
+ 1286      657200
+ 1287              	.LASF7:
+ 1288 00f8 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1288      206C6F6E 
+ 1288      6720756E 
+ 1288      7369676E 
+ 1288      65642069 
+ 1289              	.LASF27:
+ 1290 010f 48756D69 		.ascii	"Humi\000"
+ 1290      00
+ 1291              	.LASF18:
+ 1292 0114 5365676D 		.ascii	"Segment\000"
+ 1292      656E7400 
+ 1293              	.LASF26:
+ 1294 011c 54656D70 		.ascii	"Temp\000"
+ 1294      00
+ 1295              	.LASF16:
+ 1296 0121 73697A65 		.ascii	"sizetype\000"
+ 1296      74797065 
+ 1296      00
+ 1297              	.LASF6:
+ 1298 012a 6C6F6E67 		.ascii	"long long int\000"
+ 1298      206C6F6E 
+ 1298      6720696E 
+ 1298      7400
+ 1299              	.LASF24:
+ 1300 0138 56696465 		.ascii	"VideoBufer\000"
+ 1300      6F427566 
+ARM GAS  C:\DOCUME~1\Remixvit\LOCALS~1\Temp\ccmMIbCW.s 			page 27
+
+
+ 1300      657200
+ 1301              	.LASF14:
+ 1302 0143 63686172 		.ascii	"char\000"
+ 1302      00
+ 1303              	.LASF30:
+ 1304 0148 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1304      4320342E 
+ 1304      392E3320 
+ 1304      32303135 
+ 1304      30333033 
+ 1305 017b 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 1305      20726576 
+ 1305      6973696F 
+ 1305      6E203232 
+ 1305      31323230 
+ 1306 01ae 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1306      66756E63 
+ 1306      74696F6E 
+ 1306      2D736563 
+ 1306      74696F6E 
+ 1307              	.LASF31:
+ 1308 01d6 2E5C3753 		.ascii	".\\7Seg.c\000"
+ 1308      65672E63 
+ 1308      00
+ 1309              	.LASF34:
+ 1310 01df 5343425F 		.ascii	"SCB_1_SpiUartGetTxBufferSize\000"
+ 1310      315F5370 
+ 1310      69556172 
+ 1310      74476574 
+ 1310      54784275 
+ 1311              	.LASF4:
+ 1312 01fc 6C6F6E67 		.ascii	"long int\000"
+ 1312      20696E74 
+ 1312      00
+ 1313              	.LASF32:
+ 1314 0205 433A5C45 		.ascii	"C:\\EAGLE\\My\\Thermometr\\Thermometr.cydsn\000"
+ 1314      41474C45 
+ 1314      5C4D795C 
+ 1314      54686572 
+ 1314      6D6F6D65 
+ 1315              	.LASF0:
+ 1316 022d 7369676E 		.ascii	"signed char\000"
+ 1316      65642063 
+ 1316      68617200 
+ 1317              	.LASF22:
+ 1318 0239 44697370 		.ascii	"Display_Scroll_Video_Memory\000"
+ 1318      6C61795F 
+ 1318      5363726F 
+ 1318      6C6C5F56 
+ 1318      6964656F 
+ 1319              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
